@@ -137,6 +137,25 @@ La persona debe poder reconstruir el camino que llevó hasta ahí.
 
 Cuando haya que elegir entre una explicación que entrega la respuesta inmediatamente y una que permite descubrirla progresivamente, preferir la segunda si sigue siendo clara y práctica.
 
+### XIII. La consciencia de clase debe ser parte de la generación
+
+**La consciencia de clase debe ser parte de la generación.**
+
+Teaching no debe asumir como condición de acceso que la persona dispone de dinero, hardware costoso, educación formal, dominio de inglés, tiempo abundante, herramientas pagadas o condiciones físicas y sensoriales ideales.
+
+Esto se ve reflejado, entre otras cosas, en:
+
+- cuando usamos un término en inglés, **mostrar también su traducción al español de forma visible** cuando esa traducción sea necesaria para comprender la idea;
+- no esconder información esencial únicamente en hover, `title`, color, animaciones o interacciones que puedan no estar disponibles para todas las personas;
+- hacer que el contenido sea utilizable por personas con discapacidades, **especialmente discapacidades visuales**: estructura semántica, contraste suficiente, texto alternativo cuando corresponda y explicaciones textuales de aquello que no pueda depender únicamente de una representación visual;
+- no asumir acceso a software, servicios, cursos, suscripciones o infraestructura pagada cuando exista una alternativa razonable;
+- no asumir hardware potente ni conexiones rápidas como requisito implícito para aprender un concepto;
+- evitar usar formación universitaria, certificaciones o conocimiento previo costoso como filtros innecesarios para acceder a una explicación;
+- preferir ejemplos, herramientas y caminos que una persona pueda reproducir con recursos modestos cuando eso no degrade el objetivo pedagógico;
+- distinguir cuidadosamente entre una limitación técnica real y una barrera económica, lingüística, educativa o de accesibilidad que nosotros mismos estemos introduciendo.
+
+La accesibilidad y las condiciones materiales no son una fase posterior de publicación. Deben considerarse mientras se diseña y genera la explicación.
+
 ---
 
 ## Anatomía recomendada de una lección
