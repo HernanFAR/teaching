@@ -32,27 +32,34 @@
   margin: 1.1rem 0 1.35rem;
 }
 
-.learning-modes-list > ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.learning-modes-list > ul > li {
+.learning-mode {
   display: grid;
-  grid-template-columns: minmax(9rem, 0.8fr) minmax(0, 1.6fr);
-  gap: 0.25rem 1.25rem;
-  padding: 0.85rem 0;
+  grid-template-columns: minmax(10rem, 0.8fr) minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 1rem 1.25rem;
+  padding: 1rem 0;
   border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
 }
 
-.learning-modes-list > ul > li:last-child {
+.learning-mode:last-child {
   border-bottom: 0;
 }
 
-.learning-modes-list > ul > li > span {
-  grid-column: 2;
+.learning-mode > div {
+  min-width: 0;
+}
+
+.learning-mode__name {
+  font-weight: 600;
+}
+
+.learning-mode__label {
+  display: block;
+  margin-bottom: 0.2rem;
   color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
 }
 
 .learning-modes-list .twemoji {
@@ -62,12 +69,9 @@
 }
 
 @media screen and (max-width: 45rem) {
-  .learning-modes-list > ul > li {
+  .learning-mode {
     grid-template-columns: 1fr;
-  }
-
-  .learning-modes-list > ul > li > span {
-    grid-column: 1;
+    gap: 0.55rem;
   }
 }
 
