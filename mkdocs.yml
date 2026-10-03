@@ -64,7 +64,7 @@ extra:
   support:
     # Set this to the public Buy Me a Coffee URL to enable
     # "Financiar una neurona" everywhere that consumes this configuration.
-    buy_me_a_coffee_url: ""
+    buy_me_a_coffee_url: "https://buymeacoffee.com/hernanfar"
 
 extra_css:
   - stylesheets/extra.css
