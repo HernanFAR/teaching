@@ -86,17 +86,20 @@ Si nunca experimentaste el problema que motivó esas separaciones, la arquitectu
 
 Por eso preferimos comenzar con algo mucho menos impresionante:
 
-~~~text
-POST /orders
-    ↓
-validar
-    ↓
-calcular
-    ↓
-guardar
-    ↓
-notificar
-~~~
+```mermaid
+flowchart TD
+    A[HTTP POST /orders]
+    B[Validar pedido]
+    C[Calcular total]
+    D[Guardar orden]
+    E[Notificar confirmación]
+
+    A --> B --> C --> D --> E
+```
+
+Un flujo pequeño, lineal y razonable.
+
+**Todavía no necesitamos una arquitectura elaborada.**
 
 Funciona.
 
