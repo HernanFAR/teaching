@@ -3,26 +3,60 @@
 {% block content %}
   {{ super() }}
 
-  {% if page and page.url != "" and page.url != "support/" and not page.meta.hide_support %}
+  {% if page and page.url != "" and page.url != "support/" and page.url != "support/generar-un-peso/" and not page.meta.hide_support %}
     {% include "partials/support-cta.html" %}
   {% endif %}
 
   <script>
     (() => {
-      const buyMeACoffeeUrl = {{ config.extra.support.buy_me_a_coffee_url | tojson }};
+      const support = {{ config.extra.support | tojson }};
 
-      document.querySelectorAll("[data-support-provider='buy-me-a-coffee']").forEach((element) => {
-        if (!buyMeACoffeeUrl) {
-          element.setAttribute("aria-disabled", "true");
-          element.removeAttribute("href");
-          return;
-        }
-
-        element.setAttribute("href", buyMeACoffeeUrl);
+      document.querySelectorAll("[data-support-kind='one-time']").forEach((element) => {
+        const url = support.one_time?.url;
+        if (!url) return;
+        element.setAttribute("href", url);
         element.setAttribute("target", "_blank");
         element.setAttribute("rel", "noopener noreferrer");
         element.removeAttribute("aria-disabled");
       });
+
+      document.querySelectorAll("[data-support-kind='recurring']").forEach((element) => {
+        const url = support.recurring?.url;
+        if (!url) return;
+        element.setAttribute("href", url);
+        element.setAttribute("target", "_blank");
+        element.setAttribute("rel", "noopener noreferrer");
+        element.removeAttribute("aria-disabled");
+      });
+
+      const ad = support.voluntary_ad || {};
+      const adContainer = document.querySelector("[data-voluntary-ad]");
+      if (adContainer) {
+        if (!ad.enabled || !ad.sponsor_name || !ad.message) {
+          adContainer.hidden = true;
+          const empty = document.querySelector("[data-voluntary-ad-empty]");
+          if (empty) empty.hidden = false;
+          return;
+        }
+
+        const name = adContainer.querySelector("[data-voluntary-ad-name]");
+        const headline = adContainer.querySelector("[data-voluntary-ad-headline]");
+        const message = adContainer.querySelector("[data-voluntary-ad-message]");
+        const link = adContainer.querySelector("[data-voluntary-ad-link]");
+
+        if (name) name.textContent = ad.sponsor_name;
+        if (headline) headline.textContent = ad.headline || "Un mensaje de nuestro patrocinador";
+        if (message) message.textContent = ad.message;
+
+        if (link && ad.sponsor_url) {
+          link.setAttribute("href", ad.sponsor_url);
+          link.setAttribute("target", "_blank");
+          link.setAttribute("rel", "sponsored noopener noreferrer");
+          link.hidden = false;
+        }
+
+        adContainer.hidden = false;
+      }
     })();
   </script>
 {% endblock %}
