@@ -80,10 +80,6 @@
 }
 
 .hero h1 {
-  display: none;
-}
-
-.hero h2 {
   margin-top: 0;
   font-size: clamp(1.9rem, 3.2vw, 2.4rem);
   line-height: 1.08;
