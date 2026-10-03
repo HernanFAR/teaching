@@ -26,7 +26,7 @@
 
 .hero h2 {
   margin-top: 0;
-  max-width: 13ch;
+  max-width: 22ch;
   font-size: clamp(1.9rem, 3.2vw, 2.4rem);
   line-height: 1.08;
   letter-spacing: -0.035em;
