@@ -57,44 +57,6 @@ No solamente cómo se llama.
 
 ---
 
-## Nuestros 3 pilares
-
-<div class="pillars-grid" markdown>
-
-<div class="pillar-card" markdown>
-
-### :material-alert-decagram-outline: 1. Problem-first learning
-
-Primero aparece el problema.
-
-Después, cuando ya existe una razón para resolverlo, aparece el concepto.
-
-</div>
-
-<div class="pillar-card" markdown>
-
-### :material-auto-fix: 2. Lecciones generativas
-
-Una explicación no debería estar atrapada en un solo ejemplo.
-
-Queremos que puedas reconstruirla con otro lenguaje, dominio o nivel de dificultad.
-
-</div>
-
-<div class="pillar-card" markdown>
-
-### :material-source-branch: 3. Transparencia de decisiones
-
-No queremos mostrarte únicamente dónde terminó el código.
-
-Queremos que puedas seguir el camino que lo llevó hasta ahí.
-
-</div>
-
-</div>
-
----
-
 ## El problema con empezar por la respuesta
 
 Imagina que queremos enseñar Clean Architecture.
@@ -154,7 +116,49 @@ Ese es el tipo de aprendizaje que buscamos.
 
 ---
 
-## Nuestros mandamientos
+## Nuestros pilares y mandamientos
+
+Los **pilares** resumen qué intentamos preservar. Los **mandamientos** convierten esa intención en criterios concretos para enseñar.
+
+### Nuestros 3 pilares
+
+<div class="pillars-grid" markdown>
+
+<div class="pillar-card" markdown>
+
+### :material-alert-decagram-outline: 1. Problem-first learning
+
+Primero aparece el problema.
+
+Después, cuando ya existe una razón para resolverlo, aparece el concepto.
+
+</div>
+
+<div class="pillar-card" markdown>
+
+### :material-auto-fix: 2. Lecciones generativas
+
+Una explicación no debería estar atrapada en un solo ejemplo.
+
+Queremos que puedas reconstruirla con otro lenguaje, dominio o nivel de dificultad.
+
+</div>
+
+<div class="pillar-card" markdown>
+
+### :material-source-branch: 3. Transparencia de decisiones
+
+No queremos mostrarte únicamente dónde terminó el código.
+
+Queremos que puedas seguir el camino que lo llevó hasta ahí.
+
+</div>
+
+</div>
+
+---
+
+### Mandamientos
 
 No son leyes universales de ingeniería de software.
 
