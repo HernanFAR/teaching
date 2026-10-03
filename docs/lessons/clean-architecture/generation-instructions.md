@@ -1,9 +1,34 @@
 # Instrucciones de generación
 
-Este documento funciona como especificación para generar el material completo de la lección.
+Este documento funciona como **fuente pedagógica base** de la lección.
+
+La página publicada es una realización explicativa de esta fuente. Otras realizaciones pueden cambiar lenguaje, dominio, dificultad, ejemplos, material visual o forma de interacción, siempre que preserven la intención pedagógica definida aquí.
 
 !!! info "Principio pedagógico"
     Cada etapa debe introducir solamente los conceptos necesarios para resolver el problema de esa etapa.
+
+!!! note "Qué puede derivarse de esta fuente"
+    Estas instrucciones pueden utilizarse para producir, entre otras cosas:
+
+    - otra explicación del mismo recorrido;
+    - una variante en otro lenguaje o dominio;
+    - una versión para distinto nivel de experiencia;
+    - material visual alternativo;
+    - ejercicios y preguntas;
+    - una tutoría guiada;
+    - material de evaluación.
+
+    Una derivación puede cambiar la forma. **No debe cambiar silenciosamente qué se intenta enseñar ni el orden de las tensiones que justifican cada concepto.**
+
+## Invariantes de la fuente
+
+Toda realización derivada debe conservar:
+
+- el recorrido problem-first;
+- la aparición progresiva de las presiones;
+- la regla de no introducir una abstracción antes de que exista una causa visible;
+- los límites y contrafactuales relevantes;
+- la distinción entre estructura final y razones que la hicieron necesaria.
 
 ## Secuencia estable
 
