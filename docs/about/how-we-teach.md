@@ -163,13 +163,13 @@ Ese es el tipo de aprendizaje que buscamos.
 
 Los **pilares** resumen qué intentamos preservar. Los **mandamientos** convierten esa intención en criterios concretos para enseñar.
 
-### Nuestros 3 pilares
+### Pilares
 
 <div class="pillars-grid" markdown>
 
 <div class="pillar-card" markdown>
 
-### :material-alert-decagram-outline: 1. Aprendizaje desde el problema
+<div class="pillar-card__title" markdown>:material-alert-decagram-outline: **1. Aprendizaje desde el problema**</div>
 
 <span class="pillar-translation" lang="en">Problem-first learning</span>
 
@@ -181,7 +181,7 @@ Después, cuando ya existe una razón para resolverlo, aparece el concepto.
 
 <div class="pillar-card" markdown>
 
-### :material-auto-fix: 2. Lecciones generativas
+<div class="pillar-card__title" markdown>:material-auto-fix: **2. Lecciones generativas**</div>
 
 Una explicación no debería estar atrapada en un solo ejemplo.
 
@@ -191,7 +191,7 @@ Queremos que puedas reconstruirla con otro lenguaje, dominio o nivel de dificult
 
 <div class="pillar-card" markdown>
 
-### :material-source-branch: 3. Transparencia de decisiones
+<div class="pillar-card__title" markdown>:material-source-branch: **3. Transparencia de decisiones**</div>
 
 No queremos mostrarte únicamente dónde terminó el código.
 
