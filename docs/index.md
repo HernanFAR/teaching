@@ -4,8 +4,6 @@ hide:
   - title
 ---
 
-# Teaching
-
 <div class="hero" markdown>
 
 ## Entender primero. Nombrar después.
