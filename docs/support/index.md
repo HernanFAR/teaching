@@ -17,7 +17,9 @@ Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes
 
 <div class="grid cards" markdown>
 
--   :material-brain:{ .lg .middle } **Financiar una neurona**
+-   <span id="financiar-una-neurona"></span>
+
+    :material-brain:{ .lg .middle } **Financiar una neurona**
 
     ---
 
@@ -33,7 +35,9 @@ Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes
 
     <small>Buy Me a Coffee · aporte único</small>
 
--   :material-currency-usd:{ .lg .middle } **Generar un peso**
+-   <span id="generar-un-peso"></span>
+
+    :material-currency-usd:{ .lg .middle } **Generar un peso**
 
     ---
 
@@ -47,7 +51,9 @@ Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes
 
     <small>Patrocinio voluntario · sin anuncios automáticos</small>
 
--   :material-flask-outline:{ .lg .middle } **Alimenta el laboratorio**
+-   <span id="alimenta-el-laboratorio"></span>
+
+    :material-flask-outline:{ .lg .middle } **Alimenta el laboratorio**
 
     ---
 
