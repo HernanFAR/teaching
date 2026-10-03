@@ -1,0 +1,36 @@
+:root {
+  --teaching-radius: 1rem;
+}
+
+.hero {
+  padding: 2.5rem 0 1.5rem;
+}
+
+.hero h1 {
+  display: none;
+}
+
+.hero h2 {
+  margin-top: 0;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.hero > p {
+  max-width: 46rem;
+  font-size: 1.05rem;
+}
+
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  border-radius: var(--teaching-radius);
+}
+
+.md-typeset blockquote {
+  font-size: 1.05rem;
+}
+
+.mermaid {
+  text-align: center;
+}
