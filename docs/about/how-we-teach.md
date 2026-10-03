@@ -21,8 +21,6 @@ No solamente cómo se llama.
 
 </div>
 
----
-
 ## Nuestros 3 pilares
 
 <div class="grid cards" markdown>
