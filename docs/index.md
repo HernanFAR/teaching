@@ -11,6 +11,7 @@ Esta plataforma reúne lecciones de ingeniería de software construidas alrededo
 No partimos desde diagramas finales, listas de patrones ni estructuras de carpetas. Partimos desde código que funciona, introducimos nuevas presiones y observamos qué decisiones empiezan a tener sentido.
 
 [Explorar lecciones](lessons/index.md){ .md-button .md-button--primary }
+[Cómo enseñamos](about/how-we-teach.md){ .md-button }
 [Ver guías](guides/index.md){ .md-button }
 
 </div>
@@ -46,6 +47,12 @@ No partimos desde diagramas finales, listas de patrones ni estructuras de carpet
     El resultado final se puede rastrear hasta las decisiones que lo hicieron necesario.
 
 </div>
+
+## Tres pilares
+
+Teaching se apoya en tres ideas: aprender desde el problema, construir lecciones que puedan regenerarse y hacer visibles las decisiones que llevan desde una solución sencilla hasta una estructura más elaborada.
+
+[:octicons-arrow-right-24: Conocer los principios de Teaching](about/how-we-teach.md)
 
 ## Primer recorrido
 
