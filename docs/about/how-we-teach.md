@@ -9,27 +9,37 @@ hide:
 
 Hay muchas formas de aprender programación, y cada una sirve mejor para cosas distintas.
 
-<div class="learning-modes-list" markdown>
+<div class="learning-modes-list">
 
-- :material-book-open-page-variant-outline: **Documentación**
-  <span><strong>Obtienes bien:</strong> referencia precisa, APIs, opciones y comportamiento esperado.</span>
-  <span><strong>Puede quedar menos claro:</strong> por qué una decisión existe o cuándo deja de ser útil.</span>
+<div class="learning-mode">
+  <div class="learning-mode__name">:material-book-open-page-variant-outline: <strong>Documentación</strong></div>
+  <div><span class="learning-mode__label">Obtienes bien</span>Referencia precisa, APIs, opciones y comportamiento esperado.</div>
+  <div><span class="learning-mode__label">Puede quedar menos claro</span>Por qué una decisión existe o cuándo deja de ser útil.</div>
+</div>
 
-- :material-school-outline: **Tutoriales**
-  <span><strong>Obtienes bien:</strong> un camino concreto para llegar a un resultado.</span>
-  <span><strong>Puede quedar menos claro:</strong> qué partes del camino eran necesarias y cuáles eran circunstanciales.</span>
+<div class="learning-mode">
+  <div class="learning-mode__name">:material-school-outline: <strong>Tutoriales</strong></div>
+  <div><span class="learning-mode__label">Obtienes bien</span>Un camino concreto para llegar a un resultado.</div>
+  <div><span class="learning-mode__label">Puede quedar menos claro</span>Qué partes del camino eran necesarias y cuáles eran circunstanciales.</div>
+</div>
 
-- :material-play-circle-outline: **Videos**
-  <span><strong>Obtienes bien:</strong> explicación guiada, ritmo y demostración visual.</span>
-  <span><strong>Puede quedar menos claro:</strong> cómo reconstruir la idea fuera del ejemplo mostrado.</span>
+<div class="learning-mode">
+  <div class="learning-mode__name">:material-play-circle-outline: <strong>Videos</strong></div>
+  <div><span class="learning-mode__label">Obtienes bien</span>Explicación guiada, ritmo y demostración visual.</div>
+  <div><span class="learning-mode__label">Puede quedar menos claro</span>Cómo reconstruir la idea fuera del ejemplo mostrado.</div>
+</div>
 
-- :material-layers-outline: **Copiar una arquitectura**
-  <span><strong>Obtienes bien:</strong> una estructura funcional que puedes reutilizar rápido.</span>
-  <span><strong>Puede quedar menos claro:</strong> qué problema justificaba cada capa, interfaz o separación.</span>
+<div class="learning-mode">
+  <div class="learning-mode__name">:material-layers-outline: <strong>Copiar una arquitectura</strong></div>
+  <div><span class="learning-mode__label">Obtienes bien</span>Una estructura funcional que puedes reutilizar rápido.</div>
+  <div><span class="learning-mode__label">Puede quedar menos claro</span>Qué problema justificaba cada capa, interfaz o separación.</div>
+</div>
 
-- :material-brain: **Memorizar un patrón**
-  <span><strong>Obtienes bien:</strong> vocabulario y reconocimiento de una forma conocida.</span>
-  <span><strong>Puede quedar menos claro:</strong> cuándo el patrón es necesario, innecesario o incluso contraproducente.</span>
+<div class="learning-mode">
+  <div class="learning-mode__name">:material-brain: <strong>Memorizar un patrón</strong></div>
+  <div><span class="learning-mode__label">Obtienes bien</span>Vocabulario y reconocimiento de una forma conocida.</div>
+  <div><span class="learning-mode__label">Puede quedar menos claro</span>Cuándo el patrón es necesario, innecesario o incluso contraproducente.</div>
+</div>
 
 </div>
 
