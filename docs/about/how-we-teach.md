@@ -9,36 +9,36 @@ hide:
 
 Hay muchas formas de aprender programación, y cada una sirve mejor para cosas distintas.
 
-<div class="learning-modes-list">
+<div class="learning-modes-list" markdown>
 
-<div class="learning-mode">
-  <div class="learning-mode__name">:material-book-open-page-variant-outline: <strong>Documentación</strong></div>
-  <div><span class="learning-mode__label">Obtienes bien</span>Referencia precisa, APIs, opciones y comportamiento esperado.</div>
-  <div><span class="learning-mode__label">Puede quedar menos claro</span>Por qué una decisión existe o cuándo deja de ser útil.</div>
+<div class="learning-mode" markdown>
+  <div class="learning-mode__name" markdown>:material-book-open-page-variant-outline: <strong>Documentación</strong></div>
+  <div markdown><span class="learning-mode__label">Obtienes bien</span>Referencia precisa, APIs, opciones y comportamiento esperado.</div>
+  <div markdown><span class="learning-mode__label">Puede quedar menos claro</span>Por qué una decisión existe o cuándo deja de ser útil.</div>
 </div>
 
-<div class="learning-mode">
-  <div class="learning-mode__name">:material-school-outline: <strong>Tutoriales</strong></div>
-  <div><span class="learning-mode__label">Obtienes bien</span>Un camino concreto para llegar a un resultado.</div>
-  <div><span class="learning-mode__label">Puede quedar menos claro</span>Qué partes del camino eran necesarias y cuáles eran circunstanciales.</div>
+<div class="learning-mode" markdown>
+  <div class="learning-mode__name" markdown>:material-school-outline: <strong>Tutoriales</strong></div>
+  <div markdown><span class="learning-mode__label">Obtienes bien</span>Un camino concreto para llegar a un resultado.</div>
+  <div markdown><span class="learning-mode__label">Puede quedar menos claro</span>Qué partes del camino eran necesarias y cuáles eran circunstanciales.</div>
 </div>
 
-<div class="learning-mode">
-  <div class="learning-mode__name">:material-play-circle-outline: <strong>Videos</strong></div>
-  <div><span class="learning-mode__label">Obtienes bien</span>Explicación guiada, ritmo y demostración visual.</div>
-  <div><span class="learning-mode__label">Puede quedar menos claro</span>Cómo reconstruir la idea fuera del ejemplo mostrado.</div>
+<div class="learning-mode" markdown>
+  <div class="learning-mode__name" markdown>:material-play-circle-outline: <strong>Videos</strong></div>
+  <div markdown><span class="learning-mode__label">Obtienes bien</span>Explicación guiada, ritmo y demostración visual.</div>
+  <div markdown><span class="learning-mode__label">Puede quedar menos claro</span>Cómo reconstruir la idea fuera del ejemplo mostrado.</div>
 </div>
 
-<div class="learning-mode">
-  <div class="learning-mode__name">:material-layers-outline: <strong>Copiar una arquitectura</strong></div>
-  <div><span class="learning-mode__label">Obtienes bien</span>Una estructura funcional que puedes reutilizar rápido.</div>
-  <div><span class="learning-mode__label">Puede quedar menos claro</span>Qué problema justificaba cada capa, interfaz o separación.</div>
+<div class="learning-mode" markdown>
+  <div class="learning-mode__name" markdown>:material-layers-outline: <strong>Copiar una arquitectura</strong></div>
+  <div markdown><span class="learning-mode__label">Obtienes bien</span>Una estructura funcional que puedes reutilizar rápido.</div>
+  <div markdown><span class="learning-mode__label">Puede quedar menos claro</span>Qué problema justificaba cada capa, interfaz o separación.</div>
 </div>
 
-<div class="learning-mode">
-  <div class="learning-mode__name">:material-brain: <strong>Memorizar un patrón</strong></div>
-  <div><span class="learning-mode__label">Obtienes bien</span>Vocabulario y reconocimiento de una forma conocida.</div>
-  <div><span class="learning-mode__label">Puede quedar menos claro</span>Cuándo el patrón es necesario, innecesario o incluso contraproducente.</div>
+<div class="learning-mode" markdown>
+  <div class="learning-mode__name" markdown>:material-brain: <strong>Memorizar un patrón</strong></div>
+  <div markdown><span class="learning-mode__label">Obtienes bien</span>Vocabulario y reconocimiento de una forma conocida.</div>
+  <div markdown><span class="learning-mode__label">Puede quedar menos claro</span>Cuándo el patrón es necesario, innecesario o incluso contraproducente.</div>
 </div>
 
 </div>
