@@ -10,8 +10,8 @@ Esta plataforma reúne lecciones de ingeniería de software construidas alrededo
 
 No partimos desde diagramas finales, listas de patrones ni estructuras de carpetas. Partimos desde código que funciona, introducimos nuevas presiones y observamos qué decisiones empiezan a tener sentido.
 
-[Explorar lecciones](lessons/){ .md-button .md-button--primary }
-[Ver guías](guides/){ .md-button }
+[Explorar lecciones](lessons/index.md){ .md-button .md-button--primary }
+[Ver guías](guides/index.md){ .md-button }
 
 </div>
 
@@ -51,4 +51,4 @@ No partimos desde diagramas finales, listas de patrones ni estructuras de carpet
 
 La primera lección en construcción es **Clean Architecture**, abordada como una evolución incremental desde una operación HTTP completamente directa hasta una organización donde las dependencias quedan bajo control.
 
-[:octicons-arrow-right-24: Ir a Clean Architecture](lessons/clean-architecture/)
+[:octicons-arrow-right-24: Ir a Clean Architecture](lessons/clean-architecture/index.md)
