@@ -408,9 +408,7 @@ Desde esa fuente podemos producir distintas realizaciones según lo que una pers
 
 > **La forma puede cambiar. La intención pedagógica no debería cambiar silenciosamente.**
 
----
-
-## La IA puede realizar; no define la fuente
+### La IA puede realizar; no define la fuente
 
 La IA puede ayudarnos a transformar una fuente pedagógica en una explicación, un ejemplo, un diagrama, un ejercicio o una variante para otro nivel.
 
