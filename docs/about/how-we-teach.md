@@ -70,17 +70,10 @@ flowchart LR
     A[Application / Use Cases]
     D[Domain / Business Rules]
 
-    P --> A
-    I --> A
-    A --> D
+    P -- Depende de --> A
+    I -- Depende de --> A
+    A -- Depende de --> D
 ```
-
-Y podríamos explicarte que:
-
-- `Presentation` depende de `Application`;
-- `Infrastructure` depende de `Application`;
-- `Application` depende de `Domain`;
-- `Domain` no depende de las demás capas.
 
 Eso sería correcto.
 
