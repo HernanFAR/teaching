@@ -13,7 +13,7 @@ Hay muchas formas de aprender programación, y cada una sirve mejor para cosas d
 
 <div class="learning-mode" markdown>
   <div class="learning-mode__name" markdown>:material-book-open-page-variant-outline: <strong>Documentación</strong></div>
-  <div markdown><span class="learning-mode__label">Obtienes bien</span>Referencia precisa, APIs, opciones y comportamiento esperado.</div>
+  <div markdown><span class="learning-mode__label">Obtienes bien</span>Referencia precisa, interfaces de programación (APIs), opciones y comportamiento esperado.</div>
   <div markdown><span class="learning-mode__label">Puede quedar menos claro</span>Por qué una decisión existe o cuándo deja de ser útil.</div>
 </div>
 
@@ -59,21 +59,23 @@ No solamente cómo se llama.
 
 ## El problema con empezar por la respuesta
 
-Imagina que queremos enseñar Clean Architecture.
+Imagina que queremos enseñar **arquitectura limpia** (<span lang="en">Clean Architecture</span>).
 
 Podríamos comenzar mostrándote directamente el diagrama típico de dependencias:
 
 ```mermaid
 flowchart LR
-    P[Presentation / UI]
-    I[Infrastructure / DB / APIs]
-    A[Application / Use Cases]
-    D[Domain / Business Rules]
+    P[Presentación / interfaz de usuario]
+    I[Infraestructura / base de datos / APIs]
+    A[Aplicación / casos de uso]
+    D[Dominio / reglas de negocio]
 
     P -- Depende de --> A
     I -- Depende de --> A
     A -- Depende de --> D
 ```
+
+<p class="visual-equivalent"><strong>En texto:</strong> <strong>Presentación</strong> e <strong>Infraestructura</strong> dependen de <strong>Aplicación</strong>; <strong>Aplicación</strong> depende de <strong>Dominio</strong>.</p>
 
 Eso sería correcto.
 
@@ -96,6 +98,8 @@ flowchart TD
 
     A --> B --> C --> D --> E
 ```
+
+<p class="visual-equivalent"><strong>En texto:</strong> recibimos una orden por HTTP, la validamos, calculamos su total, la guardamos y finalmente notificamos la confirmación.</p>
 
 Un flujo pequeño, lineal y razonable.
 
@@ -165,7 +169,9 @@ Los **pilares** resumen qué intentamos preservar. Los **mandamientos** conviert
 
 <div class="pillar-card" markdown>
 
-### :material-alert-decagram-outline: 1. Problem-first learning
+### :material-alert-decagram-outline: 1. Aprendizaje desde el problema
+
+<span class="pillar-translation" lang="en">Problem-first learning</span>
 
 Primero aparece el problema.
 
@@ -235,11 +241,11 @@ Si necesita explicar cinco ideas al mismo tiempo, probablemente necesitamos cinc
 
 ### Cambiar una variable
 
-¿Qué pasa si reemplazamos HTTP por CLI?
+¿Qué pasa si reemplazamos HTTP por una interfaz de línea de comandos (CLI)?
 
 ¿Y SQL por archivos?
 
-¿Y si tenemos tres entry points en vez de uno?
+¿Y si tenemos tres puntos de entrada en vez de uno?
 
 Cambiar una sola condición nos permite descubrir qué partes del diseño eran esenciales y cuáles eran accidentales.
 
@@ -269,7 +275,7 @@ Pero queremos usarla de una manera un poco distinta.
 
 En lugar de pedir:
 
-> "Explícame Clean Architecture."
+> "Explícame arquitectura limpia (Clean Architecture)."
 
 podemos construir primero una especificación pedagógica que diga:
 
@@ -300,11 +306,11 @@ Podrías tomar las instrucciones de generación y pedir:
 
 O:
 
-> Genera tres variantes de esta etapa. Una para alguien en práctica, otra para mid-level y otra para senior. No adelantes conceptos de etapas posteriores.
+> Genera tres variantes de esta etapa. Una para alguien en práctica, otra para nivel intermedio y otra para nivel avanzado. No adelantes conceptos de etapas posteriores.
 
 O incluso:
 
-> Dame otro ejemplo porque el anterior no me hizo click.
+> Dame otro ejemplo porque el anterior no me quedó claro.
 
 El objetivo es que el contenido pueda adaptarse **sin perder aquello que intentaba enseñar**.
 
@@ -346,7 +352,7 @@ Para cuando dices:
 
 Una guía podrá conectar varias lecciones y convertirlas en un recorrido orientado a un objetivo real.
 
-Así, por ejemplo, una futura guía sobre **cómo volver testeable una API existente** podría apoyarse en lecciones sobre testing, dependencias, puertos y diseño de dominio sin volver a explicarlas desde cero.
+Así, por ejemplo, una futura guía sobre **cómo hacer que una API existente sea fácil de probar** podría apoyarse en lecciones sobre pruebas, dependencias, puertos y diseño de dominio sin volver a explicarlas desde cero.
 
 ---
 
