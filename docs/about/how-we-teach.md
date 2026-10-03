@@ -105,17 +105,49 @@ Funciona.
 
 No hay nada que arreglar todavía.
 
-Después cambiamos una condición.
+Entonces empezamos a cambiar una cosa a la vez:
 
-La lógica crece.
+<div class="pressure-sequence" markdown>
 
-Después queremos probarla.
+<div class="pressure-step" markdown>
+<span class="pressure-step__number">1</span>
 
-Después aparece una dependencia externa.
+**La lógica crece**
 
-Después necesitamos ejecutar el mismo comportamiento desde otro lugar.
+La operación deja de ser trivial.
 
-Y, poco a poco, empiezan a existir razones reales para mover cosas.
+</div>
+
+<div class="pressure-step" markdown>
+<span class="pressure-step__number">2</span>
+
+**Queremos probarla**
+
+Necesitamos aislar comportamiento para verificarlo.
+
+</div>
+
+<div class="pressure-step" markdown>
+<span class="pressure-step__number">3</span>
+
+**Aparece una dependencia externa**
+
+Persistencia, correo, APIs u otros servicios entran al flujo.
+
+</div>
+
+<div class="pressure-step" markdown>
+<span class="pressure-step__number">4</span>
+
+**Necesitamos otro punto de entrada**
+
+El mismo comportamiento debe poder ejecutarse desde otro lugar.
+
+</div>
+
+</div>
+
+Y, poco a poco, empiezan a existir **razones reales para mover cosas**.
 
 Cuando finalmente aparecen conceptos como **caso de uso**, **puerto**, **adaptador** o **inversión de dependencias**, ya tenemos algo a lo que conectarlos.
 
