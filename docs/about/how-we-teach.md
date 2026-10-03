@@ -97,15 +97,9 @@ flowchart TD
     A --> B --> C --> D --> E
 ```
 
-Un flujo pequeño, lineal y razonable.
+Un flujo pequeño, lineal y razonable, que funciona y no requiere nada que arreglar... todavía.
 
-**Todavía no necesitamos una arquitectura elaborada.**
-
-Funciona.
-
-No hay nada que arreglar todavía.
-
-Entonces empezamos a cambiar una cosa a la vez:
+**Acá no necesitamos una arquitectura elaborada**, pero empezamos a cambiar una cosa a la vez:
 
 <div class="pressure-sequence" markdown>
 
