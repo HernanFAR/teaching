@@ -163,9 +163,10 @@ Los **pilares** resumen qué intentamos preservar. Los **mandamientos** conviert
 
 <div class="pillar-card" markdown>
 
-<div class="pillar-card__title" markdown>:material-alert-decagram-outline: **1. Aprendizaje desde el problema**</div>
-
+<div class="pillar-card__title" markdown>
+:material-alert-decagram-outline: **1. Aprendizaje desde el problema**
 <span class="pillar-translation" lang="en">Problem-first learning</span>
+</div>
 
 Primero aparece el problema.
 
