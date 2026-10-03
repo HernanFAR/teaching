@@ -332,20 +332,41 @@ Parte del contenido de Teaching puede ser ideado, discutido, revisado, transform
 
 En lugar de pedir: **"Explícame arquitectura limpia (Clean Architecture)."**
 
-podemos construir primero una especificación pedagógica que diga:
+Preferimos construir primero una **especificación pedagógica**.
+<div class="pedagogical-spec">
 
-- qué debe entender la persona;
-- qué problemas deben aparecer;
-- en qué orden;
-- qué conceptos todavía **no** deben introducirse;
-- qué material visual necesitamos;
-- qué errores pedagógicos queremos evitar.
+<div class="pedagogical-spec__item">
+<span class="pedagogical-spec__label">Objetivo</span>
+<strong>Qué debe entender la persona</strong>
+</div>
+
+<div class="pedagogical-spec__item">
+<span class="pedagogical-spec__label">Recorrido</span>
+<strong>Qué problemas deben aparecer y en qué orden</strong>
+</div>
+
+<div class="pedagogical-spec__item">
+<span class="pedagogical-spec__label">Límites</span>
+<strong>Qué conceptos todavía no deben introducirse</strong>
+</div>
+
+<div class="pedagogical-spec__item">
+<span class="pedagogical-spec__label">Representación</span>
+<strong>Qué material visual necesitamos</strong>
+</div>
+
+<div class="pedagogical-spec__item">
+<span class="pedagogical-spec__label">Calidad</span>
+<strong>Qué errores pedagógicos queremos evitar</strong>
+</div>
+
+</div>
 
 Después esa especificación puede utilizarse para producir nuevas variantes.
 
 Por eso algunas lecciones incluyen sus **instrucciones de generación**.
 
-Puedes pensarlas como una especie de código fuente de la explicación.
+Puedes pensarlas como una especie de **código fuente de la explicación**.
 
 ---
 
