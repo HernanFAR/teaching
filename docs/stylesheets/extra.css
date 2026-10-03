@@ -9,6 +9,10 @@
   margin-inline: auto;
 }
 
+.teaching-hide-page-title > h1:first-child {
+  display: none;
+}
+
 .teaching-wide {
   width: min(var(--teaching-wide-width), calc(100vw - 2rem));
   max-width: none;
