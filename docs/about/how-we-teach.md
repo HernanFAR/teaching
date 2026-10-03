@@ -475,23 +475,3 @@ Para cuando dices:
 Una guía podrá conectar varias lecciones y convertirlas en un recorrido orientado a un objetivo real.
 
 Así, por ejemplo, una futura guía sobre **cómo hacer que una API existente sea fácil de probar** podría apoyarse en lecciones sobre pruebas, dependencias, puertos y diseño de dominio sin volver a explicarlas desde cero.
-
----
-
-## ¿Y hacia dónde puede crecer esto?
-
-Hay una posibilidad que nos interesa especialmente.
-
-En ingeniería de software muchas ideas nacen porque alguien se encontró repetidamente con un problema.
-
-Teaching puede transformarse en un lugar donde esos problemas queden expuestos, reproducibles y explorables.
-
-Eso conecta naturalmente con iniciativas como **VSlices**, donde parte importante del trabajo consiste precisamente en entender tensiones de diseño, hacer explícitas decisiones y estudiar qué estructuras emergen de ellas.
-
-No necesitamos decidir hoy cuánto se conectarán ambos proyectos.
-
-Pero sí queremos conservar algo desde el principio:
-
-> **el problema debe permanecer visible detrás de la solución.**
-
-Porque cuando desaparece el problema y queda solamente el patrón, es muy fácil terminar memorizando arquitectura en lugar de aprender a diseñar.
