@@ -360,38 +360,99 @@ En lugar de pedir: "Explícame arquitectura limpia (Clean Architecture)", prefer
 
 </div>
 
-Esa especificación puede reutilizarse para producir nuevas variantes. Por eso algunas lecciones publican también sus *instrucciones de generación*: una especie de **código fuente de la explicación**.
+Esa especificación puede reutilizarse para producir nuevas realizaciones. Por eso algunas lecciones publican también sus **instrucciones base de generación**: la **fuente pedagógica** desde la que esas realizaciones pueden derivarse.
 
 ---
 
-## Una lección, muchos ejemplos
+## Una fuente, muchas realizaciones
 
-Supongamos que una explicación usa C# y un sistema de órdenes, pero tú trabajas con Python y videojuegos. No deberías tener que empezar desde cero.
+Una explicación publicada no tiene por qué ser la única forma de enseñar una idea.
 
-Deberias poder tomar las instrucciones de generación y pedir: 
+Las **instrucciones base de generación** conservan aquello que queremos mantener estable: la intención pedagógica, las tensiones que deben aparecer, su orden, los límites y los criterios de calidad.
 
-- Adapta esta lección a Python y FastAPI. Cambia el caso de "crear una orden" por "crear una partida", pero conserva las mismas tensiones y el mismo orden pedagógico
-- Genera tres variantes de esta etapa. Una para alguien en práctica, otra para nivel intermedio y otra para nivel avanzado. No adelantes conceptos de etapas posteriores
+Desde esa fuente podemos producir distintas realizaciones según lo que una persona necesite.
 
-Incluso: **Dame otro ejemplo porque el anterior no me quedó claro**.
+<div class="realizations-grid">
 
-El objetivo es que el contenido pueda adaptarse **sin perder aquello que intentaba enseñar**.
+<div class="realization">
+<span class="realization__label">Cambiar contexto</span>
+<strong>Otro lenguaje o dominio</strong>
+<span>Por ejemplo: Python + videojuegos en vez de C# + órdenes.</span>
+</div>
+
+<div class="realization">
+<span class="realization__label">Cambiar dificultad</span>
+<strong>Práctica, intermedio o avanzado</strong>
+<span>La profundidad cambia sin adelantar conceptos que todavía no corresponden.</span>
+</div>
+
+<div class="realization">
+<span class="realization__label">Otra explicación</span>
+<strong>El ejemplo anterior no me quedó claro</strong>
+<span>Podemos cambiar la representación sin cambiar aquello que intentamos enseñar.</span>
+</div>
+
+<div class="realization">
+<span class="realization__label">Material visual</span>
+<strong>Diagramas, comparaciones o secuencias</strong>
+<span>La misma intención puede expresarse con otra forma de representación.</span>
+</div>
+
+<div class="realization">
+<span class="realization__label">Práctica y evaluación</span>
+<strong>Ejercicios, preguntas o desafíos</strong>
+<span>Podemos derivar material para practicar o comprobar comprensión.</span>
+</div>
+
+</div>
+
+> **La forma puede cambiar. La intención pedagógica no debería cambiar silenciosamente.**
 
 ---
 
-## La IA no es la fuente de verdad
+## La IA puede realizar; no define la fuente
 
-Las instrucciones de generación tampoco convierten cualquier respuesta de una IA en material correcto.
+La IA puede ayudarnos a transformar una fuente pedagógica en una explicación, un ejemplo, un diagrama, un ejercicio o una variante para otro nivel.
 
-Los ejemplos necesitan revisión.
+Pero generar una realización no demuestra que esa realización sea correcta.
 
-El código necesita revisión.
+<div class="teaching-pipeline">
 
-Las afirmaciones técnicas necesitan revisión.
+<div class="teaching-pipeline__step">
+<span>1</span>
+<strong>Fuente pedagógica</strong>
+<small>Define qué intentamos enseñar y qué debe preservarse.</small>
+</div>
 
-La intención pedagógica necesita revisión.
+<div class="teaching-pipeline__arrow" aria-hidden="true">→</div>
 
-La ventaja es otra: ahora el proceso que genera nuevas explicaciones es visible y reutilizable.
+<div class="teaching-pipeline__step">
+<span>2</span>
+<strong>Realización</strong>
+<small>Decide cómo expresarlo para una necesidad concreta.</small>
+</div>
+
+<div class="teaching-pipeline__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-pipeline__step">
+<span>3</span>
+<strong>Revisión</strong>
+<small>Comprueba intención pedagógica, afirmaciones, ejemplos y código.</small>
+</div>
+
+<div class="teaching-pipeline__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-pipeline__step">
+<span>4</span>
+<strong>Publicación</strong>
+<small>La realización revisada pasa a formar parte del material.</small>
+</div>
+
+</div>
+
+<p class="visual-equivalent"><strong>En texto:</strong> partimos desde una fuente pedagógica, producimos una realización, la revisamos y solo después la publicamos.</p>
+
+> **La IA no decide qué significa la lección. Puede ayudarnos a realizarla.**
 
 ---
 
