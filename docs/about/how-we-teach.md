@@ -453,20 +453,24 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 
 Teaching crecerá principalmente con dos tipos de contenido.
 
-### Lecciones
+<div class="content-types">
 
-Para cuando dices:
+<a class="content-type-card" href="../lessons/">
+<span class="content-type-card__label">Lección</span>
+<strong>“Quiero entender esto.”</strong>
+<span>Construye intuición alrededor de un concepto.</span>
+<span class="content-type-card__action">Explorar lecciones →</span>
+</a>
 
-> **"Quiero entender esto."**
+<a class="content-type-card" href="../guides/">
+<span class="content-type-card__label">Guía</span>
+<strong>“Quiero lograr esto.”</strong>
+<span>Conecta conocimiento para alcanzar un objetivo real.</span>
+<span class="content-type-card__action">Ver guías →</span>
+</a>
 
-Una lección intenta construir una intuición alrededor de un concepto.
+</div>
 
-### Guías
+Una guía puede componer varias lecciones sin volver a explicarlas desde cero.
 
-Para cuando dices:
-
-> **"Quiero lograr esto."**
-
-Una guía podrá conectar varias lecciones y convertirlas en un recorrido orientado a un objetivo real.
-
-Así, por ejemplo, una futura guía sobre **cómo hacer que una API existente sea fácil de probar** podría apoyarse en lecciones sobre pruebas, dependencias, puertos y diseño de dominio sin volver a explicarlas desde cero.
+Por ejemplo, una futura guía sobre **cómo hacer que una API existente sea fácil de probar** podría apoyarse en lecciones sobre pruebas, dependencias, puertos y diseño de dominio.
