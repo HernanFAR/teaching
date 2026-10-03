@@ -299,3 +299,19 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.visual-equivalent {
+  margin: 0.75rem 0 1rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.pillar-translation {
+  display: block;
+  margin: -0.25rem 0 0.75rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  font-weight: 500;
+}
