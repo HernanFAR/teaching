@@ -59,8 +59,3 @@ Teaching se apoya en tres ideas: aprender desde el problema, construir lecciones
 
 [:octicons-arrow-right-24: Conocer los principios de Teaching](about/how-we-teach.md)
 
-## Primer recorrido
-
-La primera lección en construcción es **Clean Architecture**, abordada como una evolución incremental desde una operación HTTP completamente directa hasta una organización donde las dependencias quedan bajo control.
-
-[:octicons-arrow-right-24: Ir a Clean Architecture](lessons/clean-architecture/index.md)
