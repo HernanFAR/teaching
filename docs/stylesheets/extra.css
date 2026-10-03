@@ -1,9 +1,23 @@
 :root {
   --teaching-radius: 1rem;
+  --teaching-reading-width: 46rem;
+  --teaching-wide-width: 68rem;
+}
+
+.md-content__inner {
+  max-width: var(--teaching-reading-width);
+  margin-inline: auto;
+}
+
+.teaching-wide {
+  width: min(var(--teaching-wide-width), calc(100vw - 2rem));
+  max-width: none;
+  margin-inline: 50%;
+  transform: translateX(-50%);
 }
 
 .hero {
-  padding: 2.5rem 0 1.5rem;
+  padding: 1.75rem 0 1.25rem;
 }
 
 .hero h1 {
@@ -12,13 +26,14 @@
 
 .hero h2 {
   margin-top: 0;
-  font-size: clamp(2rem, 5vw, 3.6rem);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+  max-width: 13ch;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
 }
 
 .hero > p {
-  max-width: 46rem;
+  max-width: 40rem;
   font-size: 1.05rem;
 }
 
