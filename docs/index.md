@@ -1,7 +1,8 @@
 ---
+title: Inicio
 hide:
   - navigation
-  - title
+hide_page_title: true
 ---
 
 <div class="hero" markdown>
