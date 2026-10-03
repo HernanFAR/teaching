@@ -405,8 +405,6 @@ Desde esa fuente podemos producir distintas realizaciones según lo que una pers
 
 </div>
 
-> **La forma puede cambiar. La intención pedagógica no debería cambiar silenciosamente.**
-
 ### La IA puede realizar; no define la fuente
 
 La IA puede ayudarnos a transformar una fuente pedagógica en una explicación, un ejemplo, un diagrama, un ejercicio o una variante para otro nivel.
@@ -448,8 +446,6 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 </div>
 
 <p class="visual-equivalent"><strong>En texto:</strong> partimos desde una fuente pedagógica, producimos una realización, la revisamos y solo después la publicamos.</p>
-
-> **La IA no decide qué significa la lección. Puede ayudarnos a realizarla.**
 
 ---
 
