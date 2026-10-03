@@ -7,21 +7,35 @@ hide:
 
 # Cómo enseñamos
 
-Hay muchas formas de aprender programación.
+Hay muchas formas de aprender programación, y cada una sirve mejor para cosas distintas.
 
-<div class="learning-modes" markdown>
+<div class="learning-modes-list" markdown>
 
-<span>:material-book-open-page-variant-outline: Documentación</span>
-<span>:material-school-outline: Tutoriales</span>
-<span>:material-play-circle-outline: Videos</span>
-<span>:material-layers-outline: Copiar una arquitectura</span>
-<span>:material-brain: Memorizar un patrón</span>
+- :material-book-open-page-variant-outline: **Documentación**
+  <span><strong>Obtienes bien:</strong> referencia precisa, APIs, opciones y comportamiento esperado.</span>
+  <span><strong>Puede quedar menos claro:</strong> por qué una decisión existe o cuándo deja de ser útil.</span>
+
+- :material-school-outline: **Tutoriales**
+  <span><strong>Obtienes bien:</strong> un camino concreto para llegar a un resultado.</span>
+  <span><strong>Puede quedar menos claro:</strong> qué partes del camino eran necesarias y cuáles eran circunstanciales.</span>
+
+- :material-play-circle-outline: **Videos**
+  <span><strong>Obtienes bien:</strong> explicación guiada, ritmo y demostración visual.</span>
+  <span><strong>Puede quedar menos claro:</strong> cómo reconstruir la idea fuera del ejemplo mostrado.</span>
+
+- :material-layers-outline: **Copiar una arquitectura**
+  <span><strong>Obtienes bien:</strong> una estructura funcional que puedes reutilizar rápido.</span>
+  <span><strong>Puede quedar menos claro:</strong> qué problema justificaba cada capa, interfaz o separación.</span>
+
+- :material-brain: **Memorizar un patrón**
+  <span><strong>Obtienes bien:</strong> vocabulario y reconocimiento de una forma conocida.</span>
+  <span><strong>Puede quedar menos claro:</strong> cuándo el patrón es necesario, innecesario o incluso contraproducente.</span>
 
 </div>
 
 Todas pueden ser útiles.
 
-Teaching intenta hacer algo un poco distinto.
+Teaching intenta concentrarse especialmente en aquello que suele quedar menos visible: **la relación entre el problema, la decisión y el concepto que aparece después**.
 
 Queremos que puedas mirar una decisión de software y pensar:
 
