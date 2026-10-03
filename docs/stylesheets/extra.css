@@ -246,6 +246,11 @@
   line-height: 1.35;
 }
 
+.pillar-card__title .pillar-translation {
+  display: block;
+  margin-top: 0.3rem;
+}
+
 .pillar-card > p:last-child {
   margin-bottom: 0;
 }
