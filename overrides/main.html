@@ -6,4 +6,23 @@
   {% if page and page.url != "" and page.url != "support/" and not page.meta.hide_support %}
     {% include "partials/support-cta.html" %}
   {% endif %}
+
+  <script>
+    (() => {
+      const buyMeACoffeeUrl = {{ config.extra.support.buy_me_a_coffee_url | tojson }};
+
+      document.querySelectorAll("[data-support-provider='buy-me-a-coffee']").forEach((element) => {
+        if (!buyMeACoffeeUrl) {
+          element.setAttribute("aria-disabled", "true");
+          element.removeAttribute("href");
+          return;
+        }
+
+        element.setAttribute("href", buyMeACoffeeUrl);
+        element.setAttribute("target", "_blank");
+        element.setAttribute("rel", "noopener noreferrer");
+        element.removeAttribute("aria-disabled");
+      });
+    })();
+  </script>
 {% endblock %}
