@@ -28,13 +28,29 @@ Primero debe aparecer una situación concreta, una tensión observable o una lim
 
 Las lecciones no son artefactos estáticos.
 
-Siempre que sea razonable, una lección debe incluir instrucciones de generación suficientemente claras como para reconstruir el mismo recorrido:
+Una entrada publicada debe funcionar como una **realización explicativa** de una intención pedagógica más estable.
 
-- en otro lenguaje;
-- con otro dominio;
-- para otro nivel de experiencia;
-- con más o menos ejemplos;
-- con otras representaciones visuales.
+Siempre que sea razonable, cada lección debe mantener unas **instrucciones base de generación** que actúen como su fuente pedagógica. Estas instrucciones deben conservar aquello que no debería perderse al cambiar la forma de enseñar:
+
+- qué debe entender la persona;
+- qué problemas o tensiones deben aparecer;
+- en qué orden deben aparecer;
+- qué conceptos todavía no deben introducirse;
+- qué límites y contrafactuales deben conservarse;
+- qué criterios de accesibilidad y calidad debe satisfacer la explicación.
+
+Desde esa fuente pueden derivarse distintas realizaciones según la finalidad de enseñanza, por ejemplo:
+
+- explicar el mismo recorrido en otro lenguaje o dominio;
+- adaptar la dificultad o el conocimiento previo asumido;
+- producir otra explicación cuando la anterior no funcionó;
+- generar material visual;
+- producir ejercicios o preguntas;
+- preparar una tutoría guiada;
+- generar material de evaluación;
+- construir ejemplos adicionales.
+
+Una derivación puede cambiar representación, ejemplos, lenguaje, profundidad o interacción. **No debe cambiar silenciosamente la intención pedagógica que la fuente declara.**
 
 Las instrucciones de generación son parte del material educativo, no documentación interna descartable.
 
@@ -171,7 +187,7 @@ No todas las lecciones necesitan exactamente la misma estructura, pero una buena
 7. **Contrafactual** — qué habría pasado sin el cambio.
 8. **Límites** — cuándo no vale la pena usarlo.
 9. **Siguiente tensión** — qué prepara el próximo paso.
-10. **Instrucciones de generación** — cómo reconstruir o adaptar la experiencia.
+10. **Instrucciones base de generación** — la fuente pedagógica desde la que pueden derivarse distintas realizaciones de la experiencia.
 
 ---
 
@@ -213,7 +229,7 @@ La IA puede participar en:
 
 Sin embargo, el contenido debe conservar una intención pedagógica humana y verificable.
 
-Las instrucciones de generación deben tratarse como una especie de **código fuente pedagógico**: describen qué se intenta enseñar, en qué orden y bajo qué restricciones.
+Las instrucciones base de generación deben tratarse como **código fuente pedagógico**: describen qué se intenta enseñar, en qué orden y bajo qué restricciones. La entrada publicada es una realización de esa fuente, no su reemplazo.
 
 Una persona debería poder reutilizarlas para pedir, por ejemplo:
 
