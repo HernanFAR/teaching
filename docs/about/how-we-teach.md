@@ -61,18 +61,32 @@ No solamente cómo se llama.
 
 Imagina que queremos enseñar Clean Architecture.
 
-Podríamos comenzar así:
+Podríamos comenzar mostrándote directamente el diagrama típico de dependencias:
 
-~~~text
-Domain
-Application
-Infrastructure
-Presentation
-~~~
+```mermaid
+flowchart LR
+    P[Presentation / UI]
+    I[Infrastructure / DB / APIs]
+    A[Application / Use Cases]
+    D[Domain / Business Rules]
 
-Podríamos explicar las dependencias, crear cuatro proyectos y después implementar un ejemplo.
+    P --> A
+    I --> A
+    A --> D
+```
 
-Y funcionaría.
+Y podríamos explicarte que:
+
+- `Presentation` depende de `Application`;
+- `Infrastructure` depende de `Application`;
+- `Application` depende de `Domain`;
+- `Domain` no depende de las demás capas.
+
+Eso sería correcto.
+
+Incluso podríamos resumirlo con una regla conocida:
+
+> **las dependencias apuntan hacia adentro.**
 
 Pero aparece una pregunta bastante importante:
 
