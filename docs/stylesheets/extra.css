@@ -21,7 +21,15 @@
 }
 
 .teaching-intro-section {
-  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem 1.5rem 1.35rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+  background: var(--md-default-fg-color--lightest);
+}
+
+.teaching-intro-section > h1:first-child {
+  margin-top: 0;
 }
 
 .hero {
