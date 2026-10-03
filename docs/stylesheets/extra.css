@@ -238,11 +238,12 @@
   border-radius: var(--teaching-radius);
 }
 
-.pillar-card > h3:first-child {
-  margin-top: 0;
+.pillar-card__title {
+  margin: 0;
   padding-bottom: 0.65rem;
   border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
   font-size: 0.9rem;
+  line-height: 1.35;
 }
 
 .pillar-card > p:last-child {
