@@ -39,6 +39,7 @@ nav:
           - Instrucciones de generación: lessons/clean-architecture/generation-instructions.md
   - Guías:
       - guides/index.md
+  - Apoyar: support/index.md
 
 markdown_extensions:
   - admonition
