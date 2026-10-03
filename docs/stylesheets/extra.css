@@ -222,3 +222,14 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
+
+.md-typeset .pillars-grid > ul {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media screen and (max-width: 59.9844em) {
+  .md-typeset .pillars-grid > ul {
+    grid-template-columns: 1fr;
+  }
+}
