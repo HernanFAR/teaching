@@ -27,14 +27,15 @@
 .hero h2 {
   margin-top: 0;
   max-width: 13ch;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.06;
+  font-size: clamp(1.9rem, 3.2vw, 2.4rem);
+  line-height: 1.08;
   letter-spacing: -0.035em;
 }
 
 .hero > p {
   max-width: 40rem;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
 }
 
 .md-typeset .grid.cards > ul > li,
