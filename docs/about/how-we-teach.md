@@ -1,3 +1,10 @@
+---
+hide:
+  - navigation
+---
+
+<div class="teaching-intro-section" markdown>
+
 # Cómo enseñamos
 
 Hay muchas formas de aprender programación.
@@ -11,6 +18,8 @@ Queremos que puedas mirar una decisión de software y pensar:
 > **"Entiendo por qué esto apareció."**
 
 No solamente cómo se llama.
+
+</div>
 
 ---
 
