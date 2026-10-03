@@ -20,6 +20,10 @@
   transform: translateX(-50%);
 }
 
+.teaching-intro-section {
+  padding-bottom: 1.25rem;
+}
+
 .hero {
   padding: .5rem 0 1rem;
 }
