@@ -9,7 +9,17 @@ hide:
 
 Hay muchas formas de aprender programación.
 
-Puedes leer documentación. Seguir un tutorial. Ver un video. Copiar una arquitectura. Memorizar un patrón y esperar reconocerlo cuando aparezca.
+<div class="learning-modes" markdown>
+
+<span>:material-book-open-page-variant-outline: Documentación</span>
+<span>:material-school-outline: Tutoriales</span>
+<span>:material-play-circle-outline: Videos</span>
+<span>:material-layers-outline: Copiar una arquitectura</span>
+<span>:material-brain: Memorizar un patrón</span>
+
+</div>
+
+Todas pueden ser útiles.
 
 Teaching intenta hacer algo un poco distinto.
 
