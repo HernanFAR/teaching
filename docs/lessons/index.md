@@ -18,7 +18,7 @@ Cada una intenta responder tres preguntas:
 
     Construir progresivamente una arquitectura limpia desde código ingenuo pero funcional.
 
-    [:octicons-arrow-right-24: Abrir lección](clean-architecture/)
+    [:octicons-arrow-right-24: Abrir lección](clean-architecture/index.md)
 
 </div>
 
