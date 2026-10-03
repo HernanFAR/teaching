@@ -57,7 +57,7 @@ No solamente cómo se llama.
 
 ## Nuestros 3 pilares
 
-<div class="grid cards" markdown>
+<div class="grid cards pillars-grid" markdown>
 
 -   :material-alert-decagram-outline:{ .lg .middle } **1. Problem-first learning**
 
