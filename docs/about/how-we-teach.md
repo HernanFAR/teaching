@@ -326,17 +326,11 @@ Lo que queremos enseñar es el camino.
 </div>
 ---
 
-## Y sí: usamos IA
+## Y sí: usamos IA, no queremos esconderlo.
 
-No queremos esconderlo.
+Parte del contenido de Teaching puede ser ideado, discutido, revisado, transformado o generado con ayuda de inteligencia artificial. Pero queremos usarla de una manera un poco distinta.
 
-Parte del contenido de Teaching puede ser ideado, discutido, revisado, transformado o generado con ayuda de inteligencia artificial.
-
-Pero queremos usarla de una manera un poco distinta.
-
-En lugar de pedir:
-
-> "Explícame arquitectura limpia (Clean Architecture)."
+En lugar de pedir: **"Explícame arquitectura limpia (Clean Architecture)."**
 
 podemos construir primero una especificación pedagógica que diga:
 
