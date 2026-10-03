@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Teaching
 
 <div class="hero" markdown>
