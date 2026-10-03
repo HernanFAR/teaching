@@ -130,3 +130,21 @@
   pointer-events: none;
   cursor: not-allowed;
 }
+
+
+.voluntary-ad-shell {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.voluntary-ad-shell__eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--md-accent-fg-color);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}

@@ -25,10 +25,8 @@ Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes
 
     Puede servir para tiempo de desarrollo, herramientas, infraestructura, uso de modelos de IA y otras necesidades que permitan seguir produciendo material abierto.
 
-    El aporte único se realizará mediante **Buy Me a Coffee**. No desbloquea contenido ni crea una membresía.
-
     <a class="md-button md-button--primary support-provider-action"
-       data-support-provider="buy-me-a-coffee"
+       data-support-kind="one-time"
        aria-disabled="true">
       🧠 Financiar una neurona
     </a>
@@ -41,23 +39,29 @@ Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes
 
     ¿Quieres apoyar sin gastar dinero?
 
-    Estamos explorando una forma para que puedas ver voluntariamente una publicidad cuyo ingreso vaya al proyecto.
+    La idea es simple: **solo si tú eliges hacerlo**, puedes abrir una página que muestra un único patrocinio.
 
-    No obtienes recompensas, puntos ni contenido especial por hacerlo. La única intención es apoyar.
+    No desbloquea nada, no entrega puntos y no aparece automáticamente mientras lees.
 
-    **Publicidad voluntaria · En exploración**
+    [🪙 Generar un peso](generar-un-peso.md){ .md-button }
+
+    <small>Patrocinio voluntario · sin anuncios automáticos</small>
 
 -   :material-flask-outline:{ .lg .middle } **Alimenta el laboratorio**
 
     ---
 
-    Apoya Teaching de forma recurrente.
+    Apoya Teaching de forma recurrente, sin membresías ni contenido exclusivo.
 
-    Pensado para quienes quieren contribuir mes a mes a que sigamos investigando, escribiendo, construyendo ejemplos y manteniendo vivo el laboratorio.
+    Buy Me a Coffee ofrece **Monthly Support**: puedes convertir el apoyo en una contribución mensual sin esperar perks o recompensas.
 
-    Sin niveles exclusivos ni beneficios cerrados.
+    <a class="md-button md-button--primary support-provider-action"
+       data-support-kind="recurring"
+       aria-disabled="true">
+      🧪 Alimenta el laboratorio
+    </a>
 
-    **Apoyo recurrente · Próximamente**
+    <small>Buy Me a Coffee Monthly Support · aporte recurrente</small>
 
 </div>
 
@@ -117,14 +121,7 @@ A medida que la plataforma madure, podremos hacer esta información más concret
 | Forma | Cómo ayudas | Recibes algo a cambio |
 | --- | --- | --- |
 | 🧠 **Financiar una neurona** | Aporte único mediante Buy Me a Coffee | El mismo contenido abierto que todos |
-| 🪙 **Generar un peso** | Ver voluntariamente publicidad | El mismo contenido abierto que todos |
-| 🧪 **Alimenta el laboratorio** | Aporte recurrente | El mismo contenido abierto que todos |
+| 🪙 **Generar un peso** | Abres voluntariamente un patrocinio | El mismo contenido abierto que todos |
+| 🧪 **Alimenta el laboratorio** | Monthly Support mediante Buy Me a Coffee | El mismo contenido abierto que todos |
 
 La diferencia está en **cómo quieres apoyar**, no en cuánto acceso obtienes.
-
----
-
-!!! note "Estado de los mecanismos de apoyo"
-    **Financiar una neurona** ya está preparado para Buy Me a Coffee y se habilitará al configurar su URL pública.
-
-    **Generar un peso** y **Alimenta el laboratorio** siguen en exploración/preparación.
