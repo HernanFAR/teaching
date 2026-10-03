@@ -11,7 +11,7 @@ hide:
 
 Esta plataforma reúne lecciones de ingeniería de software construidas alrededor de una idea simple:
 
-**los conceptos se entienden mejor cuando primero aparece el problema que los hace necesarios.**
+> los conceptos se entienden mejor cuando primero aparece el problema que los hace necesarios.
 
 No partimos desde diagramas finales, listas de patrones ni estructuras de carpetas. Partimos desde código que funciona, introducimos nuevas presiones y observamos qué decisiones empiezan a tener sentido.
 

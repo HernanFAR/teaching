@@ -17,7 +17,7 @@
 }
 
 .hero {
-  padding: 1.75rem 0 1.25rem;
+  padding: 1.25rem 0 1rem;
 }
 
 .hero h1 {
@@ -26,7 +26,6 @@
 
 .hero h2 {
   margin-top: 0;
-  max-width: 22ch;
   font-size: clamp(1.9rem, 3.2vw, 2.4rem);
   line-height: 1.08;
   letter-spacing: -0.035em;
