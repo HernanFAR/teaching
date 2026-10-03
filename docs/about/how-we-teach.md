@@ -330,9 +330,7 @@ Lo que queremos enseñar es el camino.
 
 Parte del contenido de Teaching puede ser ideado, discutido, revisado, transformado o generado con ayuda de inteligencia artificial. Pero queremos usarla de una manera un poco distinta.
 
-En lugar de pedir: **"Explícame arquitectura limpia (Clean Architecture)."**
-
-Preferimos construir primero una **especificación pedagógica**.
+En lugar de pedir: "Explícame arquitectura limpia (Clean Architecture)", preferimos construir primero una **especificación pedagógica**.
 <div class="pedagogical-spec">
 
 <div class="pedagogical-spec__item">
@@ -362,31 +360,20 @@ Preferimos construir primero una **especificación pedagógica**.
 
 </div>
 
-Después esa especificación puede utilizarse para producir nuevas variantes.
-
-Por eso algunas lecciones incluyen sus **instrucciones de generación**.
-
-Puedes pensarlas como una especie de **código fuente de la explicación**.
+Esa especificación puede reutilizarse para producir nuevas variantes. Por eso algunas lecciones publican también sus *instrucciones de generación*: una especie de **código fuente de la explicación**.
 
 ---
 
 ## Una lección, muchos ejemplos
 
-Supongamos que una explicación usa C# y un sistema de órdenes, pero tú trabajas con Python y videojuegos.
+Supongamos que una explicación usa C# y un sistema de órdenes, pero tú trabajas con Python y videojuegos. No deberías tener que empezar desde cero.
 
-No deberías tener que empezar desde cero.
+Deberias poder tomar las instrucciones de generación y pedir: 
 
-Podrías tomar las instrucciones de generación y pedir:
+- Adapta esta lección a Python y FastAPI. Cambia el caso de "crear una orden" por "crear una partida", pero conserva las mismas tensiones y el mismo orden pedagógico
+- Genera tres variantes de esta etapa. Una para alguien en práctica, otra para nivel intermedio y otra para nivel avanzado. No adelantes conceptos de etapas posteriores
 
-> Adapta esta lección a Python y FastAPI. Cambia el caso de "crear una orden" por "crear una partida", pero conserva las mismas tensiones y el mismo orden pedagógico.
-
-O:
-
-> Genera tres variantes de esta etapa. Una para alguien en práctica, otra para nivel intermedio y otra para nivel avanzado. No adelantes conceptos de etapas posteriores.
-
-O incluso:
-
-> Dame otro ejemplo porque el anterior no me quedó claro.
+Incluso: **Dame otro ejemplo porque el anterior no me quedó claro**.
 
 El objetivo es que el contenido pueda adaptarse **sin perder aquello que intentaba enseñar**.
 
