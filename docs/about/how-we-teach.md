@@ -59,31 +59,37 @@ No solamente cómo se llama.
 
 ## Nuestros 3 pilares
 
-<div class="grid cards pillars-grid" markdown>
+<div class="pillars-grid">
 
--   :material-alert-decagram-outline:{ .lg .middle } **1. Problem-first learning**
+<div class="pillar-card" markdown>
 
-    ---
+### :material-alert-decagram-outline: 1. Problem-first learning
 
-    Primero aparece el problema.
+Primero aparece el problema.
 
-    Después, cuando ya existe una razón para resolverlo, aparece el concepto.
+Después, cuando ya existe una razón para resolverlo, aparece el concepto.
 
--   :material-auto-fix:{ .lg .middle } **2. Lecciones generativas**
+</div>
 
-    ---
+<div class="pillar-card" markdown>
 
-    Una explicación no debería estar atrapada en un solo ejemplo.
+### :material-auto-fix: 2. Lecciones generativas
 
-    Queremos que puedas reconstruirla con otro lenguaje, dominio o nivel de dificultad.
+Una explicación no debería estar atrapada en un solo ejemplo.
 
--   :material-source-branch:{ .lg .middle } **3. Transparencia de decisiones**
+Queremos que puedas reconstruirla con otro lenguaje, dominio o nivel de dificultad.
 
-    ---
+</div>
 
-    No queremos mostrarte únicamente dónde terminó el código.
+<div class="pillar-card" markdown>
 
-    Queremos que puedas seguir el camino que lo llevó hasta ahí.
+### :material-source-branch: 3. Transparencia de decisiones
+
+No queremos mostrarte únicamente dónde terminó el código.
+
+Queremos que puedas seguir el camino que lo llevó hasta ahí.
+
+</div>
 
 </div>
 
