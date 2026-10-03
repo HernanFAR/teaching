@@ -31,6 +31,7 @@ theme:
 
 nav:
   - Inicio: index.md
+  - Cómo enseñamos: about/how-we-teach.md
   - Lecciones:
       - lessons/index.md
       - Clean Architecture:
