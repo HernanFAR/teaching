@@ -59,7 +59,7 @@ No solamente cómo se llama.
 
 ## Nuestros 3 pilares
 
-<div class="pillars-grid">
+<div class="pillars-grid" markdown>
 
 <div class="pillar-card" markdown>
 
