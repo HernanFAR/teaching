@@ -455,14 +455,14 @@ Teaching crecerá principalmente con dos tipos de contenido.
 
 <div class="content-types">
 
-<a class="content-type-card" href="../lessons/">
+<a class="content-type-card" href="../../lessons/">
 <span class="content-type-card__label">Lección</span>
 <strong>“Quiero entender esto.”</strong>
 <span>Construye intuición alrededor de un concepto.</span>
 <span class="content-type-card__action">Explorar lecciones →</span>
 </a>
 
-<a class="content-type-card" href="../guides/">
+<a class="content-type-card" href="../../guides/">
 <span class="content-type-card__label">Guía</span>
 <strong>“Quiero lograr esto.”</strong>
 <span>Conecta conocimiento para alcanzar un objetivo real.</span>
