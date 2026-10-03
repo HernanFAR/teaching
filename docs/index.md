@@ -37,7 +37,7 @@ No partimos desde diagramas finales, listas de patrones ni estructuras de carpet
 
     ---
 
-    Testing, persistencia, integraciones, nuevos puntos de entrada o cambios de negocio.
+    Pruebas, persistencia, integraciones, nuevos puntos de entrada o cambios de negocio.
 
 -   :material-lightbulb-on-outline:{ .lg .middle } **Aparece un concepto**
 
