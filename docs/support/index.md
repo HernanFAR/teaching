@@ -25,7 +25,15 @@ Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes
 
     Puede servir para tiempo de desarrollo, herramientas, infraestructura, uso de modelos de IA y otras necesidades que permitan seguir produciendo material abierto.
 
-    **Aporte único · Próximamente**
+    El aporte único se realizará mediante **Buy Me a Coffee**. No desbloquea contenido ni crea una membresía.
+
+    <a class="md-button md-button--primary support-provider-action"
+       data-support-provider="buy-me-a-coffee"
+       aria-disabled="true">
+      🧠 Financiar una neurona
+    </a>
+
+    <small>Buy Me a Coffee · aporte único</small>
 
 -   :material-currency-usd:{ .lg .middle } **Generar un peso**
 
@@ -108,7 +116,7 @@ A medida que la plataforma madure, podremos hacer esta información más concret
 
 | Forma | Cómo ayudas | Recibes algo a cambio |
 | --- | --- | --- |
-| 🧠 **Financiar una neurona** | Aporte único | El mismo contenido abierto que todos |
+| 🧠 **Financiar una neurona** | Aporte único mediante Buy Me a Coffee | El mismo contenido abierto que todos |
 | 🪙 **Generar un peso** | Ver voluntariamente publicidad | El mismo contenido abierto que todos |
 | 🧪 **Alimenta el laboratorio** | Aporte recurrente | El mismo contenido abierto que todos |
 
@@ -116,7 +124,7 @@ La diferencia está en **cómo quieres apoyar**, no en cuánto acceso obtienes.
 
 ---
 
-!!! note "Estamos preparando los mecanismos de pago"
-    Esta página ya define cómo queremos que funcione el apoyo a Teaching.
+!!! note "Estado de los mecanismos de apoyo"
+    **Financiar una neurona** ya está preparado para Buy Me a Coffee y se habilitará al configurar su URL pública.
 
-    Los enlaces de aporte único, publicidad voluntaria y sponsorship recurrente se irán habilitando a medida que configuremos proveedores compatibles con esta filosofía.
+    **Generar un peso** y **Alimenta el laboratorio** siguen en exploración/preparación.
