@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {{ super() }}
+
+  {% if page and page.url != "" and page.url != "support/" and not page.meta.hide_support %}
+    {% include "partials/support-cta.html" %}
+  {% endif %}
+{% endblock %}

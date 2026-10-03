@@ -6,6 +6,7 @@ repo_name: HernanFAR/teaching
 
 theme:
   name: material
+  custom_dir: overrides
   language: es
   features:
     - navigation.tabs
@@ -31,6 +32,7 @@ theme:
 
 nav:
   - Inicio: index.md
+  - Cómo enseñamos: about/how-we-teach.md
   - Lecciones:
       - lessons/index.md
       - Clean Architecture:
@@ -38,6 +40,7 @@ nav:
           - Instrucciones de generación: lessons/clean-architecture/generation-instructions.md
   - Guías:
       - guides/index.md
+  - Apoyar: support/index.md
 
 markdown_extensions:
   - admonition
