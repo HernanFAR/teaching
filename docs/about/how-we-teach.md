@@ -204,37 +204,85 @@ No son leyes universales de ingeniería de software.
 
 Son compromisos sobre **cómo queremos enseñar**.
 
-### No mover una línea sin una causa
+<div class="commandments-grid">
+
+<div class="commandment">
+<span class="commandment__number">I</span>
+<div class="commandment__body">
+
+<div class="commandment__title">No mover una línea sin una causa</div>
 
 Si agregamos una interfaz, una capa o una abstracción, deberías poder señalar el problema que hizo útil ese cambio.
 
-### El código inicial puede estar bien
+</div>
+</div>
+
+<div class="commandment">
+<span class="commandment__number">II</span>
+<div class="commandment__body">
+
+<div class="commandment__title">El código inicial puede estar bien</div>
 
 No necesitamos convertir la primera versión en un desastre artificial para justificar una arquitectura más sofisticada.
 
 A veces una solución sencilla es exactamente la solución correcta.
 
-### Nombrar después de entender
+</div>
+</div>
+
+<div class="commandment">
+<span class="commandment__number">III</span>
+<div class="commandment__body">
+
+<div class="commandment__title">Nombrar después de entender</div>
 
 Siempre que podamos, queremos que primero aparezca la intuición y después el término formal.
 
-### Preguntar "¿y si no hacemos nada?"
+</div>
+</div>
+
+<div class="commandment">
+<span class="commandment__number">IV</span>
+<div class="commandment__body">
+
+<div class="commandment__title">Preguntar “¿y si no hacemos nada?”</div>
 
 Una decisión se entiende mejor cuando también conocemos el costo de no tomarla.
 
-### Enseñar cuándo **no** usar algo
+</div>
+</div>
+
+<div class="commandment">
+<span class="commandment__number">V</span>
+<div class="commandment__body">
+
+<div class="commandment__title">Enseñar cuándo no usar algo</div>
 
 Saber aplicar un patrón es útil.
 
 Saber cuándo sería sobrearquitectura es todavía más útil.
 
-### Una visual, una pregunta
+</div>
+</div>
+
+<div class="commandment">
+<span class="commandment__number">VI</span>
+<div class="commandment__body">
+
+<div class="commandment__title">Una visual, una pregunta</div>
 
 Un diagrama debería ayudarte a ver algo específico.
 
 Si necesita explicar cinco ideas al mismo tiempo, probablemente necesitamos cinco visuales más pequeños.
 
-### Cambiar una variable
+</div>
+</div>
+
+<div class="commandment">
+<span class="commandment__number">VII</span>
+<div class="commandment__body">
+
+<div class="commandment__title">Cambiar una variable</div>
 
 ¿Qué pasa si reemplazamos HTTP por una interfaz de línea de comandos (CLI)?
 
@@ -244,7 +292,14 @@ Si necesita explicar cinco ideas al mismo tiempo, probablemente necesitamos cinc
 
 Cambiar una sola condición nos permite descubrir qué partes del diseño eran esenciales y cuáles eran accidentales.
 
-### Distinguir hechos de preferencias
+</div>
+</div>
+
+<div class="commandment">
+<span class="commandment__number">VIII</span>
+<div class="commandment__body">
+
+<div class="commandment__title">Distinguir hechos de preferencias</div>
 
 No todo lo que hacemos en software es una ley.
 
@@ -252,12 +307,23 @@ Hay propiedades técnicas, restricciones, convenciones, heurísticas y preferenc
 
 Intentaremos decir cuál es cuál.
 
-### Mostrar el razonamiento, no solamente el resultado
+</div>
+</div>
+
+<div class="commandment">
+<span class="commandment__number">IX</span>
+<div class="commandment__body">
+
+<div class="commandment__title">Mostrar el razonamiento, no solamente el resultado</div>
 
 El código final es un artefacto.
 
 Lo que queremos enseñar es el camino.
 
+</div>
+</div>
+
+</div>
 ---
 
 ## Y sí: usamos IA
