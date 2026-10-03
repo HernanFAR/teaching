@@ -40,7 +40,9 @@ nav:
           - Instrucciones de generación: lessons/clean-architecture/generation-instructions.md
   - Guías:
       - guides/index.md
-  - Apoyar: support/index.md
+  - Apoyar:
+      - support/index.md
+      - Generar un peso: support/generar-un-peso.md
 
 markdown_extensions:
   - admonition
@@ -62,9 +64,18 @@ markdown_extensions:
 
 extra:
   support:
-    # Set this to the public Buy Me a Coffee URL to enable
-    # "Financiar una neurona" everywhere that consumes this configuration.
-    buy_me_a_coffee_url: "https://buymeacoffee.com/hernanfar"
+    one_time:
+      provider: "Buy Me a Coffee"
+      url: "https://buymeacoffee.com/hernanfar"
+    recurring:
+      provider: "Buy Me a Coffee Monthly Support"
+      url: "https://buymeacoffee.com/hernanfar"
+    voluntary_ad:
+      enabled: false
+      sponsor_name: ""
+      sponsor_url: ""
+      headline: ""
+      message: ""
 
 extra_css:
   - stylesheets/extra.css
