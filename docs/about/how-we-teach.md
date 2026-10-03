@@ -326,7 +326,7 @@ Lo que queremos enseñar es el camino.
 </div>
 ---
 
-## Y sí: usamos IA, no queremos esconderlo.
+## El uso de IA en Teaching
 
 Parte del contenido de Teaching puede ser ideado, discutido, revisado, transformado o generado con ayuda de inteligencia artificial. Pero queremos usarla de una manera un poco distinta.
 
@@ -362,9 +362,8 @@ En lugar de pedir: "Explícame arquitectura limpia (Clean Architecture)", prefer
 
 Esa especificación puede reutilizarse para producir nuevas realizaciones. Por eso algunas lecciones publican también sus **instrucciones base de generación**: la **fuente pedagógica** desde la que esas realizaciones pueden derivarse.
 
----
 
-## Una fuente, muchas realizaciones
+### Una fuente, muchas realizaciones
 
 Una explicación publicada no tiene por qué ser la única forma de enseñar una idea.
 
