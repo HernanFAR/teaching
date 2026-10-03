@@ -77,14 +77,11 @@ flowchart LR
 
 Eso sería correcto.
 
-Incluso podríamos resumirlo con una regla conocida:
+Incluso podríamos resumirlo con una regla conocida: **las dependencias apuntan hacia adentro.**
 
-> **las dependencias apuntan hacia adentro.**
+Pero aparece una pregunta bastante importante: **¿por qué necesitábamos todo esto?**
 
-Pero aparece una pregunta bastante importante:
-
-> **¿por qué necesitábamos todo esto?**
-
+### Tener la respuesta no te da la experiencia
 Si nunca experimentaste el problema que motivó esas separaciones, la arquitectura corre el riesgo de convertirse en una receta.
 
 Por eso preferimos comenzar con algo mucho menos impresionante:
