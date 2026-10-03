@@ -6,6 +6,7 @@ repo_name: HernanFAR/teaching
 
 theme:
   name: material
+  custom_dir: overrides
   language: es
   features:
     - navigation.tabs
