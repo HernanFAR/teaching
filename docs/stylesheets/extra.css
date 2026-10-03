@@ -224,12 +224,33 @@
 }
 
 
-.md-typeset .grid.cards.pillars-grid > ul {
+
+
+.pillars-grid {
+  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.pillar-card {
+  padding: 1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.pillar-card > h3:first-child {
+  margin-top: 0;
+  padding-bottom: 0.65rem;
+  border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+  font-size: 0.9rem;
+}
+
+.pillar-card > p:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 59.9844em) {
-  .md-typeset .grid.cards.pillars-grid > ul {
+  .pillars-grid {
     grid-template-columns: 1fr;
   }
 }
