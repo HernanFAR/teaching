@@ -369,3 +369,46 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.pedagogical-spec {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.4rem;
+}
+
+.pedagogical-spec__item {
+  padding: 0.9rem 1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.pedagogical-spec__item:last-child {
+  grid-column: 1 / -1;
+}
+
+.pedagogical-spec__label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pedagogical-spec__item strong {
+  display: block;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 45rem) {
+  .pedagogical-spec {
+    grid-template-columns: 1fr;
+  }
+
+  .pedagogical-spec__item:last-child {
+    grid-column: auto;
+  }
+}
