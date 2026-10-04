@@ -30,7 +30,9 @@ La fuente no decide cada detalle visual. El diseño no debería inventar signifi
 
 Después de implementar, observamos lo que realmente ocurrió:
 
-<div class="teaching-flow">
+<div class="teaching-flow teaching-flow--multiline">
+
+<div class="teaching-flow__row">
 
 <div class="teaching-flow__step teaching-flow__step--numbered">
 <span class="teaching-flow__marker">1</span>
@@ -46,7 +48,9 @@ Después de implementar, observamos lo que realmente ocurrió:
 <span>Decide qué forma debería tomar esa intención.</span>
 </div>
 
-<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+</div>
+
+<div class="teaching-flow__row">
 
 <div class="teaching-flow__step teaching-flow__step--numbered">
 <span class="teaching-flow__marker">3</span>
@@ -60,6 +64,8 @@ Después de implementar, observamos lo que realmente ocurrió:
 <span class="teaching-flow__marker">4</span>
 <strong>Observación y revisión</strong>
 <span>La experiencia produce evidencia sobre lo que funcionó y lo que debe cambiar.</span>
+</div>
+
 </div>
 
 </div>
