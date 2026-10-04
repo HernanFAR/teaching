@@ -40,31 +40,97 @@ Sí necesitamos saber **qué debe permanecer estable aunque cambie la forma de e
 
 ## El recorrido debe tener causas
 
-Intentamos evitar una secuencia como:
+Preferimos un recorrido donde cada paso aparezca como respuesta a una necesidad visible.
 
-> capa → interfaz → patrón → arquitectura
+<div class="causal-anti-pattern">
+<span class="causal-anti-pattern__label">Secuencia que intentamos evitar</span>
+<div class="causal-anti-pattern__flow" aria-label="capa, luego interfaz, luego patrón, luego arquitectura">
+<span>capa</span><b aria-hidden="true">→</b><span>interfaz</span><b aria-hidden="true">→</b><span>patrón</span><b aria-hidden="true">→</b><span>arquitectura</span>
+</div>
+<small>Un listado de conceptos no explica todavía por qué apareció cada cosa.</small>
+</div>
 
-si todavía no sabemos por qué apareció cada cosa.
+En su lugar, preferimos que la explicación conserve una relación causal:
 
-Preferimos un recorrido parecido a este:
+<div class="causal-flow">
 
-```text
-algo funciona
-→ cambia una condición
-→ aparece una limitación
-→ exploramos qué podríamos hacer
-→ hacemos el cambio mínimo que ayuda
-→ ponemos nombre al concepto
-→ observamos sus costos y límites
-```
+<div class="causal-step">
+<span class="causal-step__number">1</span>
+<strong>Algo funciona</strong>
+<span>Partimos desde una solución suficientemente simple y razonable.</span>
+</div>
+
+<div class="causal-flow__arrow" aria-hidden="true">→</div>
+
+<div class="causal-step">
+<span class="causal-step__number">2</span>
+<strong>Cambia una condición</strong>
+<span>Aparece un requisito, más uso o un contexto diferente.</span>
+</div>
+
+<div class="causal-flow__arrow" aria-hidden="true">→</div>
+
+<div class="causal-step">
+<span class="causal-step__number">3</span>
+<strong>Aparece una limitación</strong>
+<span>La solución actual deja de responder bien a la nueva situación.</span>
+</div>
+
+<div class="causal-flow__arrow" aria-hidden="true">→</div>
+
+<div class="causal-step">
+<span class="causal-step__number">4</span>
+<strong>Exploramos</strong>
+<span>Consideramos qué podríamos hacer y qué consecuencias tendría.</span>
+</div>
+
+<div class="causal-flow__arrow" aria-hidden="true">→</div>
+
+<div class="causal-step">
+<span class="causal-step__number">5</span>
+<strong>Hacemos el cambio mínimo</strong>
+<span>Introducimos solamente lo necesario para responder al problema visible.</span>
+</div>
+
+<div class="causal-flow__arrow" aria-hidden="true">→</div>
+
+<div class="causal-step">
+<span class="causal-step__number">6</span>
+<strong>Ponemos nombre</strong>
+<span>El concepto aparece después de que ya existe algo que reconocer.</span>
+</div>
+
+<div class="causal-flow__arrow" aria-hidden="true">→</div>
+
+<div class="causal-step">
+<span class="causal-step__number">7</span>
+<strong>Observamos costos y límites</strong>
+<span>Vemos dónde ayuda, qué cuesta y cuándo deja de tener sentido.</span>
+</div>
+
+</div>
+
+<p class="visual-equivalent"><strong>En texto:</strong> partimos desde algo que funciona; cambia una condición; aparece una limitación; exploramos alternativas; hacemos el cambio mínimo útil; recién entonces ponemos nombre al concepto y observamos sus costos y límites.</p>
 
 No todas las lecciones necesitan seguir exactamente esos pasos.
 
-Por ejemplo, una lección podría comenzar con un endpoint que funciona, descubrir que las reglas de negocio empiezan a crecer, necesitar probarlas sin HTTP y recién entonces extraer una operación que podamos reconocer después como un **caso de uso**.
+<div class="causal-example">
+<span class="causal-example__label">Ejemplo concreto</span>
+<strong>Un endpoint funciona</strong>
+<span aria-hidden="true">→</span>
+<strong>crecen las reglas de negocio</strong>
+<span aria-hidden="true">→</span>
+<strong>necesitamos probarlas sin HTTP</strong>
+<span aria-hidden="true">→</span>
+<strong>recién entonces aparece algo que podemos reconocer como un caso de uso</strong>
+</div>
 
-La regla importante es otra:
+<p class="visual-equivalent"><strong>En texto:</strong> el caso de uso no aparece porque queríamos aplicar una arquitectura; aparece después de que una necesidad concreta vuelve útil separar esa operación.</p>
 
-> **un concepto no debería aparecer antes de que exista una razón visible para necesitarlo.**
+<div class="causal-rule">
+<span class="causal-rule__label">Regla importante</span>
+<strong>Un concepto no debería aparecer antes de que exista una razón visible para necesitarlo.</strong>
+</div>
 
 ## Una fuente puede tener muchas realizaciones
 
