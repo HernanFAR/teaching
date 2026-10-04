@@ -143,6 +143,62 @@ Eso puede incluir, entre otras cosas:
 - tiempo dedicado a investigar, escribir y desarrollar;
 - experimentos que puedan transformarse en nuevas lecciones o guías.
 
+### Si Teaching llega a sostenerse
+
+Queremos que Teaching pueda llegar a sostener el trabajo necesario para mantenerlo, investigarlo y seguir desarrollándolo de forma abierta.
+
+Si el proyecto alcanza un nivel de sostenibilidad que permita hacerlo responsablemente, nos gustaría dedicar parte de esa capacidad a ofrecer **acompañamiento gratuito a docentes que se acerquen a título personal** y quieran aprender a adaptar Teaching a su propia materia.
+
+!!! note "Una intención futura"
+    Este acompañamiento **todavía no es un servicio disponible ni una promesa de cupos**.
+
+    Primero necesitamos que Teaching pueda sostener razonablemente su propio trabajo y contar con capacidad real para ofrecerlo.
+
+<div class="teaching-grid teaching-grid--2" markdown>
+
+<div class="teaching-card" markdown>
+<span class="teaching-eyebrow">Docente individual</span>
+<strong>Queremos poder reducir esa barrera</strong>
+<span>Si una persona docente se acerca por iniciativa propia para aprender a aplicar Teaching a su enseñanza, nos gustaría poder acompañarla sin costo cuando exista capacidad suficiente.</span>
+</div>
+
+<div class="teaching-card" markdown>
+<span class="teaching-eyebrow">Uso institucional</span>
+<strong>Es un servicio profesional</strong>
+<span>Si una organización quiere capacitar a varios docentes, adaptar Teaching a varias asignaturas o desplegar el enfoque de forma sistemática, ese trabajo corresponde a un servicio profesional para la institución.</span>
+</div>
+
+</div>
+
+La intención del acompañamiento gratuito es ayudar a una persona que enseña, **no sustituir el presupuesto de organizaciones que quieren adoptar Teaching a escala**.
+
+Conceptualmente, la dirección de sostenibilidad es:
+
+<div class="teaching-flow">
+
+<div class="teaching-flow__step">
+<strong>Apoyo y servicios</strong>
+<small>Servicios profesionales, adopciones institucionales, patrocinios y apoyo voluntario.</small>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step">
+<strong>Sostenibilidad</strong>
+<small>Capacidad para sostener desarrollo abierto, investigación, infraestructura y trabajo humano.</small>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step teaching-flow__step--accent">
+<strong>Capacidad adicional</strong>
+<small>Si existe, queremos poder destinar parte de ella a acompañar gratuitamente a docentes individuales.</small>
+</div>
+
+</div>
+
+<p class="visual-equivalent"><strong>No es transaccional:</strong> apoyar Teaching no compra una sesión para una persona específica. Ayuda a construir una plataforma sostenible que, si llega a tener capacidad suficiente, pueda reducir esa barrera de acceso.</p>
+
 A medida que la plataforma madure, podremos hacer esta información más concreta y mantener visible cómo evoluciona su sostenibilidad.
 
 ---
