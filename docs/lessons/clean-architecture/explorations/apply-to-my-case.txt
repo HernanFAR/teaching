@@ -58,7 +58,11 @@ https://github.com/HernanFAR/teaching/tree/lesson/clean-architecture/docs/lesson
 
 Allí encontrarás la fuente pedagógica, el diseño de realización, el caso conductor, la evolución causal, la realización técnica, la evidencia de implementación y la publicación canónica.
 
-Usa esos artefactos como fuente de contexto y provenance cuando estén disponibles.
+Cuando estas referencias sean accesibles:
+- considera los artefactos de Teaching como la fuente primaria para reconstruir qué pertenece a la lección;
+- usa este texto como orientación operativa para realizar la exploración, no como reemplazo ni reinterpretación autoritativa de esos artefactos;
+- usa los artefactos como fuente de contexto y procedencia;
+- si encuentras una diferencia material entre este texto y los artefactos, no la armonices por suposición: señálala explícitamente.
 
 Si no puedes acceder a la carpeta o a alguno de sus archivos:
 - trabaja únicamente con el contexto incluido en este texto y con la necesidad concreta del estudiante;
