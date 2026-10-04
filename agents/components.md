@@ -49,7 +49,8 @@ Available modifiers:
 - `teaching-grid--2`: two columns;
 - `teaching-grid--3`: three columns;
 - `teaching-grid--stack-medium`: collapse a three-column composition earlier when cards need more room;
-- `teaching-grid--last-wide`: let the last child span the full row.
+- `teaching-grid--last-wide`: let the last child span the full row;
+- `teaching-grid--lateral-badges`: add extra horizontal clearance when child badges float over the left border.
 
 Use it to compose cards or items. Do not create a topic-specific grid class only to choose a column count.
 
@@ -167,11 +168,11 @@ Question:
 Use:
 
 ```text
-teaching-grid
+teaching-grid teaching-grid--lateral-badges
 └─ teaching-item teaching-item--criterion × N
 ```
 
-Use the lateral badge position to signal enumeration without suggesting that one criterion causes the next.
+Use the lateral badge position to signal enumeration without suggesting that one criterion causes the next. The grid modifier preserves enough space between columns for the badges to breathe.
 
 ### Sequential pressure or causal steps
 
