@@ -622,7 +622,6 @@
   border-radius: var(--teaching-radius);
 }
 
-.causal-anti-pattern__label,
 .causal-example__label,
 .causal-rule__label {
   display: block;
