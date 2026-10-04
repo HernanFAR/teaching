@@ -622,7 +622,6 @@
   border-radius: var(--teaching-radius);
 }
 
-.causal-example__label,
 .causal-rule__label {
   display: block;
   margin-bottom: 0.55rem;
@@ -717,12 +716,7 @@
   border-radius: var(--teaching-radius);
 }
 
-.causal-example__label {
-  grid-column: 1 / -1;
-  margin-bottom: 0;
-}
-
-.causal-example > span:not(.causal-example__label) {
+.causal-example > span {
   color: var(--md-default-fg-color--light);
 }
 
@@ -753,7 +747,7 @@
     grid-template-columns: 1fr;
   }
 
-  .causal-example > span:not(.causal-example__label) {
+  .causal-example > span {
     display: none;
   }
 }
