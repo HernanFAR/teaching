@@ -12,22 +12,22 @@ En Teaching, esa fuente se expresa normalmente mediante unas **instrucciones bas
 
 Una buena fuente debería dejar suficientemente claras tres cosas:
 
-<div class="source-dimensions">
+<div class="teaching-grid teaching-grid--3 teaching-grid--stack-medium">
 
-<div class="source-dimension">
-<span class="source-dimension__label">Intención</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Intención</span>
 <strong>Qué queremos que la persona comprenda</strong>
 <span>Qué debería entender al terminar y qué todavía no necesita aprender.</span>
 </div>
 
-<div class="source-dimension">
-<span class="source-dimension__label">Recorrido</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Recorrido</span>
 <strong>Qué debe ocurrir para que esa comprensión tenga sentido</strong>
 <span>Qué problemas o tensiones deben aparecer y en qué orden importa que aparezcan.</span>
 </div>
 
-<div class="source-dimension">
-<span class="source-dimension__label">Límites y acceso</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Límites y acceso</span>
 <strong>Qué no debería desaparecer de la explicación</strong>
 <span>Qué costos, límites y condiciones de accesibilidad o acceso material debemos respetar.</span>
 </div>
@@ -55,56 +55,56 @@ En su lugar, preferimos que la explicación conserve una relación causal:
 
 <div class="causal-flow">
 
-<div class="causal-step">
-<span class="causal-step__number">1</span>
+<div class="teaching-item teaching-item--stacked">
+<span class="teaching-item__marker">1</span>
 <strong>Algo funciona</strong>
 <span>Partimos desde una solución suficientemente simple y razonable.</span>
 </div>
 
 <div class="causal-flow__arrow" aria-hidden="true">→</div>
 
-<div class="causal-step">
-<span class="causal-step__number">2</span>
+<div class="teaching-item teaching-item--stacked">
+<span class="teaching-item__marker">2</span>
 <strong>Cambia una condición</strong>
 <span>Aparece un requisito, más uso o un contexto diferente.</span>
 </div>
 
 <div class="causal-flow__arrow" aria-hidden="true">→</div>
 
-<div class="causal-step">
-<span class="causal-step__number">3</span>
+<div class="teaching-item teaching-item--stacked">
+<span class="teaching-item__marker">3</span>
 <strong>Aparece una limitación</strong>
 <span>La solución actual deja de responder bien a la nueva situación.</span>
 </div>
 
 <div class="causal-flow__arrow" aria-hidden="true">→</div>
 
-<div class="causal-step">
-<span class="causal-step__number">4</span>
+<div class="teaching-item teaching-item--stacked">
+<span class="teaching-item__marker">4</span>
 <strong>Exploramos</strong>
 <span>Consideramos qué podríamos hacer y qué consecuencias tendría.</span>
 </div>
 
 <div class="causal-flow__arrow" aria-hidden="true">→</div>
 
-<div class="causal-step">
-<span class="causal-step__number">5</span>
+<div class="teaching-item teaching-item--stacked">
+<span class="teaching-item__marker">5</span>
 <strong>Hacemos el cambio mínimo</strong>
 <span>Introducimos solamente lo necesario para responder al problema visible.</span>
 </div>
 
 <div class="causal-flow__arrow" aria-hidden="true">→</div>
 
-<div class="causal-step">
-<span class="causal-step__number">6</span>
+<div class="teaching-item teaching-item--stacked">
+<span class="teaching-item__marker">6</span>
 <strong>Ponemos nombre</strong>
 <span>El concepto aparece después de que ya existe algo que reconocer.</span>
 </div>
 
 <div class="causal-flow__arrow" aria-hidden="true">→</div>
 
-<div class="causal-step">
-<span class="causal-step__number">7</span>
+<div class="teaching-item teaching-item--stacked">
+<span class="teaching-item__marker">7</span>
 <strong>Observamos costos y límites</strong>
 <span>Vemos dónde ayuda, qué cuesta y cuándo deja de tener sentido.</span>
 </div>
@@ -115,16 +115,16 @@ En su lugar, preferimos que la explicación conserve una relación causal:
 
 No todas las lecciones necesitan seguir exactamente esos pasos. Un ejemplo pequeño de ese recorrido podría verse así:
 
-<div class="causal-example">
-<strong>Un endpoint funciona</strong>
-<span aria-hidden="true">→</span>
-<strong>crecen las reglas de negocio</strong>
-<span aria-hidden="true">→</span>
-<strong>necesitamos probarlas sin HTTP</strong>
-<span aria-hidden="true">→</span>
-<strong>aparece una operación separable</strong>
-<span aria-hidden="true">→</span>
-<strong>la reconocemos como un caso de uso</strong>
+<div class="teaching-flow teaching-flow--compact">
+<div class="teaching-flow__step"><strong>Un endpoint funciona</strong></div>
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+<div class="teaching-flow__step"><strong>crecen las reglas de negocio</strong></div>
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+<div class="teaching-flow__step"><strong>necesitamos probarlas sin HTTP</strong></div>
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+<div class="teaching-flow__step"><strong>aparece una operación separable</strong></div>
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+<div class="teaching-flow__step"><strong>la reconocemos como un caso de uso</strong></div>
 </div>
 
 <p class="visual-equivalent"><strong>En texto:</strong> el caso de uso no aparece porque queríamos aplicar una arquitectura; aparece después de que una necesidad concreta vuelve útil separar esa operación.</p>
@@ -133,40 +133,40 @@ No todas las lecciones necesitan seguir exactamente esos pasos. Un ejemplo peque
 
 La misma intención pedagógica puede expresarse de distintas formas.
 
-<div class="realization-variables">
+<div class="teaching-grid teaching-grid--3">
 
-<div class="realization-variable">
-<span class="realization-variable__label">Lenguaje</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Lenguaje</span>
 <strong>C#, Python u otro</strong>
 <span>Cambia la herramienta, no aquello que intentamos enseñar.</span>
 </div>
 
-<div class="realization-variable">
-<span class="realization-variable__label">Dominio</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Dominio</span>
 <strong>Órdenes, videojuegos, inventario...</strong>
 <span>El contexto puede acercar la idea sin alterar su recorrido esencial.</span>
 </div>
 
-<div class="realization-variable">
-<span class="realization-variable__label">Dificultad</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Dificultad</span>
 <strong>Más o menos profundidad</strong>
 <span>Podemos adaptar cuánto asumimos y cuánto acompañamiento necesita la persona.</span>
 </div>
 
-<div class="realization-variable">
-<span class="realization-variable__label">Representación</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Representación</span>
 <strong>Texto, código, diagramas o ejercicios</strong>
 <span>La forma cambia según qué ayude mejor a comprender la tensión actual.</span>
 </div>
 
-<div class="realization-variable">
-<span class="realization-variable__label">Interacción</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Interacción</span>
 <strong>Lectura, tutoría o práctica guiada</strong>
 <span>La misma fuente puede convertirse en experiencias de aprendizaje distintas.</span>
 </div>
 
-<div class="realization-variable">
-<span class="realization-variable__label">Ayuda</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Ayuda</span>
 <strong>Más o menos andamiaje</strong>
 <span>Podemos variar pistas, ejemplos y apoyo sin adelantar conceptos innecesarios.</span>
 </div>
@@ -177,28 +177,28 @@ Eso nos permite producir realizaciones distintas sin perder necesariamente la mi
 
 Aunque la forma cambie, hay algunas cosas que deberían permanecer reconocibles:
 
-<div class="realization-invariants">
+<div class="teaching-grid teaching-grid--2">
 
-<div class="realization-invariant">
-<span class="realization-invariant__number">1</span>
+<div class="teaching-item teaching-item--quiet">
+<span class="teaching-item__marker">1</span>
 <strong>Intención pedagógica</strong>
 <span>Qué debería comprender la persona al terminar.</span>
 </div>
 
-<div class="realization-invariant">
-<span class="realization-invariant__number">2</span>
+<div class="teaching-item teaching-item--quiet">
+<span class="teaching-item__marker">2</span>
 <strong>Tensiones esenciales</strong>
 <span>Qué problemas deben aparecer para que el concepto tenga una causa visible.</span>
 </div>
 
-<div class="realization-invariant">
-<span class="realization-invariant__number">3</span>
+<div class="teaching-item teaching-item--quiet">
+<span class="teaching-item__marker">3</span>
 <strong>Límites</strong>
 <span>Qué costos, contrafactuales y condiciones no deberían desaparecer.</span>
 </div>
 
-<div class="realization-invariant">
-<span class="realization-invariant__number">4</span>
+<div class="teaching-item teaching-item--quiet">
+<span class="teaching-item__marker">4</span>
 <strong>Momento de introducir conceptos</strong>
 <span>Qué todavía no corresponde nombrar o enseñar.</span>
 </div>
@@ -211,30 +211,30 @@ La fuente tampoco es inmutable.
 
 Una realización puede enseñarnos que la secuencia no funciona como esperábamos, que una tensión aparece demasiado pronto, que falta una transición o que estamos intentando enseñar demasiadas cosas a la vez.
 
-<div class="source-feedback">
+<div class="teaching-flow">
 
-<div class="source-feedback__step">
+<div class="teaching-flow__step">
 <strong>Fuente pedagógica</strong>
 <span>Declara qué intentamos preservar.</span>
 </div>
 
-<div class="source-feedback__arrow" aria-hidden="true">→</div>
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
-<div class="source-feedback__step">
+<div class="teaching-flow__step">
 <strong>Realización</strong>
 <span>Expresa esa intención de una forma concreta.</span>
 </div>
 
-<div class="source-feedback__arrow" aria-hidden="true">→</div>
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
-<div class="source-feedback__step">
+<div class="teaching-flow__step">
 <strong>Evidencia</strong>
 <span>La experiencia revela qué funcionó, qué faltó o qué apareció demasiado pronto.</span>
 </div>
 
-<div class="source-feedback__arrow" aria-hidden="true">↺</div>
+<div class="teaching-flow__arrow" aria-hidden="true">↺</div>
 
-<div class="source-feedback__step source-feedback__step--review">
+<div class="teaching-flow__step teaching-flow__step--accent">
 <strong>Revisión de la fuente</strong>
 <span>Actualizamos la intención o el recorrido cuando la evidencia lo justifica.</span>
 </div>
@@ -249,40 +249,40 @@ No queremos diseñar una explicación y preguntarnos por accesibilidad recién a
 
 Mientras generamos una lección intentamos no asumir innecesariamente ciertas condiciones de acceso:
 
-<div class="access-assumptions">
+<div class="teaching-grid teaching-grid--3">
 
-<div class="access-assumption">
-<span class="access-assumption__label">Costo</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Costo</span>
 <strong>Software o servicios pagados</strong>
 <span>No asumimos que una persona pueda pagar herramientas, plataformas o suscripciones para aprender el concepto.</span>
 </div>
 
-<div class="access-assumption">
-<span class="access-assumption__label">Hardware</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Hardware</span>
 <strong>Equipos potentes</strong>
 <span>No asumimos computadores de alto rendimiento cuando el objetivo pedagógico puede alcanzarse con recursos más modestos.</span>
 </div>
 
-<div class="access-assumption">
-<span class="access-assumption__label">Conectividad</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Conectividad</span>
 <strong>Conexiones rápidas o estables</strong>
 <span>No convertimos una buena conexión a internet en un requisito implícito cuando no es técnicamente necesaria.</span>
 </div>
 
-<div class="access-assumption">
-<span class="access-assumption__label">Trayectoria</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Trayectoria</span>
 <strong>Educación formal o certificaciones</strong>
 <span>No usamos universidad, certificaciones o formación costosa como filtro innecesario para acceder a una explicación.</span>
 </div>
 
-<div class="access-assumption">
-<span class="access-assumption__label">Idioma</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Idioma</span>
 <strong>Dominio previo del inglés</strong>
 <span>No asumimos que una persona ya comprende términos en inglés que todavía no hemos explicado.</span>
 </div>
 
-<div class="access-assumption">
-<span class="access-assumption__label">Accesibilidad</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Accesibilidad</span>
 <strong>Condiciones visuales, físicas o sensoriales ideales</strong>
 <span>No diseñamos la experiencia suponiendo que todas las personas acceden al contenido de la misma forma.</span>
 </div>
@@ -291,28 +291,28 @@ Mientras generamos una lección intentamos no asumir innecesariamente ciertas co
 
 En su lugar, intentamos tomar decisiones de generación que reduzcan barreras innecesarias:
 
-<div class="access-practices">
+<div class="teaching-grid teaching-grid--2">
 
-<div class="access-practice">
-<span class="access-practice__number">1</span>
+<div class="teaching-item">
+<span class="teaching-item__marker">1</span>
 <strong>Intuición antes del tecnicismo</strong>
 <span>Cuando un término técnico todavía no es necesario, preferimos construir primero la intuición que lo vuelve comprensible.</span>
 </div>
 
-<div class="access-practice">
-<span class="access-practice__number">2</span>
+<div class="teaching-item">
+<span class="teaching-item__marker">2</span>
 <strong>Traducción visible</strong>
 <span>Cuando usamos un término en inglés que importa para comprender la idea, mostramos también su significado en español.</span>
 </div>
 
-<div class="access-practice">
-<span class="access-practice__number">3</span>
+<div class="teaching-item">
+<span class="teaching-item__marker">3</span>
 <strong>Acceso alternativo</strong>
 <span>Cuando una representación visual contiene información esencial, procuramos que exista una forma textual de acceder a ella.</span>
 </div>
 
-<div class="access-practice">
-<span class="access-practice__number">4</span>
+<div class="teaching-item">
+<span class="teaching-item__marker">4</span>
 <strong>Diseño desde el inicio</strong>
 <span>La accesibilidad y las condiciones materiales forman parte de la generación de la lección, no de una revisión posterior.</span>
 </div>
@@ -385,52 +385,52 @@ Preferimos que esas dudas permanezcan **visibles** antes que rellenarlas con una
 
 Revisamos estas preguntas para comprobar que la lección siga siendo clara, útil y justificable:
 
-<div class="publication-checks">
+<div class="teaching-grid teaching-grid--2">
 
-<div class="publication-check">
-<span class="publication-check__number">1</span>
+<div class="teaching-item">
+<span class="teaching-item__marker">1</span>
 <strong>¿Podemos rastrear cada concepto hasta el problema que lo hizo útil?</strong>
 <span>La explicación debería dejar visible qué necesidad motivó el concepto y por qué vale la pena aprenderlo.</span>
 </div>
 
-<div class="publication-check">
-<span class="publication-check__number">2</span>
+<div class="teaching-item">
+<span class="teaching-item__marker">2</span>
 <strong>¿Lo introdujimos solamente porque “así se hace”?</strong>
 <span>No queremos incluir algo solo por tradición. Debe existir una razón actual y visible para enseñarlo.</span>
 </div>
 
-<div class="publication-check">
-<span class="publication-check__number">3</span>
+<div class="teaching-item">
+<span class="teaching-item__marker">3</span>
 <strong>¿Mostramos qué ocurriría si no hiciéramos el cambio?</strong>
 <span>Cuando ayuda a comprenderlo, mostramos el contrafactual para que el valor de la técnica no dependa de memorizarla.</span>
 </div>
 
-<div class="publication-check">
-<span class="publication-check__number">4</span>
+<div class="teaching-item">
+<span class="teaching-item__marker">4</span>
 <strong>¿Explicamos cuándo la técnica puede no ser necesaria?</strong>
 <span>Una técnica también se entiende por sus límites y por los contextos donde deja de ser la mejor opción.</span>
 </div>
 
-<div class="publication-check">
-<span class="publication-check__number">5</span>
+<div class="teaching-item">
+<span class="teaching-item__marker">5</span>
 <strong>¿Distinguimos hechos de heurísticas y preferencias?</strong>
 <span>Separamos lo comprobable de una regla práctica, una decisión contextual o una preferencia.</span>
 </div>
 
-<div class="publication-check">
-<span class="publication-check__number">6</span>
+<div class="teaching-item">
+<span class="teaching-item__marker">6</span>
 <strong>¿Los recursos visuales responden preguntas concretas?</strong>
 <span>Un recurso visual debería tener una función pedagógica y seguir siendo comprensible por otra vía cuando contiene información esencial.</span>
 </div>
 
-<div class="publication-check">
-<span class="publication-check__number">7</span>
+<div class="teaching-item">
+<span class="teaching-item__marker">7</span>
 <strong>¿Alguien puede seguir el recorrido sin conocer el nombre formal?</strong>
 <span>La explicación debería construir la intuición antes de exigir que la persona conozca el término técnico.</span>
 </div>
 
-<div class="publication-check">
-<span class="publication-check__number">8</span>
+<div class="teaching-item">
+<span class="teaching-item__marker">8</span>
 <strong>¿Estamos introduciendo barreras innecesarias?</strong>
 <span>No deberíamos añadir barreras económicas, lingüísticas, educativas o de accesibilidad que no sean técnicamente necesarias.</span>
 </div>
