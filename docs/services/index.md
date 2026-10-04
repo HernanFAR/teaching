@@ -329,16 +329,34 @@ Ambos pueden combinarse cuando tenga sentido. Por ejemplo, podemos construir jun
 
 Teaching ya demuestra esta separación en casos reales, pero todavía estamos investigando qué partes pueden generalizarse entre dominios y cómo comprobar que realizaciones distintas preservan suficiente semántica pedagógica.
 
-Por eso **no prometemos** que:
+<div class="teaching-research-boundary">
 
-- funcione igual para cualquier materia;
-- exista una metodología universal;
-- una fuente capture completamente conocimiento tácito;
-- cualquier proceso educativo pueda automatizarse;
-- un LLM pueda reemplazar a especialistas o docentes;
-- adoptar este enfoque garantice mejores resultados educativos.
+<div class="teaching-research-boundary__column">
 
-No necesitamos fingir que esas preguntas ya están cerradas para poder hacer trabajo útil hoy.
+<span class="teaching-eyebrow">Hoy podemos sostener</span>
+
+- modelar una fuente pedagógica explícita;
+- producir realizaciones distintas desde una intención común;
+- usar esas realizaciones como evidencia para revisar la fuente;
+- trabajar de forma útil incluso cuando la representación siga siendo Markdown u otra documentación estructurada.
+
+</div>
+
+<div class="teaching-research-boundary__column">
+
+<span class="teaching-eyebrow">Seguimos investigando</span>
+
+- ¿cuánto puede generalizarse entre dominios?;
+- ¿cuánto conocimiento tácito puede capturarse?;
+- ¿cómo comprobamos que una realización preservó suficiente semántica?;
+- ¿qué partes del proceso pueden automatizarse sin desplazar autoridad pedagógica humana?;
+- ¿qué condiciones hacen que este enfoque mejore realmente una experiencia educativa?
+
+</div>
+
+</div>
+
+> **Podemos hacer trabajo útil hoy sin fingir que estas preguntas ya están resueltas.**
 
 ---
 
