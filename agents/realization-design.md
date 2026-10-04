@@ -71,7 +71,36 @@ If no candidate case satisfies the source constraints cleanly, treat that as evi
 
 If the source explicitly fixes the conductor case as an invariant, preserve it and do not substitute another domain during realization design without revising the source first.
 
-### 2. Editorial structure
+### 2. Concretize the causal path
+
+After selecting a conductor case, concretize the source-level causal path for this realization before deciding the editorial or visual structure.
+
+For each essential tension in the pedagogical source, define the realization-specific:
+
+- current state;
+- new pressure or changed condition;
+- observable limitation;
+- minimum useful change;
+- concept name, if the change has now earned one;
+- relevant counterfactual;
+- continuity with the previous stage.
+
+Keep the same observable objective across the sequence unless the source explicitly requires otherwise. A new stage may add conditions, mechanisms, or entry points, but it must not silently replace the problem simply to justify the next abstraction.
+
+Before moving on from each stage, verify:
+
+1. what behavior or intent is being preserved;
+2. what changed in the environment or requirements;
+3. why the current form is now insufficient or uncomfortable;
+4. why the proposed change is the minimum response to that pressure;
+5. which formal name, if any, becomes useful only after the change;
+6. why not making the change could still be reasonable in a simpler context.
+
+Do not design the page around a causal sequence that only works because pressures were fabricated for the example.
+
+If the selected conductor case cannot traverse the source path without artificial transitions, revise the realization case or the pedagogical source before continuing.
+
+### 3. Editorial structure
 
 Decide which parts of the source are best expressed as:
 
@@ -99,7 +128,7 @@ A useful table of contents should let a learner scan the large argument first an
 
 Do not force every idea into cards or diagrams. Representation should follow the pedagogical job of the content.
 
-### 3. Visual question
+### 4. Visual question
 
 Every non-trivial visual representation should answer a concrete question.
 
@@ -113,7 +142,7 @@ Examples:
 
 If a visual does not answer a useful question, prefer simpler text.
 
-### 4. Component choice
+### 5. Component choice
 
 Before implementing visual structure, read `components.md` and reuse the shared Teaching vocabulary.
 
@@ -129,7 +158,7 @@ Examples:
 
 Introduce custom HTML/CSS only when an existing component would distort the meaning or materially reduce clarity.
 
-### 5. Accessibility and material access
+### 6. Accessibility and material access
 
 Realization design must preserve the access constraints declared by the source.
 
@@ -142,7 +171,7 @@ In particular:
 - text density and contrast must remain readable;
 - the design must not add unnecessary paid or resource-heavy dependencies.
 
-### 6. Responsive behavior
+### 7. Responsive behavior
 
 A realization specification should describe what happens when space becomes scarce.
 
@@ -153,7 +182,7 @@ Prefer:
 - textual continuity when arrows or decorative connectors disappear;
 - stable reading order across layouts.
 
-### 7. Visual rhythm
+### 8. Visual rhythm
 
 Avoid making every section look identical.
 
@@ -167,7 +196,7 @@ Vary representation when the semantic job changes:
 - admonitions for emphasis;
 - prose for transitions and interpretation.
 
-### 8. Exploratory mockups
+### 9. Exploratory mockups
 
 Visual mockups, including AI-generated images, may be used as **disposable exploration artifacts**.
 
@@ -206,6 +235,8 @@ Before treating a realization design as ready for publication, verify:
 - Does the page avoid repetitive cardification?
 - Can the learner distinguish source invariants from realization choices?
 - If a conductor case was selected by the realization, was it explicitly validated against the source constraints?
+- Was the source-level causal path concretized into realization-specific states, pressures, minimum changes, and counterfactuals before visual design?
+- Can each stage be traversed without changing the problem or fabricating a pressure merely to justify an abstraction?
 - Did implementation reveal evidence that should revise the pedagogical source?
 
 If implementation reveals a problem in the source, stop and make that revision visible instead of compensating for it only in presentation.
