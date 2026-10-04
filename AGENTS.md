@@ -7,7 +7,8 @@ Este archivo define los principios generales de Teaching.
 Las instrucciones operativas específicas para agentes viven en `agents/`. Antes de generar, derivar o revisar una lección, leer:
 
 - `agents/README.md`;
-- `agents/lesson-generation.md`.
+- `agents/lesson-generation.md`;
+- `agents/realization-design.md`.
 
 La documentación bajo `docs/` es la realización pública para humanos. No reemplaza las reglas operativas de `agents/`.
 
@@ -182,6 +183,37 @@ Esto se ve reflejado, entre otras cosas, en:
 - distinguir cuidadosamente entre una limitación técnica real y una barrera económica, lingüística, educativa o de accesibilidad que nosotros mismos estemos introduciendo.
 
 La accesibilidad y las condiciones materiales no son una fase posterior de publicación. Deben considerarse mientras se diseña y genera la explicación.
+
+---
+
+## Pipeline de Teaching
+
+Separar la **fuente pedagógica** de su **diseño de realización**.
+
+La fuente responde:
+
+> ¿qué queremos enseñar y qué debe permanecer?
+
+El diseño de realización responde:
+
+> ¿cómo hacemos visible esa intención en una experiencia concreta?
+
+Usar como flujo de referencia:
+
+```text
+solicitud
+→ fuente pedagógica
+→ diseño de realización
+→ implementación
+→ revisión
+→ publicación
+→ evidencia
+↺ posible revisión de la fuente
+```
+
+No usar decisiones visuales para ocultar incertidumbre pedagógica. Si implementar una realización revela que una tensión aparece demasiado pronto, que falta una transición o que la intención era demasiado amplia, tratarlo como evidencia sobre la fuente.
+
+Los bocetos visuales —incluidas imágenes generadas con IA— pueden utilizarse para explorar composición, jerarquía y agrupación. Son artefactos desechables de exploración, no fuente de verdad ni implementación final.
 
 ---
 
