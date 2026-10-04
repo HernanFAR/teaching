@@ -114,7 +114,9 @@ Structure:
 
 Use `teaching-flow__step--accent` when one node needs semantic emphasis.
 
-Use `teaching-flow--compact` for short, text-heavy nodes.
+When explicit ordering helps, place an optional `teaching-flow__marker` inside the step. It renders as a small badge at the step's top-left; do not use bare numbers as decorative text.
+
+Use `teaching-flow--compact` for short, text-heavy nodes. The compact recipe presents the flow as one shared container instead of a row of narrow individual cards.
 
 If the flow has branching, cycles that need explicit geometry, or relationships that cannot remain clear when stacked on mobile, consider Mermaid or a purpose-built representation instead.
 
