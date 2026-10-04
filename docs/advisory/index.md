@@ -194,7 +194,7 @@ Partimos preguntando: **¿Qué necesitas preservar, qué cambió y qué presión
 
 ---
 
-## Solicitudes
+### Solicitudes
 
 Si quieres solicitar una asesoría 1:1, puedes escribir directamente a:
 
