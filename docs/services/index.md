@@ -1,4 +1,5 @@
 ---
+hide_support: true
 title: Servicios
 hide:
   - navigation
