@@ -21,6 +21,8 @@ Do not create a new component only because a section has a new topic name.
 
 Use for narrative, transitions, ordinary lists, headings, tables, code blocks, and content that gains no clarity from additional visual structure.
 
+Headings own the document's semantic and table-of-contents hierarchy. Components do not replace that hierarchy. Establish major arguments with `##` and subordinate developments with `###` before choosing cards, items, flows, or other visual recipes.
+
 ### Admonitions
 
 Use MkDocs Material admonitions for semantic emphasis such as:
