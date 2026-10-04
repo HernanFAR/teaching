@@ -244,7 +244,7 @@ La siguiente etapa comprobará si esta relación fue una excepción específica 
 
 ## Etapa 5 · Aparece otra capacidad externa
 
-Estado: **materializado; validación de CI en curso**.
+Estado: **materializado y validado por CI**.
 
 Artefacto:
 
@@ -308,19 +308,24 @@ La registramos como evidencia y mantenemos el límite pedagógico explícito.
 
 ### Validación
 
-El workflow `Clean Architecture example` run `#45` incluye:
+El workflow `Clean Architecture example` run `#45` terminó en `success`.
+
+Compilaron correctamente:
 
 - entrada web de la etapa 5;
 - entrada marketplace de la etapa 5;
 - receptor local del webhook;
-- todas las etapas anteriores.
+- ambas entradas de la etapa 4;
+- ambas entradas de la etapa 3;
+- etapa 2;
+- etapa 1.
 
-Al registrar esta evidencia el run permanece en cola, por lo que todavía no declaramos la etapa como validada por CI.
+### Consecuencia para el diseño
 
-### Consecuencia provisional para el diseño
+La etapa 5 queda validada.
 
-La implementación sostiene la hipótesis estructural de la etapa 5: persistencia no era una excepción.
+La implementación confirma que persistencia no era una excepción: la misma forma capacidad/realización reaparece con un mecanismo HTTP distinto.
 
-La misma forma capacidad/realización reaparece con un mecanismo HTTP distinto.
+No necesitamos revisar la fuente ni la evolución causal antes de avanzar.
 
-El avance a la etapa 6 queda condicionado únicamente a confirmar la compilación del snapshot completo en CI.
+El siguiente experimento será la **etapa 6**: distinguir reglas propias de la orden de la orquestación necesaria para crearla.
