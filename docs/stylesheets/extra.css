@@ -1221,8 +1221,8 @@
   line-height: 1.5;
 }
 
-.teaching-card > p:last-child {
-  margin-bottom: 0;
+.teaching-card > p {
+  margin: 0;
 }
 
 .teaching-eyebrow {
