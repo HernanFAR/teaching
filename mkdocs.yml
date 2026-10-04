@@ -39,8 +39,10 @@ nav:
       - Cómo diseñamos una realización: about/realization-design.md
   - Lecciones:
       - lessons/index.md
+      - Clean Architecture: lessons/clean-architecture/index.md
   - Guías:
       - guides/index.md
+      - Clean Architecture en uso real: guides/clean-architecture-real-use/index.md
   - Apoyar:
       - support/index.md
       - Generar un peso: support/generar-un-peso.md
@@ -83,3 +85,6 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/explorations.js

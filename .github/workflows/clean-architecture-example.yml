@@ -1,0 +1,64 @@
+name: Clean Architecture example
+
+on:
+  pull_request:
+    paths:
+      - "examples/clean-architecture/**"
+      - ".github/workflows/clean-architecture-example.yml"
+  push:
+    paths:
+      - "examples/clean-architecture/**"
+      - ".github/workflows/clean-architecture-example.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        include:
+          - name: stage-01
+            project: examples/clean-architecture/stage-01/Teaching.CleanArchitecture.Stage01.csproj
+          - name: stage-02
+            project: examples/clean-architecture/stage-02/Teaching.CleanArchitecture.Stage02.csproj
+          - name: stage-03-web
+            project: examples/clean-architecture/stage-03/Teaching.CleanArchitecture.Stage03.Web/Teaching.CleanArchitecture.Stage03.Web.csproj
+          - name: stage-03-marketplace
+            project: examples/clean-architecture/stage-03/Teaching.CleanArchitecture.Stage03.Marketplace/Teaching.CleanArchitecture.Stage03.Marketplace.csproj
+          - name: stage-04-web
+            project: examples/clean-architecture/stage-04/Teaching.CleanArchitecture.Stage04.Web/Teaching.CleanArchitecture.Stage04.Web.csproj
+          - name: stage-04-marketplace
+            project: examples/clean-architecture/stage-04/Teaching.CleanArchitecture.Stage04.Marketplace/Teaching.CleanArchitecture.Stage04.Marketplace.csproj
+          - name: stage-05-web
+            project: examples/clean-architecture/stage-05/Teaching.CleanArchitecture.Stage05.Web/Teaching.CleanArchitecture.Stage05.Web.csproj
+          - name: stage-05-marketplace
+            project: examples/clean-architecture/stage-05/Teaching.CleanArchitecture.Stage05.Marketplace/Teaching.CleanArchitecture.Stage05.Marketplace.csproj
+          - name: stage-05-webhook-receiver
+            project: examples/clean-architecture/stage-05/Teaching.CleanArchitecture.Stage05.WebhookReceiver/Teaching.CleanArchitecture.Stage05.WebhookReceiver.csproj
+          - name: stage-06-web
+            project: examples/clean-architecture/stage-06/Teaching.CleanArchitecture.Stage06.Web/Teaching.CleanArchitecture.Stage06.Web.csproj
+          - name: stage-06-marketplace
+            project: examples/clean-architecture/stage-06/Teaching.CleanArchitecture.Stage06.Marketplace/Teaching.CleanArchitecture.Stage06.Marketplace.csproj
+          - name: stage-06-webhook-receiver
+            project: examples/clean-architecture/stage-06/Teaching.CleanArchitecture.Stage06.WebhookReceiver/Teaching.CleanArchitecture.Stage06.WebhookReceiver.csproj
+          - name: stage-07-web
+            project: examples/clean-architecture/stage-07/Teaching.CleanArchitecture.Stage07.Web/Teaching.CleanArchitecture.Stage07.Web.csproj
+          - name: stage-07-marketplace
+            project: examples/clean-architecture/stage-07/Teaching.CleanArchitecture.Stage07.Marketplace/Teaching.CleanArchitecture.Stage07.Marketplace.csproj
+          - name: stage-07-webhook-receiver
+            project: examples/clean-architecture/stage-07/Teaching.CleanArchitecture.Stage07.WebhookReceiver/Teaching.CleanArchitecture.Stage07.WebhookReceiver.csproj
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Restore
+        run: dotnet restore ${{ matrix.project }}
+
+      - name: Build
+        run: dotnet build ${{ matrix.project }} --configuration Release --no-restore
