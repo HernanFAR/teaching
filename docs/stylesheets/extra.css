@@ -1171,3 +1171,284 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Shared Teaching realization primitives */
+
+.teaching-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.4rem;
+}
+
+.teaching-grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.teaching-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.teaching-grid--last-wide > :last-child {
+  grid-column: 1 / -1;
+}
+
+.teaching-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.teaching-card > strong,
+.teaching-card > span:last-child {
+  display: block;
+}
+
+.teaching-card > strong {
+  line-height: 1.35;
+}
+
+.teaching-card > span:last-child:not(.teaching-eyebrow) {
+  margin-top: 0.4rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.teaching-card > p:last-child {
+  margin-bottom: 0;
+}
+
+.teaching-eyebrow {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.teaching-item {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.teaching-item__marker {
+  display: inline-grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.teaching-item > strong,
+.teaching-item > span:last-child,
+.teaching-item > p {
+  grid-column: 2;
+}
+
+.teaching-item > strong {
+  display: block;
+  line-height: 1.35;
+}
+
+.teaching-item > span:last-child:not(.teaching-item__marker) {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.teaching-item > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.teaching-item > p + p {
+  margin-top: 0.3rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.teaching-item--stacked {
+  display: block;
+}
+
+.teaching-item--stacked .teaching-item__marker {
+  margin-bottom: 0.55rem;
+}
+
+.teaching-item--stacked > strong,
+.teaching-item--stacked > span:last-child {
+  display: block;
+}
+
+.teaching-item--stacked > span:last-child:not(.teaching-item__marker) {
+  margin-top: 0.45rem;
+}
+
+.teaching-item--quiet {
+  padding: 0.9rem 0;
+  border: 0;
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 0;
+}
+
+.teaching-item--quiet .teaching-item__marker {
+  background: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+}
+
+.teaching-flow {
+  display: flex;
+  gap: 0.55rem;
+  align-items: stretch;
+  margin: 1.2rem 0 0.75rem;
+}
+
+.teaching-flow__step {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0.95rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.teaching-flow__step > span,
+.teaching-flow__step > strong,
+.teaching-flow__step > small {
+  display: block;
+}
+
+.teaching-flow__step > span:first-child:not(:last-child) {
+  margin-bottom: 0.35rem;
+  color: var(--md-accent-fg-color);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.teaching-flow__step > span:last-child:not(:first-child),
+.teaching-flow__step > small {
+  margin-top: 0.35rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.teaching-flow__step--accent {
+  border-color: color-mix(in srgb, var(--md-accent-fg-color) 45%, var(--md-default-fg-color--lightest));
+}
+
+.teaching-flow__arrow {
+  display: grid;
+  place-items: center;
+  color: var(--md-default-fg-color--light);
+  font-size: 1.05rem;
+}
+
+.teaching-flow--compact .teaching-flow__step {
+  display: grid;
+  place-items: center;
+  padding: 0.85rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.teaching-link-card {
+  display: block;
+  min-width: 0;
+  padding: 1.1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  transition:
+    border-color 125ms,
+    transform 125ms,
+    box-shadow 125ms;
+}
+
+.teaching-link-card:hover,
+.teaching-link-card:focus-visible {
+  border-color: var(--md-accent-fg-color);
+  transform: translateY(-0.08rem);
+  box-shadow: 0 0.25rem 0.8rem rgba(0, 0, 0, 0.08);
+}
+
+.teaching-link-card > strong,
+.teaching-link-card > span {
+  display: block;
+}
+
+.teaching-link-card > span:not(.teaching-eyebrow):not(.teaching-link-card__action) {
+  margin-top: 0.45rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.teaching-link-card__action {
+  margin-top: 0.9rem;
+  color: var(--md-accent-fg-color);
+  font-weight: 700;
+}
+
+/* The causal recipe keeps its discovered 4 + 3 geometry while sharing item primitives. */
+@media screen and (min-width: 59.9844em) {
+  .causal-flow > .teaching-item {
+    grid-column: span 2;
+  }
+
+  .causal-flow > .teaching-item:nth-child(9) {
+    grid-column: 2 / span 2;
+  }
+
+  .causal-flow > .teaching-item:nth-child(11) {
+    grid-column: 4 / span 2;
+  }
+
+  .causal-flow > .teaching-item:nth-child(13) {
+    grid-column: 6 / span 2;
+  }
+}
+
+@media screen and (max-width: 59.9844em) {
+  .teaching-grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .teaching-grid--3.teaching-grid--stack-medium {
+    grid-template-columns: 1fr;
+  }
+
+  .teaching-flow {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .teaching-flow__arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  .teaching-grid--2,
+  .teaching-grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .teaching-grid--last-wide > :last-child {
+    grid-column: auto;
+  }
+}
+
