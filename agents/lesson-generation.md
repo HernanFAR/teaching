@@ -102,7 +102,26 @@ While generating:
 
 Distinguish real technical constraints from barriers introduced by the explanation itself.
 
-### 5. Source state versus realization state
+### 5. Exploration support
+
+The pedagogical source should make enough boundaries visible for realization design to determine which supported lesson explorations are honest.
+
+Do not require every lesson to support every exploration mode.
+
+When relevant, make explicit:
+
+- constraints that another valid conductor case would need to satisfy;
+- tensions and already introduced concepts that can be deepened;
+- natural ways the current case may be extended without changing the lesson's conceptual scope;
+- concepts or topics that remain outside the original lesson scope;
+- enough causal structure for a learner to practice decisions progressively;
+- enough invariants and limits to apply the reasoning to a learner-provided case without forcing the published solution onto it.
+
+The source owns the lesson's pedagogical scope. An exploration may move beyond that scope when its contract allows it, but it must not silently redefine what the original lesson teaches.
+
+Read `agents/explorations.md` for the current supported exploration vocabulary and scope rules.
+
+### 6. Source state versus realization state
 
 Do not confuse an incomplete source with an incomplete realization.
 
@@ -123,8 +142,9 @@ When producing or revising a pedagogical source:
 5. make relevant limits and counterfactuals explicit;
 6. record accessibility and material-access constraints;
 7. when a conductor case is needed, define its validity constraints unless the specific case is itself pedagogically invariant;
-8. keep unresolved pedagogical questions visible;
-9. decide whether the source is sufficiently defined for realization design.
+8. identify which supported exploration modes the source can honestly sustain, when applicable;
+9. keep unresolved pedagogical questions visible;
+10. decide whether the source is sufficiently defined for realization design.
 
 A source is ready for handoff when its intent, essential causal path, invariants, limits, and access constraints are clear enough that presentation choices no longer need to invent pedagogical meaning.
 
@@ -144,6 +164,8 @@ Before handing the source to realization design, verify:
 - Are the source invariants explicit enough that a realization can vary without silently changing pedagogical intent?
 - If the lesson uses a conductor case, is it clear whether the specific case is invariant or whether only its constraints are?
 - If the specific case is variable, are its validity constraints explicit enough that a realization can select and verify one without inventing pedagogical meaning?
+- If the lesson is expected to expose supported explorations, are the source boundaries explicit enough to tell which modes are honestly supportable?
+- Are concepts that belong to the original lesson distinguishable from neighboring concepts that an exploration may mention only as out-of-scope extensions?
 - Are unresolved pedagogical questions still visible instead of being hidden by fluent prose?
 
 If a required check cannot be satisfied because the source is insufficient, stop and expose the gap rather than inventing pedagogical authority.
