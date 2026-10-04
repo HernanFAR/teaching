@@ -1273,6 +1273,25 @@
   border-radius: 0;
 }
 
+.teaching-item--criterion {
+  grid-template-columns: 1fr;
+  padding-left: 2.15rem;
+}
+
+.teaching-item--criterion .teaching-item__marker {
+  position: absolute;
+  top: 1rem;
+  left: -0.85rem;
+  margin: 0;
+  box-shadow: 0 0 0 0.18rem var(--md-default-bg-color);
+}
+
+.teaching-item--criterion > strong,
+.teaching-item--criterion > span:last-child,
+.teaching-item--criterion > p {
+  grid-column: 1;
+}
+
 .teaching-item--quiet .teaching-item__marker {
   background: var(--md-default-fg-color--lightest);
   color: var(--md-default-fg-color--light);
