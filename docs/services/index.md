@@ -41,11 +41,34 @@ Si tienes conocimiento especializado que necesitas enseñar de forma repetida, p
 
 Teaching experimenta con una separación simple:
 
-> **convertir conocimiento experto + criterio pedagógico en una fuente reutilizable desde la cual puedan producirse distintas experiencias de aprendizaje.**
+<div class="teaching-flow">
+
+<div class="teaching-flow__step">
+<strong>Conocimiento experto</strong>
+<small>Lo que una persona o equipo sabe sobre su dominio.</small>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">+</div>
+
+<div class="teaching-flow__step">
+<strong>Criterio pedagógico</strong>
+<small>Qué necesita preservarse cuando ese conocimiento se enseña.</small>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step teaching-flow__step--accent">
+<strong>Fuente reutilizable</strong>
+<small>Una base común desde la cual producir distintas experiencias de aprendizaje.</small>
+</div>
+
+</div>
+
+<p class="visual-equivalent"><strong>En texto:</strong> combinamos conocimiento experto y criterio pedagógico para construir una fuente reutilizable que pueda sostener distintas formas de enseñar.</p>
 
 La primera demostración pública importante es ingeniería de software, pero no creemos que eso defina el límite del enfoque.
 
-## Qué entendemos por una fuente pedagógica
+### Qué entendemos por una fuente pedagógica
 
 No buscamos producir primero un chatbot, un curso o una colección de diapositivas.
 
