@@ -207,6 +207,33 @@ Toda realización de esta lección debe preservar:
 7. **La arquitectura final debe ser reconstruible causalmente.** Cada frontera relevante debería poder rastrearse hasta una presión que la volvió útil.
 8. **La implementación no es evidencia suficiente de validez arquitectónica.** Terminar con interfaces, capas o inyección de dependencias no demuestra por sí mismo que esas decisiones fueran necesarias.
 
+## Restricciones del caso conductor
+
+La fuente pedagógica no fija un dominio ni un ejemplo concreto. En su lugar, define las condiciones que debe cumplir cualquier caso conductor usado por una realización de esta lección.
+
+Un caso conductor válido debe:
+
+1. **Comenzar siendo simple y defendible.** La primera versión debe poder resolverse de forma directa sin que esa decisión sea presentada como un error.
+2. **Contener al menos una regla que pueda adquirir significado propio.** Debe existir alguna decisión del problema que pueda empezar siendo trivial y luego justificar una unidad conceptual separada.
+3. **Permitir más de un mecanismo de entrada de forma plausible.** La misma operación debe poder ser iniciada, en algún momento de la evolución, desde al menos dos contextos distintos sin cambiar su objetivo esencial.
+4. **Necesitar al menos una capacidad externa.** Persistencia, comunicación con otro sistema, sistema de archivos, reloj u otro mecanismo externo debe poder aparecer como necesidad real de la operación.
+5. **Permitir que esa capacidad cambie sin cambiar el objetivo de la operación.** Debe existir una razón creíble para querer preservar la política mientras cambia su mecanismo de realización.
+6. **Permitir distinguir orquestación de reglas del problema.** La evolución debe poder revelar, sin forzarla, una diferencia entre coordinar una operación y expresar reglas cuya validez no depende de cómo se ejecuta esa operación.
+7. **Permitir composición externa.** Al final del recorrido debe ser posible conectar mecanismos concretos alrededor de las políticas sin que estas necesiten conocer la composición completa.
+8. **Ofrecer más de un contrafactual real.** En al menos dos momentos del recorrido debe ser razonable considerar que no introducir todavía una nueva separación puede seguir siendo la mejor decisión.
+9. **Introducir las presiones de forma natural.** Las nuevas necesidades deben poder explicarse como evolución plausible del sistema, no como eventos artificiales agregados únicamente para justificar una abstracción.
+10. **No necesitar Clean Architecture desde el inicio.** Si el caso solo puede explicarse razonablemente mediante una arquitectura ya separada, no sirve para mostrar la transformación que esta lección intenta enseñar.
+
+Un caso conductor no necesita producir exactamente la misma implementación en todas las realizaciones. Lo que debe preservar es la posibilidad de experimentar las tensiones del recorrido causal y justificar cada cambio desde ellas.
+
+### Criterio de aceptación
+
+Antes de usar un caso conductor en una realización, debe ser posible responder afirmativamente:
+
+> ¿Podemos recorrer desde una solución directa hasta una forma reconocible de arquitectura limpia sin introducir ninguna separación cuya causa todavía no sea observable?
+
+Si la respuesta es no, el caso debe revisarse o reemplazarse.
+
 ### Variables de realización
 
 Una realización puede cambiar, entre otras cosas:
@@ -284,6 +311,6 @@ Esto evita que la arquitectura final se presente retrospectivamente como inevita
 
 La intención pedagógica, el recorrido causal y los invariantes de la fuente están definidos.
 
-El caso conductor concreto todavía permanece abierto. La realización deberá elegir uno que pueda experimentar estas tensiones sin fabricarlas artificialmente y que permita mostrar contrafactuales reales en más de una etapa.
+El caso conductor concreto todavía permanece abierto. Sus restricciones ya están definidas; cada realización deberá elegir y validar un caso concreto contra ellas antes de diseñar la experiencia publicada.
 
 La secuencia usada por realizaciones anteriores puede consultarse como referencia histórica, pero no constituye autoridad sobre esta fuente.
