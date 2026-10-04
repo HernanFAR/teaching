@@ -10,7 +10,16 @@ Cada una intenta responder tres preguntas:
 
 ## Disponibles
 
-Todavía no hay lecciones publicadas.
+<div class="teaching-grid teaching-grid--2" markdown>
+
+<a class="teaching-link-card" href="clean-architecture/">
+<span class="teaching-eyebrow">Arquitectura</span>
+<strong>Clean Architecture</strong>
+<span>Construimos una arquitectura desde una operación directa, introduciendo separaciones solo cuando aparece una presión que las justifica.</span>
+<span class="teaching-link-card__action">Leer lección →</span>
+</a>
+
+</div>
 
 !!! note "En crecimiento"
-    Estamos preparando las primeras lecciones con el nuevo proceso de generación y diseño de realizaciones. La colección crecerá de forma incremental y cada nueva entrada podrá compartir ejemplos, diagramas y vocabulario sin formar necesariamente un curso lineal.
+    Estamos preparando nuevas lecciones con el proceso de generación y diseño de realizaciones. La colección crecerá de forma incremental y cada nueva entrada podrá compartir ejemplos, diagramas y vocabulario sin formar necesariamente un curso lineal.
