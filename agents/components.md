@@ -195,9 +195,9 @@ Question:
 
 > What happened, in order, to make a concept useful?
 
-Prefer Mermaid for short causal chains when the important information is the relationship between named states rather than rich content inside each node. Keep a textual equivalent immediately after the diagram.
+Use `teaching-flow` when a short causal chain can be expressed as a small number of readable named states connected linearly. Keep a textual equivalent immediately after the flow when the relationship is essential.
 
-Do not force a short causal chain into `teaching-flow` merely to reuse a component.
+Use Mermaid instead when the relationship actually needs graph geometry: branching, convergence, cycles, or other structure that a linear Teaching flow cannot express honestly.
 
 ### Comparison
 
