@@ -39,6 +39,7 @@ nav:
       - Cómo diseñamos una realización: about/realization-design.md
   - Lecciones:
       - lessons/index.md
+      - Clean Architecture: lessons/clean-architecture/index.md
   - Guías:
       - guides/index.md
   - Apoyar:
