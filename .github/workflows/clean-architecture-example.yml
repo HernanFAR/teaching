@@ -1,0 +1,32 @@
+name: Clean Architecture example
+
+on:
+  pull_request:
+    paths:
+      - "examples/clean-architecture/**"
+      - ".github/workflows/clean-architecture-example.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "examples/clean-architecture/**"
+      - ".github/workflows/clean-architecture-example.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Restore
+        run: dotnet restore examples/clean-architecture/stage-01/Teaching.CleanArchitecture.Stage01.csproj
+
+      - name: Build
+        run: dotnet build examples/clean-architecture/stage-01/Teaching.CleanArchitecture.Stage01.csproj --configuration Release --no-restore
