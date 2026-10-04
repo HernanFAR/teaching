@@ -155,6 +155,22 @@ Los textos orientativos deben permitir que el LLM diga, por ejemplo:
 
 La exploración no debe fabricar evidencia para conservar una narrativa favorable.
 
+## Evidencia de las primeras exploraciones
+
+La primera ronda de pruebas manuales deja esta evidencia provisional:
+
+| Área | Casos cubiertos | Estado |
+| --- | --- | --- |
+| Automático | selección de Profundizar, Aplicarlo a mi caso, Otro caso y Ponme a prueba; además detectó correctamente un cruce de alcance conceptual | Suficientemente cubierto por ahora |
+| Otro caso | trayectoria completa, trayectoria parcial y caso que no sostiene honestamente la lección completa | Suficientemente cubierto por ahora |
+| Profundizar | profundización dentro del alcance, cruce explícito hacia Outbox y extensión conceptual vecina sin reinterpretación retrospectiva | Suficientemente cubierto por ahora |
+| Aplicarlo a mi caso | una sola presión real, incertidumbre material y ausencia de presión suficiente | Suficientemente cubierto por ahora |
+| Ponme a prueba | T-01 alternativa defendible, T-02 no cambiar nada, T-03 razonamiento débil y T-04 varias rondas sin spoilers | Pendiente |
+
+Durante esta ronda apareció además una observación transversal de procedencia: cuando la persona selecciona manualmente un modo, el LLM no debe presentar ese modo como una elección propia. Esa diferencia ya fue incorporada a los contratos directos y a las reglas compartidas de exploración.
+
+Los cuatro casos de `Ponme a prueba` permanecen deliberadamente pendientes. Su resultado no bloquea esta primera publicación: la superficie ya es útil y suficientemente honesta para seguir generando evidencia post-publicación. Si alguno de esos casos falla, el fallo se tratará como evidencia para revisar el contrato o su realización, no como motivo para reconstruir retrospectivamente los resultados anteriores.
+
 ## Estado
 
 Esta es la primera realización real de las reglas de `agents/explorations.md`.
