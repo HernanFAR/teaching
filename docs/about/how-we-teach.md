@@ -406,7 +406,9 @@ La IA puede ayudarnos a transformar una fuente pedagógica en una explicación, 
 
 Pero generar una realización no demuestra que esa realización sea correcta.
 
-<div class="teaching-flow">
+<div class="teaching-flow teaching-flow--multiline">
+
+<div class="teaching-flow__row">
 
 <div class="teaching-flow__step teaching-flow__step--numbered">
 <span class="teaching-flow__marker">1</span>
@@ -422,7 +424,9 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 <small>Decide cómo expresarlo para una necesidad concreta.</small>
 </div>
 
-<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+</div>
+
+<div class="teaching-flow__row">
 
 <div class="teaching-flow__step teaching-flow__step--numbered">
 <span class="teaching-flow__marker">3</span>
@@ -436,6 +440,8 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 <span class="teaching-flow__marker">4</span>
 <strong>Publicación</strong>
 <small>La realización revisada pasa a formar parte del material.</small>
+</div>
+
 </div>
 
 </div>
