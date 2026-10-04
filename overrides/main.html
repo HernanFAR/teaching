@@ -9,6 +9,19 @@
     {% include "partials/support-cta.html" %}
   {% endif %}
 
+  {% if page and page.meta.ai_provenance %}
+    <aside class="teaching-provenance" aria-label="Transparencia sobre esta entrada">
+      <p>
+        Esta entrada fue diseñada y materializada con ayuda de IA a partir de una
+        <a href="{{ config.site_url }}{{ page.meta.ai_source_url }}">{{ page.meta.ai_source_label }}</a>
+        y de un recorrido técnico validado por etapas.
+        El código ejecutable que sirvió como evidencia vive en
+        <a href="{{ page.meta.ai_evidence_url }}"><code>{{ page.meta.ai_evidence_label }}</code></a>
+        dentro del repositorio.
+      </p>
+    </aside>
+  {% endif %}
+
   <script>
     (() => {
       const support = {{ config.extra.support | tojson }};
