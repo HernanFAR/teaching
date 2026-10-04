@@ -190,10 +190,100 @@ Si una solución pequeña no experimenta estas presiones, detenerse antes puede 
 
 Una realización debe hacer visible al menos un momento donde **no hacer nada** siga siendo preferible a introducir una separación adicional. De otro modo, la secuencia podría convertirse silenciosamente en una receta de sobrearquitectura.
 
+## Invariantes, variables y límites
+
+Esta fuente distingue entre lo que una realización debe preservar y lo que puede cambiar sin alterar la intención pedagógica.
+
+### Invariantes pedagógicos
+
+Toda realización de esta lección debe preservar:
+
+1. **La solución inicial debe ser defendible.** No fabricamos código obviamente malo para que Clean Architecture parezca inevitable.
+2. **Cada separación necesita una presión observable previa.** Ninguna capa, interfaz, abstracción o frontera aparece solamente porque sea una práctica conocida.
+3. **El cambio introducido debe ser el mínimo que responda a la presión actual.** No adelantamos mecanismos que todavía no hacen falta.
+4. **Los nombres formales aparecen después de la experiencia.** Caso de uso, puerto, adaptador, dominio, aplicación, inversión de dependencias y Clean Architecture deben nombrar algo que la persona ya pudo observar.
+5. **Debe mantenerse visible la diferencia entre política y mecanismo.** La lección debe ayudar a reconocer qué comportamiento queremos preservar y qué detalles concretos pueden cambiar a su alrededor.
+6. **El recorrido no implica que toda aplicación deba llegar al estado final.** Detenerse antes puede ser la decisión correcta.
+7. **La arquitectura final debe ser reconstruible causalmente.** Cada frontera relevante debería poder rastrearse hasta una presión que la volvió útil.
+8. **La implementación no es evidencia suficiente de validez arquitectónica.** Terminar con interfaces, capas o inyección de dependencias no demuestra por sí mismo que esas decisiones fueran necesarias.
+
+### Variables de realización
+
+Una realización puede cambiar, entre otras cosas:
+
+- lenguaje de programación;
+- framework;
+- dominio del caso conductor;
+- mecanismo de entrada inicial;
+- persistencia concreta;
+- servicios externos;
+- segundo o posteriores puntos de entrada;
+- cantidad exacta de código mostrado;
+- dificultad y cantidad de apoyo;
+- visuales y representación;
+- nombres concretos de proyectos, carpetas o módulos;
+- mecanismo usado para expresar una capacidad: interfaz, función, trait, delegate, módulo u otra construcción adecuada;
+- ejercicios, interacción y forma de evaluación.
+
+La semántica es más estable que el mecanismo.
+
+Por ejemplo:
+
+> La operación expresa una capacidad que necesita.
+
+puede ser un invariante de la fuente.
+
+En cambio:
+
+> Esa capacidad debe implementarse como `IOrderRepository`.
+
+es una decisión de realización y no una obligación pedagógica.
+
+### Límites de la lección
+
+Esta lección no intenta demostrar:
+
+- que Clean Architecture sea superior en todos los sistemas;
+- que exista una estructura universal de cuatro capas o cuatro proyectos;
+- que las interfaces sean siempre necesarias;
+- que las pruebas automatizadas requieran Clean Architecture;
+- que diseño dirigido por el dominio (DDD) sea un requisito;
+- que puertos y adaptadores sean idénticos a Clean Architecture;
+- que toda lógica de negocio deba vivir en entidades de dominio;
+- que infraestructura deba estar físicamente en otro ensamblado o proyecto;
+- que la dirección de dependencias, por sí sola, garantice buen diseño.
+
+La lección enseña **una familia de razones que puede producir una arquitectura limpia**, no una derivación única e inevitable de una estructura final.
+
+Dos equipos pueden experimentar presiones similares y llegar a estructuras distintas sin que una de ellas sea necesariamente incorrecta.
+
+### Contrafactuales obligatorios
+
+Cada presión importante debe permitir responder:
+
+> **¿Qué pasa si no hacemos este cambio?**
+
+La respuesta no debe estar predeterminada.
+
+Una realización debe conservar la posibilidad de que:
+
+- una regla pequeña siga siendo perfectamente razonable dentro del punto de entrada;
+- con un único punto de entrada todavía no sea útil separar un caso de uso;
+- una dependencia externa estable y trivial no justifique una abstracción;
+- una sola inversión de dependencia no revele todavía ningún patrón;
+- reglas simples no justifiquen separar dominio y aplicación;
+- una composición trivial no necesite protagonismo arquitectónico.
+
+Por lo tanto:
+
+> **Cada paso debe justificar tanto por qué avanzar como por qué todavía podría ser razonable no hacerlo.**
+
+Esto evita que la arquitectura final se presente retrospectivamente como inevitable.
+
 ## Estado de la fuente
 
-La intención pedagógica y el recorrido causal están definidos.
+La intención pedagógica, el recorrido causal y los invariantes de la fuente están definidos.
 
-El caso conductor concreto todavía permanece abierto. La realización deberá elegir uno que pueda experimentar estas tensiones sin fabricarlas artificialmente.
+El caso conductor concreto todavía permanece abierto. La realización deberá elegir uno que pueda experimentar estas tensiones sin fabricarlas artificialmente y que permita mostrar contrafactuales reales en más de una etapa.
 
 La secuencia usada por realizaciones anteriores puede consultarse como referencia histórica, pero no constituye autoridad sobre esta fuente.
