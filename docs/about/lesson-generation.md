@@ -124,7 +124,9 @@ Un ejemplo pequeño de ese recorrido podría verse así:
 <span aria-hidden="true">→</span>
 <strong>necesitamos probarlas sin HTTP</strong>
 <span aria-hidden="true">→</span>
-<strong>aparece una operación separable que después reconocemos como un caso de uso</strong>
+<strong>aparece una operación separable</strong>
+<span aria-hidden="true">→</span>
+<strong>la reconocemos como un caso de uso</strong>
 </div>
 
 <p class="visual-equivalent"><strong>En texto:</strong> el caso de uso no aparece porque queríamos aplicar una arquitectura; aparece después de que una necesidad concreta vuelve útil separar esa operación.</p>
