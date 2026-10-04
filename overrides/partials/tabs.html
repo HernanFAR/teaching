@@ -1,0 +1,46 @@
+{#-
+  Custom top-level tabs for Teaching.
+
+  Sections render through Material's default tab item, except "Cómo funciona",
+  whose children are exposed as an accessible desktop dropdown.
+-#}
+<nav
+  class="md-tabs"
+  aria-label="{{ lang.t('tabs.title') }}"
+  data-md-component="tabs"
+>
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      {% for nav_item in nav %}
+        {% if nav_item.title == "Cómo funciona" and nav_item.children %}
+          <li class="md-tabs__item teaching-tab-dropdown{% if nav_item.active %} teaching-tab-dropdown--active{% endif %}">
+            <button
+              class="md-tabs__link teaching-tab-dropdown__trigger{% if nav_item.active %} md-tabs__link--active{% endif %}"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span>{{ nav_item.title }}</span>
+              <span class="teaching-tab-dropdown__chevron" aria-hidden="true">▾</span>
+            </button>
+
+            <ul class="teaching-tab-dropdown__menu" aria-label="{{ nav_item.title }}">
+              {% for child in nav_item.children %}
+                <li>
+                  <a
+                    href="{{ child.url | url }}"
+                    class="teaching-tab-dropdown__link{% if child.active %} teaching-tab-dropdown__link--active{% endif %}"
+                  >
+                    {{ child.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% else %}
+          {% include "partials/tabs-item.html" %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
