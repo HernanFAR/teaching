@@ -1200,8 +1200,18 @@
   display: block;
 }
 
-.teaching-card > strong {
+.teaching-card > strong,
+.teaching-card > p > strong {
+  display: block;
   line-height: 1.35;
+}
+
+.teaching-card > p > strong + span {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .teaching-card > span:last-child:not(.teaching-eyebrow) {
@@ -1518,11 +1528,6 @@
 
   .teaching-grid--last-wide > :last-child {
     grid-column: auto;
-  }
-
-  .teaching-card > span:last-child:not(.teaching-eyebrow),
-  .teaching-item > span:last-child:not(.teaching-item__marker) {
-    margin-top: 0;
   }
 }
 
