@@ -101,3 +101,75 @@ La etapa 2 sobrevive a la implementación sin revisar la fuente.
 También aparece una evidencia útil para la lección pública: **separar una regla porque empezó a significar algo por sí misma es una decisión menor que adoptar una arquitectura**.
 
 El siguiente experimento será introducir un segundo mecanismo de entrada y comprobar si la creación de orden deja de pertenecer razonablemente al endpoint HTTP.
+
+
+## Etapa 3 · La misma operación llega desde otro canal
+
+Estado: **materializado y compilado correctamente**.
+
+Artefacto:
+
+`examples/clean-architecture/stage-03/`
+
+La realización mantiene el mismo objetivo observable —crear una orden— y agrega un segundo mecanismo de entrada:
+
+- HTTP mediante ASP.NET Core;
+- importación de marketplace mediante una aplicación de consola que lee JSON.
+
+Cada entrada conserva su propio formato de transporte y traduce hacia el mismo lenguaje de la operación.
+
+### Cambio realizado
+
+La creación de la orden deja de pertenecer al endpoint HTTP y pasa a una operación compartida:
+
+`CreateOrder.ExecuteAsync`
+
+Esa operación concentra:
+
+- validación;
+- cálculo del total;
+- generación del identificador;
+- persistencia.
+
+Ambas entradas la invocan después de traducir sus datos.
+
+En esta etapa ya resulta útil llamar **caso de uso** a la operación compartida.
+
+### Lo que deliberadamente no cambiamos
+
+El caso de uso todavía depende directamente de `Microsoft.Data.Sqlite` y recibe el `connectionString`.
+
+No introdujimos todavía:
+
+- un puerto de persistencia;
+- Repository Pattern;
+- una capa Infrastructure;
+- dependency injection como explicación;
+- un dominio arquitectónicamente separado.
+
+La separación física en tres proyectos existe para poder tener dos ejecutables independientes que compartan la misma operación. No se utiliza como evidencia de que ya exista una arquitectura por capas.
+
+### Evidencia obtenida
+
+El workflow `Clean Architecture example` run `#17` compiló correctamente:
+
+- `stage-01`;
+- `stage-02`;
+- la entrada web de `stage-03`;
+- la entrada marketplace de `stage-03`.
+
+La materialización confirmó la presión prevista: una vez que dos mecanismos necesitan crear órdenes, dejar toda la operación dentro del endpoint HTTP obliga a duplicar comportamiento o a hacer que una entrada conozca a la otra.
+
+Extraer la operación compartida resuelve esa presión sin necesitar todavía inversión de dependencias.
+
+### Consecuencia para el diseño
+
+La etapa 3 sobrevive a la implementación.
+
+También aparece una distinción que conviene preservar en la lección pública:
+
+> **extraer un caso de uso responde a quién posee la operación; invertir una dependencia responde a qué mecanismos puede conocer esa operación.**
+
+Son dos presiones distintas y no deben enseñarse como si fueran el mismo cambio.
+
+El siguiente experimento será conservar ambos mecanismos de entrada y desafiar la dependencia directa del caso de uso hacia SQLite.
