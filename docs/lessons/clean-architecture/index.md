@@ -750,9 +750,9 @@ Es una respuesta a presiones.
     Si todavía no tenemos una respuesta observable, quizá todavía no necesitamos mover esa línea.
 
 
-## Explora esta lección
-
 <div class="teaching-exploration" data-teaching-exploration markdown>
+
+## Explora esta lección
 
 <div class="teaching-exploration__intro" markdown>
 Entender la realización de órdenes no tiene por qué ser el final.
