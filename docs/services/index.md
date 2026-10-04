@@ -335,10 +335,12 @@ Teaching ya demuestra esta separación en casos reales, pero todavía estamos in
 
 <span class="teaching-eyebrow">Hoy podemos sostener</span>
 
-- modelar una fuente pedagógica explícita;
-- producir realizaciones distintas desde una intención común;
-- usar esas realizaciones como evidencia para revisar la fuente;
-- trabajar de forma útil incluso cuando la representación siga siendo Markdown u otra documentación estructurada.
+<ul>
+  <li>modelar una fuente pedagógica explícita;</li>
+  <li>producir realizaciones distintas desde una intención común;</li>
+  <li>usar esas realizaciones como evidencia para revisar la fuente;</li>
+  <li>trabajar de forma útil incluso cuando la representación siga siendo Markdown u otra documentación estructurada.</li>
+</ul>
 
 </div>
 
@@ -346,17 +348,20 @@ Teaching ya demuestra esta separación en casos reales, pero todavía estamos in
 
 <span class="teaching-eyebrow">Seguimos investigando</span>
 
-- ¿cuánto puede generalizarse entre dominios?;
-- ¿cuánto conocimiento tácito puede capturarse?;
-- ¿cómo comprobamos que una realización preservó suficiente semántica?;
-- ¿qué partes del proceso pueden automatizarse sin desplazar autoridad pedagógica humana?;
-- ¿qué condiciones hacen que este enfoque mejore realmente una experiencia educativa?
+<ul>
+  <li>¿cuánto puede generalizarse entre dominios?</li>
+  <li>¿cuánto conocimiento tácito puede capturarse?</li>
+  <li>¿cómo comprobamos que una realización preservó suficiente semántica?</li>
+  <li>¿qué partes del proceso pueden automatizarse sin desplazar autoridad pedagógica humana?</li>
+  <li>¿qué condiciones hacen que este enfoque mejore realmente una experiencia educativa?</li>
+</ul>
 
 </div>
 
 </div>
 
-> **Podemos hacer trabajo útil hoy sin fingir que estas preguntas ya están resueltas.**
+!!! note "Una frontera explícita"
+    **Podemos hacer trabajo útil hoy sin fingir que estas preguntas ya están resueltas.**
 
 ---
 
