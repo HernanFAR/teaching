@@ -409,7 +409,7 @@ La etapa 7 debe responder a esa evidencia, no fingir que el caso de uso sigue se
 
 ## Etapa 7 · La composición adquiere un lugar propio
 
-Estado: **materializado; validación de CI en curso**.
+Estado: **materializado y validado por CI**.
 
 Artefacto:
 
@@ -468,12 +468,83 @@ Tampoco tratamos `Composition` como una capa universal: apareció porque el mism
 
 ### Validación
 
-El workflow `Clean Architecture example` run `#83` incluye las entradas web y marketplace de la etapa 7, su receptor local y todos los snapshots anteriores.
+El workflow `Clean Architecture example` run `#83` terminó en `success`.
 
-Al registrar esta evidencia, el run permanece en cola.
+Compilaron correctamente las entradas web y marketplace de la etapa 7, su receptor local y todos los snapshots anteriores.
 
-### Consecuencia provisional para el diseño
+### Consecuencia para el diseño
 
-La etapa 7 materializa una composición explícita sin introducir infraestructura adicional.
+La etapa 7 queda validada.
 
-Si el snapshot queda verde, ya no necesitaremos otra transformación estructural para completar el recorrido. La etapa 8 podrá dedicarse a reconstruir la forma resultante y nombrarla como Clean Architecture.
+La composición concreta ya tiene un lugar explícito sin introducir infraestructura adicional.
+
+No necesitamos otra transformación estructural para completar el recorrido. La etapa 8 puede dedicarse a reconstruir la forma resultante y nombrarla como Clean Architecture.
+
+
+## Etapa 8 · Nombramos la forma resultante
+
+Estado: **materializado como síntesis; no introduce un nuevo refactor ejecutable**.
+
+Artefacto:
+
+`examples/clean-architecture/stage-08/README.md`
+
+La etapa 8 reutiliza el estado ejecutable validado de la etapa 7.
+
+No copia ni reorganiza el código únicamente para parecerse a un diagrama conocido.
+
+### Reconstrucción
+
+La forma final puede explicarse desde las decisiones ya observadas:
+
+- las entradas traducen sus propios mecanismos de transporte;
+- Application coordina el objetivo de crear una orden;
+- Domain expresa reglas de la orden sin conocer mecanismos externos;
+- Application expresa las capacidades externas que necesita;
+- SQLite y HTTP realizan esas capacidades desde afuera;
+- Composition selecciona y construye las realizaciones concretas.
+
+### Regla de dependencias observada
+
+La síntesis usa como criterio:
+
+> **el código que expresa políticas más estables no necesita depender de detalles de implementación menos estables para poder realizar su trabajo.**
+
+La regla describe conocimiento de código y fronteras de cambio. No se infiere de nombres de carpetas ni de la cantidad de proyectos.
+
+### Nombre posterior a la evidencia
+
+Solo después de reconstruir esa forma usamos **Clean Architecture** como nombre útil para comunicarla.
+
+La realización muestra:
+
+- inversión de dependencias alrededor de políticas;
+- límites entre política y mecanismo;
+- casos de uso que coordinan objetivos;
+- reglas de dominio independientes de mecanismos externos;
+- adapters que realizan capacidades;
+- composición concreta hacia afuera.
+
+La arquitectura fue una consecuencia reconstruible del recorrido, no su premisa.
+
+### Lo que no quedó demostrado como obligatorio
+
+La síntesis conserva explícitamente que este caso no exige universalmente:
+
+- cuatro proyectos;
+- Repository Pattern;
+- Unit of Work;
+- MediatR;
+- CQRS;
+- DDD completo;
+- un contenedor de DI;
+- una interfaz por clase;
+- un puerto por dependencia.
+
+### Resultado
+
+La trayectoria completa de implementación está cerrada.
+
+Las ocho etapas sobreviven a la materialización sin requerir revisar la fuente pedagógica.
+
+El siguiente paso ya no es descubrir otra frontera técnica: es redactar el `index.md` público usando esta evidencia, la estructura editorial y la especificación visual.
