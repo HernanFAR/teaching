@@ -27,7 +27,7 @@ La fuente, el caso conductor, la evolución causal, la realización técnica mí
 
 La especificación visual está definida y, por ahora, no exige componentes semánticos nuevos.
 
-Las etapas 1, 2 y 3 ya fueron materializadas. La etapa 3 incorpora entradas HTTP y marketplace que comparten la misma operación de crear una orden. Todos los proyectos compilan con .NET 10 en CI.
+Las etapas 1 a 4 ya fueron materializadas. En la etapa 4 el caso de uso expresa una capacidad de persistencia propia y SQLite la realiza desde afuera. Las dos entradas de la etapa 4 compilan correctamente en CI.
 
 Todavía permanecen abiertas las decisiones de:
 
@@ -35,5 +35,5 @@ Todavía permanecen abiertas las decisiones de:
 - geometría exacta de las dos representaciones que pueden requerir boceto;
 - si los ejemplos ejecutables permanecerán como snapshots por etapa o evolucionarán hacia otra forma de distribución.
 
-El siguiente paso es materializar la **etapa 4**: conservar ambos mecanismos de entrada y comprobar qué cambia cuando el caso de uso deja de conocer directamente SQLite.
+El siguiente paso es materializar la **etapa 5**: agregar una segunda capacidad externa y comprobar si la relación capacidad/realización observada en persistencia vuelve a aparecer.
 
