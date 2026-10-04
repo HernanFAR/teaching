@@ -333,7 +333,7 @@ El siguiente experimento será la **etapa 6**: distinguir reglas propias de la o
 
 ## Etapa 6 · Calcular una orden y crear una orden dejan de ser lo mismo
 
-Estado: **materializado; validación de CI en curso**.
+Estado: **materializado y validado por CI**.
 
 Artefacto:
 
@@ -392,17 +392,16 @@ Si las reglas fueran pequeñas y relevantes solo para este caso de uso, mantener
 
 ### Validación
 
-El workflow `Clean Architecture example` run `#63` contiene:
+El workflow `Clean Architecture example` run `#63` terminó en `success`.
 
-- entrada web de la etapa 6;
-- entrada marketplace de la etapa 6;
-- receptor local del webhook;
-- todos los snapshots anteriores.
+Compilaron correctamente la entrada web, la entrada marketplace y el receptor local de la etapa 6, además de todos los snapshots anteriores.
 
-Al registrar esta evidencia el run permanece en cola, por lo que la etapa todavía no se declara validada por CI.
+### Consecuencia para el diseño
 
-### Consecuencia provisional para el diseño
+La etapa 6 queda validada.
 
-La implementación sostiene la hipótesis de la etapa 6: **dominio** y **aplicación** aparecen como nombres útiles después de que las responsabilidades se vuelven distinguibles.
+La implementación confirma que **dominio** y **aplicación** aparecen como nombres útiles después de que las responsabilidades se vuelven distinguibles.
 
-El avance a la etapa 7 queda condicionado a confirmar la compilación del snapshot completo.
+También revela una tensión concreta para la etapa 7: las dos entradas ejecutables repiten el conocimiento de composición —qué `SqliteOrderStore`, qué `HttpOrderCreatedNotifier`, qué conexión y qué endpoint construir—. Ese conocimiento ya está fuera de Domain y Application, pero todavía está duplicado entre mecanismos de entrada.
+
+La etapa 7 debe responder a esa evidencia, no fingir que el caso de uso sigue seleccionando implementaciones concretas.
