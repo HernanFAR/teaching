@@ -7,11 +7,11 @@ hide:
 
 # Asesoría
 
-Teaching publica como trabaja. 
+Teaching publica cómo trabaja.
 
-La asesoría acompañada no desbloquea conocimiento oculto, unicamente paga el tiempo y el criterio necesarios para trabajar sobre tu situación.
+**Si puedes resolver tu necesidad con lo que ya publicamos, no necesitas pagarnos; únicamente considera donar.**
 
-**Si puedes resolver tu necesidad con lo que ya publicamos, no necesitas pagarnos; únicamente considera donar.** 
+La asesoría acompañada no desbloquea conocimiento oculto; únicamente paga el tiempo y el criterio necesarios para trabajar sobre tu situación.
 
 <div class="teaching-grid teaching-grid--2" markdown>
 
