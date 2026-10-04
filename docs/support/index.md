@@ -1,8 +1,6 @@
 # Apoyar Teaching
 
-Teaching es gratuito y abierto.
-
-## El dinero no lo es todo
+Teaching es gratuito y abierto. Esto es así porque el dinero no lo es todo
 
 Queremos que cualquier persona pueda aprender con las lecciones, reutilizar sus instrucciones de generación, pedir nuevos ejemplos y recorrer las guías sin pagar ni desbloquear nada.
 
@@ -15,7 +13,7 @@ Leer, aprender, compartir una lección, reutilizar las instrucciones de generaci
 
     Apoyar nunca desbloquea contenido ni cambia tu experiencia. No hay lecciones premium, ventajas para sponsors ni contenido bloqueado detrás de una contribución.
 
-Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes hacerlo de la forma que tenga sentido para ti.
+    Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes hacerlo de la forma que tenga sentido para ti.
 
 ---
 
