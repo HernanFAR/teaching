@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Teaching.CleanArchitecture.Stage07.Application/Teaching.CleanArchitecture.Stage07.Application.csproj" />
+    <ProjectReference Include="../Teaching.CleanArchitecture.Stage07.Sqlite/Teaching.CleanArchitecture.Stage07.Sqlite.csproj" />
+    <ProjectReference Include="../Teaching.CleanArchitecture.Stage07.Webhook/Teaching.CleanArchitecture.Stage07.Webhook.csproj" />
+  </ItemGroup>
+
+</Project>
