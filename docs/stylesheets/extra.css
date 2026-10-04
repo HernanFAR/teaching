@@ -1670,3 +1670,52 @@
 .teaching-provenance p {
   margin: 0;
 }
+
+
+.teaching-work-scope {
+  margin: 1.15rem 0 1.4rem;
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+.teaching-work-scope__item {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 0.2rem 1rem;
+  padding: 1rem 0;
+  border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+.teaching-work-scope__label {
+  grid-row: 1 / span 2;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.teaching-work-scope__item strong,
+.teaching-work-scope__item > span:last-child {
+  display: block;
+}
+
+.teaching-work-scope__item strong {
+  line-height: 1.35;
+}
+
+.teaching-work-scope__item > span:last-child {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 45rem) {
+  .teaching-work-scope__item {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .teaching-work-scope__label {
+    grid-row: auto;
+  }
+}
