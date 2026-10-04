@@ -1363,29 +1363,6 @@
   font-size: 1.05rem;
 }
 
-.teaching-flow--compact {
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
-  border: 0.05rem solid var(--md-default-fg-color--lightest);
-  border-radius: var(--teaching-radius);
-}
-
-.teaching-flow--compact .teaching-flow__step {
-  display: grid;
-  flex: 0 1 6.25rem;
-  place-items: center;
-  padding: 0.2rem 0.35rem;
-  border: 0;
-  border-radius: 0;
-  text-align: center;
-  font-size: 0.82rem;
-  line-height: 1.35;
-}
-
-.teaching-flow--compact .teaching-flow__arrow {
-  flex: 0 0 auto;
-}
 
 .teaching-link-card {
   display: block;
