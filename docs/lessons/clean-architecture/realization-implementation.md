@@ -240,3 +240,87 @@ Aparece una formulación especialmente útil para la lección:
 > **no abstraemos “la base de datos”; expresamos la capacidad que la operación necesita.**
 
 La siguiente etapa comprobará si esta relación fue una excepción específica de persistencia o si reaparece cuando introducimos otra capacidad externa: notificar una orden creada.
+
+
+## Etapa 5 · Aparece otra capacidad externa
+
+Estado: **materializado; validación de CI en curso**.
+
+Artefacto:
+
+`examples/clean-architecture/stage-05/`
+
+La realización conserva los dos mecanismos de entrada y agrega una nueva necesidad del caso de uso:
+
+> notificar que una orden fue creada correctamente.
+
+### Cambio realizado
+
+`CreateOrder` expresa ahora dos capacidades externas:
+
+- `IOrderStore` para guardar la orden;
+- `IOrderCreatedNotifier` para notificar su creación.
+
+La primera sigue siendo realizada por `SqliteOrderStore`.
+
+La segunda es realizada por `HttpOrderCreatedNotifier`, que contiene:
+
+- `HttpClient`;
+- la URL del webhook;
+- serialización HTTP;
+- validación del estado de respuesta.
+
+El caso de uso no conoce ninguno de esos detalles.
+
+### Evidencia estructural
+
+La relación observada en persistencia reaparece sin cambiar la regla:
+
+```text
+caso de uso → capacidad necesaria ← mecanismo externo
+```
+
+En persistencia:
+
+`CreateOrder → IOrderStore ← SqliteOrderStore`
+
+En notificación:
+
+`CreateOrder → IOrderCreatedNotifier ← HttpOrderCreatedNotifier`
+
+La repetición permite usar ahora **puerto** y **adaptador** como vocabulario descriptivo de una forma ya observada, no como plantilla previa.
+
+### Reproducibilidad
+
+Se agregó un receptor HTTP local mínimo en:
+
+`Teaching.CleanArchitecture.Stage05.WebhookReceiver`
+
+El ejemplo no necesita una cuenta externa ni un proveedor comercial.
+
+### Una tensión nueva que no debemos esconder
+
+La materialización hizo visible una cuestión real: si SQLite guarda correctamente la orden y luego falla el webhook, los dos efectos no forman una operación atómica.
+
+No vamos a introducir transacciones distribuidas, outbox, retries o mensajería para hacer desaparecer esa tensión porque no es la pregunta de esta etapa.
+
+La registramos como evidencia y mantenemos el límite pedagógico explícito.
+
+### Validación
+
+El workflow `Clean Architecture example` run `#45` incluye:
+
+- entrada web de la etapa 5;
+- entrada marketplace de la etapa 5;
+- receptor local del webhook;
+- todas las etapas anteriores.
+
+Al registrar esta evidencia el run permanece en cola, por lo que todavía no declaramos la etapa como validada por CI.
+
+### Consecuencia provisional para el diseño
+
+La implementación sostiene la hipótesis estructural de la etapa 5: persistencia no era una excepción.
+
+La misma forma capacidad/realización reaparece con un mecanismo HTTP distinto.
+
+El avance a la etapa 6 queda condicionado únicamente a confirmar la compilación del snapshot completo en CI.
