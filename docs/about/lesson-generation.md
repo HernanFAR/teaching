@@ -6,6 +6,8 @@ Antes de decidir el ejemplo, el lenguaje, los diagramas o incluso la forma exact
 
 A eso lo tratamos como la **fuente pedagógica** de la lección.
 
+En Teaching, esa fuente se expresa normalmente mediante unas **instrucciones base de generación**: un artefacto que conserva la intención, el recorrido, los límites y las condiciones que no deberían perderse al producir distintas versiones de una misma lección.
+
 ## Primero definimos qué debe permanecer
 
 Una buena fuente debería dejar suficientemente claro:
@@ -43,6 +45,8 @@ algo funciona
 
 No todas las lecciones necesitan seguir exactamente esos pasos.
 
+Por ejemplo, una lección podría comenzar con un endpoint que funciona, descubrir que las reglas de negocio empiezan a crecer, necesitar probarlas sin HTTP y recién entonces extraer una operación que podamos reconocer después como un **caso de uso**.
+
 La regla importante es otra:
 
 > **un concepto no debería aparecer antes de que exista una razón visible para necesitarlo.**
@@ -64,6 +68,12 @@ Podemos cambiar:
 Eso nos permite, por ejemplo, explicar la misma idea usando C# y órdenes, Python y videojuegos, una tutoría guiada o una serie de ejercicios.
 
 Pero hay cosas que no deberían cambiar silenciosamente: la intención de la lección, las tensiones esenciales, sus límites y aquello que todavía no corresponde introducir.
+
+Eso no significa que la fuente sea inmutable.
+
+Una realización también puede enseñarnos que la secuencia no funciona como esperábamos, que una tensión aparece demasiado pronto, que falta una transición o que estábamos intentando enseñar demasiadas cosas a la vez.
+
+Cuando eso ocurre, revisamos la **fuente pedagógica** y dejamos visible el cambio. La realización no solo deriva de la fuente: también puede producir evidencia para mejorarla.
 
 ## Las condiciones de acceso también son parte de la generación
 
@@ -92,6 +102,8 @@ Podemos saber con claridad qué queremos enseñar aunque todavía no hayamos dec
 Eso significa que la **fuente pedagógica** puede estar suficientemente definida aunque una realización concreta todavía esté incompleta.
 
 También puede ocurrir lo contrario: una página puede verse terminada y, sin embargo, esconder que todavía no sabemos por qué introdujimos una abstracción o qué queremos que la persona comprenda.
+
+> **Una página puede verse terminada y aun así no saber qué está intentando enseñar.**
 
 Preferimos que esas dudas permanezcan visibles antes que rellenarlas con una explicación convincente pero inventada.
 
