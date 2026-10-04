@@ -181,7 +181,13 @@ A generated LLM request for a supported exploration should contain enough inform
    - its allowed degrees of freedom;
    - its scope-crossing rules.
 
-4. **Learner concrete need**
+4. **Source references**
+   - resolvable references to the Teaching material that owns the lesson semantics when such references are available;
+   - choose the smallest useful reference boundary for the exploration: this may be one source file, several artifacts, an evidence directory, or the whole lesson directory;
+   - references should let an LLM inspect original material instead of forcing it to reconstruct the lesson only from the generated prompt;
+   - the prompt must state that inaccessible material must not be treated as if it had been read.
+
+5. **Learner concrete need**
    - preserved as learner-provided text;
    - not silently rewritten into a different pedagogical goal.
 
@@ -213,6 +219,9 @@ Before publishing a lesson with supported explorations, verify:
 - Are the supported exploration modes named and briefly explained?
 - Does each exploration accept a concrete learner need rather than forcing a pre-written question?
 - Can the LLM receive enough lesson-specific material to preserve the lesson's intent?
+- Does the generated request include useful resolvable source references when Teaching has them?
+- Is the reference boundary appropriate for this exploration rather than mechanically listing every artifact?
+- Does the prompt prohibit pretending that inaccessible referenced material was actually consulted?
 - For Another case, can validity be checked without forcing the original architecture onto a new domain?
 - For Deepen, are tensions, introduced concepts, and natural case extensions distinguishable?
 - For Deepen, is any movement beyond original scope required to be unmistakably marked?
