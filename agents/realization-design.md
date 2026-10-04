@@ -262,6 +262,20 @@ Before publication:
 
 Use the shared exploration contracts in `agents/explorations.md`. Do not invent a lesson-local meaning for a shared exploration name without revising the shared vocabulary explicitly.
 
+Before treating the exploration surface as sufficiently observed, exercise its distinctive contracts with representative learner needs when practical. Do not validate prompts only by reading them.
+
+Record enough evidence to reconstruct materially important outcomes:
+
+```text
+mode
+→ learner need
+→ observed response
+→ pass / failure / ambiguity
+→ consequence
+```
+
+A lesson does not need exhaustive exploration testing before publication. It may publish with clearly documented pending cases when those cases do not undermine the already-supported pedagogical claims. Post-publication exploration results remain valid realization evidence and may trigger revisions later.
+
 ### 8. Editorial structure
 
 Decide which parts of the source are best expressed as:
@@ -413,6 +427,9 @@ Before treating a realization design as ready for publication, verify:
 - Does the public lesson expose a visible exploration surface when grounded explorations are supported?
 - Are only honestly supportable exploration modes offered, with the learner's concrete need kept explicit?
 - If Deepen can cross the original lesson scope, is that boundary required to be visually unmistakable rather than silently absorbed into the lesson?
+- Were supported explorations exercised with representative learner needs when practical, instead of being validated only by prompt inspection?
+- Are materially important exploration outcomes, failures, ambiguities, and pending cases reconstructible?
+- If some exploration cases remain pending at publication, is it explicit why they do not block the current release?
 - Did implementation reveal evidence that should revise the pedagogical source?
 
 If implementation reveals a problem in the source, stop and make that revision visible instead of compensating for it only in presentation.
