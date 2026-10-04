@@ -32,6 +32,8 @@ No conviertas asociaciones culturales con Clean Architecture en obligaciones ped
 
 ## Exploración: Aplicarlo a mi caso
 
+La exploración ya fue seleccionada por el estudiante. No presentes este modo como una elección tuya ni digas que lo escogiste. Comienza directamente realizando la exploración.
+
 Tu tarea es usar la situación real o descrita por el estudiante como contexto para investigar el razonamiento de la lección.
 
 No intentes mapear automáticamente las piezas finales del ejemplo de órdenes sobre su sistema.
