@@ -113,7 +113,7 @@ La representación debería responder una pregunta concreta.
 
 La forma aparece después de entender el trabajo pedagógico que debe hacer esa parte de la entrada.
 
-## Diseñamos una especificación de realización
+### Diseñamos una especificación de realización
 
 Antes de implementar, intentamos decidir al menos:
 
@@ -161,7 +161,7 @@ Antes de implementar, intentamos decidir al menos:
 
     Estas decisiones forman una **especificación de realización**. La especificación puede cambiar sin alterar necesariamente la fuente pedagógica.
 
-## Preferimos componentes con significado
+### Preferimos componentes con significado
 
 Cuando un componente existente expresa bien la intención, preferimos reutilizarlo.
 
@@ -201,7 +201,7 @@ Cuando un componente existente expresa bien la intención, preferimos reutilizar
 
 El objetivo no es construir una biblioteca de componentes. Es reducir complejidad accidental y hacer que la forma acompañe al contenido.
 
-## La accesibilidad también se diseña aquí
+### La accesibilidad también se diseña aquí
 
 Una visual que contiene información esencial necesita otra vía de acceso.
 
