@@ -1,3 +1,11 @@
+---
+ai_provenance: true
+ai_source_label: fuente pedagógica reproducible
+ai_source_url: lessons/clean-architecture/generation-instructions/
+ai_evidence_label: examples/clean-architecture/
+ai_evidence_url: https://github.com/HernanFAR/teaching/tree/lesson/clean-architecture/examples/clean-architecture
+---
+
 # Clean Architecture
 
 Clean Architecture suele enseñarse al revés: primero aparece un diagrama de círculos, después una lista de capas y al final intentamos decidir dónde poner cada archivo.
@@ -806,6 +814,3 @@ Todo se prepara localmente en tu navegador. **Teaching no envía lo que escribas
 
 </div>
 
----
-
-Esta lección fue diseñada y materializada con ayuda de IA a partir de una [fuente pedagógica reproducible](generation-instructions.md) y de un recorrido técnico validado por etapas. El código ejecutable que sirvió como evidencia vive en `examples/clean-architecture/` dentro del repositorio.
