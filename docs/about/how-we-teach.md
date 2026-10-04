@@ -102,7 +102,7 @@ Un flujo pequeño, lineal y razonable, que funciona y no requiere nada que arreg
 
 <div class="teaching-grid teaching-grid--2" markdown>
 
-<div class="teaching-item" markdown>
+<div class="teaching-item teaching-item--stacked" markdown>
 <span class="teaching-item__marker">1</span>
 
 **La lógica crece**
@@ -111,7 +111,7 @@ La operación deja de ser trivial.
 
 </div>
 
-<div class="teaching-item" markdown>
+<div class="teaching-item teaching-item--stacked" markdown>
 <span class="teaching-item__marker">2</span>
 
 **Queremos probarla**
@@ -120,7 +120,7 @@ Necesitamos aislar comportamiento para verificarlo.
 
 </div>
 
-<div class="teaching-item" markdown>
+<div class="teaching-item teaching-item--stacked" markdown>
 <span class="teaching-item__marker">3</span>
 
 **Aparece una dependencia externa**
@@ -129,7 +129,7 @@ Persistencia, correo, APIs u otros servicios entran al flujo.
 
 </div>
 
-<div class="teaching-item" markdown>
+<div class="teaching-item teaching-item--stacked" markdown>
 <span class="teaching-item__marker">4</span>
 
 **Necesitamos otro punto de entrada**
@@ -409,7 +409,7 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 <div class="teaching-flow">
 
 <div class="teaching-flow__step">
-<span>1</span>
+<span class="teaching-flow__marker">1</span>
 <strong>Fuente pedagógica</strong>
 <small>Define qué intentamos enseñar y qué debe preservarse.</small>
 </div>
@@ -417,7 +417,7 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 <div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
 <div class="teaching-flow__step">
-<span>2</span>
+<span class="teaching-flow__marker">2</span>
 <strong>Realización</strong>
 <small>Decide cómo expresarlo para una necesidad concreta.</small>
 </div>
@@ -425,7 +425,7 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 <div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
 <div class="teaching-flow__step">
-<span>3</span>
+<span class="teaching-flow__marker">3</span>
 <strong>Revisión</strong>
 <small>Comprueba intención pedagógica, afirmaciones, ejemplos y código.</small>
 </div>
@@ -433,7 +433,7 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 <div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
 <div class="teaching-flow__step">
-<span>4</span>
+<span class="teaching-flow__marker">4</span>
 <strong>Publicación</strong>
 <small>La realización revisada pasa a formar parte del material.</small>
 </div>
