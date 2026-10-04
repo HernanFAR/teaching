@@ -2,7 +2,9 @@
 
 ## Purpose
 
-Use these rules when creating, deriving, revising, or completing a Teaching lesson.
+Use these rules when creating, deriving, or revising the **pedagogical source** of a Teaching lesson.
+
+Once the source is sufficiently defined, hand off presentation decisions to `realization-design.md`.
 
 A lesson is a **realization** of a more stable pedagogical source. Generation may change representation, examples, language, difficulty, visuals, exercises, or interaction. It must not silently change the pedagogical intent.
 
@@ -97,35 +99,35 @@ A **realization is incomplete** when the intended published experience still lac
 
 Represent missing knowledge explicitly instead of fabricating it.
 
-## Generation procedure
+## Source generation procedure
 
-When producing a realization:
+When producing or revising a pedagogical source:
 
-1. read the pedagogical source;
-2. identify its invariants;
-3. identify the requested variables for this realization;
-4. construct the smallest working starting state;
-5. introduce one relevant change or pressure at a time;
-6. make the resulting limitation observable before naming its solution;
-7. introduce only the minimum useful change;
-8. name the concept after the intuition exists;
-9. show relevant costs, limits, and counterfactuals;
-10. preserve textual equivalents for essential visuals;
-11. review the result against the checks below.
+1. establish the intended learner understanding;
+2. establish what does not need to be taught yet;
+3. construct the causal learning path;
+4. identify invariants and realization variables;
+5. make relevant limits and counterfactuals explicit;
+6. record accessibility and material-access constraints;
+7. keep unresolved pedagogical questions visible;
+8. decide whether the source is sufficiently defined for realization design.
 
-## Publication checks
+A source is ready for handoff when its intent, essential causal path, invariants, limits, and access constraints are clear enough that presentation choices no longer need to invent pedagogical meaning.
 
-Before treating a realization as ready, verify:
+At that point, continue with `agents/realization-design.md`.
+
+## Source review checks
+
+Before handing the source to realization design, verify:
 
 - Can each important concept be traced to a problem or tension that made it useful?
 - Did any abstraction appear only because “that is how it is done”?
 - Does the lesson show what happens if we do not make the change when that counterfactual matters?
 - Does it explain when the technique may be unnecessary or harmful?
 - Are facts, heuristics, preferences, and contextual decisions distinguishable?
-- Does each essential visual answer a concrete question and have a textual equivalent where needed?
-- Can a learner follow the path without already knowing the formal name of the concept?
+- Can a learner follow the intended path without already knowing the formal name of the concept?
 - Are paid access, strong hardware, English fluency, formal education, or ideal physical conditions being assumed unnecessarily?
-- Does the realization preserve the declared invariants of its source?
+- Are the source invariants explicit enough that a realization can vary without silently changing pedagogical intent?
 - Are unresolved pedagogical questions still visible instead of being hidden by fluent prose?
 
 If a required check cannot be satisfied because the source is insufficient, stop and expose the gap rather than inventing pedagogical authority.
