@@ -2,24 +2,20 @@
 
 Teaching es gratuito y abierto.
 
+## El dinero no lo es todo
+
 Queremos que cualquier persona pueda aprender con las lecciones, reutilizar sus instrucciones de generación, pedir nuevos ejemplos y recorrer las guías sin pagar ni desbloquear nada.
 
-Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes hacerlo de forma completamente voluntaria.
-
-!!! heart "Una regla importante"
-    **Apoyar nunca desbloquea contenido ni cambia tu experiencia.**
-
-    No hay lecciones premium, ventajas para sponsors ni contenido bloqueado detrás de una contribución.
-
----
-
-## No tienes que apoyar económicamente
-
-En serio.
+Apoyar Teaching no significa únicamente aportar dinero.
 
 Leer, aprender, compartir una lección, reutilizar las instrucciones de generación, [pedir una nueva lección o guía](https://github.com/HernanFAR/teaching/issues/new?template=request-content.yml), detectar un error o contarle a otra persona que este proyecto existe también ayuda.
 
-El apoyo económico es una posibilidad, no una expectativa.
+!!! heart "Una regla importante"
+    **El apoyo económico es una posibilidad, no una expectativa.**
+
+    Apoyar nunca desbloquea contenido ni cambia tu experiencia. No hay lecciones premium, ventajas para sponsors ni contenido bloqueado detrás de una contribución.
+
+Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes hacerlo de la forma que tenga sentido para ti.
 
 ---
 
