@@ -118,7 +118,6 @@ Use `teaching-flow__step--accent` when one node needs semantic emphasis.
 
 When explicit ordering helps, add `teaching-flow__step--numbered` to the step and place a `teaching-flow__marker` inside it. The marker floats over the step's top-left border as a small badge; do not use bare numbers as decorative text.
 
-Use `teaching-flow--compact` for short, text-heavy nodes. The compact recipe presents one centered intrinsic chain inside a shared container: steps keep a bounded width instead of stretching to fill the whole row, so outer spacing remains visually meaningful.
 
 If the flow has branching, cycles that need explicit geometry, or relationships that cannot remain clear when stacked on mobile, consider Mermaid or a purpose-built representation instead.
 
@@ -189,6 +188,16 @@ Question:
 > Through which stages does an artifact or process pass?
 
 Use `teaching-flow`.
+
+### Short causal chain
+
+Question:
+
+> What happened, in order, to make a concept useful?
+
+Prefer Mermaid for short causal chains when the important information is the relationship between named states rather than rich content inside each node. Keep a textual equivalent immediately after the diagram.
+
+Do not force a short causal chain into `teaching-flow` merely to reuse a component.
 
 ### Comparison
 
