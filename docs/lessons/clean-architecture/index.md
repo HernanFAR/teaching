@@ -6,7 +6,7 @@ ai_evidence_label: examples/clean-architecture/
 ai_evidence_url: https://github.com/HernanFAR/teaching/tree/lesson/clean-architecture/examples/clean-architecture
 ---
 
-# Clean Architecture
+# Cómo se llega a Clean Architecture
 
 Clean Architecture suele enseñarse al revés: primero aparece un diagrama de círculos, después una lista de capas y al final intentamos decidir dónde poner cada archivo.
 
