@@ -291,7 +291,7 @@ Mientras generamos una lección intentamos no asumir innecesariamente ciertas co
 
 En su lugar, intentamos tomar decisiones de generación que reduzcan barreras innecesarias:
 
-<div class="teaching-grid teaching-grid--2">
+<div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges">
 
 <div class="teaching-item teaching-item--criterion">
 <span class="teaching-item__marker">1</span>
@@ -385,7 +385,7 @@ Preferimos que esas dudas permanezcan **visibles** antes que rellenarlas con una
 
 Revisamos estas preguntas para comprobar que la lección siga siendo clara, útil y justificable:
 
-<div class="teaching-grid teaching-grid--2">
+<div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges">
 
 <div class="teaching-item teaching-item--criterion">
 <span class="teaching-item__marker">1</span>
