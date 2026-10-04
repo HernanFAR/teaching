@@ -136,12 +136,13 @@ A medida que la plataforma madure, podremos hacer esta información más concret
 
 ---
 
-## Tres maneras, una misma intención
+## Cuatro maneras, una misma intención
 
 | Forma | Cómo ayudas | Recibes algo a cambio |
 | --- | --- | --- |
 | 🧠 **Financiar una neurona** | Aporte único mediante Buy Me a Coffee | El mismo contenido abierto que todos |
 | 🪙 **Generar un peso** | Abres voluntariamente un patrocinio | El mismo contenido abierto que todos |
 | 🧪 **Alimenta el laboratorio** | Monthly Support mediante Buy Me a Coffee | El mismo contenido abierto que todos |
+| 💡 **Pedir una lección o guía** | Propones contenido que te gustaría entender o conseguir | La solicitud puede orientar contenido futuro; no garantiza publicación |
 
-La diferencia está en **cómo quieres apoyar**, no en cuánto acceso obtienes.
+La diferencia está en **cómo quieres ayudar**, no en cuánto acceso obtienes.
