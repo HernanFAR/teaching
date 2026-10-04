@@ -773,26 +773,17 @@ Todo se prepara localmente en tu navegador. **Teaching no envía lo que escribas
 <label for="clean-architecture-exploration-mode">¿Cómo quieres explorarlo?</label>
 
 <select id="clean-architecture-exploration-mode" data-exploration-mode>
-<option value="automatic" data-prompt-src="explorations/automatic.txt">Automático — deja que Teaching oriente el tipo de exploración</option>
-<option value="another-case" data-prompt-src="explorations/another-case.txt">Otro caso</option>
-<option value="deepen" data-prompt-src="explorations/deepen.txt">Profundizar</option>
-<option value="apply-to-my-case" data-prompt-src="explorations/apply-to-my-case.txt">Aplicarlo a mi caso</option>
-<option value="test-me" data-prompt-src="explorations/test-me.txt">Ponme a prueba</option>
+<option value="automatic" data-prompt-src="explorations/automatic.txt" data-description="Interpreta tu necesidad y elige una de las exploraciones soportadas, explicando cuál escogió y por qué.">Automático — deja que Teaching oriente el tipo de exploración</option>
+<option value="another-case" data-prompt-src="explorations/another-case.txt" data-description="Recorre las mismas presiones en otro dominio sin copiar artificialmente la arquitectura final.">Otro caso</option>
+<option value="deepen" data-prompt-src="explorations/deepen.txt" data-description="Examina una tensión, un concepto ya introducido o una extensión natural del caso con más detalle.">Profundizar</option>
+<option value="apply-to-my-case" data-prompt-src="explorations/apply-to-my-case.txt" data-description="Parte de tu sistema y comprueba qué presiones de la lección existen realmente, sin forzar la arquitectura final sobre él.">Aplicarlo a mi caso</option>
+<option value="test-me" data-prompt-src="explorations/test-me.txt" data-description="Convierte el recorrido en decisiones progresivas y te deja decidir antes de revelar la transición siguiente.">Ponme a prueba</option>
 </select>
 
-<details class="teaching-exploration__help">
-<summary>¿Qué significa este modo?</summary>
-
-<div class="teaching-exploration__help-content" markdown>
-
-- **Automático** — interpreta tu necesidad y elige una de las exploraciones soportadas, explicando cuál escogió.
-- **Otro caso** — recorre las mismas presiones en otro dominio sin copiar artificialmente la arquitectura final.
-- **Profundizar** — examina una tensión, un concepto ya introducido o una extensión natural del caso con más detalle.
-- **Aplicarlo a mi caso** — parte de tu sistema y comprueba qué presiones de la lección existen realmente.
-- **Ponme a prueba** — convierte el recorrido en decisiones progresivas sin revelar la transición siguiente antes de tiempo.
-
+<div class="teaching-exploration__help">
+<strong>¿Qué significa este modo?</strong>
+<p data-exploration-help>Interpreta tu necesidad y elige una de las exploraciones soportadas, explicando cuál escogió y por qué.</p>
 </div>
-</details>
 
 </div>
 
