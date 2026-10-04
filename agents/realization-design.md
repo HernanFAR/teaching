@@ -100,7 +100,52 @@ Do not design the page around a causal sequence that only works because pressure
 
 If the selected conductor case cannot traverse the source path without artificial transitions, revise the realization case or the pedagogical source before continuing.
 
-### 3. Editorial structure
+### 3. Minimal technical realization
+
+Before designing the editorial structure, choose the smallest technical realization that can make the causal path honest and observable.
+
+The realization should define only the mechanisms needed to materialize the intended tensions, such as:
+
+- language and runtime;
+- initial entry mechanism;
+- concrete persistence or external capabilities when they are pedagogically necessary;
+- later entry mechanisms introduced by the causal path;
+- composition mechanism;
+- local execution and reproducibility requirements.
+
+Also record mechanisms that are intentionally **excluded** because they would introduce concepts too early, hide the tension behind a framework, or create accidental prerequisites.
+
+Prefer technologies that:
+
+- keep the relevant dependency or responsibility visible;
+- can be used locally with modest resources;
+- do not require paid accounts or unnecessary infrastructure;
+- do not solve in advance the architectural problem the lesson is meant to expose.
+
+Do not choose a library merely because it is idiomatic for the final architecture.
+
+The technical realization is valid only if each mechanism appears when the causal path has earned it.
+
+### 4. Code as evidence
+
+When code participates in the realization, treat it as evidence of the transformation rather than as a sequence of complete application rewrites.
+
+Prefer:
+
+- one sufficiently complete initial state;
+- small deltas when one decision changes;
+- before/after fragments when a dependency or responsibility changes;
+- broader snapshots only when the learner needs to inspect the resulting whole.
+
+Every code block should answer a concrete pedagogical question.
+
+Do not repeat boilerplate merely to keep every stage self-contained. If framework setup, configuration, generated code, or infrastructure detail does not help explain the current tension, reduce it, hide it from the main path, or move it to supporting material.
+
+Keep continuity visible: a learner should be able to tell what remained the same and what changed between stages.
+
+Do not use code volume as evidence that an abstraction is necessary. The justification must remain the observable pressure defined by the causal path.
+
+### 5. Editorial structure
 
 Decide which parts of the source are best expressed as:
 
@@ -128,7 +173,7 @@ A useful table of contents should let a learner scan the large argument first an
 
 Do not force every idea into cards or diagrams. Representation should follow the pedagogical job of the content.
 
-### 4. Visual question
+### 6. Visual question
 
 Every non-trivial visual representation should answer a concrete question.
 
@@ -142,7 +187,7 @@ Examples:
 
 If a visual does not answer a useful question, prefer simpler text.
 
-### 5. Component choice
+### 7. Component choice
 
 Before implementing visual structure, read `components.md` and reuse the shared Teaching vocabulary.
 
@@ -158,7 +203,7 @@ Examples:
 
 Introduce custom HTML/CSS only when an existing component would distort the meaning or materially reduce clarity.
 
-### 6. Accessibility and material access
+### 8. Accessibility and material access
 
 Realization design must preserve the access constraints declared by the source.
 
@@ -171,7 +216,7 @@ In particular:
 - text density and contrast must remain readable;
 - the design must not add unnecessary paid or resource-heavy dependencies.
 
-### 7. Responsive behavior
+### 9. Responsive behavior
 
 A realization specification should describe what happens when space becomes scarce.
 
@@ -182,7 +227,7 @@ Prefer:
 - textual continuity when arrows or decorative connectors disappear;
 - stable reading order across layouts.
 
-### 8. Visual rhythm
+### 10. Visual rhythm
 
 Avoid making every section look identical.
 
@@ -196,7 +241,7 @@ Vary representation when the semantic job changes:
 - admonitions for emphasis;
 - prose for transitions and interpretation.
 
-### 9. Exploratory mockups
+### 11. Exploratory mockups
 
 Visual mockups, including AI-generated images, may be used as **disposable exploration artifacts**.
 
@@ -237,6 +282,10 @@ Before treating a realization design as ready for publication, verify:
 - If a conductor case was selected by the realization, was it explicitly validated against the source constraints?
 - Was the source-level causal path concretized into realization-specific states, pressures, minimum changes, and counterfactuals before visual design?
 - Can each stage be traversed without changing the problem or fabricating a pressure merely to justify an abstraction?
+- Was a minimal technical realization chosen before editorial implementation, with unnecessary mechanisms explicitly excluded?
+- Does each technical mechanism appear only after the causal path gives it a reason to exist?
+- When code is used, does each block answer a pedagogical question rather than repeat the whole application?
+- Are changes between code states shown as small, traceable deltas whenever possible?
 - Did implementation reveal evidence that should revise the pedagogical source?
 
 If implementation reveals a problem in the source, stop and make that revision visible instead of compensating for it only in presentation.
