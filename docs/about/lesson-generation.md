@@ -242,7 +242,9 @@ La fuente tampoco es inmutable.
 
 Una realización puede enseñarnos que la secuencia no funciona como esperábamos, que una tensión aparece demasiado pronto, que falta una transición o que estamos intentando enseñar demasiadas cosas a la vez.
 
-<div class="teaching-flow">
+<div class="teaching-flow teaching-flow--multiline">
+
+<div class="teaching-flow__row">
 
 <div class="teaching-flow__step">
 <strong>Fuente pedagógica</strong>
@@ -256,7 +258,9 @@ Una realización puede enseñarnos que la secuencia no funciona como esperábamo
 <span>Expresa esa intención de una forma concreta.</span>
 </div>
 
-<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+</div>
+
+<div class="teaching-flow__row">
 
 <div class="teaching-flow__step">
 <strong>Evidencia</strong>
@@ -268,6 +272,8 @@ Una realización puede enseñarnos que la secuencia no funciona como esperábamo
 <div class="teaching-flow__step teaching-flow__step--accent">
 <strong>Revisión de la fuente</strong>
 <span>Actualizamos la intención o el recorrido cuando la evidencia lo justifica.</span>
+</div>
+
 </div>
 
 </div>
