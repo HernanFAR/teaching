@@ -128,11 +128,6 @@ No todas las lecciones necesitan seguir exactamente esos pasos.
 
 <p class="visual-equivalent"><strong>En texto:</strong> el caso de uso no aparece porque queríamos aplicar una arquitectura; aparece después de que una necesidad concreta vuelve útil separar esa operación.</p>
 
-<div class="causal-rule">
-<span class="causal-rule__label">Regla importante</span>
-<strong>Un concepto no debería aparecer antes de que exista una razón visible para necesitarlo.</strong>
-</div>
-
 ## Una fuente puede tener muchas realizaciones
 
 La misma intención pedagógica puede expresarse de distintas formas.
