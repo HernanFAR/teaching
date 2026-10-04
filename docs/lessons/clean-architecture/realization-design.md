@@ -27,7 +27,7 @@ La fuente, el caso conductor, la evolución causal, la realización técnica mí
 
 La especificación visual está definida y, por ahora, no exige componentes semánticos nuevos.
 
-Las etapas 1 a 5 ya fueron materializadas y validadas por CI. La etapa 6 ya está materializada y separa reglas de la orden de la orquestación del caso de uso; su validación completa en CI está en curso.
+Las etapas 1 a 6 ya fueron materializadas y validadas por CI. La etapa 6 separa reglas de la orden de la orquestación del caso de uso.
 
 Todavía permanecen abiertas las decisiones de:
 
@@ -35,5 +35,5 @@ Todavía permanecen abiertas las decisiones de:
 - geometría exacta de las dos representaciones que pueden requerir boceto;
 - si los ejemplos ejecutables permanecerán como snapshots por etapa o evolucionarán hacia otra forma de distribución.
 
-Antes de avanzar a la **etapa 7**, debemos confirmar el CI de la etapa 6. Después examinaremos dónde debe vivir el conocimiento de las realizaciones concretas y su composición.
+El siguiente paso es materializar la **etapa 7** a partir de una presión observada en el código: las entradas web y marketplace repiten el conocimiento de composición de las realizaciones concretas.
 
