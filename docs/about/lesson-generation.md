@@ -293,25 +293,25 @@ En su lugar, intentamos tomar decisiones de generación que reduzcan barreras in
 
 <div class="teaching-grid teaching-grid--2">
 
-<div class="teaching-item">
+<div class="teaching-item teaching-item--criterion">
 <span class="teaching-item__marker">1</span>
 <strong>Intuición antes del tecnicismo</strong>
 <span>Cuando un término técnico todavía no es necesario, preferimos construir primero la intuición que lo vuelve comprensible.</span>
 </div>
 
-<div class="teaching-item">
+<div class="teaching-item teaching-item--criterion">
 <span class="teaching-item__marker">2</span>
 <strong>Traducción visible</strong>
 <span>Cuando usamos un término en inglés que importa para comprender la idea, mostramos también su significado en español.</span>
 </div>
 
-<div class="teaching-item">
+<div class="teaching-item teaching-item--criterion">
 <span class="teaching-item__marker">3</span>
 <strong>Acceso alternativo</strong>
 <span>Cuando una representación visual contiene información esencial, procuramos que exista una forma textual de acceder a ella.</span>
 </div>
 
-<div class="teaching-item">
+<div class="teaching-item teaching-item--criterion">
 <span class="teaching-item__marker">4</span>
 <strong>Diseño desde el inicio</strong>
 <span>La accesibilidad y las condiciones materiales forman parte de la generación de la lección, no de una revisión posterior.</span>
