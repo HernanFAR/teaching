@@ -7,7 +7,9 @@ hide:
 
 # Asesoría
 
-Teaching publica cómo trabaja. Puedes empezar por tu cuenta o pedir una segunda mirada cuando la necesites.
+**Si puedes resolver tu necesidad con lo que ya publicamos, no necesitas pagarnos; únicamente considera donar.**
+
+La asesoría acompañada no desbloquea conocimiento oculto. Paga el tiempo y el criterio necesarios para trabajar sobre tu situación.
 
 <div class="teaching-grid teaching-grid--2" markdown>
 
@@ -30,11 +32,6 @@ Teaching publica cómo trabaja. Puedes empezar por tu cuenta o pedir una segunda
 </div>
 
 </div>
-
-!!! note "No hay una versión secreta"
-    **Si puedes resolver tu necesidad con lo que ya publicamos, no necesitas pagarnos; únicamente considera donar.**
-
-    La asesoría acompañada no desbloquea conocimiento oculto. Paga el tiempo y el criterio necesarios para trabajar sobre tu situación.
 
 ---
 
