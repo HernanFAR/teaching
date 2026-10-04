@@ -173,3 +173,70 @@ También aparece una distinción que conviene preservar en la lección pública:
 Son dos presiones distintas y no deben enseñarse como si fueran el mismo cambio.
 
 El siguiente experimento será conservar ambos mecanismos de entrada y desafiar la dependencia directa del caso de uso hacia SQLite.
+
+
+## Etapa 4 · La operación conoce demasiado sobre cómo se guarda
+
+Estado: **materializado; ambas entradas de la etapa 4 compilan correctamente**.
+
+Artefacto:
+
+`examples/clean-architecture/stage-04/`
+
+La realización conserva:
+
+- entrada HTTP;
+- entrada marketplace;
+- el mismo caso de uso `CreateOrder`;
+- las mismas reglas de cálculo.
+
+La presión nueva está únicamente en la dependencia de persistencia.
+
+### Cambio realizado
+
+`CreateOrder` dejó de importar `Microsoft.Data.Sqlite`, abrir conexiones y ejecutar SQL.
+
+Ahora expresa la capacidad que necesita mediante:
+
+`IOrderStore.SaveAsync(OrderToSave order)`
+
+La realización concreta vive en:
+
+`SqliteOrderStore`
+
+y es construida por cada entrada ejecutable antes de invocar el caso de uso.
+
+### Lo que deliberadamente no cambiamos
+
+No introdujimos Repository Pattern como plantilla.
+
+`IOrderStore` no existe porque una arquitectura conocida diga que debe existir una interfaz de repositorio. Existe porque, en esta etapa, el caso de uso necesita una capacidad más pequeña y estable que SQLite.
+
+Tampoco introdujimos un contenedor de inyección de dependencias. La composición sigue siendo explícita.
+
+### Evidencia obtenida
+
+En el workflow `Clean Architecture example` run `#29`, tanto:
+
+- `stage-04-web`;
+- `stage-04-marketplace`;
+
+alcanzaron `Build: success`.
+
+La implementación hace visible una inversión concreta:
+
+- antes, el caso de uso dependía de SQLite;
+- ahora, el caso de uso define la capacidad que necesita;
+- SQLite depende de esa capacidad para realizarla.
+
+La presión prevista sobrevivió al código sin necesitar una abstracción mayor.
+
+### Consecuencia para el diseño
+
+La etapa 4 sobrevive a la implementación.
+
+Aparece una formulación especialmente útil para la lección:
+
+> **no abstraemos “la base de datos”; expresamos la capacidad que la operación necesita.**
+
+La siguiente etapa comprobará si esta relación fue una excepción específica de persistencia o si reaparece cuando introducimos otra capacidad externa: notificar una orden creada.
