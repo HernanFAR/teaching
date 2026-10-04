@@ -1679,14 +1679,15 @@
 
 .teaching-work-scope__item {
   display: grid;
-  grid-template-columns: 8rem minmax(0, 1fr);
-  gap: 0.2rem 1rem;
-  padding: 1rem 0;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.1rem 0;
   border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
 }
 
 .teaching-work-scope__label {
-  grid-row: 1 / span 2;
+  padding-top: 0.1rem;
   color: var(--md-default-fg-color--light);
   font-size: 0.72rem;
   font-weight: 700;
@@ -1694,16 +1695,21 @@
   text-transform: uppercase;
 }
 
-.teaching-work-scope__item strong,
-.teaching-work-scope__item > span:last-child {
+.teaching-work-scope__body {
+  min-width: 0;
+}
+
+.teaching-work-scope__body strong,
+.teaching-work-scope__body span {
   display: block;
 }
 
-.teaching-work-scope__item strong {
+.teaching-work-scope__body strong {
   line-height: 1.35;
 }
 
-.teaching-work-scope__item > span:last-child {
+.teaching-work-scope__body span {
+  margin-top: 0.3rem;
   color: var(--md-default-fg-color--light);
   font-size: 0.82rem;
   line-height: 1.5;
@@ -1712,10 +1718,6 @@
 @media screen and (max-width: 45rem) {
   .teaching-work-scope__item {
     grid-template-columns: 1fr;
-    gap: 0.3rem;
-  }
-
-  .teaching-work-scope__label {
-    grid-row: auto;
+    gap: 0.35rem;
   }
 }
