@@ -32,12 +32,16 @@ Treat the default Teaching pipeline as:
 request
 → pedagogical source
 → realization design
-→ implementation
-→ review
+→ implementation evidence
+↺ possible realization or source revision
 → publication
-→ evidence
+→ post-publication evidence
 ↺ possible source revision
 ```
+
+When the lesson depends materially on a causal sequence of code transformations, implementation is not merely a delivery phase after design. It is an **evidence-producing loop** used to test whether the proposed tensions, minimum changes, and names actually survive contact with executable code.
+
+Do not assume that a realization path is valid merely because it is plausible on paper.
 
 A realization can expose problems at different layers.
 
@@ -62,7 +66,8 @@ A useful decomposition is:
 - causal evolution — realization-specific states, pressures, minimum changes, and counterfactuals;
 - technical realization — language, runtime, mechanisms, exclusions, and reproducibility;
 - editorial design — argument hierarchy, code strategy, content forms, and public navigation;
-- visual specification — representation choices, Teaching components, responsive behavior, and exploratory mockups.
+- visual specification — representation choices, Teaching components, responsive behavior, and exploratory mockups;
+- implementation evidence — executable states or other materialized evidence, validation results, observed tensions, and revisions caused by implementation.
 
 Do not create all of these files automatically for every lesson. Split only when the distinction improves ownership, reviewability, or continuity.
 
@@ -76,6 +81,12 @@ When split:
 - if a realization decision exposes a problem in the pedagogical source, revise the source explicitly rather than hiding that change inside a realization artifact.
 
 File length alone is not the rule. **Competing responsibilities are the signal.**
+
+Implementation evidence owns a different kind of statement from realization design:
+
+- realization design records what we expect should happen and why;
+- implementation evidence records what actually happened when the realization was materialized;
+- if those differ materially, revise the artifact that owns the mistaken assumption instead of rewriting the evidence to fit the plan.
 
 ## Required realization specification
 
@@ -173,7 +184,69 @@ Keep continuity visible: a learner should be able to tell what remained the same
 
 Do not use code volume as evidence that an abstraction is necessary. The justification must remain the observable pressure defined by the causal path.
 
-### 5. Editorial structure
+### 5. Materialization loop
+
+When the realization depends materially on executable code, runtime behavior, integrations, or another technical mechanism to make its causal path observable, materialize the path **stage by stage before writing the complete public lesson**.
+
+Use this loop:
+
+```text
+planned stage
+→ materialize the smallest executable state
+→ validate it
+→ record observed evidence
+→ compare evidence with the planned pressure
+→ revise realization or source if needed
+→ continue to the next stage
+```
+
+For each materialized stage, record at least:
+
+- what observable objective remains stable;
+- what new pressure was introduced;
+- what minimum change was made;
+- what still deliberately did not change;
+- whether the implementation actually exposed the expected tension;
+- what validation was performed;
+- what evidence, if any, requires revising the causal path, technical realization, or pedagogical source.
+
+Prefer independently inspectable snapshots, commits, tests, or other reconstructible evidence when they help preserve continuity.
+
+Do not reinterpret a failed prediction as if the realization had always intended the newly observed behavior.
+
+Prefer a visible trajectory:
+
+```text
+previous expectation
+→ implementation evidence
+→ revision
+→ updated expectation
+```
+
+over retrospective narrative smoothing.
+
+The implementation loop should stop introducing structural changes once the causal path has reached its intended synthesis. A final naming or synthesis stage may reuse the last validated executable state rather than creating another refactor solely to resemble a familiar diagram or canonical architecture.
+
+### 6. Publication gate
+
+Do not publish the complete lesson merely because the pedagogical source and realization design are coherent.
+
+If the lesson's argument materially depends on a sequence of technical transformations, the critical transitions should be sufficiently materialized and validated before the final public `index.md` is written.
+
+The publication gate asks:
+
+- Did the important pressures actually appear in the selected conductor case?
+- Did each minimum change solve the pressure it was meant to solve?
+- Did implementation expose a different owner for any problem than the design expected?
+- Were material revisions propagated back to the realization or pedagogical source?
+- Is the final form reconstructible from validated prior states rather than imposed retroactively?
+- Are unresolved implementation gaps clearly non-essential to the pedagogical claim?
+
+Do not convert an untested realization hypothesis into retrospective evidence by drafting the public narrative first and making the implementation conform afterward.
+
+The public lesson should be written from validated evidence when validation is part of the claim.
+
+### 7. Editorial structure
 
 Decide which parts of the source are best expressed as:
 
@@ -201,7 +274,7 @@ A useful table of contents should let a learner scan the large argument first an
 
 Do not force every idea into cards or diagrams. Representation should follow the pedagogical job of the content.
 
-### 6. Visual question
+### 8. Visual question
 
 Every non-trivial visual representation should answer a concrete question.
 
@@ -215,7 +288,7 @@ Examples:
 
 If a visual does not answer a useful question, prefer simpler text.
 
-### 7. Component choice
+### 9. Component choice
 
 Before implementing visual structure, read `components.md` and reuse the shared Teaching vocabulary.
 
@@ -231,7 +304,7 @@ Examples:
 
 Introduce custom HTML/CSS only when an existing component would distort the meaning or materially reduce clarity.
 
-### 8. Accessibility and material access
+### 10. Accessibility and material access
 
 Realization design must preserve the access constraints declared by the source.
 
@@ -244,7 +317,7 @@ In particular:
 - text density and contrast must remain readable;
 - the design must not add unnecessary paid or resource-heavy dependencies.
 
-### 9. Responsive behavior
+### 11. Responsive behavior
 
 A realization specification should describe what happens when space becomes scarce.
 
@@ -255,7 +328,7 @@ Prefer:
 - textual continuity when arrows or decorative connectors disappear;
 - stable reading order across layouts.
 
-### 10. Visual rhythm
+### 12. Visual rhythm
 
 Avoid making every section look identical.
 
@@ -269,7 +342,7 @@ Vary representation when the semantic job changes:
 - admonitions for emphasis;
 - prose for transitions and interpretation.
 
-### 11. Exploratory mockups
+### 13. Exploratory mockups
 
 Visual mockups, including AI-generated images, may be used as **disposable exploration artifacts**.
 
@@ -316,6 +389,11 @@ Before treating a realization design as ready for publication, verify:
 - Does each technical mechanism appear only after the causal path gives it a reason to exist?
 - When code is used, does each block answer a pedagogical question rather than repeat the whole application?
 - Are changes between code states shown as small, traceable deltas whenever possible?
+- When the causal path depends materially on code, was it materialized stage by stage instead of treated only as a paper design?
+- Is implementation evidence recorded separately from realization expectations when that distinction improves traceability?
+- Did each critical stage receive enough validation to support the pedagogical claim being made about it?
+- If implementation contradicted the expected pressure or owner, was the realization revised visibly instead of narratively smoothed over?
+- Has the publication gate been satisfied before drafting the complete public lesson when the lesson depends on validated technical transformations?
 - Did implementation reveal evidence that should revise the pedagogical source?
 
 If implementation reveals a problem in the source, stop and make that revision visible instead of compensating for it only in presentation.
