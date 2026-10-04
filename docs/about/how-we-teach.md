@@ -406,7 +406,7 @@ La IA puede ayudarnos a transformar una fuente pedagógica en una explicación, 
 
 Pero generar una realización no demuestra que esa realización sea correcta.
 
-<div class="teaching-flow teaching-flow--multiline">
+<div class="teaching-flow teaching-flow--multiline teaching-flow--connected">
 
 <div class="teaching-flow__row">
 
@@ -425,6 +425,8 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 </div>
 
 </div>
+
+<div class="teaching-flow__bridge" aria-hidden="true"></div>
 
 <div class="teaching-flow__row">
 
