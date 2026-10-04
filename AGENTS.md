@@ -7,6 +7,7 @@ Este archivo define los principios generales de Teaching.
 Las instrucciones operativas específicas para agentes viven en `agents/`. Antes de generar, derivar o revisar una lección, leer:
 
 - `agents/README.md`;
+- `agents/content-model.md`;
 - `agents/lesson-generation.md`;
 - `agents/realization-design.md`;
 - `agents/explorations.md`;
@@ -285,7 +286,18 @@ Una persona debería poder reutilizarlas para pedir, por ejemplo:
 
 ---
 
-## Lecciones y guías
+## Modelo de contenido
+
+Teaching distingue **tipo**, **perspectiva**, **categoría** y **nivel**.
+
+- El **tipo** describe qué clase de recurso pedagógico es.
+- La **perspectiva** describe desde qué forma de trabajo observamos el problema.
+- La **categoría** describe qué familias de problemas o conocimiento aborda.
+- El **nivel** describe qué comprensión previa presupone.
+
+Las relaciones entre entradas y los recorridos pertenecen principalmente a la composición de las guías, no a la identidad de una lección.
+
+Las reglas operativas completas viven en `agents/content-model.md`.
 
 ### Lección
 
@@ -293,15 +305,17 @@ Responde principalmente:
 
 > Quiero entender este concepto.
 
-Es una unidad conceptual relativamente autocontenida.
+Es una unidad conceptual relativamente autocontenida y reutilizable.
 
 ### Guía
 
 Responde principalmente:
 
-> Quiero conseguir este objetivo.
+> Quiero conseguir o comprender este objetivo mayor.
 
-Puede componer varias lecciones existentes sin duplicarlas.
+Una guía compone lecciones reutilizables con material pedagógico propio que da contexto, orden y continuidad al recorrido.
+
+De forma provisional, Teaching reserva además la posibilidad de un tipo futuro **Historia** para material cuyo valor principal sea reconstruir contexto y trayectoria histórica en lugar de enseñar directamente un concepto. No debe formalizarse más hasta que un caso real lo necesite.
 
 ---
 
