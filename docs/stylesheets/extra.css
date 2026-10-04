@@ -660,8 +660,8 @@
 
 .causal-flow {
   display: grid;
-  grid-template-columns: minmax(8rem, 1fr) auto minmax(8rem, 1fr) auto minmax(8rem, 1fr) auto minmax(8rem, 1fr) auto minmax(8rem, 1fr) auto minmax(8rem, 1fr) auto minmax(8rem, 1fr);
-  gap: 0.45rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
   align-items: stretch;
   margin: 1.25rem 0 0.8rem;
 }
@@ -704,9 +704,7 @@
 }
 
 .causal-flow__arrow {
-  display: grid;
-  place-items: center;
-  color: var(--md-default-fg-color--light);
+  display: none;
 }
 
 .causal-example {
@@ -747,17 +745,9 @@
   line-height: 1.5;
 }
 
-@media screen and (max-width: 76rem) {
+@media screen and (max-width: 59.9844em) {
   .causal-flow {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .causal-flow__arrow {
-    display: none;
-  }
-
-  .causal-step:last-of-type {
-    grid-column: 1 / -1;
   }
 
   .causal-example {
@@ -772,9 +762,5 @@
 @media screen and (max-width: 45rem) {
   .causal-flow {
     grid-template-columns: 1fr;
-  }
-
-  .causal-step:last-of-type {
-    grid-column: auto;
   }
 }
