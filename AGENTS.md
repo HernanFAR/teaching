@@ -1,5 +1,16 @@
 # AGENTS.md
 
+## Superficie operativa para agentes
+
+Este archivo define los principios generales de Teaching.
+
+Las instrucciones operativas específicas para agentes viven en `agents/`. Antes de generar, derivar o revisar una lección, leer:
+
+- `agents/README.md`;
+- `agents/lesson-generation.md`.
+
+La documentación bajo `docs/` es la realización pública para humanos. No reemplaza las reglas operativas de `agents/`.
+
 ## Propósito del repositorio
 
 **Teaching** es una plataforma de aprendizaje de ingeniería de software orientada a entender conceptos desde los problemas que los hacen necesarios.
@@ -257,18 +268,7 @@ Puede componer varias lecciones existentes sin duplicarlas.
 
 ---
 
-## Relación futura con VSlices
 
-Teaching es actualmente una plataforma independiente.
-
-Sin embargo, existe una dirección posible: usarla como una extensión educativa de **VSlices**, especialmente para exponer de manera reproducible los problemas, tensiones y decisiones que motivan determinadas prácticas de diseño.
-
-Si esta relación se formaliza en el futuro, debe conservarse una separación importante:
-
-- VSlices puede aportar problemas, lenguaje, experimentos y casos reales;
-- Teaching debe seguir priorizando comprensión pedagógica y no convertirse en documentación promocional de una metodología.
-
----
 
 ## Criterio de éxito
 
