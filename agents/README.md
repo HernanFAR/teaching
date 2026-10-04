@@ -14,3 +14,4 @@ Agents should:
 Current rules:
 
 - [Lesson generation](lesson-generation.md)
+- [Realization design](realization-design.md)
