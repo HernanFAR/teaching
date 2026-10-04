@@ -124,10 +124,11 @@ La revisión adopta una sola superficie de composición:
 3. el modo predeterminado es **Automático**;
 4. Automático no es una quinta exploración: funciona como un router que elige entre las cuatro exploraciones soportadas y debe declarar cuál escogió;
 5. las cuatro exploraciones siguen disponibles manualmente para quien quiera controlar la realización;
-6. una ayuda colapsable explica los modos sin obligar a comprender la taxonomía antes de formular la necesidad;
-7. el texto completo preparado puede inspeccionarse antes de copiarlo;
-8. copiar al portapapeles requiere una acción explícita;
-9. la necesidad del estudiante no se envía a ningún servidor de Teaching.
+6. cuando la persona selecciona manualmente un modo, el prompt preserva la procedencia de esa decisión: el LLM realiza el modo ya seleccionado y no debe presentarlo como una elección propia;
+7. una ayuda colapsable explica los modos sin obligar a comprender la taxonomía antes de formular la necesidad;
+8. el texto completo preparado puede inspeccionarse antes de copiarlo;
+9. copiar al portapapeles requiere una acción explícita;
+10. la necesidad del estudiante no se envía a ningún servidor de Teaching.
 
 La interacción funciona enteramente en el navegador.
 
