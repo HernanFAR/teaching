@@ -89,7 +89,7 @@ Typical structure:
 
 Modifiers:
 
-- `teaching-item--stacked`: marker above the content; useful for compact sequential steps;
+- `teaching-item--stacked`: the marker floats over the top-left border as a badge; useful for compact sequential steps;
 - `teaching-item--quiet`: restrained treatment for principles or invariants that should not look like cards.
 
 Use the number only when order or stable enumeration actually helps comprehension.
