@@ -53,7 +53,25 @@ Do not hide a source problem inside presentation decisions or compensate for a d
 
 Before implementation, establish enough information to answer the following.
 
-### 1. Editorial structure
+### 1. Conductor case selection
+
+If the pedagogical source defines constraints for a conductor case rather than fixing one concrete case, realization design must select and validate the case before deciding how to present it.
+
+The selected case should:
+
+- satisfy every source-level validity constraint;
+- make the intended tensions observable without fabricating them;
+- preserve the required counterfactuals;
+- avoid introducing accidental prerequisites or resource barriers;
+- remain replaceable by another valid case without changing the pedagogical intent.
+
+Record why the case is valid before implementation.
+
+If no candidate case satisfies the source constraints cleanly, treat that as evidence about the source or the realization design. Do not weaken the constraints silently just to keep a convenient example.
+
+If the source explicitly fixes the conductor case as an invariant, preserve it and do not substitute another domain during realization design without revising the source first.
+
+### 2. Editorial structure
 
 Decide which parts of the source are best expressed as:
 
@@ -81,7 +99,7 @@ A useful table of contents should let a learner scan the large argument first an
 
 Do not force every idea into cards or diagrams. Representation should follow the pedagogical job of the content.
 
-### 2. Visual question
+### 3. Visual question
 
 Every non-trivial visual representation should answer a concrete question.
 
@@ -95,7 +113,7 @@ Examples:
 
 If a visual does not answer a useful question, prefer simpler text.
 
-### 3. Component choice
+### 4. Component choice
 
 Before implementing visual structure, read `components.md` and reuse the shared Teaching vocabulary.
 
@@ -111,7 +129,7 @@ Examples:
 
 Introduce custom HTML/CSS only when an existing component would distort the meaning or materially reduce clarity.
 
-### 4. Accessibility and material access
+### 5. Accessibility and material access
 
 Realization design must preserve the access constraints declared by the source.
 
@@ -124,7 +142,7 @@ In particular:
 - text density and contrast must remain readable;
 - the design must not add unnecessary paid or resource-heavy dependencies.
 
-### 5. Responsive behavior
+### 6. Responsive behavior
 
 A realization specification should describe what happens when space becomes scarce.
 
@@ -135,7 +153,7 @@ Prefer:
 - textual continuity when arrows or decorative connectors disappear;
 - stable reading order across layouts.
 
-### 6. Visual rhythm
+### 7. Visual rhythm
 
 Avoid making every section look identical.
 
@@ -149,7 +167,7 @@ Vary representation when the semantic job changes:
 - admonitions for emphasis;
 - prose for transitions and interpretation.
 
-### 7. Exploratory mockups
+### 8. Exploratory mockups
 
 Visual mockups, including AI-generated images, may be used as **disposable exploration artifacts**.
 
@@ -187,6 +205,7 @@ Before treating a realization design as ready for publication, verify:
 - Does the layout reflow without overflow?
 - Does the page avoid repetitive cardification?
 - Can the learner distinguish source invariants from realization choices?
+- If a conductor case was selected by the realization, was it explicitly validated against the source constraints?
 - Did implementation reveal evidence that should revise the pedagogical source?
 
 If implementation reveals a problem in the source, stop and make that revision visible instead of compensating for it only in presentation.
