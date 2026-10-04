@@ -12,6 +12,7 @@ La realización está dividida por responsabilidad para evitar que selección de
 4. [Diseño editorial](realization-editorial.md) — argumentos mayores, uso del código, ritmo y jerarquía pública.
 5. [Especificación visual](realization-visual.md) — representaciones, componentes Teaching y bocetos que pueden aportar evidencia.
 6. [Evidencia de implementación](realization-implementation.md) — estados ejecutables, validaciones y revisiones provocadas por el código.
+7. [Exploraciones soportadas](realization-explorations.md) — modos disponibles, material requerido y composición del texto preparado para un LLM.
 
 Cada documento depende de las decisiones anteriores, pero puede revisarse de forma independiente cuando nueva evidencia revele un problema localizado.
 
@@ -31,11 +32,14 @@ Las etapas 1 a 7 ya fueron materializadas y validadas por CI. La etapa 8 ya fue 
 
 La trayectoria técnica de la realización está cerrada.
 
+La primera superficie de exploraciones soportadas también está diseñada para esta lección. Las cuatro exploraciones iniciales pueden sostenerse con la fuente y la evidencia disponibles.
+
 Permanecen como decisiones de publicación:
 
 - la geometría exacta de las dos representaciones que pueden requerir boceto;
 - qué fragmentos de los snapshots deben aparecer en el cuerpo de la lección y cuáles quedan como evidencia externa;
-- la revisión visual final sobre el sitio.
+- la revisión visual final sobre el sitio;
+- observar la primera realización de exploraciones como evidencia y revisar el contrato compartido si aparecen límites.
 
-El siguiente paso es generar el **`index.md` público** siguiendo `realization-editorial.md`, `realization-visual.md` y la evidencia acumulada en `realization-implementation.md`.
+El `index.md` público ya existe. Las revisiones posteriores deben preservar su recorrido principal y tratar la superficie de exploraciones como una continuación opcional, no como parte de la secuencia causal obligatoria.
 
