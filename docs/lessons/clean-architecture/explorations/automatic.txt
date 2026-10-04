@@ -51,4 +51,25 @@ Al comenzar tu respuesta:
 
 No inventes un quinto tipo de exploración. Si la necesidad mezcla varios objetivos, elige el dominante y conserva los demás como restricciones secundarias.
 
+## Material fuente de Teaching
+
+Estas referencias conservan la procedencia del material usado para orientar esta exploración:
+
+- **Fuente pedagógica:** `docs/lessons/clean-architecture/generation-instructions.md`
+- **Caso conductor:** `docs/lessons/clean-architecture/realization-case.md`
+- **Evolución causal:** `docs/lessons/clean-architecture/realization-evolution.md`
+- **Realización técnica:** `docs/lessons/clean-architecture/realization-technical.md`
+- **Evidencia de implementación:** `docs/lessons/clean-architecture/realization-implementation.md`
+- **Diseño de exploraciones:** `docs/lessons/clean-architecture/realization-explorations.md`
+
+Repositorio:
+
+`https://github.com/HernanFAR/teaching`
+
+Si tienes acceso al repositorio, puedes consultar estos artefactos para ampliar contexto y verificar la trayectoria original.
+
+Si no puedes acceder a ellos, trabaja únicamente con el contexto incluido en este texto. No inventes, reconstruyas por suposición ni atribuyas contenido específico a un archivo que no hayas podido consultar.
+
+Las referencias no sustituyen la necesidad concreta del estudiante ni te autorizan a ampliar silenciosamente el alcance pedagógico de la lección.
+
 A continuación recibirás la necesidad concreta del estudiante.
