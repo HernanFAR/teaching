@@ -1,14 +1,19 @@
-# Teaching
+---
+title: Inicio
+hide:
+  - navigation
+hide_page_title: true
+---
 
 <div class="hero" markdown>
 
-## Entender primero. Nombrar después.
+# Entender primero. Nombrar después.
 
 Esta plataforma reúne lecciones de ingeniería de software construidas alrededor de una idea simple:
 
-**los conceptos se entienden mejor cuando primero aparece el problema que los hace necesarios.**
+> los conceptos se entienden mejor cuando primero aparece el problema que los hace necesarios.
 
-No partimos desde diagramas finales, listas de patrones ni estructuras de carpetas. Partimos desde código que funciona, introducimos nuevas presiones y observamos qué decisiones empiezan a tener sentido.
+No partimos desde diagramas finales, listas de patrones ni estructuras de carpetas. Partimos desde código que funciona, cambiamos una condición a la vez y observamos qué decisiones empiezan a tener sentido.
 
 [Explorar lecciones](lessons/index.md){ .md-button .md-button--primary }
 [Cómo enseñamos](about/how-we-teach.md){ .md-button }
@@ -26,13 +31,13 @@ No partimos desde diagramas finales, listas de patrones ni estructuras de carpet
 
     ---
 
-    Una implementación pequeña y razonable. Nada se abstrae solo porque "así se hace".
+    Una implementación pequeña y razonable. No separamos ni agregamos capas solo porque "así se hace".
 
--   :material-alert-circle-outline:{ .lg .middle } **Introducimos una presión**
+-   :material-alert-circle-outline:{ .lg .middle } **Algo cambia**
 
     ---
 
-    Testing, persistencia, integraciones, nuevos puntos de entrada o cambios de negocio.
+    Necesitamos probar el código, guardar datos, conectarnos con otro sistema, ejecutar el mismo comportamiento desde otro lugar o responder a una nueva regla del negocio.
 
 -   :material-lightbulb-on-outline:{ .lg .middle } **Aparece un concepto**
 
@@ -50,12 +55,7 @@ No partimos desde diagramas finales, listas de patrones ni estructuras de carpet
 
 ## Tres pilares
 
-Teaching se apoya en tres ideas: aprender desde el problema, construir lecciones que puedan regenerarse y hacer visibles las decisiones que llevan desde una solución sencilla hasta una estructura más elaborada.
+Teaching se apoya en tres ideas: aprender desde el problema, construir lecciones que puedan adaptarse a otras personas, ejemplos o lenguajes, y hacer visibles las decisiones que llevan desde una solución sencilla hasta una estructura más elaborada.
 
 [:octicons-arrow-right-24: Conocer los principios de Teaching](about/how-we-teach.md)
 
-## Primer recorrido
-
-La primera lección en construcción es **Clean Architecture**, abordada como una evolución incremental desde una operación HTTP completamente directa hasta una organización donde las dependencias quedan bajo control.
-
-[:octicons-arrow-right-24: Ir a Clean Architecture](lessons/clean-architecture/index.md)

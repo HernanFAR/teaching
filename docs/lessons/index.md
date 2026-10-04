@@ -10,17 +10,7 @@ Cada una intenta responder tres preguntas:
 
 ## Disponibles
 
-<div class="grid cards" markdown>
-
--   :material-layers-triple-outline:{ .lg .middle } **Clean Architecture**
-
-    ---
-
-    Construir progresivamente una arquitectura limpia desde código ingenuo pero funcional.
-
-    [:octicons-arrow-right-24: Abrir lección](clean-architecture/index.md)
-
-</div>
+Todavía no hay lecciones publicadas.
 
 !!! note "En crecimiento"
-    Este repositorio está pensado como una colección incremental. Las nuevas lecciones pueden compartir ejemplos, diagramas y vocabulario sin formar necesariamente un curso lineal.
+    Estamos preparando las primeras lecciones con el nuevo proceso de generación y diseño de realizaciones. La colección crecerá de forma incremental y cada nueva entrada podrá compartir ejemplos, diagramas y vocabulario sin formar necesariamente un curso lineal.

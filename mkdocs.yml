@@ -6,6 +6,7 @@ repo_name: HernanFAR/teaching
 
 theme:
   name: material
+  variant: classic
   custom_dir: overrides
   language: es
   features:
@@ -32,12 +33,12 @@ theme:
 
 nav:
   - Inicio: index.md
-  - Cómo enseñamos: about/how-we-teach.md
+  - ¿Cómo funcionamos?:
+      - Cómo enseñamos: about/how-we-teach.md
+      - Cómo generamos lecciones: about/lesson-generation.md
+      - Cómo diseñamos una realización: about/realization-design.md
   - Lecciones:
       - lessons/index.md
-      - Clean Architecture:
-          - lessons/clean-architecture/index.md
-          - Instrucciones de generación: lessons/clean-architecture/generation-instructions.md
   - Guías:
       - guides/index.md
   - Apoyar:
@@ -56,6 +57,9 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:zensical.extensions.emoji.twemoji
+      emoji_generator: !!python/name:zensical.extensions.emoji.to_svg
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid

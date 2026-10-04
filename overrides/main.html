@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-  {{ super() }}
+  <div{% if page and page.meta.hide_page_title %} class="teaching-hide-page-title"{% endif %}>
+    {{ super() }}
+  </div>
 
   {% if page and page.url != "" and page.url != "support/" and page.url != "support/generar-un-peso/" and not page.meta.hide_support %}
     {% include "partials/support-cta.html" %}

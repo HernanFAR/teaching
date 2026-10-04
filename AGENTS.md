@@ -1,5 +1,18 @@
 # AGENTS.md
 
+## Superficie operativa para agentes
+
+Este archivo define los principios generales de Teaching.
+
+Las instrucciones operativas específicas para agentes viven en `agents/`. Antes de generar, derivar o revisar una lección, leer:
+
+- `agents/README.md`;
+- `agents/lesson-generation.md`;
+- `agents/realization-design.md`;
+- `agents/components.md`.
+
+La documentación bajo `docs/` es la realización pública para humanos. No reemplaza las reglas operativas de `agents/`.
+
 ## Propósito del repositorio
 
 **Teaching** es una plataforma de aprendizaje de ingeniería de software orientada a entender conceptos desde los problemas que los hacen necesarios.
@@ -28,13 +41,29 @@ Primero debe aparecer una situación concreta, una tensión observable o una lim
 
 Las lecciones no son artefactos estáticos.
 
-Siempre que sea razonable, una lección debe incluir instrucciones de generación suficientemente claras como para reconstruir el mismo recorrido:
+Una entrada publicada debe funcionar como una **realización explicativa** de una intención pedagógica más estable.
 
-- en otro lenguaje;
-- con otro dominio;
-- para otro nivel de experiencia;
-- con más o menos ejemplos;
-- con otras representaciones visuales.
+Siempre que sea razonable, cada lección debe mantener unas **instrucciones base de generación** que actúen como su fuente pedagógica. Estas instrucciones deben conservar aquello que no debería perderse al cambiar la forma de enseñar:
+
+- qué debe entender la persona;
+- qué problemas o tensiones deben aparecer;
+- en qué orden deben aparecer;
+- qué conceptos todavía no deben introducirse;
+- qué límites y contrafactuales deben conservarse;
+- qué criterios de accesibilidad y calidad debe satisfacer la explicación.
+
+Desde esa fuente pueden derivarse distintas realizaciones según la finalidad de enseñanza, por ejemplo:
+
+- explicar el mismo recorrido en otro lenguaje o dominio;
+- adaptar la dificultad o el conocimiento previo asumido;
+- producir otra explicación cuando la anterior no funcionó;
+- generar material visual;
+- producir ejercicios o preguntas;
+- preparar una tutoría guiada;
+- generar material de evaluación;
+- construir ejemplos adicionales.
+
+Una derivación puede cambiar representación, ejemplos, lenguaje, profundidad o interacción. **No debe cambiar silenciosamente la intención pedagógica que la fuente declara.**
 
 Las instrucciones de generación son parte del material educativo, no documentación interna descartable.
 
@@ -137,6 +166,56 @@ La persona debe poder reconstruir el camino que llevó hasta ahí.
 
 Cuando haya que elegir entre una explicación que entrega la respuesta inmediatamente y una que permite descubrirla progresivamente, preferir la segunda si sigue siendo clara y práctica.
 
+### XIII. La consciencia de clase debe ser parte de la generación
+
+**La consciencia de clase debe ser parte de la generación.**
+
+Teaching no debe asumir como condición de acceso que la persona dispone de dinero, hardware costoso, educación formal, dominio de inglés, tiempo abundante, herramientas pagadas o condiciones físicas y sensoriales ideales.
+
+Esto se ve reflejado, entre otras cosas, en:
+
+- cuando usamos un término en inglés, **mostrar también su traducción al español de forma visible** cuando esa traducción sea necesaria para comprender la idea;
+- no esconder información esencial únicamente en hover, `title`, color, animaciones o interacciones que puedan no estar disponibles para todas las personas;
+- hacer que el contenido sea utilizable por personas con discapacidades, **especialmente discapacidades visuales**: estructura semántica, contraste suficiente, texto alternativo cuando corresponda y explicaciones textuales de aquello que no pueda depender únicamente de una representación visual;
+- no asumir acceso a software, servicios, cursos, suscripciones o infraestructura pagada cuando exista una alternativa razonable;
+- no asumir hardware potente ni conexiones rápidas como requisito implícito para aprender un concepto;
+- evitar usar formación universitaria, certificaciones o conocimiento previo costoso como filtros innecesarios para acceder a una explicación;
+- preferir ejemplos, herramientas y caminos que una persona pueda reproducir con recursos modestos cuando eso no degrade el objetivo pedagógico;
+- distinguir cuidadosamente entre una limitación técnica real y una barrera económica, lingüística, educativa o de accesibilidad que nosotros mismos estemos introduciendo.
+
+La accesibilidad y las condiciones materiales no son una fase posterior de publicación. Deben considerarse mientras se diseña y genera la explicación.
+
+---
+
+## Pipeline de Teaching
+
+Separar la **fuente pedagógica** de su **diseño de realización**.
+
+La fuente responde:
+
+> ¿qué queremos enseñar y qué debe permanecer?
+
+El diseño de realización responde:
+
+> ¿cómo hacemos visible esa intención en una experiencia concreta?
+
+Usar como flujo de referencia:
+
+```text
+solicitud
+→ fuente pedagógica
+→ diseño de realización
+→ implementación
+→ revisión
+→ publicación
+→ evidencia
+↺ posible revisión de la fuente
+```
+
+No usar decisiones visuales para ocultar incertidumbre pedagógica. Si implementar una realización revela que una tensión aparece demasiado pronto, que falta una transición o que la intención era demasiado amplia, tratarlo como evidencia sobre la fuente.
+
+Los bocetos visuales —incluidas imágenes generadas con IA— pueden utilizarse para explorar composición, jerarquía y agrupación. Son artefactos desechables de exploración, no fuente de verdad ni implementación final.
+
 ---
 
 ## Anatomía recomendada de una lección
@@ -152,7 +231,7 @@ No todas las lecciones necesitan exactamente la misma estructura, pero una buena
 7. **Contrafactual** — qué habría pasado sin el cambio.
 8. **Límites** — cuándo no vale la pena usarlo.
 9. **Siguiente tensión** — qué prepara el próximo paso.
-10. **Instrucciones de generación** — cómo reconstruir o adaptar la experiencia.
+10. **Instrucciones base de generación** — la fuente pedagógica desde la que pueden derivarse distintas realizaciones de la experiencia.
 
 ---
 
@@ -194,7 +273,7 @@ La IA puede participar en:
 
 Sin embargo, el contenido debe conservar una intención pedagógica humana y verificable.
 
-Las instrucciones de generación deben tratarse como una especie de **código fuente pedagógico**: describen qué se intenta enseñar, en qué orden y bajo qué restricciones.
+Las instrucciones base de generación deben tratarse como **código fuente pedagógico**: describen qué se intenta enseñar, en qué orden y bajo qué restricciones. La entrada publicada es una realización de esa fuente, no su reemplazo.
 
 Una persona debería poder reutilizarlas para pedir, por ejemplo:
 
@@ -222,18 +301,7 @@ Puede componer varias lecciones existentes sin duplicarlas.
 
 ---
 
-## Relación futura con VSlices
 
-Teaching es actualmente una plataforma independiente.
-
-Sin embargo, existe una dirección posible: usarla como una extensión educativa de **VSlices**, especialmente para exponer de manera reproducible los problemas, tensiones y decisiones que motivan determinadas prácticas de diseño.
-
-Si esta relación se formaliza en el futuro, debe conservarse una separación importante:
-
-- VSlices puede aportar problemas, lenguaje, experimentos y casos reales;
-- Teaching debe seguir priorizando comprensión pedagógica y no convertirse en documentación promocional de una metodología.
-
----
 
 ## Criterio de éxito
 
