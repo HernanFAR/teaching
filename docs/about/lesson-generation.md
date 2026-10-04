@@ -133,25 +133,115 @@ No todas las lecciones necesitan seguir exactamente esos pasos. Un ejemplo peque
 
 La misma intención pedagógica puede expresarse de distintas formas.
 
-Podemos cambiar:
+<div class="realization-variables">
 
-- el lenguaje de programación;
-- el dominio del ejemplo;
-- la dificultad;
-- la cantidad de ayuda;
-- los diagramas;
-- los ejercicios;
-- la forma de interacción.
+<div class="realization-variable">
+<span class="realization-variable__label">Lenguaje</span>
+<strong>C#, Python u otro</strong>
+<span>Cambia la herramienta, no aquello que intentamos enseñar.</span>
+</div>
 
-Eso nos permite, por ejemplo, explicar la misma idea usando C# y órdenes, Python y videojuegos, una tutoría guiada o una serie de ejercicios.
+<div class="realization-variable">
+<span class="realization-variable__label">Dominio</span>
+<strong>Órdenes, videojuegos, inventario...</strong>
+<span>El contexto puede acercar la idea sin alterar su recorrido esencial.</span>
+</div>
 
-Pero hay cosas que no deberían cambiar silenciosamente: la intención de la lección, las tensiones esenciales, sus límites y aquello que todavía no corresponde introducir.
+<div class="realization-variable">
+<span class="realization-variable__label">Dificultad</span>
+<strong>Más o menos profundidad</strong>
+<span>Podemos adaptar cuánto asumimos y cuánto acompañamiento necesita la persona.</span>
+</div>
 
-Eso no significa que la fuente sea inmutable.
+<div class="realization-variable">
+<span class="realization-variable__label">Representación</span>
+<strong>Texto, código, diagramas o ejercicios</strong>
+<span>La forma cambia según qué ayude mejor a comprender la tensión actual.</span>
+</div>
 
-Una realización también puede enseñarnos que la secuencia no funciona como esperábamos, que una tensión aparece demasiado pronto, que falta una transición o que estábamos intentando enseñar demasiadas cosas a la vez.
+<div class="realization-variable">
+<span class="realization-variable__label">Interacción</span>
+<strong>Lectura, tutoría o práctica guiada</strong>
+<span>La misma fuente puede convertirse en experiencias de aprendizaje distintas.</span>
+</div>
 
-Cuando eso ocurre, revisamos la **fuente pedagógica** y dejamos visible el cambio. La realización no solo deriva de la fuente: también puede producir evidencia para mejorarla.
+<div class="realization-variable">
+<span class="realization-variable__label">Ayuda</span>
+<strong>Más o menos andamiaje</strong>
+<span>Podemos variar pistas, ejemplos y apoyo sin adelantar conceptos innecesarios.</span>
+</div>
+
+</div>
+
+Eso nos permite producir realizaciones distintas sin perder necesariamente la misma intención pedagógica.
+
+Pero algunas cosas no deberían cambiar silenciosamente:
+
+<div class="realization-invariants">
+
+<div class="realization-invariant">
+<span class="realization-invariant__number">1</span>
+<strong>Intención pedagógica</strong>
+<span>Qué debería comprender la persona al terminar.</span>
+</div>
+
+<div class="realization-invariant">
+<span class="realization-invariant__number">2</span>
+<strong>Tensiones esenciales</strong>
+<span>Qué problemas deben aparecer para que el concepto tenga una causa visible.</span>
+</div>
+
+<div class="realization-invariant">
+<span class="realization-invariant__number">3</span>
+<strong>Límites</strong>
+<span>Qué costos, contrafactuales y condiciones no deberían desaparecer.</span>
+</div>
+
+<div class="realization-invariant">
+<span class="realization-invariant__number">4</span>
+<strong>Momento de introducir conceptos</strong>
+<span>Qué todavía no corresponde nombrar o enseñar.</span>
+</div>
+
+</div>
+
+<p class="visual-equivalent"><strong>En texto:</strong> una realización puede cambiar lenguaje, dominio, dificultad, representación, interacción o cantidad de ayuda; no debería cambiar silenciosamente la intención, las tensiones esenciales, los límites ni el momento en que aparecen los conceptos.</p>
+
+La fuente tampoco es inmutable.
+
+Una realización puede enseñarnos que la secuencia no funciona como esperábamos, que una tensión aparece demasiado pronto, que falta una transición o que estamos intentando enseñar demasiadas cosas a la vez.
+
+<div class="source-feedback">
+
+<div class="source-feedback__step">
+<strong>Fuente pedagógica</strong>
+<span>Declara qué intentamos preservar.</span>
+</div>
+
+<div class="source-feedback__arrow" aria-hidden="true">→</div>
+
+<div class="source-feedback__step">
+<strong>Realización</strong>
+<span>Expresa esa intención de una forma concreta.</span>
+</div>
+
+<div class="source-feedback__arrow" aria-hidden="true">→</div>
+
+<div class="source-feedback__step">
+<strong>Evidencia</strong>
+<span>La experiencia revela qué funcionó, qué faltó o qué apareció demasiado pronto.</span>
+</div>
+
+<div class="source-feedback__arrow" aria-hidden="true">↺</div>
+
+<div class="source-feedback__step source-feedback__step--review">
+<strong>Revisión de la fuente</strong>
+<span>Actualizamos la intención o el recorrido cuando la evidencia lo justifica.</span>
+</div>
+
+</div>
+
+<p class="visual-equivalent"><strong>En texto:</strong> la fuente produce realizaciones, pero las realizaciones también producen evidencia que puede justificar revisar la fuente.</p>
 
 ## Las condiciones de acceso también son parte de la generación
 
