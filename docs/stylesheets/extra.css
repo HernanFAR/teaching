@@ -1363,6 +1363,30 @@
   font-size: 1.05rem;
 }
 
+.teaching-flow--multiline {
+  display: block;
+}
+
+.teaching-flow--multiline .teaching-flow__row {
+  display: flex;
+  gap: 0.55rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.teaching-flow--multiline .teaching-flow__row + .teaching-flow__row {
+  margin-top: 1.35rem;
+}
+
+.teaching-flow--multiline .teaching-flow__step {
+  flex: 0 1 12rem;
+  width: 12rem;
+}
+
+.teaching-flow--multiline .teaching-flow__arrow {
+  flex: 0 0 auto;
+}
+
 
 .teaching-link-card {
   display: block;
@@ -1436,6 +1460,23 @@
 
   .teaching-flow__arrow {
     transform: rotate(90deg);
+  }
+
+  .teaching-flow--multiline {
+    display: block;
+  }
+
+  .teaching-flow--multiline .teaching-flow__row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .teaching-flow--multiline .teaching-flow__step {
+    width: auto;
+  }
+
+  .teaching-flow--multiline .teaching-flow__row + .teaching-flow__row {
+    margin-top: 0.55rem;
   }
 }
 
