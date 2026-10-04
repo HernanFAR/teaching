@@ -183,28 +183,28 @@ Puede ser conocimiento sobre software, pero también sobre:
 
 ### El trabajo puede incluir
 
-<div class="teaching-grid teaching-grid--2" markdown>
+<div class="teaching-work-scope" markdown>
 
-<div class="teaching-card" markdown>
-<span class="teaching-eyebrow">Delimitar</span>
+<div class="teaching-work-scope__item" markdown>
+<span class="teaching-work-scope__label">Delimitar</span>
 <strong>Encontrar la unidad de trabajo</strong>
 <span>Identificar qué conocimiento quieres enseñar y delimitar unidades pedagógicas que puedan trabajarse con claridad.</span>
 </div>
 
-<div class="teaching-card" markdown>
-<span class="teaching-eyebrow">Modelar</span>
+<div class="teaching-work-scope__item" markdown>
+<span class="teaching-work-scope__label">Modelar</span>
 <strong>Hacer explícito lo que importa</strong>
 <span>Explicitar intención, relaciones, dependencias, invariantes, errores, contrafactuales y qué puede variar entre realizaciones.</span>
 </div>
 
-<div class="teaching-card" markdown>
-<span class="teaching-eyebrow">Realizar</span>
+<div class="teaching-work-scope__item" markdown>
+<span class="teaching-work-scope__label">Realizar</span>
 <strong>Convertir el modelo en experiencias</strong>
 <span>Diseñar recorridos, construir una primera fuente pedagógica y producir realizaciones iniciales.</span>
 </div>
 
-<div class="teaching-card" markdown>
-<span class="teaching-eyebrow">Probar</span>
+<div class="teaching-work-scope__item" markdown>
+<span class="teaching-work-scope__label">Probar</span>
 <strong>Usar la evidencia para revisar</strong>
 <span>Observar qué evidencia contradice nuestras expectativas y qué parte del trabajo necesita volver a examinarse.</span>
 </div>
