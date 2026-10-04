@@ -16,4 +16,5 @@ Current rules:
 
 - [Lesson generation](lesson-generation.md)
 - [Realization design](realization-design.md)
+- [Supported lesson explorations](explorations.md)
 - [Components](components.md)
