@@ -53,23 +53,19 @@ No inventes un quinto tipo de exploración. Si la necesidad mezcla varios objeti
 
 ## Material fuente de Teaching
 
-Estas referencias conservan la procedencia del material usado para orientar esta exploración:
+Si tienes acceso a GitHub, consulta la carpeta completa de esta lección antes de reconstruir por tu cuenta aquello que Teaching ya dejó explícito:
 
-- **Fuente pedagógica:** `docs/lessons/clean-architecture/generation-instructions.md`
-- **Caso conductor:** `docs/lessons/clean-architecture/realization-case.md`
-- **Evolución causal:** `docs/lessons/clean-architecture/realization-evolution.md`
-- **Realización técnica:** `docs/lessons/clean-architecture/realization-technical.md`
-- **Evidencia de implementación:** `docs/lessons/clean-architecture/realization-implementation.md`
-- **Diseño de exploraciones:** `docs/lessons/clean-architecture/realization-explorations.md`
+https://github.com/HernanFAR/teaching/tree/lesson/clean-architecture/docs/lessons/clean-architecture
 
-Repositorio:
+Allí encontrarás la fuente pedagógica, el diseño de realización, el caso conductor, la evolución causal, la realización técnica, la evidencia de implementación y la publicación canónica.
 
-`https://github.com/HernanFAR/teaching`
+Usa esos artefactos como fuente de contexto y provenance cuando estén disponibles.
 
-Si tienes acceso al repositorio, puedes consultar estos artefactos para ampliar contexto y verificar la trayectoria original.
+Si no puedes acceder a la carpeta o a alguno de sus archivos:
+- trabaja únicamente con el contexto incluido en este texto y con la necesidad concreta del estudiante;
+- no finjas haber consultado material al que no tuviste acceso;
+- no atribuyas a Teaching una afirmación específica que no puedas sostener con el material disponible.
 
-Si no puedes acceder a ellos, trabaja únicamente con el contexto incluido en este texto. No inventes, reconstruyas por suposición ni atribuyas contenido específico a un archivo que no hayas podido consultar.
-
-Las referencias no sustituyen la necesidad concreta del estudiante ni te autorizan a ampliar silenciosamente el alcance pedagógico de la lección.
+Las referencias complementan esta exploración; no sustituyen la necesidad concreta del estudiante ni amplían por sí solas el alcance pedagógico de la lección.
 
 A continuación recibirás la necesidad concreta del estudiante.
