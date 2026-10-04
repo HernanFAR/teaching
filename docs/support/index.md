@@ -100,24 +100,48 @@ El apoyo voluntario no es requisito para utilizar esos servicios, y contratar un
 
 ## ¿Por qué existe esta página?
 
-Teaching nace de una intención simple: compartir conocimiento de una forma que ayude a entender **por qué** aparecen ciertas decisiones de software, no solamente a memorizarlas.
+Teaching quiere mantener el conocimiento **abierto y reutilizable**.
 
-Crear ese material requiere trabajo:
+Hacerlo bien requiere trabajo real, y queremos que ese trabajo siga siendo visible.
 
-- estudiar problemas reales;
-- diseñar recorridos pedagógicos;
-- escribir y revisar explicaciones;
-- construir ejemplos;
-- producir diagramas y material visual;
-- probar distintas formas de explicar la misma idea;
-- mantener la plataforma;
-- utilizar herramientas e inteligencia artificial cuando aportan valor.
+<div class="teaching-research-boundary">
 
-Queremos que ese proceso siga siendo visible.
+<div class="teaching-research-boundary__column">
 
-Por eso también somos transparentes con el uso de IA: algunas partes del material pueden ser ideadas, discutidas, revisadas, transformadas o generadas con ayuda de modelos de inteligencia artificial.
+<span class="teaching-eyebrow">Trabajo pedagógico</span>
 
-Puedes leer más sobre ello en [Cómo enseñamos](../about/how-we-teach.md).
+<ul>
+  <li>estudiar problemas y casos reales;</li>
+  <li>diseñar recorridos de aprendizaje;</li>
+  <li>escribir y revisar explicaciones;</li>
+  <li>probar distintas formas de enseñar la misma intención;</li>
+  <li>revisar qué evidencia contradice lo que esperábamos.</li>
+</ul>
+
+</div>
+
+<div class="teaching-research-boundary__column">
+
+<span class="teaching-eyebrow">Realización y continuidad</span>
+
+<ul>
+  <li>construir ejemplos, diagramas y material visual;</li>
+  <li>mantener la plataforma y su documentación;</li>
+  <li>sostener herramientas e infraestructura;</li>
+  <li>usar modelos de IA cuando aportan valor;</li>
+  <li>seguir investigando cómo mejorar el sistema.</li>
+</ul>
+
+</div>
+
+</div>
+
+!!! info "Queremos que el proceso siga siendo visible"
+    Algunas partes de Teaching pueden ser ideadas, discutidas, revisadas, transformadas o generadas con ayuda de modelos de inteligencia artificial.
+
+    La IA puede participar en la realización; no convierte automáticamente al modelo en autoridad pedagógica.
+
+    Puedes leer más en [Cómo enseñamos](../about/how-we-teach.md).
 
 ---
 
