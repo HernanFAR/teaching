@@ -15,9 +15,13 @@ Esta plataforma reúne lecciones de ingeniería de software construidas alrededo
 
 No partimos desde diagramas finales, listas de patrones ni estructuras de carpetas. Partimos desde código que funciona, cambiamos una condición a la vez y observamos qué decisiones empiezan a tener sentido.
 
+<div class="hero-actions" markdown>
+
 [Explorar lecciones](lessons/index.md){ .md-button .md-button--primary }
 [Explorar guías](guides/index.md){ .md-button }
 [¿Quieres ver cómo enseñamos?](about/how-we-teach.md){ .md-button }
+
+</div>
 
 </div>
 
