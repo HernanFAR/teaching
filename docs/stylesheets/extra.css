@@ -763,3 +763,26 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Center the final three cards in the 4 + 3 causal flow layout. */
+@media screen and (min-width: 59.9844em) {
+  .causal-step:nth-of-type(9) {
+    grid-column: 2;
+  }
+}
+
+
+@media screen and (min-width: 59.9844em) {
+  .causal-flow > .causal-step:nth-child(9) {
+    grid-column: 2;
+  }
+
+  .causal-flow > .causal-step:nth-child(11) {
+    grid-column: 3;
+  }
+
+  .causal-flow > .causal-step:nth-child(13) {
+    grid-column: 4;
+  }
+}
