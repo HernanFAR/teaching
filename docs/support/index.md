@@ -13,6 +13,16 @@ Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes
 
 ---
 
+## No tienes que apoyar económicamente
+
+En serio.
+
+Leer, aprender, compartir una lección, reutilizar las instrucciones de generación, [pedir una nueva lección o guía](https://github.com/HernanFAR/teaching/issues/new?template=request-content.yml), detectar un error o contarle a otra persona que este proyecto existe también ayuda.
+
+El apoyo económico es una posibilidad, no una expectativa.
+
+---
+
 ## Trabajo profesional
 
 Si lo que necesitas no es apoyar económicamente el proyecto sino trabajar con nosotros, esas superficies viven separadas:
@@ -142,16 +152,6 @@ Hacerlo bien requiere trabajo real, y queremos que ese trabajo siga siendo visib
     La IA puede participar en la realización; no convierte automáticamente al modelo en autoridad pedagógica.
 
     Puedes leer más en [Cómo enseñamos](../about/how-we-teach.md).
-
----
-
-## No tienes que apoyar económicamente
-
-En serio.
-
-Leer, aprender, compartir una lección, reutilizar las instrucciones de generación, [pedir una nueva lección o guía](https://github.com/HernanFAR/teaching/issues/new?template=request-content.yml), detectar un error o contarle a otra persona que este proyecto existe también ayuda.
-
-El apoyo económico es una posibilidad, no una expectativa.
 
 ---
 
