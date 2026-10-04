@@ -54,3 +54,50 @@ La etapa 1 sobrevive por ahora a la implementación.
 No necesitamos revisar la fuente, el caso conductor ni la realización técnica antes de introducir la siguiente presión.
 
 El siguiente experimento será **hacer que el cálculo deje de ser una suma trivial** y observar si la regla adquiere identidad propia sin necesitar todavía una capa de dominio.
+
+
+## Etapa 2 · El cálculo deja de ser una suma trivial
+
+Estado: **materializado y compilado correctamente**.
+
+Artefacto:
+
+`examples/clean-architecture/stage-02/`
+
+La operación conserva HTTP y SQLite directos. La única presión nueva es el cálculo del total.
+
+Las reglas introducidas son:
+
+- un subtotal elegible para promociones;
+- `gift-card` queda fuera de promociones;
+- desde 100.000 de subtotal elegible se aplica 10% de descuento;
+- el descuento tiene un máximo de 20.000.
+
+### Cambio realizado
+
+El cálculo deja de ser una expresión local y pasa a `OrderTotalCalculator`.
+
+El endpoint sigue siendo responsable de:
+
+- recibir y validar la petición;
+- invocar el cálculo;
+- persistir directamente con SQLite;
+- construir la respuesta.
+
+No se introdujeron todavía caso de uso, dominio, puertos, adaptadores ni separación en proyectos.
+
+### Evidencia obtenida
+
+El workflow `Clean Architecture example` run `#6` compiló correctamente tanto `stage-01` como `stage-02`.
+
+La nueva regla puede leerse sin recorrer detalles de HTTP ni SQLite. Al mismo tiempo, la persistencia directa y la coordinación general siguen siendo suficientemente pequeñas para no justificar todavía una arquitectura mayor.
+
+La presión observada coincide con la prevista: el comportamiento adquirió identidad propia, pero esa identidad no exige aún una capa `Domain`.
+
+### Consecuencia para el diseño
+
+La etapa 2 sobrevive a la implementación sin revisar la fuente.
+
+También aparece una evidencia útil para la lección pública: **separar una regla porque empezó a significar algo por sí misma es una decisión menor que adoptar una arquitectura**.
+
+El siguiente experimento será introducir un segundo mecanismo de entrada y comprobar si la creación de orden deja de pertenecer razonablemente al endpoint HTTP.
