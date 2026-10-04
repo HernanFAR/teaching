@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Cómo generamos una lección
 
 Una lección de Teaching no empieza necesariamente como una página terminada.
