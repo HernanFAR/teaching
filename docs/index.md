@@ -16,8 +16,8 @@ Esta plataforma reúne lecciones de ingeniería de software construidas alrededo
 No partimos desde diagramas finales, listas de patrones ni estructuras de carpetas. Partimos desde código que funciona, cambiamos una condición a la vez y observamos qué decisiones empiezan a tener sentido.
 
 [Explorar lecciones](lessons/index.md){ .md-button .md-button--primary }
-[Cómo enseñamos](about/how-we-teach.md){ .md-button }
-[Ver guías](guides/index.md){ .md-button }
+[Explorar guías](guides/index.md){ .md-button }
+[¿Quieres ver cómo enseñamos?](about/how-we-teach.md){ .md-button }
 
 </div>
 
@@ -53,9 +53,11 @@ No partimos desde diagramas finales, listas de patrones ni estructuras de carpet
 
 </div>
 
-## Tres pilares
+## Pilares y mandamientos
 
-Teaching se apoya en tres ideas: aprender desde el problema, construir lecciones que puedan adaptarse a otras personas, ejemplos o lenguajes, y hacer visibles las decisiones que llevan desde una solución sencilla hasta una estructura más elaborada.
+Teaching se apoya en tres pilares: aprender desde el problema, construir lecciones que puedan adaptarse a otras personas, ejemplos o lenguajes, y hacer visibles las decisiones que llevan desde una solución sencilla hasta una estructura más elaborada.
 
-[:octicons-arrow-right-24: Conocer los principios de Teaching](about/how-we-teach.md)
+Los **mandamientos** convierten esos pilares en criterios concretos para enseñar: no mover una línea sin una causa, nombrar después de entender, mostrar el razonamiento y hacer visibles los límites, costos y condiciones de acceso.
+
+[:octicons-arrow-right-24: Conocer los pilares y mandamientos de Teaching](about/how-we-teach.md#pilares-y-mandamientos)
 
