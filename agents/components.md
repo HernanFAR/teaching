@@ -114,7 +114,7 @@ Structure:
 
 Use `teaching-flow__step--accent` when one node needs semantic emphasis.
 
-When explicit ordering helps, place an optional `teaching-flow__marker` inside the step. It renders as a small badge at the step's top-left; do not use bare numbers as decorative text.
+When explicit ordering helps, add `teaching-flow__step--numbered` to the step and place a `teaching-flow__marker` inside it. The marker floats over the step's top-left border as a small badge; do not use bare numbers as decorative text.
 
 Use `teaching-flow--compact` for short, text-heavy nodes. The compact recipe presents the flow as one shared container instead of a row of narrow individual cards.
 
