@@ -215,6 +215,48 @@ The **realization design** decides how the supported exploration surface is pres
 
 The public entry should not make the learner reverse-engineer hidden operational files manually.
 
+## Exploration evidence
+
+A supported exploration is not sufficiently validated only because its prompt looks coherent on paper.
+
+When practical, exercise each supported mode with a small set of representative learner needs that target the behavior unique to that mode. Treat the LLM responses as realization evidence.
+
+Use a loop such as:
+
+```text
+exploration contract
+→ representative learner need
+→ generated request
+→ LLM response
+→ observe whether the contract held
+→ record pass / failure / ambiguity
+→ revise prompt, realization, or source when evidence justifies it
+```
+
+Do not require a universal test matrix for every lesson. Choose the smallest set of cases that can expose meaningful failure modes.
+
+Examples of useful evidence include:
+
+- **Another case**: a full-fit case, a partial-fit case, and a poor-fit case that should stop instead of fabricating pressures;
+- **Deepen**: an in-scope deepening, an explicit out-of-scope extension, and a neighboring concept that must not be retrospectively attributed to the lesson;
+- **Apply it to my case**: one real pressure, missing material facts, and a case where no architectural change is currently justified;
+- **Test me**: a defensible non-canonical alternative, a valid decision to do nothing, a weak answer that should be challenged, and several rounds without revealing future pressures.
+
+Automatic routing, when present, should also be exercised with needs that clearly correspond to different supported modes.
+
+These cases are examples, not mandatory fixtures. Preserve the lesson's own semantics and choose evidence that tests its actual risks.
+
+A failed exploration does not automatically invalidate the lesson. First identify the owner of the failure:
+
+- prompt composition problem → revise the exploration realization;
+- exploration-contract problem → revise the shared contract;
+- insufficient or ambiguous pedagogical source → revise the source explicitly;
+- LLM variability that does not undermine the contract → record it as evidence rather than smoothing it away.
+
+Keep test results reconstructible when they materially influence a revision. Do not rewrite previous outcomes to make the current contract appear as if it had always behaved correctly.
+
+Exploration evidence may continue after publication. A lesson may publish with explicitly pending exploratory cases when the remaining uncertainty does not undermine the claims already supported by the realization. Pending cases must remain visible rather than being silently treated as passed.
+
 ## Review checks
 
 Before publishing a lesson with supported explorations, verify:
@@ -233,3 +275,6 @@ Before publishing a lesson with supported explorations, verify:
 - For Test me, can the learner make decisions before the canonical transition is revealed?
 - Does any exploration accidentally grant the LLM authority to redefine the lesson's pedagogical scope?
 - Can an exploration fail or narrow itself honestly when the learner's requested case cannot support the intended reasoning?
+- Have the distinctive behaviors of each supported mode been exercised with representative learner needs when practical?
+- Were failures, ambiguities, and pending cases preserved as evidence rather than normalized away?
+- If Automatic routing exists, has it been exercised across more than one supported mode?
