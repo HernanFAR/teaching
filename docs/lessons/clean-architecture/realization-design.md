@@ -27,7 +27,7 @@ La fuente, el caso conductor, la evolución causal, la realización técnica mí
 
 La especificación visual está definida y, por ahora, no exige componentes semánticos nuevos.
 
-La primera etapa ejecutable ya fue materializada en `examples/clean-architecture/stage-01/` y su compilación en .NET 10 fue validada por CI.
+Las etapas 1 y 2 ya fueron materializadas en `examples/clean-architecture/stage-01/` y `stage-02/`. Ambas compilan con .NET 10 en CI.
 
 Todavía permanecen abiertas las decisiones de:
 
@@ -35,5 +35,5 @@ Todavía permanecen abiertas las decisiones de:
 - geometría exacta de las dos representaciones que pueden requerir boceto;
 - si los ejemplos ejecutables permanecerán como snapshots por etapa o evolucionarán hacia otra forma de distribución.
 
-El siguiente paso es materializar la **etapa 2** como un delta sobre el estado inicial: introducir una regla de cálculo suficientemente significativa para observar si merece una unidad propia, sin adelantar dominio ni otras abstracciones.
+El siguiente paso es materializar la **etapa 3**: introducir un segundo mecanismo de entrada y comprobar si la operación de crear una orden necesita dejar de pertenecer al endpoint HTTP.
 
