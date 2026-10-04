@@ -1,0 +1,79 @@
+name: Solicitar una lección o guía
+description: Cuéntanos qué quieres entender o conseguir. No necesitas conocer vocabulario técnico para pedirlo.
+title: "[Solicitud] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por proponer contenido para Teaching.
+
+        Puedes pedir una **lección** si quieres entender una idea o una **guía** si quieres conseguir un objetivo.
+
+        No necesitas saber cómo se llama formalmente el concepto, ni tener estudios formales, herramientas pagadas o un entorno específico. Cuéntanos tu situación con tus propias palabras.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: ¿Qué te gustaría pedir?
+      description: Elige la opción que más se acerque a lo que necesitas.
+      options:
+        - Una lección — quiero entender algo
+        - Una guía — quiero conseguir algo
+        - No estoy seguro/a
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: ¿Qué quieres entender o conseguir?
+      description: Puedes escribirlo con tus propias palabras. No hace falta usar términos técnicos.
+      placeholder: "Por ejemplo: quiero entender por qué a veces se usan interfaces; o quiero hacer que una API existente sea más fácil de probar."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: ¿Qué situación te llevó a esta duda o necesidad?
+      description: Cuéntanos qué estabas intentando hacer, qué viste o qué problema apareció.
+      placeholder: "Por ejemplo: tengo código que funciona, pero cada vez cuesta más probarlo y no sé por qué."
+    validations:
+      required: false
+
+  - type: textarea
+    id: prior
+    attributes:
+      label: ¿Qué conoces ya sobre el tema?
+      description: Esto es opcional. Sirve para no asumir conocimientos que quizá no tienes.
+      placeholder: "Por ejemplo: sé C# básico, nunca he usado pruebas automatizadas; o no conozco nada del tema todavía."
+    validations:
+      required: false
+
+  - type: textarea
+    id: preferences
+    attributes:
+      label: ¿Hay algún lenguaje, ejemplo o contexto que te ayudaría?
+      description: Opcional. Puede ser un lenguaje de programación, un tipo de proyecto, un dominio o una forma de explicación que te resulte cercana.
+      placeholder: "Por ejemplo: Python, videojuegos, una API pequeña, ejemplos sin framework, etc."
+    validations:
+      required: false
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: ¿Hay alguna restricción que debamos considerar?
+      description: |
+        Opcional. Por ejemplo: solo puedes usar herramientas gratuitas, tienes hardware limitado,
+        una conexión lenta, necesitas una alternativa textual a material visual o prefieres evitar inglés.
+      placeholder: "Déjalo vacío si no aplica."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Antes de enviar
+      options:
+        - label: Entiendo que esta solicitud puede inspirar contenido futuro, pero no garantiza que se publique.
+          required: true
