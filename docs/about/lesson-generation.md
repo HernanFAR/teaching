@@ -115,8 +115,9 @@ En su lugar, preferimos que la explicación conserve una relación causal:
 
 No todas las lecciones necesitan seguir exactamente esos pasos.
 
+Un ejemplo pequeño de ese recorrido podría verse así:
+
 <div class="causal-example">
-<span class="causal-example__label">Ejemplo concreto</span>
 <strong>Un endpoint funciona</strong>
 <span aria-hidden="true">→</span>
 <strong>crecen las reglas de negocio</strong>
