@@ -9,6 +9,7 @@ Las instrucciones operativas específicas para agentes viven en `agents/`. Antes
 - `agents/README.md`;
 - `agents/lesson-generation.md`;
 - `agents/realization-design.md`;
+- `agents/explorations.md`;
 - `agents/components.md`.
 
 La documentación bajo `docs/` es la realización pública para humanos. No reemplaza las reglas operativas de `agents/`.
@@ -156,6 +157,8 @@ Cuando corresponda, exponer las instrucciones que permiten reproducir o adaptar 
 
 La IA aquí no reemplaza el razonamiento pedagógico: opera sobre una intención pedagógica explícita.
 
+Las entradas de lecciones deben considerar una superficie visible para **explorar esta lección**. Las exploraciones soportadas combinan material pedagógico de la lección, orientación específica del modo de exploración y una necesidad concreta escrita por la persona. Sus reglas operativas viven en `agents/explorations.md`.
+
 ### XI. El resultado final no es el objetivo
 
 Una arquitectura terminada, un patrón aplicado o un ejemplo correcto no bastan.
@@ -231,7 +234,8 @@ No todas las lecciones necesitan exactamente la misma estructura, pero una buena
 7. **Contrafactual** — qué habría pasado sin el cambio.
 8. **Límites** — cuándo no vale la pena usarlo.
 9. **Siguiente tensión** — qué prepara el próximo paso.
-10. **Instrucciones base de generación** — la fuente pedagógica desde la que pueden derivarse distintas realizaciones de la experiencia.
+10. **Exploraciones soportadas** — formas explícitas en que la persona puede continuar investigando la lección con un LLM sin delegarle la autoridad pedagógica de la lección.
+11. **Instrucciones base de generación** — la fuente pedagógica desde la que pueden derivarse distintas realizaciones de la experiencia.
 
 ---
 
