@@ -13,7 +13,7 @@ Teaching publica cómo trabaja. Puedes empezar por tu cuenta o pedir una segunda
 
 <div class="teaching-card" markdown>
 <span class="teaching-eyebrow">Gratis · Autoguiada</span>
-<strong>Usa nuestra documentación</strong>
+<strong>Usa nuestra documentación</strong><br/>
 <span>Publicamos el proceso, sus principios y buena parte de las decisiones que usamos para construir Teaching.</span>
 
 [Empezar por ¿Cómo funcionamos?](../about/how-we-teach.md){ .md-button .md-button--primary }
@@ -21,7 +21,7 @@ Teaching publica cómo trabaja. Puedes empezar por tu cuenta o pedir una segunda
 
 <div class="teaching-card" markdown>
 <span class="teaching-eyebrow">Acompañada · 1:1</span>
-<strong>Trae un caso real</strong>
+<strong>Trae un caso real</strong><br/>
 <span>Revisamos contigo una situación donde hace falta criterio externo, contexto o una segunda mirada.</span>
 
 [Ver qué revisamos](#asesoria-11){ .md-button }
