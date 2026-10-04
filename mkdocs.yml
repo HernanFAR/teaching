@@ -32,7 +32,7 @@ theme:
 
 nav:
   - Inicio: index.md
-  - Cómo funciona:
+  - ¿Cómo funcionamos?:
       - Cómo enseñamos: about/how-we-teach.md
       - Cómo generamos lecciones: about/lesson-generation.md
   - Lecciones:

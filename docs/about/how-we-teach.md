@@ -1,8 +1,3 @@
----
-hide:
-  - navigation
----
-
 <div class="teaching-intro-section" markdown>
 
 # Cómo enseñamos
