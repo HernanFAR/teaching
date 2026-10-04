@@ -781,7 +781,7 @@ Todo se prepara localmente en tu navegador. **Teaching no envía lo que escribas
 </select>
 
 <details class="teaching-exploration__help">
-<summary>¿Qué significa cada modo?</summary>
+<summary>¿Qué significa este modo?</summary>
 
 <div class="teaching-exploration__help-content" markdown>
 
