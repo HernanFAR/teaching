@@ -87,6 +87,8 @@ If a visual does not answer a useful question, prefer simpler text.
 
 ### 3. Component choice
 
+Before implementing visual structure, read `components.md` and reuse the shared Teaching vocabulary.
+
 Prefer an existing semantic or native site component when it expresses the intended meaning honestly.
 
 Examples:
