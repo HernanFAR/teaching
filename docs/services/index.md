@@ -1,11 +1,10 @@
 ---
+title: Servicios
 hide:
   - navigation
 ---
 
 <div class="teaching-intro-section" markdown>
-
-# Servicios
 
 Si tienes conocimiento especializado que necesitas enseñar de forma repetida, podemos trabajar contigo de dos maneras:
 
@@ -90,9 +89,9 @@ Puede ser Markdown, documentación estructurada u otra representación suficient
 
 ---
 
-# Implementación acompañada
+## Implementación acompañada
 
-## Lo hacemos contigo
+### Lo hacemos contigo
 
 Este servicio está pensado para personas, equipos u organizaciones que tienen conocimiento especializado y necesitan enseñarlo de forma repetida.
 
@@ -207,9 +206,9 @@ No estás pagando por acceso a una metodología secreta.
 
 ---
 
-# Formación y transferencia
+## Formación y transferencia
 
-## Te enseñamos a hacerlo
+### Te enseñamos a hacerlo
 
 En este servicio el resultado principal no es que nosotros construyamos la superficie.
 
