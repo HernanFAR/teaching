@@ -14,7 +14,7 @@ Cada una intenta responder tres preguntas:
 
 <a class="teaching-link-card" href="clean-architecture/">
 <span class="teaching-eyebrow">Arquitectura</span>
-<strong>Clean Architecture</strong>
+<strong>Cómo se llega a Clean Architecture</strong>
 <span>Construimos una arquitectura desde una operación directa, introduciendo separaciones solo cuando aparece una presión que las justifica.</span>
 <span class="teaching-link-card__action">Leer lección →</span>
 </a>
