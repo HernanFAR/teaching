@@ -4,15 +4,25 @@
 
 Use these rules after a pedagogical source is sufficiently defined and before implementing or publishing a concrete Teaching entry.
 
-The pedagogical source answers:
+Keep three responsibilities distinct:
+
+**Pedagogical source**
 
 > What are we trying to teach, and what must remain stable?
 
-Realization design answers a different question:
+**Realization design**
 
-> How should this intention become visible, readable, navigable, and useful in this particular realization?
+> What form should that intention take in this concrete experience, and why?
+
+**Implementation**
+
+> How do we materialize that design with the concrete mechanisms available to us?
 
 Do not use realization design to silently redefine pedagogical intent.
+
+Do not treat implementation details as proof that a realization design is pedagogically valid.
+
+A working page can still be a poor realization. A compelling mockup can still be impossible, inaccessible, or semantically dishonest when implemented.
 
 ## Pipeline position
 
@@ -29,7 +39,15 @@ request
 ↺ possible source revision
 ```
 
-A realization can expose problems in the source. If that happens, revise the source explicitly instead of hiding the change inside presentation decisions.
+A realization can expose problems at different layers.
+
+When evidence appears, identify who owns the problem:
+
+- implementation problem → revise the implementation;
+- realization-design problem → revise the realization specification;
+- pedagogical-source problem → revise the source explicitly.
+
+Do not hide a source problem inside presentation decisions or compensate for a design problem only with implementation tricks.
 
 ## Required realization specification
 
