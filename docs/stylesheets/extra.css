@@ -1190,6 +1190,7 @@
 }
 
 .teaching-item {
+  position: relative;
   display: grid;
   grid-template-columns: 2rem minmax(0, 1fr);
   gap: 0.75rem;
@@ -1244,10 +1245,15 @@
 
 .teaching-item--stacked {
   display: block;
+  padding-top: 1.3rem;
 }
 
 .teaching-item--stacked .teaching-item__marker {
-  margin-bottom: 0.55rem;
+  position: absolute;
+  top: -0.85rem;
+  left: 1rem;
+  margin: 0;
+  box-shadow: 0 0 0 0.18rem var(--md-default-bg-color);
 }
 
 .teaching-item--stacked > strong,
