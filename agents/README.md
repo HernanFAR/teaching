@@ -14,6 +14,7 @@ Agents should:
 
 Current rules:
 
+- [Content model](content-model.md)
 - [Lesson generation](lesson-generation.md)
 - [Realization design](realization-design.md)
 - [Supported lesson explorations](explorations.md)
