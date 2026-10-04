@@ -1495,32 +1495,35 @@
 /* Optional connector between rows in multiline flows. */
 .teaching-flow--connected .teaching-flow__bridge {
   position: relative;
-  width: 4.5rem;
-  height: 1.35rem;
-  margin: 0 auto;
+  width: 5.1rem;
+  height: 1.7rem;
+  margin: -0.15rem auto -0.1rem;
 }
 
 .teaching-flow--connected .teaching-flow__bridge::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 0.55rem;
-  width: 3.45rem;
+  top: 0.22rem;
+  right: 0.25rem;
+  width: 4.55rem;
   height: 0.08rem;
   background: var(--md-default-fg-color--light);
-  transform: translateY(-50%) rotate(-20deg);
-  transform-origin: center;
+  transform: rotate(-20deg);
+  transform-origin: right center;
 }
 
 .teaching-flow--connected .teaching-flow__bridge::after {
   content: "";
   position: absolute;
-  left: 0.42rem;
-  bottom: 0.12rem;
-  width: 0.38rem;
-  height: 0.38rem;
-  border-bottom: 0.08rem solid var(--md-default-fg-color--light);
-  border-left: 0.08rem solid var(--md-default-fg-color--light);
+  left: 0.06rem;
+  bottom: 0.05rem;
+  width: 0;
+  height: 0;
+  border-top: 0.26rem solid transparent;
+  border-bottom: 0.26rem solid transparent;
+  border-right: 0.48rem solid var(--md-default-fg-color--light);
+  transform: rotate(-20deg);
+  transform-origin: center;
 }
 
 .teaching-flow--connected .teaching-flow__bridge + .teaching-flow__row {
