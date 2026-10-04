@@ -175,7 +175,7 @@ La misma intención pedagógica puede expresarse de distintas formas.
 
 Eso nos permite producir realizaciones distintas sin perder necesariamente la misma intención pedagógica.
 
-Pero algunas cosas no deberían cambiar silenciosamente:
+Aunque la forma cambie, hay algunas cosas que deberían permanecer reconocibles:
 
 <div class="realization-invariants">
 
@@ -205,7 +205,7 @@ Pero algunas cosas no deberían cambiar silenciosamente:
 
 </div>
 
-<p class="visual-equivalent"><strong>En texto:</strong> una realización puede cambiar lenguaje, dominio, dificultad, representación, interacción o cantidad de ayuda; no debería cambiar silenciosamente la intención, las tensiones esenciales, los límites ni el momento en que aparecen los conceptos.</p>
+<p class="visual-equivalent visual-equivalent--subtle"><strong>En texto:</strong> una realización puede cambiar lenguaje, dominio, dificultad, representación, interacción o cantidad de ayuda; no debería cambiar silenciosamente la intención, las tensiones esenciales, los límites ni el momento en que aparecen los conceptos.</p>
 
 La fuente tampoco es inmutable.
 
@@ -241,7 +241,7 @@ Una realización puede enseñarnos que la secuencia no funciona como esperábamo
 
 </div>
 
-<p class="visual-equivalent"><strong>En texto:</strong> la fuente produce realizaciones, pero las realizaciones también producen evidencia que puede justificar revisar la fuente.</p>
+<p class="visual-equivalent visual-equivalent--subtle"><strong>En texto:</strong> la fuente produce realizaciones, pero las realizaciones también producen evidencia que puede justificar revisar la fuente.</p>
 
 ## Las condiciones de acceso también son parte de la generación
 
