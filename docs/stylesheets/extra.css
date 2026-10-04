@@ -1291,7 +1291,7 @@
   padding-top: 1.3rem;
 }
 
-.teaching-flow__step > span,
+.teaching-flow__step > span:not(.teaching-flow__marker),
 .teaching-flow__step > strong,
 .teaching-flow__step > small {
   display: block;
