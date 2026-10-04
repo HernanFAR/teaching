@@ -7,9 +7,7 @@ hide:
 
 # Asesoría
 
-Teaching publica cómo trabaja.
-
-No necesitas contratar una llamada para descubrir una metodología que mantenemos escondida. Puedes **usar nuestra documentación por tu cuenta** o, cuando el problema ya depende de tu situación concreta, **traer un caso real para revisarlo contigo**.
+Teaching publica cómo trabaja. Puedes empezar por tu cuenta o pedir una segunda mirada cuando la necesites.
 
 <div class="teaching-grid teaching-grid--2" markdown>
 
