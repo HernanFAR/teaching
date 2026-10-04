@@ -259,38 +259,42 @@ No estás pagando por acceso a una metodología secreta.
 
 En este servicio el resultado principal no es que nosotros construyamos la superficie, sino que **tu equipo aprenda a construirla, probarla y revisarla por sí mismo**.
 
-<div class="teaching-work-scope">
+<div class="teaching-flow teaching-flow--multiline">
 
-<div class="teaching-work-scope__item">
-  <span class="teaching-work-scope__label">Modelar</span>
-  <div class="teaching-work-scope__body">
-    <strong>Hacer explícito el conocimiento enseñable</strong>
-    <span>Delimitar unidades pedagógicas, separar intención de realización y reconocer invariantes, dependencias y grados de libertad.</span>
-  </div>
+<div class="teaching-flow__row">
+
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">1</span>
+<strong>Modelar</strong>
+<small>Delimitar unidades pedagógicas, separar intención de realización y reconocer invariantes, dependencias y grados de libertad.</small>
 </div>
 
-<div class="teaching-work-scope__item">
-  <span class="teaching-work-scope__label">Diseñar</span>
-  <div class="teaching-work-scope__body">
-    <strong>Construir fuentes y recorridos</strong>
-    <span>Diseñar fuentes pedagógicas y recorridos de aprendizaje que puedan sostener distintas experiencias.</span>
-  </div>
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">2</span>
+<strong>Diseñar</strong>
+<small>Construir fuentes pedagógicas y recorridos de aprendizaje que puedan sostener distintas experiencias.</small>
 </div>
 
-<div class="teaching-work-scope__item">
-  <span class="teaching-work-scope__label">Realizar</span>
-  <div class="teaching-work-scope__body">
-    <strong>Producir y comparar experiencias</strong>
-    <span>Crear realizaciones, compararlas y usar IA como apoyo sin delegarle autoridad pedagógica.</span>
-  </div>
 </div>
 
-<div class="teaching-work-scope__item">
-  <span class="teaching-work-scope__label">Revisar</span>
-  <div class="teaching-work-scope__body">
-    <strong>Usar evidencia e incertidumbre</strong>
-    <span>Registrar lo que todavía no sabemos y revisar si una realización sigue preservando aquello que importa.</span>
-  </div>
+<div class="teaching-flow__row">
+
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">3</span>
+<strong>Realizar</strong>
+<small>Crear realizaciones, compararlas y usar IA como apoyo sin delegarle autoridad pedagógica.</small>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step teaching-flow__step--numbered teaching-flow__step--accent">
+<span class="teaching-flow__marker">4</span>
+<strong>Revisar</strong>
+<small>Registrar lo que todavía no sabemos y comprobar si una realización sigue preservando aquello que importa.</small>
+</div>
+
 </div>
 
 </div>
