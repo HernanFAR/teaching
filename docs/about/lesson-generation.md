@@ -44,12 +44,12 @@ Preferimos un recorrido donde cada paso aparezca como respuesta a una necesidad 
 
 Una secuencia como esta puede mostrar el resultado, pero no todavía las causas:
 
-<div class="causal-anti-pattern">
-<div class="causal-anti-pattern__flow" aria-label="capa, luego interfaz, luego patrón, luego arquitectura">
-<span>capa</span><b aria-hidden="true">→</b><span>interfaz</span><b aria-hidden="true">→</b><span>patrón</span><b aria-hidden="true">→</b><span>arquitectura</span>
-</div>
-<small>Un listado de conceptos no explica por sí solo por qué apareció cada cosa.</small>
-</div>
+```mermaid
+flowchart LR
+    A[Capa] --> B[Interfaz] --> C[Patrón] --> D[Arquitectura]
+```
+
+<p class="visual-equivalent"><strong>En texto:</strong> la secuencia muestra capa → interfaz → patrón → arquitectura; por sí sola no explica por qué apareció cada concepto.</p>
 
 En su lugar, preferimos que la explicación conserve una relación causal:
 
