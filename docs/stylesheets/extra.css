@@ -1492,49 +1492,4 @@
 }
 
 
-/* Optional connector between rows in multiline flows. */
-.teaching-flow--connected .teaching-flow__bridge {
-  position: relative;
-  width: 5.4rem;
-  height: 1.75rem;
-  margin: -0.1rem auto -0.05rem;
-}
 
-.teaching-flow--connected .teaching-flow__bridge::before {
-  content: "";
-  position: absolute;
-  top: 0.18rem;
-  right: 0.1rem;
-  width: 5rem;
-  height: 0.08rem;
-  background: var(--md-default-fg-color--light);
-  transform: rotate(-19deg);
-  transform-origin: right center;
-}
-
-.teaching-flow--connected .teaching-flow__bridge::after {
-  content: "";
-  position: absolute;
-  left: 0.19rem;
-  bottom: -0.02rem;
-  width: 0.38rem;
-  height: 0.38rem;
-  border-left: 0.08rem solid var(--md-default-fg-color--light);
-  border-bottom: 0.08rem solid var(--md-default-fg-color--light);
-  transform: rotate(-19deg);
-  transform-origin: bottom left;
-}
-
-.teaching-flow--connected .teaching-flow__bridge + .teaching-flow__row {
-  margin-top: 0;
-}
-
-@media screen and (max-width: 59.9844em) {
-  .teaching-flow--connected .teaching-flow__bridge {
-    display: none;
-  }
-
-  .teaching-flow--connected .teaching-flow__bridge + .teaching-flow__row {
-    margin-top: 0.55rem;
-  }
-}
