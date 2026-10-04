@@ -448,7 +448,7 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 
 Teaching crecerá principalmente con dos tipos de contenido.
 
-<div class="teaching-grid teaching-grid--2">
+<div class="teaching-grid teaching-grid--2 teaching-grid--last-wide">
 
 <a class="teaching-link-card" href="../../lessons/">
 <span class="teaching-eyebrow">Lección</span>
@@ -462,6 +462,13 @@ Teaching crecerá principalmente con dos tipos de contenido.
 <strong>“Quiero lograr esto.”</strong>
 <span>Conecta conocimiento para alcanzar un objetivo real.</span>
 <span class="teaching-link-card__action">Ver guías →</span>
+</a>
+
+<a class="teaching-link-card" href="https://github.com/HernanFAR/teaching/issues/new?template=request-content.yml">
+<span class="teaching-eyebrow">Solicitud</span>
+<strong>¿Falta algo que quieres entender o conseguir?</strong>
+<span>Puedes pedir una lección o una guía con tus propias palabras. No necesitas conocer el nombre técnico del tema.</span>
+<span class="teaching-link-card__action">Solicitar una lección o guía →</span>
 </a>
 
 </div>
