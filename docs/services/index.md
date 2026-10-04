@@ -367,10 +367,20 @@ Teaching ya demuestra esta separación en casos reales, pero todavía estamos in
 
 ## Solicitudes
 
-Todavía estamos definiendo el mecanismo estable para solicitar estos servicios.
+Si quieres conversar sobre alguno de estos servicios, puedes escribir directamente a:
 
-No queremos hardcodear una plataforma, formulario o calendario antes de saber qué proceso de entrada necesitamos realmente.
+**[h.f.alvarez.rubio@gmail.com](mailto:h.f.alvarez.rubio@gmail.com)**
 
-Cuando exista una vía estable, aparecerá aquí.
+Idealmente incluye una breve descripción de:
 
-Hasta entonces puedes explorar públicamente [cómo funcionamos](../about/how-we-teach.md) y observar la implementación actual de Teaching.
+- qué conocimiento necesitas enseñar;
+- quiénes necesitan aprenderlo;
+- cómo se transmite hoy;
+- qué problema estás intentando resolver;
+- si buscas principalmente una implementación acompañada, formación para tu equipo o todavía no lo tienes claro.
+
+No necesitas llegar con una solución definida ni conocer nuestro vocabulario antes de escribir.
+
+Podemos partir desde el problema real y descubrir juntos qué forma de trabajo tiene sentido.
+
+Mientras tanto, puedes explorar públicamente [cómo funcionamos](../about/how-we-teach.md) y observar la implementación actual de Teaching.
