@@ -1493,3 +1493,132 @@
 
 
 
+
+
+/* Supported lesson explorations */
+
+.teaching-exploration {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+.teaching-exploration__intro {
+  max-width: 42rem;
+}
+
+.teaching-exploration__modes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.teaching-exploration__mode {
+  width: 100%;
+  padding: 1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+  background: transparent;
+  color: var(--md-default-fg-color);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.teaching-exploration__mode:hover,
+.teaching-exploration__mode:focus-visible,
+.teaching-exploration__mode--selected {
+  border-color: var(--md-accent-fg-color);
+}
+
+.teaching-exploration__mode--selected {
+  box-shadow: inset 0 0 0 0.05rem var(--md-accent-fg-color);
+}
+
+.teaching-exploration__mode strong,
+.teaching-exploration__mode span {
+  display: block;
+}
+
+.teaching-exploration__mode span {
+  margin-top: 0.3rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.teaching-exploration__composer {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.teaching-exploration__composer label,
+.teaching-exploration__composer textarea {
+  display: block;
+  width: 100%;
+}
+
+.teaching-exploration__composer label {
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+}
+
+.teaching-exploration__composer textarea {
+  min-height: 8rem;
+  padding: 0.75rem;
+  resize: vertical;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 0.65rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font: inherit;
+  line-height: 1.5;
+}
+
+.teaching-exploration__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.teaching-exploration__button {
+  padding: 0.55rem 0.8rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 0.6rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.teaching-exploration__button--primary {
+  border-color: var(--md-accent-fg-color);
+}
+
+.teaching-exploration__status {
+  min-height: 1.5rem;
+  margin: 0.65rem 0 0;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.78rem;
+}
+
+.teaching-exploration__result {
+  margin-top: 1rem;
+}
+
+.teaching-exploration__result textarea {
+  min-height: 18rem;
+  font-family: var(--md-code-font-family);
+  font-size: 0.78rem;
+}
+
+@media screen and (max-width: 45rem) {
+  .teaching-exploration__modes {
+    grid-template-columns: 1fr;
+  }
+}
