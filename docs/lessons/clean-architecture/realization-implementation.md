@@ -329,3 +329,80 @@ La implementación confirma que persistencia no era una excepción: la misma for
 No necesitamos revisar la fuente ni la evolución causal antes de avanzar.
 
 El siguiente experimento será la **etapa 6**: distinguir reglas propias de la orden de la orquestación necesaria para crearla.
+
+
+## Etapa 6 · Calcular una orden y crear una orden dejan de ser lo mismo
+
+Estado: **materializado; validación de CI en curso**.
+
+Artefacto:
+
+`examples/clean-architecture/stage-06/`
+
+La presión nueva no introduce otro mecanismo externo. Introduce una diferencia interna de responsabilidad.
+
+### Cambio realizado
+
+Las reglas propias de una orden pasan a:
+
+`Teaching.CleanArchitecture.Stage06.Domain`
+
+Ese proyecto contiene:
+
+- validación de la orden;
+- cálculo del total;
+- representación de `Order`.
+
+La coordinación de crear una orden pasa a:
+
+`Teaching.CleanArchitecture.Stage06.Application`
+
+El caso de uso `CreateOrder` ahora:
+
+1. traduce la entrada normalizada a `OrderLine`;
+2. pide al dominio crear una orden válida y calculada;
+3. persiste el resultado;
+4. notifica su creación;
+5. devuelve el resultado del caso de uso.
+
+### Evidencia estructural
+
+La diferencia entre las dos responsabilidades puede expresarse así:
+
+| Responsabilidad | Cambia cuando... |
+| --- | --- |
+| `Domain` | cambia qué hace válida una orden o cómo se calcula |
+| `Application` | cambia cómo coordinamos la creación de una orden |
+
+Esta diferencia ya era observable antes de crear los proyectos.
+
+La separación física se introduce ahora porque ayuda a mantener visible una frontera semántica que ya apareció.
+
+### Lo que deliberadamente no afirmamos
+
+La etapa no demuestra que:
+
+- toda regla deba vivir en un proyecto `Domain`;
+- toda aplicación necesite proyectos separados;
+- una entidad rica sea obligatoria;
+- Domain Driven Design sea un prerrequisito;
+- separar proyectos sea lo que define una frontera arquitectónica.
+
+Si las reglas fueran pequeñas y relevantes solo para este caso de uso, mantenerlas dentro de Application seguiría siendo defendible.
+
+### Validación
+
+El workflow `Clean Architecture example` run `#63` contiene:
+
+- entrada web de la etapa 6;
+- entrada marketplace de la etapa 6;
+- receptor local del webhook;
+- todos los snapshots anteriores.
+
+Al registrar esta evidencia el run permanece en cola, por lo que la etapa todavía no se declara validada por CI.
+
+### Consecuencia provisional para el diseño
+
+La implementación sostiene la hipótesis de la etapa 6: **dominio** y **aplicación** aparecen como nombres útiles después de que las responsabilidades se vuelven distinguibles.
+
+El avance a la etapa 7 queda condicionado a confirmar la compilación del snapshot completo.
