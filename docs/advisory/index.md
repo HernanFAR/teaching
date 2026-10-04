@@ -40,7 +40,7 @@ La asesoría existe cuando ya no basta con leer el proceso y necesitas **criteri
 </div>
 
 !!! note "No hay una versión secreta"
-    **Si puedes resolver tu necesidad con lo que ya publicamos, no necesitas pagarnos.**
+    **Si puedes resolver tu necesidad con lo que ya publicamos, no necesitas pagarnos; únicamente considera donar.**
 
     La asesoría acompañada no desbloquea conocimiento oculto. Paga el tiempo y el criterio necesarios para trabajar sobre tu situación.
 
