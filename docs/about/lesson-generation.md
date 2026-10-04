@@ -115,34 +115,45 @@ En su lugar, preferimos que la explicación conserve una relación causal:
 
 No todas las lecciones necesitan seguir exactamente esos pasos. Un ejemplo pequeño de ese recorrido podría verse así:
 
-<div class="teaching-flow">
+<div class="teaching-flow teaching-flow--multiline">
 
-<div class="teaching-flow__step">
+<div class="teaching-flow__row">
+
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">1</span>
 <strong>Un endpoint funciona</strong>
 </div>
 
 <div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
-<div class="teaching-flow__step">
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">2</span>
 <strong>Crecen las reglas de negocio</strong>
 </div>
 
 <div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
-<div class="teaching-flow__step">
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">3</span>
 <strong>Necesitamos probarlas sin HTTP</strong>
 </div>
 
-<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+</div>
 
-<div class="teaching-flow__step">
+<div class="teaching-flow__row">
+
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">4</span>
 <strong>Aparece una operación separable</strong>
 </div>
 
 <div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
-<div class="teaching-flow__step">
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">5</span>
 <strong>La reconocemos como un caso de uso</strong>
+</div>
+
 </div>
 
 </div>
