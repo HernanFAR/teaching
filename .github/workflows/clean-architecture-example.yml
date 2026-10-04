@@ -6,8 +6,6 @@ on:
       - "examples/clean-architecture/**"
       - ".github/workflows/clean-architecture-example.yml"
   push:
-    branches:
-      - main
     paths:
       - "examples/clean-architecture/**"
       - ".github/workflows/clean-architecture-example.yml"
