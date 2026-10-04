@@ -69,6 +69,16 @@ Decide which parts of the source are best expressed as:
 - exercise;
 - interaction.
 
+Also define the **argument hierarchy** before polishing components:
+
+- use `##` for the few major arguments or phases that organize the entry;
+- use `###` for developments that belong to one of those major arguments;
+- avoid a flat table of contents where every section appears as a peer when the content already has conceptual grouping;
+- do not create heading depth only for visual indentation; hierarchy must express conceptual containment;
+- keep heading order meaningful even when visual components are removed.
+
+A useful table of contents should let a learner scan the large argument first and then inspect its subordinate parts.
+
 Do not force every idea into cards or diagrams. Representation should follow the pedagogical job of the content.
 
 ### 2. Visual question
@@ -171,6 +181,7 @@ Before treating a realization design as ready for publication, verify:
 - Does each representation have a pedagogical job?
 - Is the content still understandable without decorative styling?
 - Does the visual hierarchy match the conceptual hierarchy?
+- Does the heading hierarchy make the table of contents reflect the entry's major arguments and their subordinate sections?
 - Are native components used when they fit?
 - Are essential visuals accompanied by textual equivalents?
 - Does the layout reflow without overflow?
