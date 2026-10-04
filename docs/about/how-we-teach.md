@@ -408,7 +408,7 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 
 <div class="teaching-flow">
 
-<div class="teaching-flow__step">
+<div class="teaching-flow__step teaching-flow__step--numbered">
 <span class="teaching-flow__marker">1</span>
 <strong>Fuente pedagógica</strong>
 <small>Define qué intentamos enseñar y qué debe preservarse.</small>
@@ -416,7 +416,7 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 
 <div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
-<div class="teaching-flow__step">
+<div class="teaching-flow__step teaching-flow__step--numbered">
 <span class="teaching-flow__marker">2</span>
 <strong>Realización</strong>
 <small>Decide cómo expresarlo para una necesidad concreta.</small>
@@ -424,7 +424,7 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 
 <div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
-<div class="teaching-flow__step">
+<div class="teaching-flow__step teaching-flow__step--numbered">
 <span class="teaching-flow__marker">3</span>
 <strong>Revisión</strong>
 <small>Comprueba intención pedagógica, afirmaciones, ejemplos y código.</small>
@@ -432,7 +432,7 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 
 <div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
-<div class="teaching-flow__step">
+<div class="teaching-flow__step teaching-flow__step--numbered">
 <span class="teaching-flow__marker">4</span>
 <strong>Publicación</strong>
 <small>La realización revisada pasa a formar parte del material.</small>
