@@ -749,6 +749,70 @@ Es una respuesta a presiones.
 
     Si todavía no tenemos una respuesta observable, quizá todavía no necesitamos mover esa línea.
 
+
+## Explora esta lección
+
+<div class="teaching-exploration" data-teaching-exploration markdown>
+
+<div class="teaching-exploration__intro" markdown>
+Entender la realización de órdenes no tiene por qué ser el final.
+
+Teaching puede preparar una **exploración soportada** usando el material pedagógico de esta lección, el tipo de investigación que elijas y una necesidad concreta escrita por ti.
+
+El texto se prepara localmente en tu navegador. **Teaching no envía lo que escribas a ningún LLM ni a ningún servidor.** Tú decides dónde usar el resultado.
+</div>
+
+<div class="teaching-exploration__modes">
+
+<button type="button" class="teaching-exploration__mode" data-exploration-mode data-exploration-label="Otro caso" data-prompt-src="explorations/another-case.txt" aria-pressed="false">
+<strong>Otro caso</strong>
+<span>Recorre las mismas presiones en otro dominio sin copiar artificialmente la arquitectura final.</span>
+</button>
+
+<button type="button" class="teaching-exploration__mode" data-exploration-mode data-exploration-label="Profundizar" data-prompt-src="explorations/deepen.txt" aria-pressed="false">
+<strong>Profundizar</strong>
+<span>Examina una tensión, un concepto ya introducido o una extensión natural del caso con más detalle.</span>
+</button>
+
+<button type="button" class="teaching-exploration__mode" data-exploration-mode data-exploration-label="Aplicarlo a mi caso" data-prompt-src="explorations/apply-to-my-case.txt" aria-pressed="false">
+<strong>Aplicarlo a mi caso</strong>
+<span>Describe tu sistema y comprueba qué presiones de la lección existen realmente en él.</span>
+</button>
+
+<button type="button" class="teaching-exploration__mode" data-exploration-mode data-exploration-label="Ponme a prueba" data-prompt-src="explorations/test-me.txt" aria-pressed="false">
+<strong>Ponme a prueba</strong>
+<span>Convierte el recorrido en decisiones progresivas sin revelar la transición siguiente antes de tiempo.</span>
+</button>
+
+</div>
+
+<div class="teaching-exploration__composer">
+
+<p>Exploración seleccionada: <strong data-exploration-selected>Otro caso</strong></p>
+
+<label for="clean-architecture-exploration-need">¿Qué te gustaría entender?</label>
+
+<textarea id="clean-architecture-exploration-need" data-exploration-need placeholder="Por ejemplo: entiendo la idea de invertir la dependencia de SQLite, pero me gustaría verla en un sistema que trabaja con archivos locales."></textarea>
+
+<div class="teaching-exploration__actions">
+<button type="button" class="teaching-exploration__button teaching-exploration__button--primary" data-exploration-prepare>Preparar exploración</button>
+</div>
+
+<p class="teaching-exploration__status" data-exploration-status role="status" aria-live="polite"></p>
+
+<div class="teaching-exploration__result" data-exploration-result hidden>
+<label for="clean-architecture-exploration-output">Texto preparado para tu LLM</label>
+<textarea id="clean-architecture-exploration-output" data-exploration-output readonly></textarea>
+
+<div class="teaching-exploration__actions">
+<button type="button" class="teaching-exploration__button" data-exploration-copy>Copiar texto</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
 ---
 
 Esta lección fue diseñada y materializada con ayuda de IA a partir de una [fuente pedagógica reproducible](generation-instructions.md) y de un recorrido técnico validado por etapas. El código ejecutable que sirvió como evidencia vive en `examples/clean-architecture/` dentro del repositorio.
