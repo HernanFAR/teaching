@@ -1519,6 +1519,11 @@
   .teaching-grid--last-wide > :last-child {
     grid-column: auto;
   }
+
+  .teaching-card > span:last-child:not(.teaching-eyebrow),
+  .teaching-item > span:last-child:not(.teaching-item__marker) {
+    margin-top: 0;
+  }
 }
 
 
