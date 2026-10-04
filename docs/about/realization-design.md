@@ -4,22 +4,22 @@ Una fuente pedagógica puede estar suficientemente clara y todavía no decirnos 
 
 Para no mezclar responsabilidades, distinguimos tres capas:
 
-<div class="realization-layers">
+<div class="teaching-grid teaching-grid--3 teaching-grid--stack-medium">
 
-<div class="realization-layer">
-<span class="realization-layer__number">1</span>
+<div class="teaching-item teaching-item--stacked">
+<span class="teaching-item__marker">1</span>
 <strong>Fuente pedagógica</strong>
 <span>¿Qué queremos enseñar y qué debe permanecer estable aunque cambie la forma?</span>
 </div>
 
-<div class="realization-layer">
-<span class="realization-layer__number">2</span>
+<div class="teaching-item teaching-item--stacked">
+<span class="teaching-item__marker">2</span>
 <strong>Diseño de realización</strong>
 <span>¿Qué forma debería tomar esa intención en esta experiencia concreta y por qué?</span>
 </div>
 
-<div class="realization-layer">
-<span class="realization-layer__number">3</span>
+<div class="teaching-item teaching-item--stacked">
+<span class="teaching-item__marker">3</span>
 <strong>Implementación</strong>
 <span>¿Cómo materializamos ese diseño con los mecanismos concretos que tenemos disponibles?</span>
 </div>
