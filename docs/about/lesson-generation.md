@@ -323,15 +323,62 @@ En su lugar, intentamos tomar decisiones de generación que reduzcan barreras in
 
 ## Una fuente incompleta no es lo mismo que una página incompleta
 
-Podemos saber con claridad qué queremos enseñar aunque todavía no hayamos decidido el mejor diagrama o ejercicio.
+Podemos saber con claridad qué queremos enseñar aunque todavía no hayamos decidido el mejor diagrama o ejercicio. Una idea pedagógica puede estar suficientemente definida aunque una realización concreta todavía esté incompleta.
 
-Eso significa que la **fuente pedagógica** puede estar suficientemente definida aunque una realización concreta todavía esté incompleta.
+<div class="completion-comparison">
 
-También puede ocurrir lo contrario: una página puede verse terminada y, sin embargo, esconder que todavía no sabemos por qué introdujimos una abstracción o qué queremos que la persona comprenda.
+<div class="completion-card completion-card--source">
+<span class="completion-card__label">Fuente pedagógica incompleta</span>
 
-> **Una página puede verse terminada y aun así no saber qué está intentando enseñar.**
+<div class="completion-card__item completion-card__item--known">
+<strong>Sabemos qué debe comprender la persona</strong>
+</div>
 
-Preferimos que esas dudas permanezcan visibles antes que rellenarlas con una explicación convincente pero inventada.
+<div class="completion-card__item completion-card__item--known">
+<strong>El recorrido general ya tiene sentido</strong>
+</div>
+
+<div class="completion-card__item completion-card__item--open">
+<strong>Falta decidir ejemplos, diagramas o ejercicios</strong>
+</div>
+
+<div class="completion-card__item completion-card__item--question">
+<strong>Todavía hay preguntas abiertas y eso sigue visible</strong>
+</div>
+
+</div>
+
+<div class="completion-card completion-card--page">
+<span class="completion-card__label">Página incompleta</span>
+
+<div class="completion-card__item completion-card__item--known">
+<strong>La explicación publicada todavía no está terminada</strong>
+</div>
+
+<div class="completion-card__item completion-card__item--known">
+<strong>Puede faltar un diagrama, un bloque o una transición</strong>
+</div>
+
+<div class="completion-card__item completion-card__item--open">
+<strong>La forma visible aún está en construcción</strong>
+</div>
+
+<div class="completion-card__item completion-card__item--info">
+<strong>Eso no implica que la fuente esté mal definida</strong>
+</div>
+
+</div>
+
+</div>
+
+<p class="visual-equivalent visual-equivalent--subtle"><strong>En texto:</strong> una fuente puede estar suficientemente definida aunque todavía falten decisiones de representación; una página puede seguir incompleta aunque la intención pedagógica ya esté clara.</p>
+
+<div class="completion-warning">
+<strong>Una página puede verse terminada y aun así no saber qué está intentando enseñar.</strong>
+<span>Puede tener texto, diagramas y ejercicios y, sin embargo, seguir ocultando que todavía no sabemos por qué introdujimos una abstracción o qué queremos que la persona comprenda. La forma visible puede estar cerrada aunque el objetivo pedagógico siga siendo difuso.</span>
+</div>
+
+Preferimos que esas dudas permanezcan **visibles** antes que rellenarlas con una explicación convincente pero inventada.
 
 ## Antes de publicar
 
