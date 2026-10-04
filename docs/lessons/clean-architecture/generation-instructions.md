@@ -1,6 +1,6 @@
 # Instrucciones de generación
 
-Este documento conserva la **fuente pedagógica** de la lección sobre arquitectura limpia (Clean Architecture).
+Este documento conserva la **fuente pedagógica** de la lección **Cómo se llega a Clean Architecture**.
 
 La realización publicada puede cambiar ejemplos, lenguaje, visuales, dificultad o forma de interacción. Esas decisiones no deben cambiar silenciosamente qué intentamos enseñar.
 
