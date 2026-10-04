@@ -114,7 +114,7 @@ La forma concreta del código podrá evolucionar aproximadamente así:
 3. **Etapa 4:** la persistencia SQLite deja de ser conocida directamente por el caso de uso.
 4. **Etapa 5:** la notificación HTTP repite la relación capacidad/realización.
 5. **Etapa 6:** reglas de la orden y orquestación pasan a tener responsabilidades distinguibles.
-6. **Etapa 7:** `Program.cs` o un punto equivalente realiza la composición concreta.
+6. **Etapa 7:** la composición concreta adquiere una unidad externa propia cuando el mismo ensamblaje empieza a repetirse entre entradas; no requiere un contenedor adicional.
 7. **Etapa 8:** observamos y nombramos la forma resultante; no reorganizamos el código únicamente para parecerse a un diagrama clásico.
 
 Esta trayectoria es una expectativa de diseño, no un árbol de carpetas obligatorio. La implementación puede obligarnos a revisar alguna decisión si aparece evidencia mejor.
