@@ -11,6 +11,7 @@ La realización está dividida por responsabilidad para evitar que selección de
 3. [Realización técnica mínima](realization-technical.md) — lenguaje, mecanismos concretos, exclusiones y reproducibilidad.
 4. [Diseño editorial](realization-editorial.md) — argumentos mayores, uso del código, ritmo y jerarquía pública.
 5. [Especificación visual](realization-visual.md) — representaciones, componentes Teaching y bocetos que pueden aportar evidencia.
+6. [Evidencia de implementación](realization-implementation.md) — estados ejecutables, validaciones y revisiones provocadas por el código.
 
 Cada documento depende de las decisiones anteriores, pero puede revisarse de forma independiente cuando nueva evidencia revele un problema localizado.
 
@@ -26,11 +27,13 @@ La fuente, el caso conductor, la evolución causal, la realización técnica mí
 
 La especificación visual está definida y, por ahora, no exige componentes semánticos nuevos.
 
+La primera etapa ejecutable ya fue materializada en `examples/clean-architecture/stage-01/` y su compilación en .NET 10 fue validada por CI.
+
 Todavía permanecen abiertas las decisiones de:
 
-- código definitivo que materializará cada transición;
+- código definitivo de las transiciones posteriores;
 - geometría exacta de las dos representaciones que pueden requerir boceto;
-- si los ejemplos ejecutables vivirán solamente dentro de la lección o también como artefactos separados y versionados.
+- si los ejemplos ejecutables permanecerán como snapshots por etapa o evolucionarán hacia otra forma de distribución.
 
-El siguiente paso es comenzar la **implementación de la realización**: construir el primer estado ejecutable del caso y usarlo como evidencia antes de redactar el recorrido completo en `index.md`.
+El siguiente paso es materializar la **etapa 2** como un delta sobre el estado inicial: introducir una regla de cálculo suficientemente significativa para observar si merece una unidad propia, sin adelantar dominio ni otras abstracciones.
 
