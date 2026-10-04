@@ -69,6 +69,20 @@ Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes
 
     <small>Buy Me a Coffee Monthly Support · aporte recurrente</small>
 
+-   <span id="solicitar-contenido"></span>
+
+    :material-lightbulb-on-outline:{ .lg .middle } **Pedir una lección o guía**
+
+    ---
+
+    ¿Hay algo que quieres entender o conseguir y todavía no está en Teaching?
+
+    Puedes proponer una **lección** o una **guía** con tus propias palabras. No necesitas conocer el nombre técnico del tema.
+
+    [💡 Solicitar una lección o guía](https://github.com/HernanFAR/teaching/issues/new?template=request-content.yml){ .md-button .md-button--primary }
+
+    <small>Solicitud pública en GitHub · no requiere aporte económico</small>
+
 </div>
 
 ---
@@ -100,7 +114,7 @@ Puedes leer más sobre ello en [Cómo enseñamos](../about/how-we-teach.md).
 
 En serio.
 
-Leer, aprender, compartir una lección, reutilizar las instrucciones de generación, abrir un issue, detectar un error o contarle a otra persona que este proyecto existe también ayuda.
+Leer, aprender, compartir una lección, reutilizar las instrucciones de generación, [pedir una nueva lección o guía](https://github.com/HernanFAR/teaching/issues/new?template=request-content.yml), detectar un error o contarle a otra persona que este proyecto existe también ayuda.
 
 El apoyo económico es una posibilidad, no una expectativa.
 
