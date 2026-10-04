@@ -115,16 +115,37 @@ En su lugar, preferimos que la explicación conserve una relación causal:
 
 No todas las lecciones necesitan seguir exactamente esos pasos. Un ejemplo pequeño de ese recorrido podría verse así:
 
-```mermaid
-flowchart LR
-    A["Un endpoint funciona"]
-    B["Crecen las reglas de negocio"]
-    C["Necesitamos probarlas sin HTTP"]
-    D["Aparece una operación separable"]
-    E["La reconocemos como un caso de uso"]
+<div class="teaching-flow">
 
-    A --> B --> C --> D --> E
-```
+<div class="teaching-flow__step">
+<strong>Un endpoint funciona</strong>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step">
+<strong>Crecen las reglas de negocio</strong>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step">
+<strong>Necesitamos probarlas sin HTTP</strong>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step">
+<strong>Aparece una operación separable</strong>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step">
+<strong>La reconocemos como un caso de uso</strong>
+</div>
+
+</div>
 
 <p class="visual-equivalent"><strong>En texto:</strong> el caso de uso no aparece porque queríamos aplicar una arquitectura; aparece después de que una necesidad concreta vuelve útil separar esa operación.</p>
 
