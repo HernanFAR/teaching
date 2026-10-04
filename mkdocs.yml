@@ -35,6 +35,7 @@ nav:
   - ¿Cómo funcionamos?:
       - Cómo enseñamos: about/how-we-teach.md
       - Cómo generamos lecciones: about/lesson-generation.md
+      - Cómo diseñamos una realización: about/realization-design.md
   - Lecciones:
       - lessons/index.md
       - Clean Architecture:
