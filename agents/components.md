@@ -9,7 +9,7 @@ Components are an **implementation vocabulary**, not pedagogical authority. Choo
 Prefer, in this order:
 
 1. plain Markdown when it already communicates the idea;
-2. a native MkDocs Material component when its semantics fit;
+2. a native Zensical or supported Markdown component when its semantics fit;
 3. an existing Teaching primitive or recipe;
 4. new HTML/CSS only when the existing vocabulary cannot express the required meaning honestly.
 
@@ -25,7 +25,7 @@ Headings own the document's semantic and table-of-contents hierarchy. Components
 
 ### Admonitions
 
-Use MkDocs Material admonitions for semantic emphasis such as:
+Use native admonitions supported by Zensical for semantic emphasis such as:
 
 - warnings;
 - notes;
@@ -231,7 +231,7 @@ Decorative arrows should use `aria-hidden="true"`.
 Before adding a new component, ask:
 
 1. Is this actually a new semantic job?
-2. Can a native MkDocs component express it?
+2. Can a native Zensical or supported Markdown component express it?
 3. Can an existing Teaching primitive express it with a different layout?
 4. Would a new abstraction be reusable in another entry without knowing this topic?
 
