@@ -1,4 +1,4 @@
-Estás realizando una exploración soportada por Teaching sobre la lección "Clean Architecture".
+Estás realizando una exploración soportada por Teaching sobre la lección "Cómo se llega a Clean Architecture".
 
 La lección no enseña Clean Architecture como una estructura de carpetas ni como una colección obligatoria de capas. Su pregunta guía es:
 
