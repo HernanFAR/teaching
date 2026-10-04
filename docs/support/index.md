@@ -17,14 +17,34 @@ Leer, aprender, compartir una lección, reutilizar las instrucciones de generaci
 
 ---
 
-## Trabajo profesional
+## Trabajar con nosotros
 
-Si lo que necesitas no es apoyar económicamente el proyecto sino trabajar con nosotros, esas superficies viven separadas:
+<span class="teaching-eyebrow">Trabajo profesional</span>
 
-- [Asesoría](../advisory/) — criterio aplicado a un caso concreto, incluida una vía gratuita basada en nuestra documentación pública.
-- [Servicios](../services/) — implementación acompañada del enfoque en tu dominio o formación para que tu equipo pueda aplicarlo por su cuenta.
+Si necesitas más que el contenido público, podemos trabajar contigo de dos maneras:
 
-El apoyo voluntario no es requisito para utilizar esos servicios, y contratar un servicio no cambia el acceso al contenido público.
+<div class="teaching-grid teaching-grid--2" markdown>
+
+<a class="teaching-link-card" href="../advisory/">
+  <span class="teaching-eyebrow">Asesoría</span>
+  <strong>Una segunda mirada sobre un caso concreto</strong>
+  <span>Revisamos contigo una situación real, sus presiones, alternativas y el siguiente movimiento razonable.</span>
+  <span class="teaching-link-card__action">Ver asesoría →</span>
+</a>
+
+<a class="teaching-link-card" href="../services/">
+  <span class="teaching-eyebrow">Servicios</span>
+  <strong>Aplicamos o transferimos el enfoque</strong>
+  <span>Podemos ayudarte a construir una superficie pedagógica para tu dominio o formar a tu equipo para que pueda hacerlo con autonomía.</span>
+  <span class="teaching-link-card__action">Ver servicios →</span>
+</a>
+
+</div>
+
+!!! info "Una distinción importante"
+    **Contratar trabajo profesional no desbloquea contenido ni cambia el acceso a Teaching.**
+
+    Pagas por tiempo, criterio y trabajo aplicado a tu contexto; el contenido público sigue siendo abierto.
 
 ---
 
