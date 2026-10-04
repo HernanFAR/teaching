@@ -39,9 +39,7 @@ La asesoría acompañada no desbloquea conocimiento oculto; únicamente paga el 
 
 ## Asesoría gratuita
 
-Sí, el nombre es literal.
-
-Nuestra primera asesoría es simplemente hacer público **cómo pensamos y cómo trabajamos**.
+Sí, el nombre es literal. Nuestra primera asesoría es simplemente hacer público **cómo pensamos y cómo trabajamos**.
 
 Puedes revisar, entre otras cosas:
 
@@ -91,17 +89,11 @@ Puedes revisar, entre otras cosas:
 
 ## Asesoría 1:1
 
-Hay momentos donde el enfoque ya se entiende, pero la situación real sigue siendo ambigua.
+Hay momentos donde el enfoque ya se entiende, pero la situación real sigue siendo ambigua. Ahí podemos revisar el caso contigo.
 
-Ahí podemos revisar el caso contigo.
+No partimos preguntando: ¿Qué patrón quieres aplicar? 
 
-No partimos preguntando:
-
-> ¿Qué patrón quieres aplicar?
-
-Partimos preguntando:
-
-> **¿Qué necesitas preservar, qué cambió y qué presión existe realmente?**
+Partimos preguntando: **¿Qué necesitas preservar, qué cambió y qué presión existe realmente?**
 
 ### Qué podemos revisar
 
