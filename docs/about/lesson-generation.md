@@ -373,10 +373,11 @@ Podemos saber con claridad qué queremos enseñar aunque todavía no hayamos dec
 
 <p class="visual-equivalent visual-equivalent--subtle"><strong>En texto:</strong> una fuente puede estar suficientemente definida aunque todavía falten decisiones de representación; una página puede seguir incompleta aunque la intención pedagógica ya esté clara.</p>
 
-<div class="completion-warning">
-<strong>Una página puede verse terminada y aun así no saber qué está intentando enseñar.</strong>
-<span>Puede tener texto, diagramas y ejercicios y, sin embargo, seguir ocultando que todavía no sabemos por qué introdujimos una abstracción o qué queremos que la persona comprenda. La forma visible puede estar cerrada aunque el objetivo pedagógico siga siendo difuso.</span>
-</div>
+!!! warning "Una página puede verse terminada y aun así no saber qué está intentando enseñar."
+
+    Puede tener texto, diagramas y ejercicios y, sin embargo, seguir ocultando que todavía no sabemos por qué introdujimos una abstracción o qué queremos que la persona comprenda.
+
+    La forma visible puede estar cerrada aunque el objetivo pedagógico siga siendo difuso.
 
 Preferimos que esas dudas permanezcan **visibles** antes que rellenarlas con una explicación convincente pero inventada.
 
