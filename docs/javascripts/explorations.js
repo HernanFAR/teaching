@@ -9,10 +9,21 @@
     const result = root.querySelector("[data-exploration-result]");
     const copy = root.querySelector("[data-exploration-copy]");
     const status = root.querySelector("[data-exploration-status]");
+    const help = root.querySelector("[data-exploration-help]");
+
+    const updateModeHelp = () => {
+      const selectedOption = mode?.selectedOptions?.[0];
+      if (help && selectedOption) {
+        help.textContent = selectedOption.dataset.description ?? "";
+      }
+    };
 
     const setStatus = (message) => {
       if (status) status.textContent = message;
     };
+
+    mode?.addEventListener("change", updateModeHelp);
+    updateModeHelp();
 
     prepare?.addEventListener("click", async () => {
       const concreteNeed = need?.value.trim() ?? "";
