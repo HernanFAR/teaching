@@ -14,6 +14,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        stage:
+          - stage-01
+          - stage-02
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,7 +30,7 @@ jobs:
           dotnet-version: "10.0.x"
 
       - name: Restore
-        run: dotnet restore examples/clean-architecture/stage-01/Teaching.CleanArchitecture.Stage01.csproj
+        run: dotnet restore examples/clean-architecture/${{ matrix.stage }}/Teaching.CleanArchitecture.${{ matrix.stage == 'stage-01' && 'Stage01' || 'Stage02' }}.csproj
 
       - name: Build
-        run: dotnet build examples/clean-architecture/stage-01/Teaching.CleanArchitecture.Stage01.csproj --configuration Release --no-restore
+        run: dotnet build examples/clean-architecture/${{ matrix.stage }}/Teaching.CleanArchitecture.${{ matrix.stage == 'stage-01' && 'Stage01' || 'Stage02' }}.csproj --configuration Release --no-restore
