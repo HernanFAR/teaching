@@ -25,7 +25,50 @@ Relations / composition
 
 A single label must not silently answer several of these questions at once.
 
+## Classification is a projection, not authority
+
+Teaching classification should summarize pedagogical semantics that already exist in the source. It must not become a second source of pedagogical authority.
+
+Prefer this direction:
+
+```text
+pedagogical source
+→ intent
+→ scope
+→ perspective actually used
+→ assumed prior understanding
+→ causal path
+→ limits and invariants
+
+            ↓ derive
+
+classification
+→ Type
+→ Perspective
+→ Categories
+→ Level
+```
+
+If classification and source disagree, **review or recalculate the classification first**.
+
+Do not deform a pedagogical source merely to satisfy labels that were assigned to it.
+
+Some dimensions have a stronger semantic relationship with the source than others:
+
+- **Perspective** should be reconstructible from what kind of work the source is actually teaching. If changing the perspective would change what the learner is meant to understand, that likely indicates a different lesson or a source revision.
+- **Level** should be derivable from the prior understanding the source explicitly assumes. Do not assign a level first and then invent prerequisites to justify it.
+- **Categories** are primarily thematic projections over the source. They describe what families of problems or knowledge the entry touches; they should not force content into the lesson.
+- **Type** is usually structural and follows the pedagogical role of the resource, but it still must match the resource's actual semantics.
+
+A useful rule is:
+
+> **Classification summarizes the pedagogical source; it does not define it.**
+
+This also means generation instructions should make enough semantics explicit that **Perspective** and **Level** can be derived without guesswork, while **Type** and **Categories** may often be projected from the resulting resource and its content.
+
 ---
+
+
 
 ## 1. Type
 
