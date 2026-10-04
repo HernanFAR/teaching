@@ -1149,6 +1149,11 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.teaching-grid--lateral-badges {
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+}
+
 .teaching-grid--last-wide > :last-child {
   grid-column: 1 / -1;
 }
