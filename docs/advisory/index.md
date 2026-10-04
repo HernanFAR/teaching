@@ -9,22 +9,7 @@ hide:
 
 Teaching publica cómo trabaja.
 
-No necesitas contratar una llamada para descubrir una metodología que mantenemos escondida. Si quieres entender el enfoque, **empieza por la documentación abierta**.
-
-La asesoría existe cuando ya no basta con leer el proceso y necesitas **criterio aplicado a una situación concreta**.
-
-<div class="hero-actions" markdown>
-
-[Ver cómo funcionamos](../about/how-we-teach.md){ .md-button .md-button--primary }
-[Ver servicios](../services/){ .md-button }
-
-</div>
-
-</div>
-
----
-
-## Dos formas de recibir asesoría
+No necesitas contratar una llamada para descubrir una metodología que mantenemos escondida. Puedes **usar nuestra documentación por tu cuenta** o, cuando el problema ya depende de tu situación concreta, **traer un caso real para revisarlo contigo**.
 
 <div class="teaching-grid teaching-grid--2" markdown>
 
@@ -40,6 +25,10 @@ La asesoría existe cuando ya no basta con leer el proceso y necesitas **criteri
 <span class="teaching-eyebrow">Acompañada · 1:1</span>
 <strong>Trae un caso real</strong>
 <span>Revisamos contigo una situación donde hace falta criterio externo, contexto o una segunda mirada.</span>
+
+[Ver qué revisamos](#asesoria-11){ .md-button }
+</div>
+
 </div>
 
 </div>
