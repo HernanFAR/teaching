@@ -10,18 +10,33 @@ En Teaching, esa fuente se expresa normalmente mediante unas **instrucciones bas
 
 ## Primero definimos qué debe permanecer
 
-Una buena fuente debería dejar suficientemente claro:
+Una buena fuente debería dejar suficientemente claras tres cosas:
 
-- qué queremos que la persona entienda al terminar;
-- qué todavía no necesita aprender;
-- qué problemas o tensiones deben aparecer;
-- en qué orden importa que aparezcan;
-- qué límites y costos no deberían desaparecer de la explicación;
-- qué condiciones de accesibilidad y acceso material debemos respetar.
+<div class="source-dimensions">
+
+<div class="source-dimension">
+<span class="source-dimension__label">Intención</span>
+<strong>Qué queremos que la persona comprenda</strong>
+<span>Qué debería entender al terminar y qué todavía no necesita aprender.</span>
+</div>
+
+<div class="source-dimension">
+<span class="source-dimension__label">Recorrido</span>
+<strong>Qué debe ocurrir para que esa comprensión tenga sentido</strong>
+<span>Qué problemas o tensiones deben aparecer y en qué orden importa que aparezcan.</span>
+</div>
+
+<div class="source-dimension">
+<span class="source-dimension__label">Límites y acceso</span>
+<strong>Qué no debería desaparecer de la explicación</strong>
+<span>Qué costos, límites y condiciones de accesibilidad o acceso material debemos respetar.</span>
+</div>
+
+</div>
 
 No necesitamos decidir desde el comienzo cada frase, diagrama o ejercicio.
 
-Sí necesitamos saber qué no queremos perder cuando cambiemos la forma de enseñar.
+Sí necesitamos saber **qué debe permanecer estable aunque cambie la forma de enseñar**.
 
 ## El recorrido debe tener causas
 
