@@ -8,7 +8,8 @@ Las instrucciones operativas específicas para agentes viven en `agents/`. Antes
 
 - `agents/README.md`;
 - `agents/lesson-generation.md`;
-- `agents/realization-design.md`.
+- `agents/realization-design.md`;
+- `agents/components.md`.
 
 La documentación bajo `docs/` es la realización pública para humanos. No reemplaza las reglas operativas de `agents/`.
 
