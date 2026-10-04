@@ -2,11 +2,43 @@
 
 Una fuente pedagógica puede estar suficientemente clara y todavía no decirnos cuál es la mejor forma de convertirla en una página, una tutoría, un ejercicio o una experiencia interactiva.
 
-Por eso separamos dos preguntas:
+Para no mezclar responsabilidades, distinguimos tres capas:
 
-> **Fuente pedagógica:** ¿qué queremos enseñar y qué debe permanecer?
+<div class="realization-layers">
 
-> **Diseño de realización:** ¿cómo hacemos visible esa intención en esta experiencia concreta?
+<div class="realization-layer">
+<span class="realization-layer__number">1</span>
+<strong>Fuente pedagógica</strong>
+<span>¿Qué queremos enseñar y qué debe permanecer estable aunque cambie la forma?</span>
+</div>
+
+<div class="realization-layer">
+<span class="realization-layer__number">2</span>
+<strong>Diseño de realización</strong>
+<span>¿Qué forma debería tomar esa intención en esta experiencia concreta y por qué?</span>
+</div>
+
+<div class="realization-layer">
+<span class="realization-layer__number">3</span>
+<strong>Implementación</strong>
+<span>¿Cómo materializamos ese diseño con los mecanismos concretos que tenemos disponibles?</span>
+</div>
+
+</div>
+
+La fuente no decide cada detalle visual. El diseño no debería inventar significado pedagógico. Y la implementación no demuestra por sí sola que el diseño era correcto.
+
+Después de implementar, observamos lo que realmente ocurrió:
+
+```text
+fuente pedagógica
+→ diseño de realización
+→ implementación
+→ observación y revisión
+↺
+```
+
+La evidencia puede hacernos revisar la implementación, el diseño o incluso la fuente pedagógica.
 
 ## No todo contenido necesita la misma forma
 
