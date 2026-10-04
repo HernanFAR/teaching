@@ -934,3 +934,101 @@
   opacity: 0.78;
   font-size: 0.78rem;
 }
+
+
+.access-assumptions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.access-assumption {
+  padding: 1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.access-assumption__label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.access-assumption strong,
+.access-assumption > span:last-child {
+  display: block;
+}
+
+.access-assumption strong {
+  line-height: 1.35;
+}
+
+.access-assumption > span:last-child {
+  margin-top: 0.45rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.access-practices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem 1rem;
+  margin: 1.15rem 0 0.85rem;
+}
+
+.access-practice {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.access-practice__number {
+  display: inline-grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.access-practice strong,
+.access-practice > span:last-child {
+  grid-column: 2;
+  display: block;
+}
+
+.access-practice strong {
+  line-height: 1.35;
+}
+
+.access-practice > span:last-child {
+  margin-top: 0.3rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 59.9844em) {
+  .access-assumptions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  .access-assumptions,
+  .access-practices {
+    grid-template-columns: 1fr;
+  }
+}
