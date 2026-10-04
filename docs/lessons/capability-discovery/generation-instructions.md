@@ -8,6 +8,27 @@ La lección nace de una pregunta que quedó abierta en **Cómo se llega a Clean 
 
 La realización publicada podrá cambiar dominio, lenguaje, mecanismos, ejemplos, visuales, dificultad o interacción. Esas decisiones no deben cambiar silenciosamente qué intentamos enseñar.
 
+## Clasificación pedagógica
+
+Según el modelo de contenido de Teaching:
+
+```text
+Tipo: Lección
+Perspectiva: Desarrollo
+Categorías:
+- Efectos e IO
+- Dependencias y límites
+Nivel: Introductorio
+```
+
+Esta clasificación describe la entrada, no el recorrido desde el que fue descubierta.
+
+La lección nace dentro de **Clean Architecture en uso real**, pero no pertenece semánticamente a esa guía: debe poder reutilizarse por sí misma en otros recorridos.
+
+La perspectiva es **Desarrollo** porque la pregunta central no es todavía cómo organizar todo el sistema, sino cómo materializar una necesidad externa sin confundirla con el mecanismo concreto que hoy la satisface.
+
+La relación con policy y con la organización arquitectónica posterior se mantiene deliberadamente fuera del centro de esta lección. Esas conexiones pueden ser enseñadas por entradas separadas y luego compuestas por una guía.
+
 ## Intención pedagógica
 
 Al terminar la lección, la persona debería entender que una **capacidad** no aparece porque queramos introducir una interfaz, un puerto o una arquitectura determinada.
