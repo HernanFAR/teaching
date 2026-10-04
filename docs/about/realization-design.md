@@ -74,7 +74,7 @@ Después de implementar, observamos lo que realmente ocurrió:
 
 La evidencia puede hacernos revisar la implementación, el diseño o incluso la fuente pedagógica.
 
-## No todo contenido necesita la misma forma
+## Elegir la forma
 
 Una parte de una lección puede necesitar narrativa. Otra puede funcionar mejor como secuencia, comparación, lista de verificación (`checklist`), código, diagrama o aviso semántico (`admonition`).
 
@@ -113,7 +113,7 @@ La representación debería responder una pregunta concreta.
 
 La forma aparece después de entender el trabajo pedagógico que debe hacer esa parte de la entrada.
 
-### Diseñamos una especificación de realización
+### Especificación de realización
 
 Antes de implementar, intentamos decidir al menos:
 
@@ -161,7 +161,7 @@ Antes de implementar, intentamos decidir al menos:
 
     Estas decisiones forman una **especificación de realización**. La especificación puede cambiar sin alterar necesariamente la fuente pedagógica.
 
-### Preferimos componentes con significado
+### Componentes con significado
 
 Cuando un componente existente expresa bien la intención, preferimos reutilizarlo.
 
@@ -201,7 +201,7 @@ Cuando un componente existente expresa bien la intención, preferimos reutilizar
 
 El objetivo no es construir una biblioteca de componentes. Es reducir complejidad accidental y hacer que la forma acompañe al contenido.
 
-### La accesibilidad también se diseña aquí
+### Accesibilidad
 
 Una visual que contiene información esencial necesita otra vía de acceso.
 
@@ -251,7 +251,7 @@ Por eso el diseño de realización también revisa:
 
 </div>
 
-## Los bocetos pueden ser desechables
+## Bocetos desechables
 
 A veces resulta útil explorar una idea visual antes de implementarla.
 
@@ -321,7 +321,7 @@ La implementación también produce evidencia.
 
 Si al realizar una lección descubrimos que una tensión aparece demasiado pronto, que falta una transición o que intentábamos enseñar demasiadas cosas a la vez, quizá el problema no sea visual: puede ser evidencia para revisar la fuente pedagógica.
 
-## Una fuente puede tener más de un buen diseño
+## Más de un buen diseño
 
 La misma fuente puede dar lugar a distintas realizaciones:
 
