@@ -98,6 +98,30 @@
   line-height: 1.65;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.hero-actions .md-button {
+  margin: 0;
+}
+
+@media screen and (max-width: 45rem) {
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions .md-button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
 .md-typeset .grid.cards > ul > li,
 .md-typeset .grid.cards > ol > li {
   border-radius: var(--teaching-radius);
