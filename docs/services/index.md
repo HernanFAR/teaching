@@ -255,23 +255,45 @@ No estás pagando por acceso a una metodología secreta.
 
 ## Formación y transferencia
 
-### Te enseñamos a hacerlo
+**Te enseñamos a aplicar el proceso con autonomía.**
 
-En este servicio el resultado principal no es que nosotros construyamos la superficie.
+En este servicio el resultado principal no es que nosotros construyamos la superficie, sino que **tu equipo aprenda a construirla, probarla y revisarla por sí mismo**.
 
-Es que **tu equipo aprenda a construirla y revisarla con autonomía**.
+<div class="teaching-work-scope">
 
-Podemos trabajar sobre:
+<div class="teaching-work-scope__item">
+  <span class="teaching-work-scope__label">Modelar</span>
+  <div class="teaching-work-scope__body">
+    <strong>Hacer explícito el conocimiento enseñable</strong>
+    <span>Delimitar unidades pedagógicas, separar intención de realización y reconocer invariantes, dependencias y grados de libertad.</span>
+  </div>
+</div>
 
-- cómo delimitar conocimiento enseñable;
-- cómo separar intención de realización;
-- cómo reconocer invariantes y grados de libertad;
-- cómo diseñar fuentes pedagógicas;
-- cómo construir recorridos;
-- cómo producir y comparar realizaciones;
-- cómo usar IA sin delegarle autoridad pedagógica;
-- cómo registrar incertidumbre en vez de rellenarla con respuestas plausibles;
-- cómo revisar si una realización todavía preserva aquello que importa.
+<div class="teaching-work-scope__item">
+  <span class="teaching-work-scope__label">Diseñar</span>
+  <div class="teaching-work-scope__body">
+    <strong>Construir fuentes y recorridos</strong>
+    <span>Diseñar fuentes pedagógicas y recorridos de aprendizaje que puedan sostener distintas experiencias.</span>
+  </div>
+</div>
+
+<div class="teaching-work-scope__item">
+  <span class="teaching-work-scope__label">Realizar</span>
+  <div class="teaching-work-scope__body">
+    <strong>Producir y comparar experiencias</strong>
+    <span>Crear realizaciones, compararlas y usar IA como apoyo sin delegarle autoridad pedagógica.</span>
+  </div>
+</div>
+
+<div class="teaching-work-scope__item">
+  <span class="teaching-work-scope__label">Revisar</span>
+  <div class="teaching-work-scope__body">
+    <strong>Usar evidencia e incertidumbre</strong>
+    <span>Registrar lo que todavía no sabemos y revisar si una realización sigue preservando aquello que importa.</span>
+  </div>
+</div>
+
+</div>
 
 !!! note "El objetivo es reducir dependencia"
     Una transferencia exitosa debería hacer que necesites menos acompañamiento nuestro con el tiempo, no más.
