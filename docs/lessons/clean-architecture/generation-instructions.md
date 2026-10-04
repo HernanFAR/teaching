@@ -4,6 +4,46 @@ Este documento conserva la **fuente pedagógica** de la lección **Cómo se lleg
 
 La realización publicada puede cambiar ejemplos, lenguaje, visuales, dificultad o forma de interacción. Esas decisiones no deben cambiar silenciosamente qué intentamos enseñar.
 
+## Perspectiva y conocimiento previo
+
+Esta fuente enseña el problema desde una **perspectiva arquitectónica**.
+
+La pregunta central no es cómo implementar cada mecanismo ni cómo modelar por completo las reglas del problema, sino **cómo organizar responsabilidades, fronteras y dependencias cuando distintas partes del sistema empiezan a cambiar por razones diferentes**.
+
+El recorrido puede tocar decisiones de diseño y desarrollo para producir presiones observables, pero esas decisiones actúan como evidencia y contexto para una pregunta arquitectónica mayor:
+
+> ¿Qué separación se vuelve útil, quién debería poseer cada responsabilidad y cómo debería cambiar la relación entre las partes?
+
+La lección está pensada para ser **introductoria respecto de Clean Architecture y de esta familia de decisiones arquitectónicas**.
+
+No presupone que la persona ya conozca:
+
+- Clean Architecture;
+- Ports and Adapters;
+- inversión de dependencias;
+- Domain / Application como taxonomía previa;
+- Repository Pattern;
+- CQRS;
+- DDD;
+- un contenedor de inyección de dependencias.
+
+Sí presupone únicamente capacidad básica para leer el ejemplo de software usado por la realización y seguir cambios pequeños entre estados.
+
+Que una realización use C#, HTTP, SQLite u otro mecanismo concreto no convierte esos conocimientos en prerrequisitos semánticos de la lección. Cuando una tecnología sea accidental al objetivo pedagógico, la realización debe explicarla lo suficiente o elegir una alternativa accesible.
+
+Desde esta fuente puede proyectarse provisionalmente una clasificación como:
+
+```text
+Tipo: Lección
+Perspectiva: Arquitectura
+Categorías:
+- Dependencias y límites
+- Evolución
+Nivel: Introductorio
+```
+
+Esta clasificación **resume** la fuente; no la gobierna. Si una revisión posterior de la intención, alcance o conocimiento previo deja de sostener alguna de estas etiquetas, debe revisarse la clasificación antes que deformar la fuente para conservarla.
+
 ## Intención pedagógica
 
 Al terminar la lección, la persona debería entender que **arquitectura limpia (Clean Architecture) no es una estructura de carpetas ni una colección obligatoria de capas**, sino una respuesta posible a ciertas presiones que aparecen cuando queremos preservar comportamiento importante mientras cambian los mecanismos que lo rodean.
