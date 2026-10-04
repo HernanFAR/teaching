@@ -1032,3 +1032,115 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.completion-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.25rem 0 0.85rem;
+}
+
+.completion-card {
+  padding: 1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.completion-card--source {
+  border-color: color-mix(in srgb, var(--md-accent-fg-color) 42%, var(--md-default-fg-color--lightest));
+}
+
+.completion-card--page {
+  border-color: color-mix(in srgb, var(--md-primary-fg-color) 24%, var(--md-default-fg-color--lightest));
+}
+
+.completion-card__label {
+  display: block;
+  padding-bottom: 0.7rem;
+  border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.completion-card__item {
+  position: relative;
+  min-height: 2rem;
+  margin-top: 0.8rem;
+  padding-left: 2rem;
+}
+
+.completion-card__item::before {
+  position: absolute;
+  top: 0.05rem;
+  left: 0;
+  display: inline-grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  background: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.completion-card__item--known::before {
+  content: "✓";
+  background: color-mix(in srgb, var(--md-accent-fg-color) 26%, transparent);
+  color: var(--md-accent-fg-color);
+}
+
+.completion-card__item--open::before {
+  content: "";
+  box-sizing: border-box;
+  border: 0.08rem dashed var(--md-default-fg-color--light);
+  background: transparent;
+}
+
+.completion-card__item--question::before {
+  content: "?";
+}
+
+.completion-card__item--info::before {
+  content: "i";
+}
+
+.completion-card__item strong {
+  display: block;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.completion-warning {
+  margin: 1.25rem 0 1rem;
+  padding: 1rem 1.1rem;
+  border: 0.05rem solid color-mix(in srgb, #f6a800 50%, var(--md-default-fg-color--lightest));
+  border-left-width: 0.18rem;
+  border-radius: 0 var(--teaching-radius) var(--teaching-radius) 0;
+  background: color-mix(in srgb, #f6a800 7%, transparent);
+}
+
+.completion-warning strong,
+.completion-warning span {
+  display: block;
+}
+
+.completion-warning strong {
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.completion-warning span {
+  margin-top: 0.45rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+@media screen and (max-width: 45rem) {
+  .completion-comparison {
+    grid-template-columns: 1fr;
+  }
+}
