@@ -755,44 +755,46 @@ Es una respuesta a presiones.
 ## Explora esta lección
 
 <div class="teaching-exploration__intro" markdown>
-Entender la realización de órdenes no tiene por qué ser el final.
+¿Hay algo de esta lección que quieras llevar más lejos?
 
-Teaching puede preparar una **exploración soportada** usando el material pedagógico de esta lección, el tipo de investigación que elijas y una necesidad concreta escrita por ti.
+Describe **qué te gustaría entender** y Teaching preparará un texto orientativo usando el material pedagógico de esta lección. Si no eliges un modo concreto, el LLM podrá seleccionar entre las exploraciones que esta lección soporta.
 
-El texto se prepara localmente en tu navegador. **Teaching no envía lo que escribas a ningún LLM ni a ningún servidor.** Tú decides dónde usar el resultado.
-</div>
-
-<div class="teaching-exploration__modes">
-
-<button type="button" class="teaching-exploration__mode" data-exploration-mode data-exploration-label="Otro caso" data-prompt-src="explorations/another-case.txt" aria-pressed="false">
-<strong>Otro caso</strong>
-<span>Recorre las mismas presiones en otro dominio sin copiar artificialmente la arquitectura final.</span>
-</button>
-
-<button type="button" class="teaching-exploration__mode" data-exploration-mode data-exploration-label="Profundizar" data-prompt-src="explorations/deepen.txt" aria-pressed="false">
-<strong>Profundizar</strong>
-<span>Examina una tensión, un concepto ya introducido o una extensión natural del caso con más detalle.</span>
-</button>
-
-<button type="button" class="teaching-exploration__mode" data-exploration-mode data-exploration-label="Aplicarlo a mi caso" data-prompt-src="explorations/apply-to-my-case.txt" aria-pressed="false">
-<strong>Aplicarlo a mi caso</strong>
-<span>Describe tu sistema y comprueba qué presiones de la lección existen realmente en él.</span>
-</button>
-
-<button type="button" class="teaching-exploration__mode" data-exploration-mode data-exploration-label="Ponme a prueba" data-prompt-src="explorations/test-me.txt" aria-pressed="false">
-<strong>Ponme a prueba</strong>
-<span>Convierte el recorrido en decisiones progresivas sin revelar la transición siguiente antes de tiempo.</span>
-</button>
-
+Todo se prepara localmente en tu navegador. **Teaching no envía lo que escribas a ningún LLM ni a ningún servidor.** Tú decides dónde usar el resultado.
 </div>
 
 <div class="teaching-exploration__composer">
 
-<p>Exploración seleccionada: <strong data-exploration-selected>Otro caso</strong></p>
-
 <label for="clean-architecture-exploration-need">¿Qué te gustaría entender?</label>
 
 <textarea id="clean-architecture-exploration-need" data-exploration-need placeholder="Por ejemplo: entiendo la idea de invertir la dependencia de SQLite, pero me gustaría verla en un sistema que trabaja con archivos locales."></textarea>
+
+<div class="teaching-exploration__settings">
+
+<label for="clean-architecture-exploration-mode">¿Cómo quieres explorarlo?</label>
+
+<select id="clean-architecture-exploration-mode" data-exploration-mode>
+<option value="automatic" data-prompt-src="explorations/automatic.txt">Automático — deja que Teaching oriente el tipo de exploración</option>
+<option value="another-case" data-prompt-src="explorations/another-case.txt">Otro caso</option>
+<option value="deepen" data-prompt-src="explorations/deepen.txt">Profundizar</option>
+<option value="apply-to-my-case" data-prompt-src="explorations/apply-to-my-case.txt">Aplicarlo a mi caso</option>
+<option value="test-me" data-prompt-src="explorations/test-me.txt">Ponme a prueba</option>
+</select>
+
+<details class="teaching-exploration__help">
+<summary>¿Qué significa cada modo?</summary>
+
+<div class="teaching-exploration__help-content" markdown>
+
+- **Automático** — interpreta tu necesidad y elige una de las exploraciones soportadas, explicando cuál escogió.
+- **Otro caso** — recorre las mismas presiones en otro dominio sin copiar artificialmente la arquitectura final.
+- **Profundizar** — examina una tensión, un concepto ya introducido o una extensión natural del caso con más detalle.
+- **Aplicarlo a mi caso** — parte de tu sistema y comprueba qué presiones de la lección existen realmente.
+- **Ponme a prueba** — convierte el recorrido en decisiones progresivas sin revelar la transición siguiente antes de tiempo.
+
+</div>
+</details>
+
+</div>
 
 <div class="teaching-exploration__actions">
 <button type="button" class="teaching-exploration__button teaching-exploration__button--primary" data-exploration-prepare>Preparar exploración</button>
