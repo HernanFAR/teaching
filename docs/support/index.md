@@ -13,6 +13,17 @@ Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes
 
 ---
 
+## Trabajo profesional
+
+Si lo que necesitas no es apoyar económicamente el proyecto sino trabajar con nosotros, esas superficies viven separadas:
+
+- [Asesoría](../advisory/) — criterio aplicado a un caso concreto, incluida una vía gratuita basada en nuestra documentación pública.
+- [Servicios](../services/) — implementación acompañada del enfoque en tu dominio o formación para que tu equipo pueda aplicarlo por su cuenta.
+
+El apoyo voluntario no es requisito para utilizar esos servicios, y contratar un servicio no cambia el acceso al contenido público.
+
+---
+
 ## Formas de apoyar
 
 <div class="grid cards" markdown>
