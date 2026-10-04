@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 <div class="teaching-intro-section" markdown>
 
 # Asesoría
