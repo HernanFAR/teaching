@@ -1365,7 +1365,7 @@
 
 .teaching-flow--compact {
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   border: 0.05rem solid var(--md-default-fg-color--lightest);
   border-radius: var(--teaching-radius);
 }
