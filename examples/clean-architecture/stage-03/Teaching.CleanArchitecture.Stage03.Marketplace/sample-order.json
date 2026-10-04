@@ -1,0 +1,15 @@
+{
+  "externalOrderId": "market-1042",
+  "lines": [
+    {
+      "sku": "coffee",
+      "units": 30,
+      "price": 3500
+    },
+    {
+      "sku": "gift-card",
+      "units": 1,
+      "price": 25000
+    }
+  ]
+}
