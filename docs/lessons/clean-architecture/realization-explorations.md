@@ -32,6 +32,18 @@ La primera realización pública prepara el texto localmente en el navegador par
 
 Esto mantiene visible qué contexto entrega Teaching y qué necesidad pertenece al estudiante, sin introducir todavía dependencia de un proveedor o API externa.
 
+## Referencias fuente
+
+Para esta lección, la frontera de referencia más útil para una exploración general es la carpeta completa:
+
+`https://github.com/HernanFAR/teaching/tree/lesson/clean-architecture/docs/lessons/clean-architecture`
+
+La carpeta concentra la fuente pedagógica y los artefactos de realización que un LLM puede consultar cuando tiene acceso a GitHub.
+
+No todas las futuras lecciones deben usar una carpeta completa. La realización debe elegir la referencia mínima que siga siendo suficiente para la exploración: uno o varios archivos concretos, una carpeta, evidencia ejecutable u otra superficie resolvible.
+
+Los prompts deben indicar explícitamente que una referencia inaccesible no puede tratarse como material efectivamente consultado.
+
 ## Material por exploración
 
 ### Otro caso
