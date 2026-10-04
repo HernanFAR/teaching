@@ -113,9 +113,7 @@ En su lugar, preferimos que la explicación conserve una relación causal:
 
 <p class="visual-equivalent"><strong>En texto:</strong> partimos desde algo que funciona; cambia una condición; aparece una limitación; exploramos alternativas; hacemos el cambio mínimo útil; recién entonces ponemos nombre al concepto y observamos sus costos y límites.</p>
 
-No todas las lecciones necesitan seguir exactamente esos pasos.
-
-Un ejemplo pequeño de ese recorrido podría verse así:
+No todas las lecciones necesitan seguir exactamente esos pasos. Un ejemplo pequeño de ese recorrido podría verse así:
 
 <div class="causal-example">
 <strong>Un endpoint funciona</strong>
