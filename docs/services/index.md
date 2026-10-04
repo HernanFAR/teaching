@@ -183,17 +183,33 @@ Puede ser conocimiento sobre software, pero también sobre:
 
 ### El trabajo puede incluir
 
-- identificar qué conocimiento quieres enseñar;
-- delimitar unidades pedagógicas;
-- explicitar la intención;
-- reconstruir relaciones y dependencias;
-- identificar invariantes;
-- encontrar errores y contrafactuales importantes;
-- distinguir qué puede variar;
-- diseñar recorridos;
-- construir una primera fuente pedagógica;
-- producir realizaciones iniciales;
-- revisar qué evidencia contradice nuestras expectativas.
+<div class="teaching-grid teaching-grid--2" markdown>
+
+<div class="teaching-card" markdown>
+<span class="teaching-eyebrow">Delimitar</span>
+<strong>Encontrar la unidad de trabajo</strong>
+<span>Identificar qué conocimiento quieres enseñar y delimitar unidades pedagógicas que puedan trabajarse con claridad.</span>
+</div>
+
+<div class="teaching-card" markdown>
+<span class="teaching-eyebrow">Modelar</span>
+<strong>Hacer explícito lo que importa</strong>
+<span>Explicitar intención, relaciones, dependencias, invariantes, errores, contrafactuales y qué puede variar entre realizaciones.</span>
+</div>
+
+<div class="teaching-card" markdown>
+<span class="teaching-eyebrow">Realizar</span>
+<strong>Convertir el modelo en experiencias</strong>
+<span>Diseñar recorridos, construir una primera fuente pedagógica y producir realizaciones iniciales.</span>
+</div>
+
+<div class="teaching-card" markdown>
+<span class="teaching-eyebrow">Probar</span>
+<strong>Usar la evidencia para revisar</strong>
+<span>Observar qué evidencia contradice nuestras expectativas y qué parte del trabajo necesita volver a examinarse.</span>
+</div>
+
+</div>
 
 ### Qué estás contratando
 
