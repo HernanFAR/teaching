@@ -405,3 +405,75 @@ La implementación confirma que **dominio** y **aplicación** aparecen como nomb
 También revela una tensión concreta para la etapa 7: las dos entradas ejecutables repiten el conocimiento de composición —qué `SqliteOrderStore`, qué `HttpOrderCreatedNotifier`, qué conexión y qué endpoint construir—. Ese conocimiento ya está fuera de Domain y Application, pero todavía está duplicado entre mecanismos de entrada.
 
 La etapa 7 debe responder a esa evidencia, no fingir que el caso de uso sigue seleccionando implementaciones concretas.
+
+
+## Etapa 7 · La composición adquiere un lugar propio
+
+Estado: **materializado; validación de CI en curso**.
+
+Artefacto:
+
+`examples/clean-architecture/stage-07/`
+
+La presión observada al cerrar la etapa 6 fue concreta: las entradas web y marketplace repetían el mismo conocimiento de composición.
+
+Ambas sabían:
+
+- qué almacenamiento concreto usar;
+- cómo inicializarlo;
+- qué notificador concreto usar;
+- qué endpoint configurar;
+- cómo entregar esas realizaciones al caso de uso.
+
+### Cambio realizado
+
+Se agregó:
+
+`Teaching.CleanArchitecture.Stage07.Composition`
+
+Su `OrderApplicationComposition.CreateAsync()` conoce las realizaciones concretas y devuelve las capacidades ya ensambladas.
+
+Las entradas HTTP y marketplace conservan sus responsabilidades de transporte, pero dejan de conocer:
+
+- SQLite;
+- la cadena de conexión;
+- `HttpClient`;
+- la URL del webhook;
+- qué adapters concretos fueron elegidos.
+
+Domain y Application tampoco conocen Composition.
+
+### Evidencia estructural
+
+La dirección observada queda así:
+
+```text
+Domain <- Application <- adapters
+          ^             /
+          |            /
+       entries -> Composition
+```
+
+El dibujo anterior representa dependencias de código de manera aproximada, no flujo de ejecución.
+
+La observación importante es que el conocimiento de las realizaciones concretas se concentra hacia afuera de las políticas.
+
+### Lo que deliberadamente no hicimos
+
+No agregamos un contenedor de inyección de dependencias.
+
+La construcción explícita sigue siendo suficiente.
+
+Tampoco tratamos `Composition` como una capa universal: apareció porque el mismo ensamblaje concreto estaba duplicado entre dos entradas.
+
+### Validación
+
+El workflow `Clean Architecture example` run `#83` incluye las entradas web y marketplace de la etapa 7, su receptor local y todos los snapshots anteriores.
+
+Al registrar esta evidencia, el run permanece en cola.
+
+### Consecuencia provisional para el diseño
+
+La etapa 7 materializa una composición explícita sin introducir infraestructura adicional.
+
+Si el snapshot queda verde, ya no necesitaremos otra transformación estructural para completar el recorrido. La etapa 8 podrá dedicarse a reconstruir la forma resultante y nombrarla como Clean Architecture.
