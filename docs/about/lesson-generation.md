@@ -42,12 +42,13 @@ Sí necesitamos saber **qué debe permanecer estable aunque cambie la forma de e
 
 Preferimos un recorrido donde cada paso aparezca como respuesta a una necesidad visible.
 
+Una secuencia como esta puede mostrar el resultado, pero no todavía las causas:
+
 <div class="causal-anti-pattern">
-<span class="causal-anti-pattern__label">Secuencia que intentamos evitar</span>
 <div class="causal-anti-pattern__flow" aria-label="capa, luego interfaz, luego patrón, luego arquitectura">
 <span>capa</span><b aria-hidden="true">→</b><span>interfaz</span><b aria-hidden="true">→</b><span>patrón</span><b aria-hidden="true">→</b><span>arquitectura</span>
 </div>
-<small>Un listado de conceptos no explica todavía por qué apareció cada cosa.</small>
+<small>Un listado de conceptos no explica por sí solo por qué apareció cada cosa.</small>
 </div>
 
 En su lugar, preferimos que la explicación conserve una relación causal:
