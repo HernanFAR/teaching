@@ -383,17 +383,60 @@ Preferimos que esas dudas permanezcan **visibles** antes que rellenarlas con una
 
 ## Antes de publicar
 
-Revisamos preguntas como estas:
+Revisamos estas preguntas para comprobar que la lección siga siendo clara, útil y justificable:
 
-- ¿podemos rastrear cada concepto importante hasta el problema que lo hizo útil?
-- ¿introdujimos algo solamente porque “así se hace”?
-- ¿mostramos qué ocurriría si no hiciéramos el cambio cuando eso ayuda a comprenderlo?
-- ¿explicamos cuándo la técnica puede no ser necesaria?
-- ¿distinguimos hechos de heurísticas y preferencias?
-- ¿los recursos visuales responden preguntas concretas y siguen siendo comprensibles de otra forma?
-- ¿alguien puede seguir el recorrido sin conocer previamente el nombre formal del concepto?
-- ¿estamos introduciendo una barrera económica, lingüística, educativa o de accesibilidad que no era técnicamente necesaria?
+<div class="publication-checks">
 
-Una lección no está terminada solo porque su resultado final sea correcto.
+<div class="publication-check">
+<span class="publication-check__number">1</span>
+<strong>¿Podemos rastrear cada concepto hasta el problema que lo hizo útil?</strong>
+<span>La explicación debería dejar visible qué necesidad motivó el concepto y por qué vale la pena aprenderlo.</span>
+</div>
 
-Está mucho más cerca de estar terminada cuando una persona puede **reconstruir por qué ese resultado llegó a tener sentido**.
+<div class="publication-check">
+<span class="publication-check__number">2</span>
+<strong>¿Lo introdujimos solamente porque “así se hace”?</strong>
+<span>No queremos incluir algo solo por tradición. Debe existir una razón actual y visible para enseñarlo.</span>
+</div>
+
+<div class="publication-check">
+<span class="publication-check__number">3</span>
+<strong>¿Mostramos qué ocurriría si no hiciéramos el cambio?</strong>
+<span>Cuando ayuda a comprenderlo, mostramos el contrafactual para que el valor de la técnica no dependa de memorizarla.</span>
+</div>
+
+<div class="publication-check">
+<span class="publication-check__number">4</span>
+<strong>¿Explicamos cuándo la técnica puede no ser necesaria?</strong>
+<span>Una técnica también se entiende por sus límites y por los contextos donde deja de ser la mejor opción.</span>
+</div>
+
+<div class="publication-check">
+<span class="publication-check__number">5</span>
+<strong>¿Distinguimos hechos de heurísticas y preferencias?</strong>
+<span>Separamos lo comprobable de una regla práctica, una decisión contextual o una preferencia.</span>
+</div>
+
+<div class="publication-check">
+<span class="publication-check__number">6</span>
+<strong>¿Los recursos visuales responden preguntas concretas?</strong>
+<span>Un recurso visual debería tener una función pedagógica y seguir siendo comprensible por otra vía cuando contiene información esencial.</span>
+</div>
+
+<div class="publication-check">
+<span class="publication-check__number">7</span>
+<strong>¿Alguien puede seguir el recorrido sin conocer el nombre formal?</strong>
+<span>La explicación debería construir la intuición antes de exigir que la persona conozca el término técnico.</span>
+</div>
+
+<div class="publication-check">
+<span class="publication-check__number">8</span>
+<strong>¿Estamos introduciendo barreras innecesarias?</strong>
+<span>No deberíamos añadir barreras económicas, lingüísticas, educativas o de accesibilidad que no sean técnicamente necesarias.</span>
+</div>
+
+</div>
+
+!!! info "Una lección no está terminada solo porque su resultado final sea correcto."
+
+    Está mucho más cerca de estar terminada cuando una persona puede **reconstruir por qué ese resultado llegó a tener sentido**.
