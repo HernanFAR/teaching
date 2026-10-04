@@ -169,19 +169,28 @@ Partimos preguntando: **¿Qué necesitas preservar, qué cambió y qué presión
 
 <p class="visual-equivalent"><strong>En texto:</strong> reconstruimos el estado actual, identificamos las presiones, comparamos opciones y terminamos con un siguiente movimiento defendible —incluida la posibilidad de no cambiar nada todavía.</p>
 
----
+### Alcance de la asesoría
 
-## Qué no es una asesoría 1:1
+<div class="teaching-grid teaching-grid--2" markdown>
 
-No es:
+<div class="teaching-card" markdown>
+<span class="teaching-eyebrow">Sí es</span>
+<strong>Una revisión situada de tu caso</strong>
+<span>Trabajamos sobre una situación concreta para hacer visibles presiones, alternativas, límites e incertidumbres relevantes.</span>
+</div>
 
-- una auditoría integral de un sistema;
-- una certificación;
-- una promesa de llegar a Clean Architecture;
-- una venta de patrones;
-- una forma de esconder detrás de pago lo que ya publicamos.
+<div class="teaching-card" markdown>
+<span class="teaching-eyebrow">No es</span>
+<strong>Una receta ni una validación formal</strong>
+<span>No es una auditoría integral, certificación, venta de patrones ni una promesa de llegar a Clean Architecture.</span>
+</div>
 
-Si tu necesidad es más amplia —por ejemplo, construir una superficie pedagógica para conocimiento propio de tu organización— probablemente estás buscando uno de nuestros [servicios](../services/).
+</div>
+
+!!! note "Un límite importante"
+    La asesoría no es una forma de esconder detrás de pago lo que ya publicamos.
+
+    Si tu necesidad es más amplia —por ejemplo, construir una superficie pedagógica para conocimiento propio de tu organización— probablemente estás buscando uno de nuestros [servicios](../services/).
 
 ---
 
