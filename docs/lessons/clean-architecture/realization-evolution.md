@@ -192,7 +192,7 @@ No asumimos que toda regla deba convertirse en una entidad ni que el dominio req
 
 Si las reglas permanecieran pequeñas y solo fueran relevantes dentro de una operación, crear una separación entre dominio y aplicación podría seguir siendo complejidad accidental.
 
-### Etapa 7 · La aplicación necesita ser ensamblada
+### Etapa 7 · La composición adquiere un lugar propio
 
 #### Estado
 
@@ -200,24 +200,36 @@ Tenemos:
 
 - mecanismos de entrada que invocan el caso de uso;
 - reglas del problema separadas de la coordinación;
-- capacidades expresadas por la operación;
+- capacidades expresadas por Application;
 - mecanismos concretos que realizan persistencia y notificación.
+
+La implementación de la etapa 6 ya mantiene la selección de realizaciones fuera de Domain y Application.
+
+Sin embargo, las entradas web y marketplace repiten la construcción de esas mismas realizaciones concretas.
 
 #### Presión
 
-Las piezas necesitan encontrarse en algún lugar.
+El conocimiento de composición empieza a duplicarse:
 
-Si el propio caso de uso selecciona qué base de datos, qué proveedor de notificaciones o qué entrada utilizar, volveríamos a introducir hacia adentro conocimiento sobre mecanismos concretos.
+- qué almacenamiento concreto usar;
+- cómo inicializarlo;
+- qué notificador concreto usar;
+- qué endpoint configurar;
+- cómo entregar esas realizaciones al caso de uso.
+
+Ese conocimiento no pertenece al dominio, al caso de uso ni a los mecanismos de entrada.
 
 #### Cambio mínimo
 
-Mover la selección y construcción de realizaciones concretas hacia un punto externo de composición.
+Dar un lugar explícito a la composición concreta y hacer que las entradas obtengan desde allí las capacidades ya ensambladas.
 
-Ese punto conoce los detalles necesarios para ejecutar el sistema. Las políticas no necesitan conocerlo.
+El punto de composición puede conocer Application y los mecanismos concretos. Domain y Application no necesitan conocerlo.
+
+No introducimos un contenedor adicional de inyección de dependencias: la construcción explícita sigue siendo suficiente.
 
 #### Contrafactual
 
-En una aplicación minúscula, construir las dependencias explícitamente junto al arranque puede ser suficiente. El concepto de composición no exige un contenedor ni una infraestructura adicional.
+Con una sola entrada o dos líneas triviales de construcción, mantener la composición junto al arranque seguiría siendo razonable. La separación aparece aquí porque el mismo ensamblaje concreto ya se repite entre mecanismos de entrada.
 
 ### Etapa 8 · Nombramos la forma resultante
 
