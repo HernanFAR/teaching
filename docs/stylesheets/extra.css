@@ -765,24 +765,25 @@
 }
 
 
-/* Center the final three cards in the 4 + 3 causal flow layout. */
+/* Use an 8-unit desktop grid so the 4 + 3 layout can be truly centered. */
 @media screen and (min-width: 59.9844em) {
-  .causal-step:nth-of-type(9) {
-    grid-column: 2;
+  .causal-flow {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
   }
-}
 
+  .causal-step {
+    grid-column: span 2;
+  }
 
-@media screen and (min-width: 59.9844em) {
   .causal-flow > .causal-step:nth-child(9) {
-    grid-column: 2;
+    grid-column: 2 / span 2;
   }
 
   .causal-flow > .causal-step:nth-child(11) {
-    grid-column: 3;
+    grid-column: 4 / span 2;
   }
 
   .causal-flow > .causal-step:nth-child(13) {
-    grid-column: 4;
+    grid-column: 6 / span 2;
   }
 }
