@@ -52,7 +52,7 @@ No solamente cómo se llama.
 
 ---
 
-## El problema con empezar por la respuesta
+## Empezar por la respuesta
 
 Imagina que queremos enseñar **arquitectura limpia** (<span lang="en">Clean Architecture</span>).
 
@@ -78,7 +78,7 @@ Incluso podríamos resumirlo con una regla conocida: **las dependencias apuntan 
 
 Pero aparece una pregunta bastante importante: **¿por qué necesitábamos todo esto?**
 
-### Tener la respuesta no te da la experiencia
+### La respuesta no da la experiencia
 Si nunca experimentaste el problema que motivó esas separaciones, la arquitectura corre el riesgo de convertirse en una receta.
 
 Por eso preferimos comenzar con algo mucho menos impresionante:
@@ -148,7 +148,7 @@ Ese es el tipo de aprendizaje que buscamos.
 
 ---
 
-## Nuestros pilares y mandamientos
+## Pilares y mandamientos
 
 Los **pilares** resumen qué intentamos preservar. Los **mandamientos** convierten esa intención en criterios concretos para enseñar.
 
@@ -321,7 +321,7 @@ Lo que queremos enseñar es el camino.
 </div>
 ---
 
-## El uso de IA en Teaching
+## IA en Teaching
 
 Parte del contenido de Teaching puede ser ideado, discutido, revisado, transformado o generado con ayuda de inteligencia artificial. Pero queremos usarla de una manera un poco distinta.
 
@@ -400,7 +400,7 @@ Desde esa fuente podemos producir distintas realizaciones según lo que una pers
 
 </div>
 
-### La IA puede realizar; no define la fuente
+### La IA realiza; no define la fuente
 
 La IA puede ayudarnos a transformar una fuente pedagógica en una explicación, un ejemplo, un diagrama, un ejercicio o una variante para otro nivel.
 
