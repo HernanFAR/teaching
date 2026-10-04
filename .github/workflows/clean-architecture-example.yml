@@ -41,6 +41,12 @@ jobs:
             project: examples/clean-architecture/stage-06/Teaching.CleanArchitecture.Stage06.Marketplace/Teaching.CleanArchitecture.Stage06.Marketplace.csproj
           - name: stage-06-webhook-receiver
             project: examples/clean-architecture/stage-06/Teaching.CleanArchitecture.Stage06.WebhookReceiver/Teaching.CleanArchitecture.Stage06.WebhookReceiver.csproj
+          - name: stage-07-web
+            project: examples/clean-architecture/stage-07/Teaching.CleanArchitecture.Stage07.Web/Teaching.CleanArchitecture.Stage07.Web.csproj
+          - name: stage-07-marketplace
+            project: examples/clean-architecture/stage-07/Teaching.CleanArchitecture.Stage07.Marketplace/Teaching.CleanArchitecture.Stage07.Marketplace.csproj
+          - name: stage-07-webhook-receiver
+            project: examples/clean-architecture/stage-07/Teaching.CleanArchitecture.Stage07.WebhookReceiver/Teaching.CleanArchitecture.Stage07.WebhookReceiver.csproj
 
     steps:
       - name: Checkout
