@@ -7,52 +7,44 @@ hide:
 
 # Servicios
 
-Teaching es también un experimento práctico sobre una idea más general:
+Si tienes conocimiento especializado que necesitas enseñar de forma repetida, podemos trabajar contigo de dos maneras:
+
+<div class="teaching-grid teaching-grid--2" markdown>
+
+<div class="teaching-card" markdown>
+<span class="teaching-eyebrow">Implementación acompañada</span>
+<strong>Lo hacemos contigo</strong>
+<span>Trabajamos junto a especialistas de tu dominio para construir una primera superficie pedagógica reusable y probar sus primeras realizaciones.</span>
+
+[Ver implementación](#implementacion-acompanada){ .md-button .md-button--primary }
+</div>
+
+<div class="teaching-card" markdown>
+<span class="teaching-eyebrow">Formación y transferencia</span>
+<strong>Te enseñamos a hacerlo</strong>
+<span>Formamos a tu equipo para que pueda aplicar el proceso, revisar sus resultados y continuar sin depender permanentemente de nosotros.</span>
+
+[Ver formación](#formacion-y-transferencia){ .md-button }
+</div>
+
+</div>
+
+!!! note "También puedes hacerlo por tu cuenta"
+    Nuestra documentación del proceso es pública. Si te basta con ella, puedes leerla, adaptarla y experimentar sin contratarnos.
+
+    [Ver cómo funcionamos](../about/how-we-teach.md)
+
+</div>
+
+---
+
+## La idea detrás de los servicios
+
+Teaching experimenta con una separación simple:
 
 > **convertir conocimiento experto + criterio pedagógico en una fuente reutilizable desde la cual puedan producirse distintas experiencias de aprendizaje.**
 
-La primera demostración pública importante es ingeniería de software.
-
-No creemos que eso defina el límite del enfoque.
-
-<div class="hero-actions" markdown>
-
-[Ver cómo funcionamos](../about/how-we-teach.md){ .md-button .md-button--primary }
-[Ver asesoría](../advisory/){ .md-button }
-
-</div>
-
-</div>
-
----
-
-## Tres maneras de usar el enfoque
-
-<div class="teaching-grid teaching-grid--3 teaching-grid--stack-medium" markdown>
-
-<div class="teaching-card" markdown>
-<span class="teaching-eyebrow">1 · Autoguiado</span>
-<strong>Hazlo por tu cuenta</strong>
-<span>La documentación del proceso es pública. Puedes leerla, adaptarla y experimentar sin contratarnos.</span>
-</div>
-
-<div class="teaching-card" markdown>
-<span class="teaching-eyebrow">2 · Implementación</span>
-<strong>Lo hacemos contigo</strong>
-<span>Trabajamos junto a especialistas de tu dominio para construir una primera superficie pedagógica reusable.</span>
-</div>
-
-<div class="teaching-card" markdown>
-<span class="teaching-eyebrow">3 · Transferencia</span>
-<strong>Te enseñamos a hacerlo</strong>
-<span>Formamos a tu equipo para que pueda aplicar el proceso sin depender permanentemente de nosotros.</span>
-</div>
-
-</div>
-
-> **Puedes leer cómo lo hacemos, pedirnos que lo hagamos contigo, o aprender a hacerlo sin nosotros.**
-
----
+La primera demostración pública importante es ingeniería de software, pero no creemos que eso defina el límite del enfoque.
 
 ## Qué entendemos por una fuente pedagógica
 
