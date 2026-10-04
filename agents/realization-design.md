@@ -246,7 +246,23 @@ Do not convert an untested realization hypothesis into retrospective evidence by
 
 The public lesson should be written from validated evidence when validation is part of the claim.
 
-### 7. Editorial structure
+### 7. Supported exploration surface
+
+Every published lesson should include a visible `Explore this lesson` section, or an equivalent clearly identifiable surface, unless there is an explicit reason the lesson cannot yet support grounded LLM exploration.
+
+Before publication:
+
+- select only exploration modes the pedagogical source and available evidence can support honestly;
+- define which lesson material each mode receives;
+- keep the learner's concrete need as an explicit free-text input;
+- do not make the learner reconstruct internal operational files manually;
+- preserve the distinction between original lesson scope and exploration-time extensions;
+- for Deepen, require visually unmistakable marking whenever the LLM introduces material outside the original lesson scope;
+- allow an exploration to narrow itself or fail honestly when the requested case cannot sustain the lesson's intended pressures.
+
+Use the shared exploration contracts in `agents/explorations.md`. Do not invent a lesson-local meaning for a shared exploration name without revising the shared vocabulary explicitly.
+
+### 8. Editorial structure
 
 Decide which parts of the source are best expressed as:
 
@@ -274,7 +290,7 @@ A useful table of contents should let a learner scan the large argument first an
 
 Do not force every idea into cards or diagrams. Representation should follow the pedagogical job of the content.
 
-### 8. Visual question
+### 9. Visual question
 
 Every non-trivial visual representation should answer a concrete question.
 
@@ -288,7 +304,7 @@ Examples:
 
 If a visual does not answer a useful question, prefer simpler text.
 
-### 9. Component choice
+### 10. Component choice
 
 Before implementing visual structure, read `components.md` and reuse the shared Teaching vocabulary.
 
@@ -304,7 +320,7 @@ Examples:
 
 Introduce custom HTML/CSS only when an existing component would distort the meaning or materially reduce clarity.
 
-### 10. Accessibility and material access
+### 11. Accessibility and material access
 
 Realization design must preserve the access constraints declared by the source.
 
@@ -317,7 +333,7 @@ In particular:
 - text density and contrast must remain readable;
 - the design must not add unnecessary paid or resource-heavy dependencies.
 
-### 11. Responsive behavior
+### 12. Responsive behavior
 
 A realization specification should describe what happens when space becomes scarce.
 
@@ -328,7 +344,7 @@ Prefer:
 - textual continuity when arrows or decorative connectors disappear;
 - stable reading order across layouts.
 
-### 12. Visual rhythm
+### 13. Visual rhythm
 
 Avoid making every section look identical.
 
@@ -342,7 +358,7 @@ Vary representation when the semantic job changes:
 - admonitions for emphasis;
 - prose for transitions and interpretation.
 
-### 13. Exploratory mockups
+### 14. Exploratory mockups
 
 Visual mockups, including AI-generated images, may be used as **disposable exploration artifacts**.
 
@@ -394,6 +410,9 @@ Before treating a realization design as ready for publication, verify:
 - Did each critical stage receive enough validation to support the pedagogical claim being made about it?
 - If implementation contradicted the expected pressure or owner, was the realization revised visibly instead of narratively smoothed over?
 - Has the publication gate been satisfied before drafting the complete public lesson when the lesson depends on validated technical transformations?
+- Does the public lesson expose a visible exploration surface when grounded explorations are supported?
+- Are only honestly supportable exploration modes offered, with the learner's concrete need kept explicit?
+- If Deepen can cross the original lesson scope, is that boundary required to be visually unmistakable rather than silently absorbed into the lesson?
 - Did implementation reveal evidence that should revise the pedagogical source?
 
 If implementation reveals a problem in the source, stop and make that revision visible instead of compensating for it only in presentation.
