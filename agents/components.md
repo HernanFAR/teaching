@@ -118,7 +118,7 @@ Use `teaching-flow__step--accent` when one node needs semantic emphasis.
 
 When explicit ordering helps, add `teaching-flow__step--numbered` to the step and place a `teaching-flow__marker` inside it. The marker floats over the step's top-left border as a small badge; do not use bare numbers as decorative text.
 
-Use `teaching-flow--multiline` with `teaching-flow__row` when a linear flow has enough steps that a single row would make each step too narrow. Prefer balanced rows such as 3 + 2 for five short steps. Number the steps so order remains explicit across the row break.
+Use `teaching-flow--multiline` with `teaching-flow__row` when a linear flow has enough steps that a single row would make each step too narrow. Prefer balanced rows such as 2 + 2 for four longer steps or 3 + 2 for five short steps. Number the steps so order remains explicit across the row break.
 
 If the flow has branching, cycles that need explicit geometry, or relationships that cannot remain clear when stacked on mobile, consider Mermaid or a purpose-built representation instead.
 
