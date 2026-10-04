@@ -743,9 +743,7 @@ La arquitectura no es una puntuación que haya que maximizar.
 Es una respuesta a presiones.
 
 !!! success "El criterio que queremos conservar"
-    Cuando aparezca una nueva carpeta, interfaz, capa, puerto, adaptador o abstracción, vuelve a la pregunta:
-
-    > **¿Qué problema justifica esta separación?**
+    Cuando aparezca una nueva carpeta, interfaz, capa, puerto, adaptador o abstracción, recuerda volver a la pregunta: **¿Qué problema justifica esta separación?**
 
     Si todavía no tenemos una respuesta observable, quizá todavía no necesitamos mover esa línea.
 
@@ -816,3 +814,4 @@ El texto se prepara localmente en tu navegador. **Teaching no envía lo que escr
 ---
 
 Esta lección fue diseñada y materializada con ayuda de IA a partir de una [fuente pedagógica reproducible](generation-instructions.md) y de un recorrido técnico validado por etapas. El código ejecutable que sirvió como evidencia vive en `examples/clean-architecture/` dentro del repositorio.
+f
