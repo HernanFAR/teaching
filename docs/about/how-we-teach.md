@@ -100,10 +100,10 @@ Un flujo pequeño, lineal y razonable, que funciona y no requiere nada que arreg
 
 **Acá no necesitamos una arquitectura elaborada**, pero empezamos a cambiar una cosa a la vez:
 
-<div class="pressure-sequence" markdown>
+<div class="teaching-grid teaching-grid--2" markdown>
 
-<div class="pressure-step" markdown>
-<span class="pressure-step__number">1</span>
+<div class="teaching-item" markdown>
+<span class="teaching-item__marker">1</span>
 
 **La lógica crece**
 
@@ -111,8 +111,8 @@ La operación deja de ser trivial.
 
 </div>
 
-<div class="pressure-step" markdown>
-<span class="pressure-step__number">2</span>
+<div class="teaching-item" markdown>
+<span class="teaching-item__marker">2</span>
 
 **Queremos probarla**
 
@@ -120,8 +120,8 @@ Necesitamos aislar comportamiento para verificarlo.
 
 </div>
 
-<div class="pressure-step" markdown>
-<span class="pressure-step__number">3</span>
+<div class="teaching-item" markdown>
+<span class="teaching-item__marker">3</span>
 
 **Aparece una dependencia externa**
 
@@ -129,8 +129,8 @@ Persistencia, correo, APIs u otros servicios entran al flujo.
 
 </div>
 
-<div class="pressure-step" markdown>
-<span class="pressure-step__number">4</span>
+<div class="teaching-item" markdown>
+<span class="teaching-item__marker">4</span>
 
 **Necesitamos otro punto de entrada**
 
@@ -154,9 +154,9 @@ Los **pilares** resumen qué intentamos preservar. Los **mandamientos** conviert
 
 ### Pilares
 
-<div class="pillars-grid" markdown>
+<div class="teaching-grid teaching-grid--3 teaching-grid--stack-medium" markdown>
 
-<div class="pillar-card" markdown>
+<div class="teaching-card pillar-card" markdown>
 
 <div class="pillar-card__title" markdown>
 :material-alert-decagram-outline: **1. <span lang="en">Problem-first learning</span>**
@@ -169,7 +169,7 @@ Después, cuando ya existe una razón para resolverlo, aparece el concepto.
 
 </div>
 
-<div class="pillar-card" markdown>
+<div class="teaching-card pillar-card" markdown>
 
 <div class="pillar-card__title" markdown>:material-auto-fix: **2. Lecciones generativas**</div>
 
@@ -179,7 +179,7 @@ Queremos que puedas reconstruirla con otro lenguaje, dominio o nivel de dificult
 
 </div>
 
-<div class="pillar-card" markdown>
+<div class="teaching-card pillar-card" markdown>
 
 <div class="pillar-card__title" markdown>:material-source-branch: **3. Transparencia de decisiones**</div>
 
@@ -326,30 +326,30 @@ Lo que queremos enseñar es el camino.
 Parte del contenido de Teaching puede ser ideado, discutido, revisado, transformado o generado con ayuda de inteligencia artificial. Pero queremos usarla de una manera un poco distinta.
 
 En lugar de pedir: "Explícame arquitectura limpia (Clean Architecture)", preferimos construir primero una **especificación pedagógica**.
-<div class="pedagogical-spec">
+<div class="teaching-grid teaching-grid--2 teaching-grid--last-wide">
 
-<div class="pedagogical-spec__item">
-<span class="pedagogical-spec__label">Objetivo</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Objetivo</span>
 <strong>Qué debe entender la persona</strong>
 </div>
 
-<div class="pedagogical-spec__item">
-<span class="pedagogical-spec__label">Recorrido</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Recorrido</span>
 <strong>Qué problemas deben aparecer y en qué orden</strong>
 </div>
 
-<div class="pedagogical-spec__item">
-<span class="pedagogical-spec__label">Límites</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Límites</span>
 <strong>Qué conceptos todavía no deben introducirse</strong>
 </div>
 
-<div class="pedagogical-spec__item">
-<span class="pedagogical-spec__label">Representación</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Representación</span>
 <strong>Qué material visual necesitamos</strong>
 </div>
 
-<div class="pedagogical-spec__item">
-<span class="pedagogical-spec__label">Calidad</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Calidad</span>
 <strong>Qué errores pedagógicos queremos evitar</strong>
 </div>
 
@@ -366,34 +366,34 @@ Las **instrucciones base de generación** conservan aquello que queremos mantene
 
 Desde esa fuente podemos producir distintas realizaciones según lo que una persona necesite.
 
-<div class="realizations-grid">
+<div class="teaching-grid teaching-grid--2 teaching-grid--last-wide">
 
-<div class="realization">
-<span class="realization__label">Cambiar contexto</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Cambiar contexto</span>
 <strong>Otro lenguaje o dominio</strong>
 <span>Por ejemplo: Python + videojuegos en vez de C# + órdenes.</span>
 </div>
 
-<div class="realization">
-<span class="realization__label">Cambiar dificultad</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Cambiar dificultad</span>
 <strong>Práctica, intermedio o avanzado</strong>
 <span>La profundidad cambia sin adelantar conceptos que todavía no corresponden.</span>
 </div>
 
-<div class="realization">
-<span class="realization__label">Otra explicación</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Otra explicación</span>
 <strong>El ejemplo anterior no me quedó claro</strong>
 <span>Podemos cambiar la representación sin cambiar aquello que intentamos enseñar.</span>
 </div>
 
-<div class="realization">
-<span class="realization__label">Material visual</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Material visual</span>
 <strong>Diagramas, comparaciones o secuencias</strong>
 <span>La misma intención puede expresarse con otra forma de representación.</span>
 </div>
 
-<div class="realization">
-<span class="realization__label">Práctica y evaluación</span>
+<div class="teaching-card">
+<span class="teaching-eyebrow">Práctica y evaluación</span>
 <strong>Ejercicios, preguntas o desafíos</strong>
 <span>Podemos derivar material para practicar o comprobar comprensión.</span>
 </div>
@@ -406,33 +406,33 @@ La IA puede ayudarnos a transformar una fuente pedagógica en una explicación, 
 
 Pero generar una realización no demuestra que esa realización sea correcta.
 
-<div class="teaching-pipeline">
+<div class="teaching-flow">
 
-<div class="teaching-pipeline__step">
+<div class="teaching-flow__step">
 <span>1</span>
 <strong>Fuente pedagógica</strong>
 <small>Define qué intentamos enseñar y qué debe preservarse.</small>
 </div>
 
-<div class="teaching-pipeline__arrow" aria-hidden="true">→</div>
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
-<div class="teaching-pipeline__step">
+<div class="teaching-flow__step">
 <span>2</span>
 <strong>Realización</strong>
 <small>Decide cómo expresarlo para una necesidad concreta.</small>
 </div>
 
-<div class="teaching-pipeline__arrow" aria-hidden="true">→</div>
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
-<div class="teaching-pipeline__step">
+<div class="teaching-flow__step">
 <span>3</span>
 <strong>Revisión</strong>
 <small>Comprueba intención pedagógica, afirmaciones, ejemplos y código.</small>
 </div>
 
-<div class="teaching-pipeline__arrow" aria-hidden="true">→</div>
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
-<div class="teaching-pipeline__step">
+<div class="teaching-flow__step">
 <span>4</span>
 <strong>Publicación</strong>
 <small>La realización revisada pasa a formar parte del material.</small>
@@ -448,20 +448,20 @@ Pero generar una realización no demuestra que esa realización sea correcta.
 
 Teaching crecerá principalmente con dos tipos de contenido.
 
-<div class="content-types">
+<div class="teaching-grid teaching-grid--2">
 
-<a class="content-type-card" href="../../lessons/">
-<span class="content-type-card__label">Lección</span>
+<a class="teaching-link-card" href="../../lessons/">
+<span class="teaching-eyebrow">Lección</span>
 <strong>“Quiero entender esto.”</strong>
 <span>Construye intuición alrededor de un concepto.</span>
-<span class="content-type-card__action">Explorar lecciones →</span>
+<span class="teaching-link-card__action">Explorar lecciones →</span>
 </a>
 
-<a class="content-type-card" href="../../guides/">
-<span class="content-type-card__label">Guía</span>
+<a class="teaching-link-card" href="../../guides/">
+<span class="teaching-eyebrow">Guía</span>
 <strong>“Quiero lograr esto.”</strong>
 <span>Conecta conocimiento para alcanzar un objetivo real.</span>
-<span class="content-type-card__action">Ver guías →</span>
+<span class="teaching-link-card__action">Ver guías →</span>
 </a>
 
 </div>
