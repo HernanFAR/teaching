@@ -71,9 +71,18 @@
     copy?.addEventListener("click", async () => {
       if (!output?.value) return;
 
+      const originalLabel = copy.textContent;
+
       try {
         await navigator.clipboard.writeText(output.value);
+        copy.textContent = "Copiado ✓";
+        copy.disabled = true;
         setStatus("Texto copiado. Puedes pegarlo en el LLM que prefieras.");
+
+        window.setTimeout(() => {
+          copy.textContent = originalLabel;
+          copy.disabled = false;
+        }, 1600);
       } catch {
         output.focus();
         output.select();
