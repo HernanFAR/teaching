@@ -307,6 +307,21 @@ Por lo tanto:
 
 Esto evita que la arquitectura final se presente retrospectivamente como inevitable.
 
+## Exploraciones soportadas
+
+Esta fuente contiene suficiente semántica para sostener honestamente las cuatro exploraciones iniciales de Teaching:
+
+- **Otro caso** — las restricciones del caso conductor permiten validar dominios alternativos sin convertir el caso de órdenes en canónico.
+- **Profundizar** — las tensiones, conceptos introducidos, contrafactuales y límites permiten examinar con más detalle el material y distinguir extensiones del caso de extensiones conceptuales.
+- **Aplicarlo a mi caso** — los invariantes están expresados con independencia de mecanismos concretos y permiten reconocer también cuándo una presión no existe.
+- **Ponme a prueba** — el recorrido causal contiene estados, presiones, cambios mínimos y decisiones legítimas de no avanzar que pueden presentarse progresivamente.
+
+Estas exploraciones no amplían por sí mismas el alcance pedagógico de la fuente.
+
+En particular, **Profundizar** puede introducir conocimiento externo cuando la necesidad concreta del estudiante lo requiera, pero cualquier cruce fuera del alcance original debe marcarse de forma explícita y visualmente inequívoca. Ese material no adquiere autoridad retroactiva sobre la lección.
+
+La realización concreta de estas exploraciones se diseña separadamente y debe seguir `agents/explorations.md`.
+
 ## Estado de la fuente
 
 La intención pedagógica, el recorrido causal y los invariantes de la fuente están definidos.
