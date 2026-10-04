@@ -27,13 +27,15 @@ La fuente, el caso conductor, la evolución causal, la realización técnica mí
 
 La especificación visual está definida y, por ahora, no exige componentes semánticos nuevos.
 
-Las etapas 1 a 6 ya fueron materializadas y validadas por CI. La etapa 7 ya está materializada y concentra la composición concreta fuera de Domain, Application y los mecanismos de entrada; su validación completa en CI está en curso.
+Las etapas 1 a 7 ya fueron materializadas y validadas por CI. La etapa 8 ya fue materializada como síntesis de la forma resultante, sin introducir una refactorización estructural adicional.
 
-Todavía permanecen abiertas las decisiones de:
+La trayectoria técnica de la realización está cerrada.
 
-- código definitivo de las transiciones posteriores;
-- geometría exacta de las dos representaciones que pueden requerir boceto;
-- si los ejemplos ejecutables permanecerán como snapshots por etapa o evolucionarán hacia otra forma de distribución.
+Permanecen como decisiones de publicación:
 
-Antes de cerrar con la **etapa 8**, debemos confirmar el CI de la etapa 7. Después reconstruiremos la forma resultante y recién entonces la nombraremos como Clean Architecture.
+- la geometría exacta de las dos representaciones que pueden requerir boceto;
+- qué fragmentos de los snapshots deben aparecer en el cuerpo de la lección y cuáles quedan como evidencia externa;
+- la revisión visual final sobre el sitio.
+
+El siguiente paso es generar el **`index.md` público** siguiendo `realization-editorial.md`, `realization-visual.md` y la evidencia acumulada en `realization-implementation.md`.
 
