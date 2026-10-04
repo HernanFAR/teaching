@@ -196,10 +196,16 @@ Partimos preguntando: **¿Qué necesitas preservar, qué cambió y qué presión
 
 ## Solicitudes
 
-Todavía estamos definiendo el mecanismo concreto para solicitar una sesión.
+Si quieres solicitar una asesoría 1:1, puedes escribir directamente a:
 
-Preferimos no publicar un formulario, calendario o canal de contacto provisional que después termine convertido accidentalmente en parte del servicio.
+**[h.f.alvarez.rubio@gmail.com](mailto:h.f.alvarez.rubio@gmail.com)**
 
-Cuando exista una vía estable, aparecerá aquí.
+Idealmente incluye una breve descripción de:
+
+- qué estás intentando resolver;
+- cuál es la situación actual;
+- qué parte te gustaría revisar con una segunda mirada.
+
+No necesitas preparar una presentación ni conocer el nombre técnico del problema antes de escribir.
 
 Mientras tanto, **todo el material público sigue disponible sin registro ni pago**.
