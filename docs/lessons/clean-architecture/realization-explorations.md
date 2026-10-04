@@ -51,6 +51,8 @@ El texto orientativo vive en:
 
 `explorations/another-case.txt`
 
+El routing automático usa `explorations/automatic.txt` para seleccionar entre los cuatro contratos soportados sin inventar un quinto modo pedagógico.
+
 ### Profundizar
 
 Necesita:
@@ -101,18 +103,31 @@ La realización debe presentar una presión a la vez y no revelar la transición
 
 ## Interacción pública mínima
 
-La sección pública debe:
+La primera materialización mostró que presentar las cuatro exploraciones como cuatro decisiones visuales principales hacía que la taxonomía interna compitiera con la necesidad concreta de la persona.
 
-1. mostrar las cuatro exploraciones como alternativas;
-2. explicar brevemente qué hace cada una;
-3. permitir seleccionar una;
-4. aceptar una necesidad concreta en texto libre;
-5. preparar el texto completo de exploración usando el artefacto orientativo correspondiente;
-6. permitir inspeccionar el resultado antes de copiarlo;
-7. copiarlo al portapapeles solo por acción explícita;
-8. no enviar la necesidad del estudiante a ningún servidor de Teaching.
+La revisión adopta una sola superficie de composición:
+
+1. la necesidad concreta en texto libre es el elemento principal;
+2. el modo de exploración aparece como configuración secundaria;
+3. el modo predeterminado es **Automático**;
+4. Automático no es una quinta exploración: funciona como un router que elige entre las cuatro exploraciones soportadas y debe declarar cuál escogió;
+5. las cuatro exploraciones siguen disponibles manualmente para quien quiera controlar la realización;
+6. una ayuda colapsable explica los modos sin obligar a comprender la taxonomía antes de formular la necesidad;
+7. el texto completo preparado puede inspeccionarse antes de copiarlo;
+8. copiar al portapapeles requiere una acción explícita;
+9. la necesidad del estudiante no se envía a ningún servidor de Teaching.
 
 La interacción funciona enteramente en el navegador.
+
+Esta revisión preserva los contratos de exploración y cambia solamente su jerarquía de presentación:
+
+```text
+necesidad concreta
+→ modo automático por defecto
+→ configuración explícita si la persona la necesita
+```
+
+La taxonomía soporta la experiencia; no necesita dominarla visualmente.
 
 ## Fallos honestos
 
