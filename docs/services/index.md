@@ -305,18 +305,23 @@ En este servicio el resultado principal no es que nosotros construyamos la super
 <div class="teaching-card" markdown>
 <span class="teaching-eyebrow">Implementación acompañada</span>
 <strong>Quieres construir una superficie ahora</strong>
-<span>El entregable principal es el trabajo producido junto a tu equipo: fuente pedagógica, primeras realizaciones y evidencia de sus límites.</span>
+<span>Te conviene si ya tienes conocimiento que necesitas enseñar, quieres convertirlo en algo utilizable y prefieres trabajar sobre un caso real desde el principio. El entregable principal es el trabajo producido junto a tu equipo: fuente pedagógica, primeras realizaciones y evidencia de sus límites.</span>
 </div>
 
 <div class="teaching-card" markdown>
 <span class="teaching-eyebrow">Formación y transferencia</span>
 <strong>Quieres desarrollar capacidad interna</strong>
-<span>El entregable principal es que tu equipo pueda aplicar el proceso por sí mismo sobre nuevas unidades de conocimiento.</span>
+<span>Te conviene si el problema se repite, varias personas tendrán que modelar conocimiento o quieres que el criterio quede instalado dentro de tu organización. El entregable principal es que tu equipo pueda aplicar el proceso por sí mismo sobre nuevas unidades de conocimiento.</span>
 </div>
 
 </div>
 
-Ambos pueden combinarse cuando tenga sentido.
+La diferencia práctica es simple:
+
+- **implementación acompañada** optimiza primero por obtener una superficie concreta y aprender de ella;
+- **formación y transferencia** optimiza primero por desarrollar autonomía para repetir el proceso.
+
+Ambos pueden combinarse cuando tenga sentido. Por ejemplo, podemos construir juntos una primera superficie y usar ese mismo trabajo como caso de formación para tu equipo.
 
 ---
 
