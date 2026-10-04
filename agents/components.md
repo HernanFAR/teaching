@@ -118,7 +118,7 @@ Use `teaching-flow__step--accent` when one node needs semantic emphasis.
 
 When explicit ordering helps, add `teaching-flow__step--numbered` to the step and place a `teaching-flow__marker` inside it. The marker floats over the step's top-left border as a small badge; do not use bare numbers as decorative text.
 
-Use `teaching-flow--compact` for short, text-heavy nodes. The compact recipe presents the flow as one shared container instead of a row of narrow individual cards.
+Use `teaching-flow--compact` for short, text-heavy nodes. The compact recipe presents one centered intrinsic chain inside a shared container: steps keep a bounded width instead of stretching to fill the whole row, so outer spacing remains visually meaningful.
 
 If the flow has branching, cycles that need explicit geometry, or relationships that cannot remain clear when stacked on mobile, consider Mermaid or a purpose-built representation instead.
 
