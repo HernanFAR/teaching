@@ -49,6 +49,34 @@ When evidence appears, identify who owns the problem:
 
 Do not hide a source problem inside presentation decisions or compensate for a design problem only with implementation tricks.
 
+## Realization artifact organization
+
+A realization design does not need to live in one file.
+
+When case selection, causal evolution, technical realization, editorial structure, and visual specification begin competing for attention inside a single artifact, split the realization by **responsibility**, not by arbitrary size.
+
+A useful decomposition is:
+
+- realization hub or index — order of work, links, current state, and authority boundaries;
+- conductor case — candidates, selection, constraints, and validation;
+- causal evolution — realization-specific states, pressures, minimum changes, and counterfactuals;
+- technical realization — language, runtime, mechanisms, exclusions, and reproducibility;
+- editorial design — argument hierarchy, code strategy, content forms, and public navigation;
+- visual specification — representation choices, Teaching components, responsive behavior, and exploratory mockups.
+
+Do not create all of these files automatically for every lesson. Split only when the distinction improves ownership, reviewability, or continuity.
+
+When split:
+
+- each artifact should have one primary responsibility;
+- preserve an explicit order between artifacts when later decisions depend on earlier ones;
+- keep a small hub that makes the realization reconstructible without reading every file first;
+- do not duplicate the same decision across several files merely for convenience;
+- revisions should happen in the artifact that owns the decision;
+- if a realization decision exposes a problem in the pedagogical source, revise the source explicitly rather than hiding that change inside a realization artifact.
+
+File length alone is not the rule. **Competing responsibilities are the signal.**
+
 ## Required realization specification
 
 Before implementation, establish enough information to answer the following.
@@ -279,6 +307,8 @@ Before treating a realization design as ready for publication, verify:
 - Does the layout reflow without overflow?
 - Does the page avoid repetitive cardification?
 - Can the learner distinguish source invariants from realization choices?
+- If realization artifacts were split, does each file own a clear responsibility and can the design be reconstructed from a small hub or index?
+- Are decisions stored in the artifact that owns them instead of duplicated across several files?
 - If a conductor case was selected by the realization, was it explicitly validated against the source constraints?
 - Was the source-level causal path concretized into realization-specific states, pressures, minimum changes, and counterfactuals before visual design?
 - Can each stage be traversed without changing the problem or fabricating a pressure merely to justify an abstraction?
