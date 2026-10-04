@@ -1279,11 +1279,16 @@
 }
 
 .teaching-flow__step {
+  position: relative;
   flex: 1 1 0;
   min-width: 0;
   padding: 0.95rem;
   border: 0.05rem solid var(--md-default-fg-color--lightest);
   border-radius: var(--teaching-radius);
+}
+
+.teaching-flow__step--numbered {
+  padding-top: 1.3rem;
 }
 
 .teaching-flow__step > span,
@@ -1293,14 +1298,17 @@
 }
 
 .teaching-flow__marker {
+  position: absolute;
+  top: -0.78rem;
+  left: 1rem;
   display: inline-grid;
   place-items: center;
   width: 1.55rem;
   height: 1.55rem;
-  margin-bottom: 0.65rem;
   border-radius: 50%;
   background: var(--md-accent-fg-color);
   color: var(--md-accent-bg-color);
+  box-shadow: 0 0 0 0.18rem var(--md-default-bg-color);
   font-size: 0.7rem;
   font-weight: 700;
 }
