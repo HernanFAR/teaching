@@ -38,7 +38,7 @@ No necesitamos decidir desde el comienzo cada frase, diagrama o ejercicio.
 
 Sí necesitamos saber **qué debe permanecer estable aunque cambie la forma de enseñar**.
 
-## El recorrido debe tener causas
+### El recorrido debe tener causas
 
 Preferimos un recorrido donde cada paso aparezca como respuesta a una necesidad visible.
 
@@ -274,7 +274,7 @@ Una realización puede enseñarnos que la secuencia no funciona como esperábamo
 
 <p class="visual-equivalent visual-equivalent--subtle"><strong>En texto:</strong> la fuente produce realizaciones, pero las realizaciones también producen evidencia que puede justificar revisar la fuente.</p>
 
-## Las condiciones de acceso también son parte de la generación
+### Las condiciones de acceso también son parte de la generación
 
 No queremos diseñar una explicación y preguntarnos por accesibilidad recién al final.
 
@@ -352,7 +352,7 @@ En su lugar, intentamos tomar decisiones de generación que reduzcan barreras in
 
 <p class="visual-equivalent visual-equivalent--subtle"><strong>En texto:</strong> generar una lección también implica decidir desde qué condiciones de acceso estamos enseñando. No solo importa qué explicamos, sino también qué barreras introduce la forma en que lo explicamos.</p>
 
-## Una fuente incompleta no es lo mismo que una página incompleta
+### Una fuente incompleta no es lo mismo que una página incompleta
 
 Podemos saber con claridad qué queremos enseñar aunque todavía no hayamos decidido el mejor diagrama o ejercicio. Una idea pedagógica puede estar suficientemente definida aunque una realización concreta todavía esté incompleta.
 
