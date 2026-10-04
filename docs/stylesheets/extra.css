@@ -1616,3 +1616,17 @@
   font-family: var(--md-code-font-family);
   font-size: 0.78rem;
 }
+
+
+.teaching-provenance {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.teaching-provenance p {
+  margin: 0;
+}
