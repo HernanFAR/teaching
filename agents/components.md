@@ -89,7 +89,8 @@ Typical structure:
 
 Modifiers:
 
-- `teaching-item--stacked`: the marker floats over the top-left border as a badge; useful for compact sequential steps;
+- `teaching-item--stacked`: the marker floats over the top border near the left corner; useful for compact sequential steps;
+- `teaching-item--criterion`: the marker floats over the left border near the top; useful for independent numbered criteria that should not imply sequence;
 - `teaching-item--quiet`: restrained treatment for principles or invariants that should not look like cards.
 
 Use the number only when order or stable enumeration actually helps comprehension.
@@ -167,8 +168,10 @@ Use:
 
 ```text
 teaching-grid
-└─ teaching-item × N
+└─ teaching-item teaching-item--criterion × N
 ```
+
+Use the lateral badge position to signal enumeration without suggesting that one criterion causes the next.
 
 ### Sequential pressure or causal steps
 
