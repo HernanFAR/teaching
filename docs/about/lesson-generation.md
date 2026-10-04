@@ -247,21 +247,79 @@ Una realización puede enseñarnos que la secuencia no funciona como esperábamo
 
 No queremos diseñar una explicación y preguntarnos por accesibilidad recién al final.
 
-Mientras generamos una lección intentamos no asumir innecesariamente:
+Mientras generamos una lección intentamos no asumir innecesariamente ciertas condiciones de acceso:
 
-- software o servicios pagados;
-- hardware potente;
-- conexiones rápidas;
-- educación universitaria;
-- certificaciones;
-- dominio previo del inglés;
-- condiciones visuales, físicas o sensoriales ideales.
+<div class="access-assumptions">
 
-Cuando un término técnico todavía no es necesario, preferimos construir primero la intuición.
+<div class="access-assumption">
+<span class="access-assumption__label">Costo</span>
+<strong>Software o servicios pagados</strong>
+<span>No asumimos que una persona pueda pagar herramientas, plataformas o suscripciones para aprender el concepto.</span>
+</div>
 
-Cuando usamos un término en inglés que importa para comprender la idea, mostramos también su significado en español.
+<div class="access-assumption">
+<span class="access-assumption__label">Hardware</span>
+<strong>Equipos potentes</strong>
+<span>No asumimos computadores de alto rendimiento cuando el objetivo pedagógico puede alcanzarse con recursos más modestos.</span>
+</div>
 
-Y cuando una representación visual contiene información esencial, procuramos que exista una forma textual de acceder a ella.
+<div class="access-assumption">
+<span class="access-assumption__label">Conectividad</span>
+<strong>Conexiones rápidas o estables</strong>
+<span>No convertimos una buena conexión a internet en un requisito implícito cuando no es técnicamente necesaria.</span>
+</div>
+
+<div class="access-assumption">
+<span class="access-assumption__label">Trayectoria</span>
+<strong>Educación formal o certificaciones</strong>
+<span>No usamos universidad, certificaciones o formación costosa como filtro innecesario para acceder a una explicación.</span>
+</div>
+
+<div class="access-assumption">
+<span class="access-assumption__label">Idioma</span>
+<strong>Dominio previo del inglés</strong>
+<span>No asumimos que una persona ya comprende términos en inglés que todavía no hemos explicado.</span>
+</div>
+
+<div class="access-assumption">
+<span class="access-assumption__label">Accesibilidad</span>
+<strong>Condiciones visuales, físicas o sensoriales ideales</strong>
+<span>No diseñamos la experiencia suponiendo que todas las personas acceden al contenido de la misma forma.</span>
+</div>
+
+</div>
+
+En su lugar, intentamos tomar decisiones de generación que reduzcan barreras innecesarias:
+
+<div class="access-practices">
+
+<div class="access-practice">
+<span class="access-practice__number">1</span>
+<strong>Intuición antes del tecnicismo</strong>
+<span>Cuando un término técnico todavía no es necesario, preferimos construir primero la intuición que lo vuelve comprensible.</span>
+</div>
+
+<div class="access-practice">
+<span class="access-practice__number">2</span>
+<strong>Traducción visible</strong>
+<span>Cuando usamos un término en inglés que importa para comprender la idea, mostramos también su significado en español.</span>
+</div>
+
+<div class="access-practice">
+<span class="access-practice__number">3</span>
+<strong>Acceso alternativo</strong>
+<span>Cuando una representación visual contiene información esencial, procuramos que exista una forma textual de acceder a ella.</span>
+</div>
+
+<div class="access-practice">
+<span class="access-practice__number">4</span>
+<strong>Diseño desde el inicio</strong>
+<span>La accesibilidad y las condiciones materiales forman parte de la generación de la lección, no de una revisión posterior.</span>
+</div>
+
+</div>
+
+<p class="visual-equivalent visual-equivalent--subtle"><strong>En texto:</strong> generar una lección también implica decidir desde qué condiciones de acceso estamos enseñando. No solo importa qué explicamos, sino también qué barreras introduce la forma en que lo explicamos.</p>
 
 ## Una fuente incompleta no es lo mismo que una página incompleta
 
