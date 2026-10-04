@@ -48,6 +48,19 @@ Do not introduce a pattern, abstraction, layer, dependency, or formal name only 
 
 Separate what must remain stable from what a realization may change.
 
+When a lesson depends on a **conductor case** or evolving example, distinguish whether that case is itself part of the pedagogical source or merely one realization choice.
+
+If the exact case is not pedagogically essential:
+
+- define in the source the properties, pressures, and acceptance criteria that any valid case must satisfy;
+- keep the concrete domain, entities, technologies, and example details variable;
+- do not accidentally make one convenient example canonical;
+- leave the concrete case selection to realization design;
+- require the selected case to be validated against the source constraints before implementation.
+
+Only fix a specific conductor case in the source when changing that case would materially change what the lesson is trying to teach.
+
+
 **Invariants may include:**
 
 - pedagogical intent;
@@ -109,8 +122,9 @@ When producing or revising a pedagogical source:
 4. identify invariants and realization variables;
 5. make relevant limits and counterfactuals explicit;
 6. record accessibility and material-access constraints;
-7. keep unresolved pedagogical questions visible;
-8. decide whether the source is sufficiently defined for realization design.
+7. when a conductor case is needed, define its validity constraints unless the specific case is itself pedagogically invariant;
+8. keep unresolved pedagogical questions visible;
+9. decide whether the source is sufficiently defined for realization design.
 
 A source is ready for handoff when its intent, essential causal path, invariants, limits, and access constraints are clear enough that presentation choices no longer need to invent pedagogical meaning.
 
@@ -128,6 +142,8 @@ Before handing the source to realization design, verify:
 - Can a learner follow the intended path without already knowing the formal name of the concept?
 - Are paid access, strong hardware, English fluency, formal education, or ideal physical conditions being assumed unnecessarily?
 - Are the source invariants explicit enough that a realization can vary without silently changing pedagogical intent?
+- If the lesson uses a conductor case, is it clear whether the specific case is invariant or whether only its constraints are?
+- If the specific case is variable, are its validity constraints explicit enough that a realization can select and verify one without inventing pedagogical meaning?
 - Are unresolved pedagogical questions still visible instead of being hidden by fluent prose?
 
 If a required check cannot be satisfied because the source is insufficient, stop and expose the gap rather than inventing pedagogical authority.
