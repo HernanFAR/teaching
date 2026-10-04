@@ -159,6 +159,10 @@ The learner may specify what part of the lesson they want to practice, how chall
 
 ## Exploration prompt composition
 
+When a learner explicitly selects a supported exploration mode, preserve the provenance of that choice: the mode was selected by the learner, not by the LLM. A direct-mode prompt must not ask the LLM to choose the mode or invite it to say that it chose it. It should begin by realizing the already-selected exploration.
+
+Automatic routing is different: when Teaching delegates mode selection to the LLM, the generated request should explicitly ask it to state which supported mode it selected and why.
+
 A generated LLM request for a supported exploration should contain enough information to distinguish at least:
 
 1. **Lesson identity and pedagogical intent**
