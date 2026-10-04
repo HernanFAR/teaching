@@ -811,7 +811,3 @@ Todo se prepara localmente en tu navegador. **Teaching no envía lo que escribas
 </div>
 
 </div>
-
----
-
-Esta lección fue diseñada y materializada con ayuda de IA a partir de una [fuente pedagógica reproducible](generation-instructions.md) y de un recorrido técnico validado por etapas. El código ejecutable que sirvió como evidencia vive en `examples/clean-architecture/` dentro del repositorio.
