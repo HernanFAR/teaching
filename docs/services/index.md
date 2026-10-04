@@ -259,9 +259,7 @@ No estás pagando por acceso a una metodología secreta.
 
 En este servicio el resultado principal no es que nosotros construyamos la superficie, sino que **tu equipo aprenda a construirla, probarla y revisarla por sí mismo**.
 
-<div class="teaching-flow teaching-flow--multiline">
-
-<div class="teaching-flow__row">
+<div class="teaching-flow">
 
 <div class="teaching-flow__step teaching-flow__step--numbered">
 <span class="teaching-flow__marker">1</span>
@@ -277,9 +275,7 @@ En este servicio el resultado principal no es que nosotros construyamos la super
 <small>Construir fuentes pedagógicas y recorridos de aprendizaje que puedan sostener distintas experiencias.</small>
 </div>
 
-</div>
-
-<div class="teaching-flow__row">
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
 <div class="teaching-flow__step teaching-flow__step--numbered">
 <span class="teaching-flow__marker">3</span>
@@ -293,8 +289,6 @@ En este servicio el resultado principal no es que nosotros construyamos la super
 <span class="teaching-flow__marker">4</span>
 <strong>Revisar</strong>
 <small>Registrar lo que todavía no sabemos y comprobar si una realización sigue preservando aquello que importa.</small>
-</div>
-
 </div>
 
 </div>
