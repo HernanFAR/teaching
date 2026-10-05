@@ -4,6 +4,7 @@ hide:
   - navigation
   - toc
   - footer
+hide_support: true
 ---
 
 # PIR-STU-001 — Evaluación humana Phase 0b
@@ -758,16 +759,10 @@ Nota general:
 
 # Nota de entrega
 
-Por favor, entrega:
+Cuando hayas terminado, envía **de forma privada a Hernán**:
+
 1. el perfil del evaluador completado;
 2. los juicios para EVAL-001 a EVAL-016;
 3. cualquier nota general opcional sobre ambigüedades en el contrato o las muestras.
 
 No compares tus respuestas con las de otro evaluador antes de enviarlas.
-
-
----
-
-## Entrega
-
-Cuando hayas terminado, envía de forma privada a Hernán lo solicitado en la sección **Nota de entrega**.
