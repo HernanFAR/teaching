@@ -842,7 +842,7 @@ No se requiere un puntaje global.
 
 Completa las muestras en orden. Puedes volver a una muestra ya completada; si modificas su formulario y queda incompleto, la navegación vuelve a bloquearse hasta completarlo.
 
-<div class="pir-eval-wizard" data-pir-eval-wizard data-eval-count="16">
+<div class="pir-eval-wizard" data-pir-eval-wizard data-eval-count="16" markdown>
 
 <div class="pir-eval-wizard__tabs" role="tablist" aria-label="Muestras de evaluación">
 <button type="button" role="tab" class="pir-eval-wizard__tab is-active" id="pir-tab-EVAL-001" aria-controls="pir-panel-EVAL-001" aria-selected="true" data-eval-tab="EVAL-001" >EVAL-001</button>
@@ -869,7 +869,7 @@ Completa las muestras en orden. Puedes volver a una muestra ya completada; si mo
 </div>
 
 
-<section class="pir-eval-wizard__panel is-active" role="tabpanel" id="pir-panel-EVAL-001" aria-labelledby="pir-tab-EVAL-001" data-eval-panel="EVAL-001" >
+<section markdown class="pir-eval-wizard__panel is-active" role="tabpanel" id="pir-panel-EVAL-001" aria-labelledby="pir-tab-EVAL-001" data-eval-panel="EVAL-001" >
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -961,7 +961,7 @@ Sí, tiene mucho sentido. Como los descuentos cambian seguido, lo mejor es hacer
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-002" aria-labelledby="pir-tab-EVAL-002" data-eval-panel="EVAL-002" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-002" aria-labelledby="pir-tab-EVAL-002" data-eval-panel="EVAL-002" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -1059,7 +1059,7 @@ Una respuesta posible es Transactional Outbox: persistir la orden y la intenció
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-003" aria-labelledby="pir-tab-EVAL-003" data-eval-panel="EVAL-003" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-003" aria-labelledby="pir-tab-EVAL-003" data-eval-panel="EVAL-003" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -1155,7 +1155,7 @@ Este es el punto donde conviene extraer un caso de uso compartido, dejando HTTP 
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-004" aria-labelledby="pir-tab-EVAL-004" data-eval-panel="EVAL-004" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-004" aria-labelledby="pir-tab-EVAL-004" data-eval-panel="EVAL-004" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -1247,7 +1247,7 @@ La solución actual sigue siendo defendible. PostgreSQL existe, pero hoy no est�
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-005" aria-labelledby="pir-tab-EVAL-005" data-eval-panel="EVAL-005" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-005" aria-labelledby="pir-tab-EVAL-005" data-eval-panel="EVAL-005" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -1339,7 +1339,7 @@ Dado que el segundo sistema también crea solicitudes, modelaría desde ahora la
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-006" aria-labelledby="pir-tab-EVAL-006" data-eval-panel="EVAL-006" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-006" aria-labelledby="pir-tab-EVAL-006" data-eval-panel="EVAL-006" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -1431,7 +1431,7 @@ Sí, ahí detectaste un problema real en el escenario que te planteé. Con el es
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-007" aria-labelledby="pir-tab-EVAL-007" data-eval-panel="EVAL-007" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-007" aria-labelledby="pir-tab-EVAL-007" data-eval-panel="EVAL-007" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -1523,7 +1523,7 @@ Una vez separadas las reglas de validación, conviene completar la evolución ar
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-008" aria-labelledby="pir-tab-EVAL-008" data-eval-panel="EVAL-008" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-008" aria-labelledby="pir-tab-EVAL-008" data-eval-panel="EVAL-008" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -1615,7 +1615,7 @@ Tu propuesta es defendible, aunque resuelve principalmente la fricción de prueb
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-009" aria-labelledby="pir-tab-EVAL-009" data-eval-panel="EVAL-009" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-009" aria-labelledby="pir-tab-EVAL-009" data-eval-panel="EVAL-009" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -1707,7 +1707,7 @@ La siguiente evolución de Clean Architecture es introducir Transactional Outbox
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-010" aria-labelledby="pir-tab-EVAL-010" data-eval-panel="EVAL-010" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-010" aria-labelledby="pir-tab-EVAL-010" data-eval-panel="EVAL-010" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -1799,7 +1799,7 @@ Extraer calcularTotal(...) está bien justificado porque la política de cálcul
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-011" aria-labelledby="pir-tab-EVAL-011" data-eval-panel="EVAL-011" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-011" aria-labelledby="pir-tab-EVAL-011" data-eval-panel="EVAL-011" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -1891,7 +1891,7 @@ Aunque el sistema todavía es pequeño y no presenta dificultades observables, e
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-012" aria-labelledby="pir-tab-EVAL-012" data-eval-panel="EVAL-012" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-012" aria-labelledby="pir-tab-EVAL-012" data-eval-panel="EVAL-012" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -1985,7 +1985,7 @@ Ahora aparece una integración con un marketplace. Envía órdenes en otro forma
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-013" aria-labelledby="pir-tab-EVAL-013" data-eval-panel="EVAL-013" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-013" aria-labelledby="pir-tab-EVAL-013" data-eval-panel="EVAL-013" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -2077,7 +2077,7 @@ Mejorar la infraestructura de pruebas no es la respuesta arquitectónica correct
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-014" aria-labelledby="pir-tab-EVAL-014" data-eval-panel="EVAL-014" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-014" aria-labelledby="pir-tab-EVAL-014" data-eval-panel="EVAL-014" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -2169,7 +2169,7 @@ Hasta aquí el caso sostiene honestamente la separación de las reglas de valida
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-015" aria-labelledby="pir-tab-EVAL-015" data-eval-panel="EVAL-015" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-015" aria-labelledby="pir-tab-EVAL-015" data-eval-panel="EVAL-015" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
@@ -2261,7 +2261,7 @@ Entiendo la observación, pero podemos asumir que una orden puede contener vario
 
 </section>
 
-<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-016" aria-labelledby="pir-tab-EVAL-016" data-eval-panel="EVAL-016" hidden>
+<section markdown class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-016" aria-labelledby="pir-tab-EVAL-016" data-eval-panel="EVAL-016" hidden>
 
 <div class="pir-evaluation-sample" markdown>
 
