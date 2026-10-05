@@ -835,47 +835,43 @@ No se requiere un puntaje global.
 
         No busques pares coincidentes, no asumas un balance entre muestras válidas e inválidas, no infieras un balance esperado de clases, no revises juicios anteriores para forzar simetría y no uses los juicios de otro evaluador.
 
-=== "Salida"
-
-    Para cada muestra, devuelve:
-
-    ```text
-    Muestra: EVAL-###
-
-    Propiedad: <PROPERTY-ID>
-    Juicio: PASS | VIOLATION | AMBIGUOUS | N/A
-    Evidencia: "<fragmento útil más pequeño>"
-    Fundamento: <1-3 oraciones>
-
-    Propiedad: <PROPERTY-ID>
-    ...
-    ```
-
-    No necesitas listar todas las propiedades del contrato cuando sean claramente irrelevantes, pero sí toda propiedad que la muestra ejercite materialmente.
-
-    Al final de cada muestra puedes agregar:
-
-    ```text
-    Nota general:
-    <nota concisa opcional sobre ambigüedad, solapamiento o contexto faltante>
-
-    Confianza: alta | media | baja
-    ```
-
-    La confianza se refiere a tu confianza en la clasificación, no a cuánto te gusta o disgusta la realización.
-
-    No produzcas un único puntaje global.
-
-    !!! info "Condición de término"
-        Una vez evaluadas todas las muestras suministradas, detente.
-
-        No intentes reconstruir emparejamientos ocultos, inferir una clave de respuestas ni rediseñar el contrato salvo que se solicite explícitamente después de la evaluación.
 
 ---
 
-### 3.3 Muestras ciegas {#muestras}
+### 3.3 Evaluación de muestras {#muestras}
 
-<article class="pir-evaluation-sample" markdown>
+Completa las muestras en orden. Puedes volver a una muestra ya completada; si modificas su formulario y queda incompleto, la navegación vuelve a bloquearse hasta completarlo.
+
+<div class="pir-eval-wizard" data-pir-eval-wizard data-eval-count="16">
+
+<div class="pir-eval-wizard__tabs" role="tablist" aria-label="Muestras de evaluación">
+<button type="button" role="tab" class="pir-eval-wizard__tab is-active" id="pir-tab-EVAL-001" aria-controls="pir-panel-EVAL-001" aria-selected="true" data-eval-tab="EVAL-001" >EVAL-001</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-002" aria-controls="pir-panel-EVAL-002" aria-selected="false" data-eval-tab="EVAL-002" disabled>EVAL-002</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-003" aria-controls="pir-panel-EVAL-003" aria-selected="false" data-eval-tab="EVAL-003" disabled>EVAL-003</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-004" aria-controls="pir-panel-EVAL-004" aria-selected="false" data-eval-tab="EVAL-004" disabled>EVAL-004</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-005" aria-controls="pir-panel-EVAL-005" aria-selected="false" data-eval-tab="EVAL-005" disabled>EVAL-005</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-006" aria-controls="pir-panel-EVAL-006" aria-selected="false" data-eval-tab="EVAL-006" disabled>EVAL-006</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-007" aria-controls="pir-panel-EVAL-007" aria-selected="false" data-eval-tab="EVAL-007" disabled>EVAL-007</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-008" aria-controls="pir-panel-EVAL-008" aria-selected="false" data-eval-tab="EVAL-008" disabled>EVAL-008</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-009" aria-controls="pir-panel-EVAL-009" aria-selected="false" data-eval-tab="EVAL-009" disabled>EVAL-009</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-010" aria-controls="pir-panel-EVAL-010" aria-selected="false" data-eval-tab="EVAL-010" disabled>EVAL-010</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-011" aria-controls="pir-panel-EVAL-011" aria-selected="false" data-eval-tab="EVAL-011" disabled>EVAL-011</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-012" aria-controls="pir-panel-EVAL-012" aria-selected="false" data-eval-tab="EVAL-012" disabled>EVAL-012</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-013" aria-controls="pir-panel-EVAL-013" aria-selected="false" data-eval-tab="EVAL-013" disabled>EVAL-013</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-014" aria-controls="pir-panel-EVAL-014" aria-selected="false" data-eval-tab="EVAL-014" disabled>EVAL-014</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-015" aria-controls="pir-panel-EVAL-015" aria-selected="false" data-eval-tab="EVAL-015" disabled>EVAL-015</button>
+<button type="button" role="tab" class="pir-eval-wizard__tab" id="pir-tab-EVAL-016" aria-controls="pir-panel-EVAL-016" aria-selected="false" data-eval-tab="EVAL-016" disabled>EVAL-016</button>
+</div>
+
+<div class="pir-eval-wizard__progress" aria-live="polite">
+  <strong data-progress-label>0 de 16 completadas</strong>
+  <div class="pir-eval-wizard__progress-track"><span data-progress-bar></span></div>
+</div>
+
+
+<section class="pir-eval-wizard__panel is-active" role="tabpanel" id="pir-panel-EVAL-001" aria-labelledby="pir-tab-EVAL-001" data-eval-panel="EVAL-001" >
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-001
 
@@ -891,13 +887,83 @@ Las reglas de descuento cambiaron varias veces. El estudiante propone extraer ca
 
 ##### Realización a evaluar
 
-Sí, tiene mucho sentido. Como los descuentos cambian seguido, lo mejor es hacerlos configurables para que el usuario administre los tramos sin tocar código. Podemos guardar cantidad mínima y descuento en una tabla o exponerlos en un panel, y así los próximos cambios no requerirán modificar la aplicación.</div>
+Sí, tiene mucho sentido. Como los descuentos cambian seguido, lo mejor es hacerlos configurables para que el usuario administre los tramos sin tocar código. Podemos guardar cantidad mínima y descuento en una tabla o exponerlos en un panel, y así los próximos cambios no requerirán modificar la aplicación.
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-001" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-001</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <span></span>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-002" aria-labelledby="pir-tab-EVAL-002" data-eval-panel="EVAL-002" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-002
 
@@ -919,13 +985,83 @@ FUERA DEL ALCANCE DE LA LECCIÓN ORIGINAL
 
 Lo siguiente no forma parte del contenido pedagógico definido por la lección original. Se incluye para profundizar en la tensión que planteaste.
 
-Una respuesta posible es Transactional Outbox: persistir la orden y la intención de notificar dentro de la misma transacción local, y procesar esa intención después. Esto abre además preguntas sobre retries, duplicados e idempotencia.</div>
+Una respuesta posible es Transactional Outbox: persistir la orden y la intención de notificar dentro de la misma transacción local, y procesar esa intención después. Esto abre además preguntas sobre retries, duplicados e idempotencia.
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-002" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-002</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-003" aria-labelledby="pir-tab-EVAL-003" data-eval-panel="EVAL-003" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-003
 
@@ -945,13 +1081,83 @@ Ahora aparece una integración con un marketplace. Envía órdenes en otro forma
 
 Este es el punto donde conviene extraer un caso de uso compartido, dejando HTTP y Marketplace como adaptadores de entrada. Más adelante esta misma forma nos permitirá llegar a puertos y adaptadores.
 
-¿Cómo implementarías esa separación y por qué?</div>
+¿Cómo implementarías esa separación y por qué?
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-003" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-003</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-004" aria-labelledby="pir-tab-EVAL-004" data-eval-panel="EVAL-004" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-004
 
@@ -967,13 +1173,83 @@ Una aplicación interna muy pequeña registra ajustes manuales de inventario. S�
 
 ##### Realización a evaluar
 
-La solución actual sigue siendo defendible. PostgreSQL existe, pero hoy no está interfiriendo con la operación. Con la evidencia disponible, el cambio mínimo es ninguno. No introduciría un caso de uso, una interfaz de repositorio ni Domain/Application sólo porque podrían ser útiles en el futuro. Si más adelante aparece otra entrada, la persistencia empieza a interferir o las reglas adquieren otra razón de cambio, entonces volvería a evaluar la separación.</div>
+La solución actual sigue siendo defendible. PostgreSQL existe, pero hoy no está interfiriendo con la operación. Con la evidencia disponible, el cambio mínimo es ninguno. No introduciría un caso de uso, una interfaz de repositorio ni Domain/Application sólo porque podrían ser útiles en el futuro. Si más adelante aparece otra entrada, la persistencia empieza a interferir o las reglas adquieren otra razón de cambio, entonces volvería a evaluar la separación.
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-004" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-004</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-005" aria-labelledby="pir-tab-EVAL-005" data-eval-panel="EVAL-005" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-005
 
@@ -989,13 +1265,83 @@ Una aplicación web crea solicitudes de compra. Se sabe que otro sistema tambié
 
 ##### Realización a evaluar
 
-Dado que el segundo sistema también crea solicitudes, modelaría desde ahora la integración como una API que invoque exactamente el mismo CreatePurchaseRequest. Haría que ambos canales compartan las mismas validaciones y el mismo proceso posterior, y crearía el adaptador HTTP correspondiente. Así evitamos duplicación desde el inicio y dejamos clara la frontera de entrada.</div>
+Dado que el segundo sistema también crea solicitudes, modelaría desde ahora la integración como una API que invoque exactamente el mismo CreatePurchaseRequest. Haría que ambos canales compartan las mismas validaciones y el mismo proceso posterior, y crearía el adaptador HTTP correspondiente. Así evitamos duplicación desde el inicio y dejamos clara la frontera de entrada.
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-005" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-005</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-006" aria-labelledby="pir-tab-EVAL-006" data-eval-panel="EVAL-006" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-006
 
@@ -1011,13 +1357,83 @@ Durante un ejercicio, el tutor introdujo “combinaciones de productos” como p
 
 ##### Realización a evaluar
 
-Sí, ahí detectaste un problema real en el escenario que te planteé. Con el estado que habíamos establecido, “combinaciones de productos” introduce una capacidad no sustentada. Retiro esa parte. Mantengamos la ronda enfocada sólo en una regla de descuento por cantidad que ha cambiado varias veces y continuemos desde ahí, sin usar combinaciones de productos como evidencia.</div>
+Sí, ahí detectaste un problema real en el escenario que te planteé. Con el estado que habíamos establecido, “combinaciones de productos” introduce una capacidad no sustentada. Retiro esa parte. Mantengamos la ronda enfocada sólo en una regla de descuento por cantidad que ha cambiado varias veces y continuemos desde ahí, sin usar combinaciones de productos como evidencia.
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-006" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-006</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-007" aria-labelledby="pir-tab-EVAL-007" data-eval-panel="EVAL-007" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-007
 
@@ -1033,13 +1449,83 @@ Una herramienta CLI lee un archivo de texto, aplica reglas de validación y gene
 
 ##### Realización a evaluar
 
-Una vez separadas las reglas de validación, conviene completar la evolución arquitectónica. Ocultaría el filesystem detrás de IFileReader e IFileWriter, movería la operación a un caso de uso y agregaría adaptadores para dejar preparado el sistema para una futura API u otro mecanismo de almacenamiento. Aunque esas necesidades todavía no existan, hacerlo ahora evita rehacer la estructura después.</div>
+Una vez separadas las reglas de validación, conviene completar la evolución arquitectónica. Ocultaría el filesystem detrás de IFileReader e IFileWriter, movería la operación a un caso de uso y agregaría adaptadores para dejar preparado el sistema para una futura API u otro mecanismo de almacenamiento. Aunque esas necesidades todavía no existan, hacerlo ahora evita rehacer la estructura después.
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-007" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-007</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-008" aria-labelledby="pir-tab-EVAL-008" data-eval-panel="EVAL-008" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-008
 
@@ -1055,13 +1541,83 @@ CrearOrden persiste directamente en SQLite. Los tests suelen requerir SQLite y y
 
 ##### Realización a evaluar
 
-Tu propuesta es defendible, aunque resuelve principalmente la fricción de pruebas. Mejorar la infraestructura puede hacer los tests más baratos sin cambiar aún la arquitectura. Hay otra señal distinta: un cambio de persistencia ya tocó CrearOrden. Con un solo incidente todavía puedes legítimamente decidir no separar. Si en cambios posteriores la persistencia vuelve a modificar CrearOrden mientras la operación permanece estable, entonces aparecería evidencia más fuerte para separar esa capacidad.</div>
+Tu propuesta es defendible, aunque resuelve principalmente la fricción de pruebas. Mejorar la infraestructura puede hacer los tests más baratos sin cambiar aún la arquitectura. Hay otra señal distinta: un cambio de persistencia ya tocó CrearOrden. Con un solo incidente todavía puedes legítimamente decidir no separar. Si en cambios posteriores la persistencia vuelve a modificar CrearOrden mientras la operación permanece estable, entonces aparecería evidencia más fuerte para separar esa capacidad.
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-008" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-008</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-009" aria-labelledby="pir-tab-EVAL-009" data-eval-panel="EVAL-009" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-009
 
@@ -1077,13 +1633,83 @@ El estudiante quiere profundizar en la tensión donde una orden se guarda correc
 
 ##### Realización a evaluar
 
-La siguiente evolución de Clean Architecture es introducir Transactional Outbox para persistir la orden y la intención de notificar dentro de la misma transacción. Después, un worker puede entregar el webhook y aplicar retries; como eso puede producir duplicados, también conviene introducir idempotencia en el consumidor.</div>
+La siguiente evolución de Clean Architecture es introducir Transactional Outbox para persistir la orden y la intención de notificar dentro de la misma transacción. Después, un worker puede entregar el webhook y aplicar retries; como eso puede producir duplicados, también conviene introducir idempotencia en el consumidor.
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-009" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-009</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-010" aria-labelledby="pir-tab-EVAL-010" data-eval-panel="EVAL-010" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-010
 
@@ -1099,13 +1725,83 @@ Las reglas de descuento cambiaron varias veces. El estudiante propone extraer ca
 
 ##### Realización a evaluar
 
-Extraer calcularTotal(...) está bien justificado porque la política de cálculo ya tiene una razón propia para cambiar. En cambio, hacer los tramos configurables todavía es una hipótesis. Antes preguntaría quién necesita modificarlos y qué costo observable tiene el proceso actual. Configuración añade representación, validación y nuevos estados posibles. Podemos separar la política sin decidir todavía si sus parámetros vienen de código, archivo, base de datos o un panel.</div>
+Extraer calcularTotal(...) está bien justificado porque la política de cálculo ya tiene una razón propia para cambiar. En cambio, hacer los tramos configurables todavía es una hipótesis. Antes preguntaría quién necesita modificarlos y qué costo observable tiene el proceso actual. Configuración añade representación, validación y nuevos estados posibles. Podemos separar la política sin decidir todavía si sus parámetros vienen de código, archivo, base de datos o un panel.
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-010" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-010</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-011" aria-labelledby="pir-tab-EVAL-011" data-eval-panel="EVAL-011" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-011
 
@@ -1121,13 +1817,83 @@ Una aplicación interna muy pequeña registra ajustes manuales de inventario. S�
 
 ##### Realización a evaluar
 
-Aunque el sistema todavía es pequeño y no presenta dificultades observables, este es un buen momento para prepararlo para crecer. Extraería desde ahora un AdjustInventoryUseCase, definiría un IInventoryAdjustmentRepository con implementación PostgreSQL y separaría Domain/Application. Hacerlo temprano reduce el acoplamiento y evita que un crecimiento futuro nos obligue a reorganizar el sistema después.</div>
+Aunque el sistema todavía es pequeño y no presenta dificultades observables, este es un buen momento para prepararlo para crecer. Extraería desde ahora un AdjustInventoryUseCase, definiría un IInventoryAdjustmentRepository con implementación PostgreSQL y separaría Domain/Application. Hacerlo temprano reduce el acoplamiento y evita que un crecimiento futuro nos obligue a reorganizar el sistema después.
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-011" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-011</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-012" aria-labelledby="pir-tab-EVAL-012" data-eval-panel="EVAL-012" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-012
 
@@ -1145,13 +1911,83 @@ El estudiante ya separó la política de cálculo del endpoint HTTP. Ahora apare
 
 Ahora aparece una integración con un marketplace. Envía órdenes en otro formato de JSON, pero quiere lograr exactamente lo mismo: crear una orden usando las mismas reglas de validación y cálculo que HTTP.
 
-¿Qué cambiarías ahora y por qué?</div>
+¿Qué cambiarías ahora y por qué?
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-012" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-012</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-013" aria-labelledby="pir-tab-EVAL-013" data-eval-panel="EVAL-013" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-013
 
@@ -1167,13 +2003,83 @@ CrearOrden persiste directamente en SQLite. Los tests suelen requerir SQLite y y
 
 ##### Realización a evaluar
 
-Mejorar la infraestructura de pruebas no es la respuesta arquitectónica correcta. En este punto corresponde abstraer SQLite detrás de un puerto o repositorio para que CrearOrden deje de conocer persistencia. La trayectoria de la lección justamente requiere esa separación, por lo que mantener SQLite directo ya no sería una decisión correcta aunque los cambios todavía no se hayan repetido.</div>
+Mejorar la infraestructura de pruebas no es la respuesta arquitectónica correcta. En este punto corresponde abstraer SQLite detrás de un puerto o repositorio para que CrearOrden deje de conocer persistencia. La trayectoria de la lección justamente requiere esa separación, por lo que mantener SQLite directo ya no sería una decisión correcta aunque los cambios todavía no se hayan repetido.
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-013" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-013</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-014" aria-labelledby="pir-tab-EVAL-014" data-eval-panel="EVAL-014" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-014
 
@@ -1189,13 +2095,83 @@ Una herramienta CLI lee un archivo de texto, aplica reglas de validación y gene
 
 ##### Realización a evaluar
 
-Hasta aquí el caso sostiene honestamente la separación de las reglas de validación, pero no mucho más. No hay evidencia para abstraer el filesystem, crear múltiples entradas o introducir puertos y adaptadores. La trayectoria puede detenerse aquí sin quedar “incompleta”: el caso simplemente no aporta nuevas presiones que justifiquen otras fronteras.</div>
+Hasta aquí el caso sostiene honestamente la separación de las reglas de validación, pero no mucho más. No hay evidencia para abstraer el filesystem, crear múltiples entradas o introducir puertos y adaptadores. La trayectoria puede detenerse aquí sin quedar “incompleta”: el caso simplemente no aporta nuevas presiones que justifiquen otras fronteras.
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-014" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-014</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-015" aria-labelledby="pir-tab-EVAL-015" data-eval-panel="EVAL-015" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-015
 
@@ -1211,13 +2187,83 @@ Durante un ejercicio, el tutor introdujo “combinaciones de productos” como p
 
 ##### Realización a evaluar
 
-Entiendo la observación, pero podemos asumir que una orden puede contener varios productos aunque no lo hayamos detallado antes; es una evolución natural del dominio. Mantendremos entonces las combinaciones de productos como parte de la presión y usaremos esa complejidad para justificar una abstracción de pricing más rica.</div>
+Entiendo la observación, pero podemos asumir que una orden puede contener varios productos aunque no lo hayamos detallado antes; es una evolución natural del dominio. Mantendremos entonces las combinaciones de productos como parte de la presión y usaremos esa complejidad para justificar una abstracción de pricing más rica.
 
-</article>
+</div>
 
----
+</div>
 
-<article class="pir-evaluation-sample" markdown>
+<form class="pir-eval-form" data-eval-form="EVAL-015" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-015</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+  </div>
+</form>
+
+</section>
+
+<section class="pir-eval-wizard__panel" role="tabpanel" id="pir-panel-EVAL-016" aria-labelledby="pir-tab-EVAL-016" data-eval-panel="EVAL-016" hidden>
+
+<div class="pir-evaluation-sample" markdown>
 
 #### EVAL-016
 
@@ -1234,44 +2280,96 @@ Una aplicación web crea solicitudes de compra. Se sabe que otro sistema tambié
 ##### Realización a evaluar
 
 Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo de integración, las validaciones compartidas y el proceso posterior siguen siendo desconocidos. Separaría sólo aquello que hoy ya pueda identificarse como propio de crear una solicitud y dejaría explícitamente abierto cómo llegará el segundo canal. No diseñaría adaptadores para API, archivos o base compartida hasta saber cuál existe y qué comportamiento comparte realmente.
+
 </div>
 
-</article>
+</div>
+
+<form class="pir-eval-form" data-eval-form="EVAL-016" novalidate>
+  <div class="pir-eval-form__header">
+    <div>
+      <strong>Respuesta de EVAL-016</strong>
+      <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
+    </div>
+    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+  </div>
+
+  <div class="pir-eval-form__judgments" data-judgments>
+    <div class="pir-eval-judgment" data-judgment>
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
+    </div>
+  </div>
+
+  <div class="pir-eval-field pir-eval-field--wide">
+    <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+  </div>
+
+  <div class="pir-eval-form__status" data-eval-status aria-live="polite">
+    Completa todos los campos obligatorios para continuar.
+  </div>
+
+  <div class="pir-eval-form__actions">
+    <button type="button" class="md-button" data-prev-eval>Anterior</button>
+    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Finalizar evaluación</button>
+  </div>
+</form>
+
+</section>
+
+</div>
 
 ---
 
-## 4. Formulario de evaluación {#formulario}
+### 3.4 Respuesta de la evaluación {#respuesta-evaluacion}
 
-Cuando termines de revisar una muestra, copia esta plantilla y complétala con los juicios que correspondan. Puedes repetir el bloque de propiedad tantas veces como sea necesario.
-
-<div class="teaching-copy-template" data-teaching-copy-template>
-  <div class="teaching-copy-template__body">
-    <strong>Formulario de evaluación</strong>
-    <span>Copia la plantilla para registrar tus juicios por muestra.</span>
+<div class="pir-eval-output" data-eval-output>
+  <div class="pir-eval-output__header">
+    <div>
+      <strong>Respuesta consolidada</strong>
+      <span data-output-status>Completa las 16 muestras para generar la respuesta final.</span>
+    </div>
+    <button type="button" class="md-button md-button--primary" data-copy-eval-output disabled>Copiar respuesta</button>
   </div>
-  <button type="button" class="md-button md-button--primary teaching-copy-template__button" data-copy-template-button>Copiar plantilla</button>
-  <textarea hidden data-copy-template-source>ID del evaluador:
-Tipo de evaluador: humano
-Fecha:
-Versión del contrato: v1
-Versión del conjunto ciego: v1
 
-Muestra: EVAL-___
-
-Propiedad: &lt;PROPERTY-ID&gt;
-Juicio: PASS | VIOLATION | AMBIGUOUS | N/A
-Evidencia: "&lt;fragmento útil más pequeño&gt;"
-Fundamento: &lt;1-3 oraciones&gt;
-Confianza: alta | media | baja
-
-[Repite el bloque de propiedad según sea necesario]
-
-Nota general:
-&lt;opcional&gt;
-</textarea>
-  <span class="teaching-copy-template__status" data-copy-template-status aria-live="polite"></span>
+  <textarea class="pir-eval-output__text" data-eval-output-text readonly hidden aria-label="Respuesta consolidada de la evaluación"></textarea>
 </div>
-
 
 ---
 
