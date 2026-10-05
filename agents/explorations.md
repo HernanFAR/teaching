@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Teaching lessons may expose **supported explorations**: guided ways for a learner to continue investigating a lesson with an LLM without requiring the LLM to reconstruct the lesson's pedagogical meaning from general knowledge.
+TDidacta Platform lessons may expose **supported explorations**: guided ways for a learner to continue investigating a lesson with an LLM without requiring the LLM to reconstruct the lesson's pedagogical meaning from general knowledge.
 
 A supported exploration is not a pre-written answer.
 
@@ -17,7 +17,7 @@ lesson pedagogical material
 
 Keep these responsibilities distinct:
 
-**Teaching owns**
+**TDidacta Platform owns**
 
 - what the lesson teaches;
 - which tensions, concepts, limits, counterfactuals, and evidence belong to it;
@@ -51,11 +51,11 @@ Each supported exploration should make clear:
 - what must remain invariant;
 - whether and how the exploration may move beyond the original lesson scope.
 
-The concrete learner need should remain free text. Teaching should guide the exploration, not pre-decide the learner's question.
+The concrete learner need should remain free text. TDidacta Platform should guide the exploration, not pre-decide the learner's question.
 
 ## Initial supported exploration vocabulary
 
-Teaching currently recognizes four initial exploration modes. This vocabulary is expected to evolve from evidence.
+TDidacta Platform currently recognizes four initial exploration modes. This vocabulary is expected to evolve from evidence.
 
 ### 1. Another case
 
@@ -161,7 +161,7 @@ The learner may specify what part of the lesson they want to practice, how chall
 
 When a learner explicitly selects a supported exploration mode, preserve the provenance of that choice: the mode was selected by the learner, not by the LLM. A direct-mode prompt must not ask the LLM to choose the mode or invite it to say that it chose it. It should begin by realizing the already-selected exploration.
 
-Automatic routing is different: when Teaching delegates mode selection to the LLM, the generated request should explicitly ask it to state which supported mode it selected and why.
+Automatic routing is different: when TDidacta Platform delegates mode selection to the LLM, the generated request should explicitly ask it to state which supported mode it selected and why.
 
 A generated LLM request for a supported exploration should contain enough information to distinguish at least:
 
@@ -186,7 +186,7 @@ A generated LLM request for a supported exploration should contain enough inform
    - its scope-crossing rules.
 
 4. **Source references**
-   - resolvable references to the Teaching material that owns the lesson semantics when such references are available;
+   - resolvable references to the TDidacta Platform material that owns the lesson semantics when such references are available;
    - choose the smallest useful reference boundary for the exploration: this may be one source file, several artifacts, an evidence directory, or the whole lesson directory;
    - references should let an LLM inspect original material instead of forcing it to reconstruct the lesson only from the generated prompt;
    - the prompt must state that inaccessible material must not be treated as if it had been read.
@@ -265,7 +265,7 @@ Before publishing a lesson with supported explorations, verify:
 - Are the supported exploration modes named and briefly explained?
 - Does each exploration accept a concrete learner need rather than forcing a pre-written question?
 - Can the LLM receive enough lesson-specific material to preserve the lesson's intent?
-- Does the generated request include useful resolvable source references when Teaching has them?
+- Does the generated request include useful resolvable source references when TDidacta Platform has them?
 - Is the reference boundary appropriate for this exploration rather than mechanically listing every artifact?
 - Does the prompt prohibit pretending that inaccessible referenced material was actually consulted?
 - For Another case, can validity be checked without forcing the original architecture onto a new domain?
