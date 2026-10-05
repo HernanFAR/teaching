@@ -2029,3 +2029,243 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* PIR evaluator wizard */
+
+.pir-eval-wizard {
+  margin-top: 1.2rem;
+}
+
+.pir-eval-wizard__tabs {
+  display: flex;
+  gap: 0.25rem;
+  overflow-x: auto;
+  padding-bottom: 0.45rem;
+  border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+  scrollbar-width: thin;
+}
+
+.pir-eval-wizard__tab {
+  flex: 0 0 auto;
+  padding: 0.5rem 0.65rem;
+  border: 0;
+  border-bottom: 0.12rem solid transparent;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  font: inherit;
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pir-eval-wizard__tab:hover:not(:disabled),
+.pir-eval-wizard__tab:focus-visible:not(:disabled) {
+  color: var(--md-accent-fg-color);
+}
+
+.pir-eval-wizard__tab.is-active {
+  border-bottom-color: var(--md-accent-fg-color);
+  color: var(--md-default-fg-color);
+}
+
+.pir-eval-wizard__tab.is-complete::after {
+  content: " ✓";
+  color: var(--md-accent-fg-color);
+}
+
+.pir-eval-wizard__tab:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pir-eval-wizard__progress {
+  margin: 0.9rem 0 1.2rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.78rem;
+}
+
+.pir-eval-wizard__progress-track {
+  height: 0.25rem;
+  margin-top: 0.4rem;
+  overflow: hidden;
+  border-radius: 999rem;
+  background: var(--md-default-fg-color--lightest);
+}
+
+.pir-eval-wizard__progress-track > span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--md-accent-fg-color);
+  transition: width 180ms ease;
+}
+
+.pir-eval-wizard__panel[hidden] {
+  display: none;
+}
+
+.pir-eval-form {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.pir-eval-form__header,
+.pir-eval-output__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pir-eval-form__header strong,
+.pir-eval-form__header span,
+.pir-eval-output__header strong,
+.pir-eval-output__header span {
+  display: block;
+}
+
+.pir-eval-form__header span,
+.pir-eval-output__header span {
+  margin-top: 0.25rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+}
+
+.pir-eval-form__judgments {
+  margin-top: 1rem;
+}
+
+.pir-eval-judgment {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.8fr) minmax(10rem, 0.8fr) minmax(8rem, 0.6fr);
+  gap: 0.85rem;
+  padding: 1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.pir-eval-judgment + .pir-eval-judgment {
+  margin-top: 0.8rem;
+}
+
+.pir-eval-field {
+  min-width: 0;
+}
+
+.pir-eval-field--wide {
+  grid-column: 1 / -1;
+}
+
+.pir-eval-field label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.pir-eval-field__optional {
+  color: var(--md-default-fg-color--light);
+  font-weight: 400;
+}
+
+.pir-eval-field input,
+.pir-eval-field select,
+.pir-eval-field textarea {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 0.7rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 0.55rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font: inherit;
+  line-height: 1.4;
+}
+
+.pir-eval-field textarea {
+  resize: vertical;
+}
+
+.pir-eval-judgment__remove {
+  align-self: end;
+  justify-self: start;
+  border: 0;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  font: inherit;
+  font-size: 0.74rem;
+  cursor: pointer;
+}
+
+.pir-eval-form > .pir-eval-field {
+  margin-top: 1rem;
+}
+
+.pir-eval-form__status {
+  min-height: 1.25rem;
+  margin-top: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.76rem;
+}
+
+.pir-eval-form__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.7rem;
+  margin-top: 0.85rem;
+}
+
+.pir-eval-output {
+  padding: 1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.pir-eval-output__text {
+  display: block;
+  width: 100%;
+  min-height: 28rem;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 0.55rem;
+  background: color-mix(in srgb, var(--md-default-fg-color) 4%, var(--md-default-bg-color));
+  color: var(--md-default-fg-color);
+  font-family: var(--md-code-font-family);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+@media screen and (max-width: 59.9844em) {
+  .pir-eval-judgment {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  .pir-eval-form__header,
+  .pir-eval-output__header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pir-eval-judgment {
+    grid-template-columns: 1fr;
+  }
+
+  .pir-eval-field--wide {
+    grid-column: auto;
+  }
+
+  .pir-eval-form__actions {
+    flex-direction: column;
+  }
+
+  .pir-eval-form__actions .md-button {
+    width: 100%;
+  }
+}
