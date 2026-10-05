@@ -1804,3 +1804,155 @@
     width: 100%;
   }
 }
+
+
+/* PIR evaluator surface */
+
+.pir-evaluation-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.pir-evaluation-nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.7rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 999rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pir-evaluation-nav a:hover,
+.pir-evaluation-nav a:focus-visible {
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color);
+}
+
+.pir-judgment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.pir-judgment {
+  padding: 0.8rem 0.9rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.pir-judgment strong,
+.pir-judgment span {
+  display: block;
+}
+
+.pir-judgment strong {
+  color: var(--md-accent-fg-color);
+  font-size: 0.76rem;
+  letter-spacing: 0.035em;
+}
+
+.pir-judgment span {
+  margin-top: 0.25rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.pir-contract-family {
+  margin: 1.35rem 0;
+  padding: 1rem 1.05rem 0.35rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-left: 0.18rem solid var(--md-accent-fg-color);
+  border-radius: var(--teaching-radius);
+}
+
+.pir-contract-family > h3:first-child {
+  margin-top: 0;
+}
+
+.pir-contract-family h4 {
+  margin-top: 1rem;
+  font-size: 0.92rem;
+}
+
+.pir-contract-family h4 + p {
+  margin-top: 0.25rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.pir-evaluation-sample {
+  margin: 1.4rem 0 1.8rem;
+  padding: 1.05rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: calc(var(--teaching-radius) + 0.1rem);
+}
+
+.pir-evaluation-sample > h3 {
+  display: inline-block;
+  margin: 0 0 0.9rem;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999rem;
+  background: color-mix(in srgb, var(--md-accent-fg-color) 12%, transparent);
+  color: var(--md-accent-fg-color);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+}
+
+.pir-sample-context,
+.pir-sample-realization {
+  padding: 0.85rem 0.95rem;
+  border-radius: var(--teaching-radius);
+}
+
+.pir-sample-context {
+  background: color-mix(in srgb, var(--md-default-fg-color) 4%, transparent);
+}
+
+.pir-sample-realization {
+  margin-top: 0.7rem;
+  border: 0.05rem solid color-mix(in srgb, var(--md-accent-fg-color) 22%, var(--md-default-fg-color--lightest));
+  background: color-mix(in srgb, var(--md-accent-fg-color) 5%, transparent);
+}
+
+.pir-sample-context > h4,
+.pir-sample-realization > h4 {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.pir-sample-context > :last-child,
+.pir-sample-realization > :last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 45rem) {
+  .pir-judgment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pir-evaluation-nav {
+    gap: 0.35rem;
+  }
+
+  .pir-evaluation-nav a {
+    font-size: 0.7rem;
+  }
+
+  .pir-evaluation-sample,
+  .pir-contract-family {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
