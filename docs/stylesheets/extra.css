@@ -2269,3 +2269,149 @@
     width: 100%;
   }
 }
+
+
+/* Compact integrated EVAL workspace */
+
+.pir-eval-wizard__panel {
+  padding: 0.85rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: calc(var(--teaching-radius) + 0.1rem);
+}
+
+.pir-eval-wizard__panel .pir-evaluation-sample {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.pir-eval-wizard__panel .pir-evaluation-sample > h4 {
+  margin: 0 0 0.55rem;
+  padding: 0;
+  background: transparent;
+  color: var(--md-default-fg-color);
+  font-size: 0.82rem;
+  letter-spacing: 0.025em;
+}
+
+.pir-eval-wizard__panel .pir-sample-context,
+.pir-eval-wizard__panel .pir-sample-realization {
+  padding: 0.65rem 0.8rem;
+}
+
+.pir-eval-wizard__panel .pir-sample-realization {
+  margin-top: 0.45rem;
+}
+
+.pir-eval-wizard__panel .pir-sample-context > h5,
+.pir-eval-wizard__panel .pir-sample-realization > h5 {
+  margin-bottom: 0.3rem;
+}
+
+.pir-eval-wizard__panel .pir-sample-context p,
+.pir-eval-wizard__panel .pir-sample-realization p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.45;
+}
+
+.pir-eval-wizard__panel .pir-eval-form {
+  margin-top: 0.7rem;
+  padding: 0.75rem 0 0;
+  border: 0;
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 0;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__header {
+  gap: 0.65rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__header strong {
+  font-size: 0.82rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__header span {
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__add {
+  padding: 0.38rem 0.58rem;
+  font-size: 0.72rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__judgments {
+  margin-top: 0.65rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-judgment {
+  grid-template-columns:
+    minmax(7.5rem, 0.7fr)
+    minmax(8.5rem, 0.8fr)
+    minmax(7rem, 0.55fr);
+  gap: 0.55rem 0.7rem;
+  padding: 0.7rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-judgment + .pir-eval-judgment {
+  margin-top: 0.55rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-field label {
+  margin-bottom: 0.2rem;
+  font-size: 0.69rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-field input,
+.pir-eval-wizard__panel .pir-eval-field select,
+.pir-eval-wizard__panel .pir-eval-field textarea {
+  padding: 0.42rem 0.52rem;
+  border-radius: 0.45rem;
+  font-size: 0.76rem;
+  line-height: 1.3;
+}
+
+.pir-eval-wizard__panel .pir-eval-field textarea {
+  min-height: 2.35rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-field[data-role="note"] {
+  margin-top: 0.6rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-form > .pir-eval-field {
+  margin-top: 0.6rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__status {
+  min-height: 1rem;
+  margin-top: 0.45rem;
+  font-size: 0.68rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__actions {
+  margin-top: 0.5rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__actions .md-button {
+  padding: 0.42rem 0.65rem;
+  font-size: 0.72rem;
+}
+
+@media screen and (max-width: 59.9844em) {
+  .pir-eval-wizard__panel .pir-eval-judgment {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  .pir-eval-wizard__panel {
+    padding: 0.7rem;
+  }
+
+  .pir-eval-wizard__panel .pir-eval-judgment {
+    grid-template-columns: 1fr;
+  }
+}
