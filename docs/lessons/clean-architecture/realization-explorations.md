@@ -6,7 +6,7 @@ No redefine la fuente pedagógica. Usa los contratos compartidos de `agents/expl
 
 ## Resultado
 
-Esta lección puede soportar las cuatro exploraciones iniciales de Teaching:
+Esta lección puede soportar las cuatro exploraciones iniciales de TDidacta Platform:
 
 | Exploración | ¿Soportada? | Evidencia disponible |
 | --- | --- | --- |
@@ -30,7 +30,7 @@ La página no llama a un LLM directamente.
 
 La primera realización pública prepara el texto localmente en el navegador para que la persona pueda inspeccionarlo y copiarlo.
 
-Esto mantiene visible qué contexto entrega Teaching y qué necesidad pertenece al estudiante, sin introducir todavía dependencia de un proveedor o API externa.
+Esto mantiene visible qué contexto entrega TDidacta Platform y qué necesidad pertenece al estudiante, sin introducir todavía dependencia de un proveedor o API externa.
 
 ## Referencias fuente
 
@@ -128,7 +128,7 @@ La revisión adopta una sola superficie de composición:
 7. una ayuda colapsable explica los modos sin obligar a comprender la taxonomía antes de formular la necesidad;
 8. el texto completo preparado puede inspeccionarse antes de copiarlo;
 9. copiar al portapapeles requiere una acción explícita;
-10. la necesidad del estudiante no se envía a ningún servidor de Teaching.
+10. la necesidad del estudiante no se envía a ningún servidor de TDidacta Platform.
 
 La interacción funciona enteramente en el navegador.
 
