@@ -249,9 +249,9 @@ Antes de implementar no fijamos geometría exacta, pero sí la pregunta que cada
 6. **Composición:** dónde se decide qué mecanismos concretos ejecutan las capacidades.
 7. **Síntesis final:** qué dirección tienen las dependencias en la forma resultante.
 
-No todas estas preguntas necesitan un diagrama. Código, tablas, Teaching flows o prosa pueden resolverlas mejor.
+No todas estas preguntas necesitan un diagrama. Código, tablas, TDidacta Platform flows o prosa pueden resolverlas mejor.
 
-Mermaid queda reservado para relaciones cuya geometría no pueda expresarse limpiamente con los componentes Teaching existentes.
+Mermaid queda reservado para relaciones cuya geometría no pueda expresarse limpiamente con los componentes TDidacta Platform existentes.
 
 ## Ritmo visual
 
