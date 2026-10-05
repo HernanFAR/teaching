@@ -3139,7 +3139,7 @@ Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo 
 
 ---
 
-### 3.4 Respuesta de la evaluación {#respuesta-evaluacion}
+## 4. Respuesta y entrega {#respuesta-evaluacion}
 
 <div class="pir-eval-output" data-eval-output>
   <div class="pir-eval-output__header">
@@ -3153,14 +3153,10 @@ Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo 
   <textarea class="pir-eval-output__text" data-eval-output-text readonly hidden aria-label="Respuesta consolidada de la evaluación"></textarea>
 </div>
 
----
-
-## Nota de entrega {#entrega}
-
-Cuando hayas terminado, envía **de forma privada a Hernán**:
-
-1. el perfil del evaluador completado;
-2. los juicios para EVAL-001 a EVAL-016;
-3. cualquier nota general opcional sobre ambigüedades en el contrato o las muestras.
+<div class="teaching-card">
+<span class="teaching-eyebrow">Entrega privada</span>
+<strong>Envía la evaluación completa a Hernán</strong>
+<span>Cuando hayas terminado, envía de forma privada: el perfil del evaluador completado, los juicios para EVAL-001 a EVAL-016 y cualquier nota general opcional sobre ambigüedades en el contrato o las muestras.</span>
+</div>
 
 No compares tus respuestas con las de otro evaluador antes de enviarlas.
