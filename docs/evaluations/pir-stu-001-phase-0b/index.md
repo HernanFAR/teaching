@@ -906,7 +906,54 @@ Sí, tiene mucho sentido. Como los descuentos cambian seguido, lo mejor es hacer
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -1004,7 +1051,54 @@ Una respuesta posible es Transactional Outbox: persistir la orden y la intenció
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -1100,7 +1194,54 @@ Este es el punto donde conviene extraer un caso de uso compartido, dejando HTTP 
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -1192,7 +1333,54 @@ La solución actual sigue siendo defendible. PostgreSQL existe, pero hoy no est�
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -1284,7 +1472,54 @@ Dado que el segundo sistema también crea solicitudes, modelaría desde ahora la
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -1376,7 +1611,54 @@ Sí, ahí detectaste un problema real en el escenario que te planteé. Con el es
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -1468,7 +1750,54 @@ Una vez separadas las reglas de validación, conviene completar la evolución ar
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -1560,7 +1889,54 @@ Tu propuesta es defendible, aunque resuelve principalmente la fricción de prueb
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -1652,7 +2028,54 @@ La siguiente evolución de Clean Architecture es introducir Transactional Outbox
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -1744,7 +2167,54 @@ Extraer calcularTotal(...) está bien justificado porque la política de cálcul
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -1836,7 +2306,54 @@ Aunque el sistema todavía es pequeño y no presenta dificultades observables, e
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -1930,7 +2447,54 @@ Ahora aparece una integración con un marketplace. Envía órdenes en otro forma
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -2022,7 +2586,54 @@ Mejorar la infraestructura de pruebas no es la respuesta arquitectónica correct
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -2114,7 +2725,54 @@ Hasta aquí el caso sostiene honestamente la separación de las reglas de valida
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -2206,7 +2864,54 @@ Entiendo la observación, pero podemos asumir que una orden puede contener vario
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
@@ -2298,7 +3003,54 @@ Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo 
     <div class="pir-eval-judgment" data-judgment>
       <div class="pir-eval-field">
         <label>Propiedad <span aria-hidden="true">*</span></label>
-        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+        <select data-field="property" required>
+          <option value="">Selecciona…</option>
+          <optgroup label="RTE — Enrutamiento">
+            <option value="RTE-001">RTE-001 — Profundizar compatible</option>
+            <option value="RTE-002">RTE-002 — Aplicarlo a mi caso compatible</option>
+            <option value="RTE-003">RTE-003 — Otro caso compatible</option>
+            <option value="RTE-004">RTE-004 — Ponme a prueba compatible</option>
+          </optgroup>
+          <optgroup label="CAU — Presión causal y cambio mínimo">
+            <option value="CAU-001">CAU-001 — Suficiencia inicial</option>
+            <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+            <option value="CAU-003">CAU-003 — Cambio mínimo justificado</option>
+            <option value="CAU-004">CAU-004 — Nombre formal después de la experiencia</option>
+          </optgroup>
+          <optgroup label="STP — Detención y ausencia de cambio">
+            <option value="STP-001">STP-001 — Detenerse cuando termina la presión</option>
+            <option value="STP-002">STP-002 — No cambiar puede ser correcto</option>
+            <option value="STP-003">STP-003 — No cambiar es revisable</option>
+          </optgroup>
+          <optgroup label="UNC — Incertidumbre y evidencia">
+            <option value="UNC-001">UNC-001 — Preservar la incertidumbre material</option>
+            <option value="UNC-002">UNC-002 — Umbral de evidencia</option>
+          </optgroup>
+          <optgroup label="SCP — Alcance">
+            <option value="SCP-001">SCP-001 — Cruce explícito de alcance externo</option>
+            <option value="SCP-002">SCP-002 — Extensión no retroactiva</option>
+          </optgroup>
+          <optgroup label="VAR — Variación permitida">
+            <option value="VAR-001">VAR-001 — Equivalencia semántica sin identidad estructural</option>
+            <option value="VAR-002">VAR-002 — Evaluación de alternativas por sus compromisos</option>
+            <option value="VAR-003">VAR-003 — Se permite variación significativa</option>
+          </optgroup>
+          <optgroup label="TST — Ponme a prueba">
+            <option value="TST-001">TST-001 — Una presión por ronda</option>
+            <option value="TST-002">TST-002 — Esperar antes de avanzar</option>
+            <option value="TST-003">TST-003 — Retención progresiva de información</option>
+            <option value="TST-004">TST-004 — Evaluación crítica sin validación por cortesía</option>
+            <option value="TST-005">TST-005 — Distinguir error local de razonamiento arquitectónico</option>
+            <option value="TST-006">TST-006 — Una aclaración no avanza el escenario</option>
+            <option value="TST-007">TST-007 — Reparación del escenario</option>
+            <option value="TST-008">TST-008 — La presión agregada por el estudiante es explícita</option>
+          </optgroup>
+          <optgroup label="POL — Política y mecanismo">
+            <option value="POL-001">POL-001 — El mecanismo no es automáticamente una frontera</option>
+            <option value="POL-002">POL-002 — Distinción política/mecanismo cuando sea relevante</option>
+            <option value="POL-003">POL-003 — La elección del mecanismo puede permanecer abierta</option>
+          </optgroup>
+        </select>
       </div>
 
       <div class="pir-eval-field">
