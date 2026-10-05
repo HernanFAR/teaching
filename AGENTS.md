@@ -2,7 +2,7 @@
 
 ## Superficie operativa para agentes
 
-Este archivo define los principios generales de Teaching.
+Este archivo define los principios generales de TDidacta Platform.
 
 Las instrucciones operativas específicas para agentes viven en `agents/`. Antes de generar, derivar o revisar una lección, leer:
 
@@ -17,7 +17,7 @@ La documentación bajo `docs/` es la realización pública para humanos. No reem
 
 ## Propósito del repositorio
 
-**Teaching** es una plataforma de aprendizaje de ingeniería de software orientada a entender conceptos desde los problemas que los hacen necesarios.
+**TDidacta Platform** es la superficie operacional de TDidacta. Actualmente está centrada principalmente en experiencias de aprendizaje de ingeniería de software orientadas a entender conceptos desde los problemas que los hacen necesarios.
 
 La meta no es acumular definiciones, patrones ni recetas. La meta es reconstruir el razonamiento que hace que una decisión de diseño tenga sentido.
 
@@ -86,7 +86,7 @@ El estudiante debe poder rastrear una estructura final hacia las razones que la 
 
 ---
 
-## Mandamientos de Teaching
+## Mandamientos de TDidacta Platform
 
 Estos principios son operativos. Pueden crecer con el proyecto, pero cualquier contenido nuevo debe respetar su intención.
 
@@ -118,7 +118,7 @@ Esto ayuda a distinguir una necesidad real de una preferencia arquitectónica.
 
 Toda técnica relevante debería incluir sus límites, costos y condiciones bajo las cuales no aporta valor.
 
-Teaching no debe convertir patrones en obligaciones.
+TDidacta Platform no debe convertir patrones en obligaciones.
 
 ### VI. Una visual, una pregunta
 
@@ -174,7 +174,7 @@ Cuando haya que elegir entre una explicación que entrega la respuesta inmediata
 
 **La consciencia de clase debe ser parte de la generación.**
 
-Teaching no debe asumir como condición de acceso que la persona dispone de dinero, hardware costoso, educación formal, dominio de inglés, tiempo abundante, herramientas pagadas o condiciones físicas y sensoriales ideales.
+TDidacta Platform no debe asumir como condición de acceso que la persona dispone de dinero, hardware costoso, educación formal, dominio de inglés, tiempo abundante, herramientas pagadas o condiciones físicas y sensoriales ideales.
 
 Esto se ve reflejado, entre otras cosas, en:
 
@@ -191,7 +191,7 @@ La accesibilidad y las condiciones materiales no son una fase posterior de publi
 
 ---
 
-## Pipeline de Teaching
+## Pipeline de TDidacta Platform
 
 Separar la **fuente pedagógica** de su **diseño de realización**.
 
@@ -264,7 +264,7 @@ Preferir representaciones pequeñas y legibles.
 
 ## Uso de IA
 
-Teaching adopta una postura explícitamente transparente respecto al uso de IA.
+TDidacta Platform adopta una postura explícitamente transparente respecto al uso de IA.
 
 La IA puede participar en:
 
