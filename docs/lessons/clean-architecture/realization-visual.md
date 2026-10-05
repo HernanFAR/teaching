@@ -1,8 +1,8 @@
 # Especificación visual de la realización
 
-Este documento mapea el trabajo editorial a representaciones y componentes Teaching existentes.
+Este documento mapea el trabajo editorial a representaciones y componentes TDidacta Platform existentes.
 
-La realización reutilizará el vocabulario visual existente de Teaching. No introduciremos un componente nuevo por el solo hecho de que esta sea una lección de arquitectura.
+La realización reutilizará el vocabulario visual existente de TDidacta Platform. No introduciremos un componente nuevo por el solo hecho de que esta sea una lección de arquitectura.
 
 La pregunta de diseño es:
 
