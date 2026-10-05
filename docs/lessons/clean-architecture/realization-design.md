@@ -10,7 +10,7 @@ La realización está dividida por responsabilidad para evitar que selección de
 2. [Evolución causal](realization-evolution.md) — estado, presión, cambio mínimo y contrafactual de cada etapa.
 3. [Realización técnica mínima](realization-technical.md) — lenguaje, mecanismos concretos, exclusiones y reproducibilidad.
 4. [Diseño editorial](realization-editorial.md) — argumentos mayores, uso del código, ritmo y jerarquía pública.
-5. [Especificación visual](realization-visual.md) — representaciones, componentes Teaching y bocetos que pueden aportar evidencia.
+5. [Especificación visual](realization-visual.md) — representaciones, componentes TDidacta Platform y bocetos que pueden aportar evidencia.
 6. [Evidencia de implementación](realization-implementation.md) — estados ejecutables, validaciones y revisiones provocadas por el código.
 7. [Exploraciones soportadas](realization-explorations.md) — modos disponibles, material requerido y composición del texto preparado para un LLM.
 
