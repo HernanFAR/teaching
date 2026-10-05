@@ -201,8 +201,20 @@
     return wrapper;
   };
 
-  const rowIsComplete = (row) =>
-    [...row.querySelectorAll("[required]")].every((field) => field.value.trim() !== "");
+  const syncEvidenceRequirement = (row) => {
+    const judgment = row.querySelector('[data-field="judgment"]')?.value ?? "";
+    const evidence = row.querySelector('[data-field="evidence"]');
+    if (!evidence) return;
+
+    const required = judgment !== "N/A";
+    evidence.required = required;
+    evidence.closest(".pir-eval-field")?.classList.toggle("is-optional", !required);
+  };
+
+  const rowIsComplete = (row) => {
+    syncEvidenceRequirement(row);
+    return [...row.querySelectorAll("[required]")].every((field) => field.value.trim() !== "");
+  };
 
   const formIsComplete = (form) => {
     const rows = [...form.querySelectorAll("[data-judgment]")];
@@ -225,7 +237,7 @@
     const properties = rows.map((row) => [
       `Propiedad: ${row.property}`,
       `Juicio: ${row.judgment}`,
-      `Evidencia: "${row.evidence}"`,
+      ...(row.evidence ? [`Evidencia: "${row.evidence}"`] : []),
       `Fundamento: ${row.rationale}`,
       `Confianza: ${row.confidence}`
     ].join("\n")).join("\n\n");
@@ -247,6 +259,7 @@
   };
 
   const updateForm = (form) => {
+    form.querySelectorAll("[data-judgment]").forEach(syncEvidenceRequirement);
     const evalId = form.dataset.evalForm;
     const complete = formIsComplete(form);
     const next = form.querySelector("[data-next-eval]");
