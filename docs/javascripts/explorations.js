@@ -311,12 +311,18 @@
     const complete = formIsComplete(form);
     const next = form.querySelector("[data-next-eval]");
     const status = form.querySelector("[data-eval-status]");
+    const legend = form.querySelector("[data-eval-legend]");
 
     if (next) next.disabled = !complete;
     if (status) {
       status.textContent = complete
         ? "Muestra completa. Puedes continuar o revisar tus respuestas."
         : "Completa todos los campos obligatorios para continuar.";
+    }
+    if (legend) {
+      legend.textContent = complete
+        ? `Respuesta de ${evalId}, lista para continuar`
+        : `Respuesta de ${evalId}, completa para continuar`;
     }
 
     const previous = state.get(evalId);
