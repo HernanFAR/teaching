@@ -1750,3 +1750,57 @@
     gap: 0.75rem;
   }
 }
+
+
+/* Reusable copyable response templates */
+
+.teaching-copy-template {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 1.4rem 0;
+  padding: 1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.teaching-copy-template__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.teaching-copy-template__body strong,
+.teaching-copy-template__body span {
+  display: block;
+}
+
+.teaching-copy-template__body span {
+  margin-top: 0.3rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.teaching-copy-template__button {
+  flex: 0 0 auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+.teaching-copy-template__status {
+  flex-basis: 100%;
+  min-height: 1.2rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 45rem) {
+  .teaching-copy-template {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .teaching-copy-template__button {
+    width: 100%;
+  }
+}
