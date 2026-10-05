@@ -1962,3 +1962,41 @@
     padding-right: 0.8rem;
   }
 }
+
+
+/* Contract-family tabs */
+
+.pir-contract-family__title {
+  margin-bottom: 0.9rem;
+}
+
+.pir-contract-family__title strong {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.pir-contract-criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.pir-contract-criteria-grid > .teaching-item {
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+}
+
+/* Markdown inside tabbed content can emit empty paragraph nodes.
+   They should never participate in the criteria grid. */
+.pir-contract-criteria-grid > p:empty {
+  display: none;
+}
+
+@media screen and (max-width: 59.9844em) {
+  .pir-contract-criteria-grid {
+    grid-template-columns: 1fr;
+  }
+}
