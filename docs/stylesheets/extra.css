@@ -2615,3 +2615,28 @@
     width: 100%;
   }
 }
+
+
+/* Group each evaluated property inside the response form */
+
+.pir-eval-wizard__panel .pir-eval-form__judgments {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-judgment {
+  padding: 0.75rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+  background: color-mix(
+    in srgb,
+    var(--md-default-fg-color) 2.5%,
+    transparent
+  );
+}
+
+.pir-eval-wizard__panel .pir-eval-judgment + .pir-eval-judgment {
+  margin-top: 0;
+  padding-top: 0.75rem;
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+}
