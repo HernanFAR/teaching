@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Use these rules after a pedagogical source is sufficiently defined and before implementing or publishing a concrete Teaching entry.
+Use these rules after a pedagogical source is sufficiently defined and before implementing or publishing a concrete TDidacta Platform entry.
 
 Keep three responsibilities distinct:
 
@@ -26,7 +26,7 @@ A working page can still be a poor realization. A compelling mockup can still be
 
 ## Pipeline position
 
-Treat the default Teaching pipeline as:
+Treat the default TDidacta Platform pipeline as:
 
 ```text
 request
@@ -66,7 +66,7 @@ A useful decomposition is:
 - causal evolution — realization-specific states, pressures, minimum changes, and counterfactuals;
 - technical realization — language, runtime, mechanisms, exclusions, and reproducibility;
 - editorial design — argument hierarchy, code strategy, content forms, and public navigation;
-- visual specification — representation choices, Teaching components, responsive behavior, and exploratory mockups;
+- visual specification — representation choices, TDidacta Platform components, responsive behavior, and exploratory mockups;
 - implementation evidence — executable states or other materialized evidence, validation results, observed tensions, and revisions caused by implementation.
 
 Do not create all of these files automatically for every lesson. Split only when the distinction improves ownership, reviewability, or continuity.
@@ -320,7 +320,7 @@ If a visual does not answer a useful question, prefer simpler text.
 
 ### 10. Component choice
 
-Before implementing visual structure, read `components.md` and reuse the shared Teaching vocabulary.
+Before implementing visual structure, read `components.md` and reuse the shared TDidacta Platform vocabulary.
 
 Prefer an existing semantic or native site component when it expresses the intended meaning honestly.
 
