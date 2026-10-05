@@ -102,27 +102,31 @@ Años de experiencia relevante:
 Educación, formación o experiencia docente relevante:
 
 Experiencia con arquitectura de software:
-- ninguna
-- básica
-- intermedia
-- avanzada
+
+- [ ] ninguna
+- [ ] básica
+- [ ] intermedia
+- [ ] avanzada
 
 Experiencia con diseño instruccional / pedagogía / evaluación:
-- ninguna
-- básica
-- intermedia
-- avanzada
+
+- [ ] ninguna
+- [ ] básica
+- [ ] intermedia
+- [ ] avanzada
 
 Familiaridad previa con Clean Architecture:
-- ninguna
-- básica
-- intermedia
-- avanzada
+
+- [ ] ninguna
+- [ ] básica
+- [ ] intermedia
+- [ ] avanzada
 
 Familiaridad previa con Teaching / PIR / este estudio:
-- ninguna
-- limitada
-- sustancial
+
+- [ ] ninguna
+- [ ] limitada
+- [ ] sustancial
 
 ## Condiciones de evaluación
 
@@ -131,12 +135,14 @@ Fecha:
 Tiempo aproximado dedicado:
 
 ¿Conversaste alguna muestra con otra persona antes del envío?
-- sí
-- no
+
+- [ ] sí
+- [ ] no
 
 ¿Usaste un asistente de IA durante la evaluación?
-- sí
-- no
+
+- [ ] sí
+- [ ] no
 
 Si respondiste que sí, describe cómo:
 
