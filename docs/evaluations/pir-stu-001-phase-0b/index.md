@@ -248,7 +248,7 @@ No prescribe un formato de fuente, no evalúa la calidad general de enseñanza n
 
 La lección preserva estos invariantes centrales:
 
-<div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
+<div class="pir-contract-criteria-grid" markdown>
 
 <div class="teaching-item teaching-item--criterion">
 <span class="teaching-item__marker">1</span>
@@ -349,9 +349,13 @@ En exploraciones interactivas, una ejecución puede contener múltiples rondas. 
 
 No se requiere un puntaje global.
 
-=== "RTE — Enrutamiento"
+=== "RTE"
 
     <section class="pir-contract-family pir-contract-family--tab" markdown>
+
+    <div class="pir-contract-family__title">
+    <strong>RTE — Enrutamiento</strong>
+    </div>
 
     <div class="teaching-card">
     <span class="teaching-eyebrow">Qué protege esta familia</span>
@@ -359,7 +363,7 @@ No se requiere un puntaje global.
     <span>El enrutamiento se evalúa por la necesidad concreta del estudiante; su selección y la conformidad de la realización son juicios separados.</span>
     </div>
 
-    <div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
+    <div class="pir-contract-criteria-grid" markdown>
 
     <div class="teaching-item teaching-item--criterion">
     <span class="teaching-item__marker">1</span>
@@ -391,9 +395,13 @@ No se requiere un puntaje global.
 
     </section>
 
-=== "CAU — Presión causal y cambio mínimo"
+=== "CAU"
 
     <section class="pir-contract-family pir-contract-family--tab" markdown>
+
+    <div class="pir-contract-family__title">
+    <strong>CAU — Presión causal y cambio mínimo</strong>
+    </div>
 
     <div class="teaching-card">
     <span class="teaching-eyebrow">Qué protege esta familia</span>
@@ -401,7 +409,7 @@ No se requiere un puntaje global.
     <span>Una separación debe ganarse por la evidencia presente y responder con el cambio mínimo que esa presión justifica.</span>
     </div>
 
-    <div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
+    <div class="pir-contract-criteria-grid" markdown>
 
     <div class="teaching-item teaching-item--criterion">
     <span class="teaching-item__marker">1</span>
@@ -431,9 +439,13 @@ No se requiere un puntaje global.
 
     </section>
 
-=== "STP — Detención y ausencia de cambio"
+=== "STP"
 
     <section class="pir-contract-family pir-contract-family--tab" markdown>
+
+    <div class="pir-contract-family__title">
+    <strong>STP — Detención y ausencia de cambio</strong>
+    </div>
 
     <div class="teaching-card">
     <span class="teaching-eyebrow">Qué protege esta familia</span>
@@ -441,7 +453,7 @@ No se requiere un puntaje global.
     <span>La trayectoria no necesita avanzar hacia una forma final cuando la presión termina o la solución actual todavía la absorbe.</span>
     </div>
 
-    <div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
+    <div class="pir-contract-criteria-grid" markdown>
 
     <div class="teaching-item teaching-item--criterion">
     <span class="teaching-item__marker">1</span>
@@ -465,9 +477,13 @@ No se requiere un puntaje global.
 
     </section>
 
-=== "UNC — Incertidumbre y evidencia"
+=== "UNC"
 
     <section class="pir-contract-family pir-contract-family--tab" markdown>
+
+    <div class="pir-contract-family__title">
+    <strong>UNC — Incertidumbre y evidencia</strong>
+    </div>
 
     <div class="teaching-card">
     <span class="teaching-eyebrow">Qué protege esta familia</span>
@@ -475,7 +491,7 @@ No se requiere un puntaje global.
     <span>La incertidumbre material debe preservarse hasta que exista evidencia suficiente para sostener una decisión.</span>
     </div>
 
-    <div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
+    <div class="pir-contract-criteria-grid" markdown>
 
     <div class="teaching-item teaching-item--criterion">
     <span class="teaching-item__marker">1</span>
@@ -493,9 +509,13 @@ No se requiere un puntaje global.
 
     </section>
 
-=== "SCP — Alcance"
+=== "SCP"
 
     <section class="pir-contract-family pir-contract-family--tab" markdown>
+
+    <div class="pir-contract-family__title">
+    <strong>SCP — Alcance</strong>
+    </div>
 
     <div class="teaching-card">
     <span class="teaching-eyebrow">Qué protege esta familia</span>
@@ -503,7 +523,7 @@ No se requiere un puntaje global.
     <span>Profundizar fuera del alcance original puede ser válido, pero el cruce debe ser explícito y no reescribir retroactivamente la lección.</span>
     </div>
 
-    <div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
+    <div class="pir-contract-criteria-grid" markdown>
 
     <div class="teaching-item teaching-item--criterion">
     <span class="teaching-item__marker">1</span>
@@ -521,9 +541,13 @@ No se requiere un puntaje global.
 
     </section>
 
-=== "VAR — Variación permitida"
+=== "VAR"
 
     <section class="pir-contract-family pir-contract-family--tab" markdown>
+
+    <div class="pir-contract-family__title">
+    <strong>VAR — Variación permitida</strong>
+    </div>
 
     <div class="teaching-card">
     <span class="teaching-eyebrow">Qué protege esta familia</span>
@@ -531,7 +555,7 @@ No se requiere un puntaje global.
     <span>Una alternativa puede ser conforme si responde a la presión y conserva las obligaciones, aunque su estructura concreta sea distinta.</span>
     </div>
 
-    <div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
+    <div class="pir-contract-criteria-grid" markdown>
 
     <div class="teaching-item teaching-item--criterion">
     <span class="teaching-item__marker">1</span>
@@ -555,9 +579,13 @@ No se requiere un puntaje global.
 
     </section>
 
-=== "TST — Ponme a prueba"
+=== "TST"
 
     <section class="pir-contract-family pir-contract-family--tab" markdown>
+
+    <div class="pir-contract-family__title">
+    <strong>TST — Ponme a prueba</strong>
+    </div>
 
     <div class="teaching-card">
     <span class="teaching-eyebrow">Qué protege esta familia</span>
@@ -565,7 +593,7 @@ No se requiere un puntaje global.
     <span>La prueba debe avanzar por presiones progresivas, evaluar críticamente las decisiones y reparar el escenario cuando sea necesario.</span>
     </div>
 
-    <div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
+    <div class="pir-contract-criteria-grid" markdown>
 
     <div class="teaching-item teaching-item--criterion">
     <span class="teaching-item__marker">1</span>
@@ -619,9 +647,13 @@ No se requiere un puntaje global.
 
     </section>
 
-=== "POL — Política y mecanismo"
+=== "POL"
 
     <section class="pir-contract-family pir-contract-family--tab" markdown>
+
+    <div class="pir-contract-family__title">
+    <strong>POL — Política y mecanismo</strong>
+    </div>
 
     <div class="teaching-card">
     <span class="teaching-eyebrow">Qué protege esta familia</span>
@@ -629,7 +661,7 @@ No se requiere un puntaje global.
     <span>La separación debe responder a interferencia real entre política y mecanismo, sin forzar desde temprano cómo se realizará el mecanismo futuro.</span>
     </div>
 
-    <div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
+    <div class="pir-contract-criteria-grid" markdown>
 
     <div class="teaching-item teaching-item--criterion">
     <span class="teaching-item__marker">1</span>
