@@ -922,12 +922,12 @@ Sí, tiene mucho sentido. Como los descuentos cambian seguido, lo mejor es hacer
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -946,7 +946,7 @@ Sí, tiene mucho sentido. Como los descuentos cambian seguido, lo mejor es hacer
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -1020,12 +1020,12 @@ Una respuesta posible es Transactional Outbox: persistir la orden y la intenció
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -1044,7 +1044,7 @@ Una respuesta posible es Transactional Outbox: persistir la orden y la intenció
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -1116,12 +1116,12 @@ Este es el punto donde conviene extraer un caso de uso compartido, dejando HTTP 
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -1140,7 +1140,7 @@ Este es el punto donde conviene extraer un caso de uso compartido, dejando HTTP 
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -1208,12 +1208,12 @@ La solución actual sigue siendo defendible. PostgreSQL existe, pero hoy no est�
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -1232,7 +1232,7 @@ La solución actual sigue siendo defendible. PostgreSQL existe, pero hoy no est�
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -1300,12 +1300,12 @@ Dado que el segundo sistema también crea solicitudes, modelaría desde ahora la
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -1324,7 +1324,7 @@ Dado que el segundo sistema también crea solicitudes, modelaría desde ahora la
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -1392,12 +1392,12 @@ Sí, ahí detectaste un problema real en el escenario que te planteé. Con el es
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -1416,7 +1416,7 @@ Sí, ahí detectaste un problema real en el escenario que te planteé. Con el es
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -1484,12 +1484,12 @@ Una vez separadas las reglas de validación, conviene completar la evolución ar
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -1508,7 +1508,7 @@ Una vez separadas las reglas de validación, conviene completar la evolución ar
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -1576,12 +1576,12 @@ Tu propuesta es defendible, aunque resuelve principalmente la fricción de prueb
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -1600,7 +1600,7 @@ Tu propuesta es defendible, aunque resuelve principalmente la fricción de prueb
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -1668,12 +1668,12 @@ La siguiente evolución de Clean Architecture es introducir Transactional Outbox
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -1692,7 +1692,7 @@ La siguiente evolución de Clean Architecture es introducir Transactional Outbox
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -1760,12 +1760,12 @@ Extraer calcularTotal(...) está bien justificado porque la política de cálcul
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -1784,7 +1784,7 @@ Extraer calcularTotal(...) está bien justificado porque la política de cálcul
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -1852,12 +1852,12 @@ Aunque el sistema todavía es pequeño y no presenta dificultades observables, e
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -1876,7 +1876,7 @@ Aunque el sistema todavía es pequeño y no presenta dificultades observables, e
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -1946,12 +1946,12 @@ Ahora aparece una integración con un marketplace. Envía órdenes en otro forma
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -1970,7 +1970,7 @@ Ahora aparece una integración con un marketplace. Envía órdenes en otro forma
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -2038,12 +2038,12 @@ Mejorar la infraestructura de pruebas no es la respuesta arquitectónica correct
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -2062,7 +2062,7 @@ Mejorar la infraestructura de pruebas no es la respuesta arquitectónica correct
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -2130,12 +2130,12 @@ Hasta aquí el caso sostiene honestamente la separación de las reglas de valida
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -2154,7 +2154,7 @@ Hasta aquí el caso sostiene honestamente la separación de las reglas de valida
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -2222,12 +2222,12 @@ Entiendo la observación, pero podemos asumir que una orden puede contener vario
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -2246,7 +2246,7 @@ Entiendo la observación, pero podemos asumir que una orden puede contener vario
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
@@ -2314,12 +2314,12 @@ Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo 
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
       </div>
 
       <div class="pir-eval-field pir-eval-field--wide">
         <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <div class="pir-eval-field">
@@ -2338,7 +2338,7 @@ Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo 
 
   <div class="pir-eval-field pir-eval-field--wide">
     <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
-    <textarea data-overall-note rows="3" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+    <textarea data-overall-note rows="2" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
   </div>
 
   <div class="pir-eval-form__status" data-eval-status aria-live="polite">
