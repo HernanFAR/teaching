@@ -873,7 +873,7 @@ Completa las muestras en orden. Puedes volver a una muestra ya completada; si mo
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-001
+<span class="teaching-eyebrow pir-eval-label">EVAL-001</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -965,7 +965,7 @@ Sí, tiene mucho sentido. Como los descuentos cambian seguido, lo mejor es hacer
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-002
+<span class="teaching-eyebrow pir-eval-label">EVAL-002</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -1063,7 +1063,7 @@ Una respuesta posible es Transactional Outbox: persistir la orden y la intenció
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-003
+<span class="teaching-eyebrow pir-eval-label">EVAL-003</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -1159,7 +1159,7 @@ Este es el punto donde conviene extraer un caso de uso compartido, dejando HTTP 
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-004
+<span class="teaching-eyebrow pir-eval-label">EVAL-004</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -1251,7 +1251,7 @@ La solución actual sigue siendo defendible. PostgreSQL existe, pero hoy no est�
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-005
+<span class="teaching-eyebrow pir-eval-label">EVAL-005</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -1343,7 +1343,7 @@ Dado que el segundo sistema también crea solicitudes, modelaría desde ahora la
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-006
+<span class="teaching-eyebrow pir-eval-label">EVAL-006</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -1435,7 +1435,7 @@ Sí, ahí detectaste un problema real en el escenario que te planteé. Con el es
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-007
+<span class="teaching-eyebrow pir-eval-label">EVAL-007</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -1527,7 +1527,7 @@ Una vez separadas las reglas de validación, conviene completar la evolución ar
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-008
+<span class="teaching-eyebrow pir-eval-label">EVAL-008</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -1619,7 +1619,7 @@ Tu propuesta es defendible, aunque resuelve principalmente la fricción de prueb
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-009
+<span class="teaching-eyebrow pir-eval-label">EVAL-009</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -1711,7 +1711,7 @@ La siguiente evolución de Clean Architecture es introducir Transactional Outbox
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-010
+<span class="teaching-eyebrow pir-eval-label">EVAL-010</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -1803,7 +1803,7 @@ Extraer calcularTotal(...) está bien justificado porque la política de cálcul
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-011
+<span class="teaching-eyebrow pir-eval-label">EVAL-011</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -1895,7 +1895,7 @@ Aunque el sistema todavía es pequeño y no presenta dificultades observables, e
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-012
+<span class="teaching-eyebrow pir-eval-label">EVAL-012</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -1989,7 +1989,7 @@ Ahora aparece una integración con un marketplace. Envía órdenes en otro forma
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-013
+<span class="teaching-eyebrow pir-eval-label">EVAL-013</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -2081,7 +2081,7 @@ Mejorar la infraestructura de pruebas no es la respuesta arquitectónica correct
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-014
+<span class="teaching-eyebrow pir-eval-label">EVAL-014</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -2173,7 +2173,7 @@ Hasta aquí el caso sostiene honestamente la separación de las reglas de valida
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-015
+<span class="teaching-eyebrow pir-eval-label">EVAL-015</span>
 
 <div class="pir-sample-context" markdown>
 
@@ -2265,7 +2265,7 @@ Entiendo la observación, pero podemos asumir que una orden puede contener vario
 
 <div class="pir-evaluation-sample" markdown>
 
-#### EVAL-016
+<span class="teaching-eyebrow pir-eval-label">EVAL-016</span>
 
 <div class="pir-sample-context" markdown>
 
