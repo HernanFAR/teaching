@@ -309,7 +309,7 @@ Esto evita que la arquitectura final se presente retrospectivamente como inevita
 
 ## Exploraciones soportadas
 
-Esta fuente contiene suficiente semántica para sostener honestamente las cuatro exploraciones iniciales de Teaching:
+Esta fuente contiene suficiente semántica para sostener honestamente las cuatro exploraciones iniciales de TDidacta Platform:
 
 - **Otro caso** — las restricciones del caso conductor permiten validar dominios alternativos sin convertir el caso de órdenes en canónico.
 - **Profundizar** — las tensiones, conceptos introducidos, contrafactuales y límites permiten examinar con más detalle el material y distinguir extensiones del caso de extensiones conceptuales.
