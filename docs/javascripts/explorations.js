@@ -91,3 +91,54 @@
     });
   }
 })();
+
+
+/* Reusable copyable response templates */
+(() => {
+  const roots = document.querySelectorAll("[data-teaching-copy-template]");
+
+  for (const root of roots) {
+    const button = root.querySelector("[data-copy-template-button]");
+    const source = root.querySelector("[data-copy-template-source]");
+    const status = root.querySelector("[data-copy-template-status]");
+
+    button?.addEventListener("click", async () => {
+      const value = source?.value ?? "";
+      if (!value) return;
+
+      const originalLabel = button.textContent;
+
+      const fallbackCopy = () => {
+        const temporary = document.createElement("textarea");
+        temporary.value = value;
+        temporary.setAttribute("readonly", "");
+        temporary.style.position = "fixed";
+        temporary.style.opacity = "0";
+        document.body.appendChild(temporary);
+        temporary.select();
+        const copied = document.execCommand("copy");
+        temporary.remove();
+        return copied;
+      };
+
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(value);
+        } else if (!fallbackCopy()) {
+          throw new Error("clipboard unavailable");
+        }
+
+        button.textContent = "Copiado ✓";
+        button.disabled = true;
+        if (status) status.textContent = "Plantilla copiada. Puedes pegarla donde prefieras para completarla.";
+
+        window.setTimeout(() => {
+          button.textContent = originalLabel;
+          button.disabled = false;
+        }, 1600);
+      } catch {
+        if (status) status.textContent = "No pudimos copiar automáticamente. Intenta nuevamente desde otro navegador.";
+      }
+    });
+  }
+})();
