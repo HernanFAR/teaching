@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Use these rules when creating, deriving, or revising the **pedagogical source** of a Teaching lesson.
+Use these rules when creating, deriving, or revising the **pedagogical source** of a TDidacta Platform lesson.
 
 Once the source is sufficiently defined, hand off presentation decisions to `realization-design.md`.
 
