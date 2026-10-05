@@ -369,9 +369,16 @@
 
   const showPanel = (index) => {
     const currentForm = panels[currentIndex]?.querySelector("[data-eval-form]");
-    if (index !== currentIndex && currentForm && !formIsComplete(currentForm)) {
-      currentForm.querySelector("[data-eval-status]")?.scrollIntoView({ behavior: "smooth", block: "center" });
-      return;
+    const leavingCurrent = index !== currentIndex;
+
+    if (leavingCurrent && currentForm && !formIsComplete(currentForm)) {
+      const dirty = currentForm.dataset.dirty === "true";
+      const movingForward = index > currentIndex;
+
+      if (dirty || movingForward) {
+        currentForm.querySelector("[data-eval-status]")?.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
     }
 
     currentIndex = index;
@@ -399,21 +406,32 @@
     const form = panel.querySelector("[data-eval-form]");
     if (!form) return;
 
-    form.addEventListener("input", () => updateForm(form));
-    form.addEventListener("change", () => updateForm(form));
+    form.dataset.dirty = "false";
+
+    form.addEventListener("input", () => {
+      form.dataset.dirty = "true";
+      updateForm(form);
+    });
+
+    form.addEventListener("change", () => {
+      form.dataset.dirty = "true";
+      updateForm(form);
+    });
 
     form.querySelector("[data-add-judgment]")?.addEventListener("click", () => {
       const list = form.querySelector("[data-judgments]");
       list?.appendChild(judgmentTemplate());
+      form.dataset.dirty = "true";
       updateRemoveButtons(form);
       updateForm(form);
-      list?.lastElementChild?.querySelector("input")?.focus();
+      list?.lastElementChild?.querySelector("select, input")?.focus();
     });
 
     form.addEventListener("click", (event) => {
       const remove = event.target.closest("[data-remove-judgment]");
       if (!remove) return;
       remove.closest("[data-judgment]")?.remove();
+      form.dataset.dirty = "true";
       updateRemoveButtons(form);
       updateForm(form);
     });
