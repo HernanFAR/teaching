@@ -155,7 +155,7 @@ Cualquier otra condición que pueda haber afectado la evaluación:
 
 **PIR-STU-001 — Contrato de conformidad de Clean Architecture v1**
 
-##### Vista del evaluador
+#### Vista del evaluador
 
 Esta vista para evaluadores preserva las propiedades de conformidad congeladas de v1 y sus definiciones, mientras omite material de construcción del benchmark, identidades de controles positivos, familias de mutantes, expectativas ocultas, el procedimiento interno de calibración y la procedencia de ejecución.
 
