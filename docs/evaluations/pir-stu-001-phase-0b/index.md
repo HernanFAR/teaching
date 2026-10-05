@@ -723,34 +723,12 @@ Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo 
 
 # 4. Formulario de evaluación
 
-# PIR-STU-001 — Formulario de evaluación v1
-
-ID del evaluador:
-Tipo de evaluador: humano
-Fecha:
-Versión del contrato: v1
-Versión del conjunto ciego: v1
-
-## Muestra
-
-ID de muestra: EVAL-___
-
-### Juicios
-
-| Propiedad | Juicio | Evidencia | Fundamento | Confianza |
-| --- | --- | --- | --- | --- |
-|  | PASS / VIOLATION / AMBIGUOUS / N/A |  |  | alta / media / baja |
-
-Agrega filas según sea necesario.
-
-### Nota general
-
-Opcional:
+Cuando termines de revisar una muestra, copia esta plantilla y complétala con los juicios que correspondan. Puedes repetir el bloque de propiedad tantas veces como sea necesario.
 
 <div class="teaching-copy-template" data-teaching-copy-template>
   <div class="teaching-copy-template__body">
-    <strong>Plantilla de respuesta por muestra</strong>
-    <span>Cópiala y repite el bloque de propiedad tantas veces como sea necesario.</span>
+    <strong>Formulario de evaluación</strong>
+    <span>Copia la plantilla para registrar tus juicios por muestra.</span>
   </div>
   <button type="button" class="md-button md-button--primary teaching-copy-template__button" data-copy-template-button>Copiar plantilla</button>
   <textarea hidden data-copy-template-source>ID del evaluador:
