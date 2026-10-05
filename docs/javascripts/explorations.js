@@ -158,6 +158,11 @@
   const outputStatus = output?.querySelector("[data-output-status]");
   const copyOutput = output?.querySelector("[data-copy-eval-output]");
   const state = new Map();
+  const itemLabel = wizard.dataset.itemLabel || "Muestra";
+  const itemLabelPlural = wizard.dataset.itemLabelPlural || "muestras";
+  const completedWord = wizard.dataset.completedWord || "completadas";
+  const confidenceRequired = wizard.dataset.confidenceRequired !== "false";
+  const evidenceRequiredForNa = wizard.dataset.evidenceRequiredForNa === "true";
   let currentIndex = 0;
 
   const judgmentTemplate = () => {
@@ -227,8 +232,8 @@
         </select>
       </div>
       <div class="pir-eval-field">
-        <label>Confianza <span aria-hidden="true">*</span></label>
-        <select data-field="confidence" required>
+        <label>Confianza ${confidenceRequired ? '<span aria-hidden="true">*</span>' : '<span class="pir-eval-field__optional">opcional</span>'}</label>
+        <select data-field="confidence" ${confidenceRequired ? "required" : ""}>
           <option value="">Selecciona…</option>
           <option>alta</option>
           <option>media</option>
@@ -253,7 +258,7 @@
     const evidence = row.querySelector('[data-field="evidence"]');
     if (!evidence) return;
 
-    const required = judgment !== "N/A";
+    const required = evidenceRequiredForNa || judgment !== "N/A";
     evidence.required = required;
     evidence.closest(".pir-eval-field")?.classList.toggle("is-optional", !required);
   };
@@ -286,11 +291,11 @@
       `Juicio: ${row.judgment}`,
       ...(row.evidence ? [`Evidencia: "${row.evidence}"`] : []),
       `Fundamento: ${row.rationale}`,
-      `Confianza: ${row.confidence}`
+      ...(row.confidence ? [`Confianza: ${row.confidence}`] : [])
     ].join("\n")).join("\n\n");
 
     return [
-      `Muestra: ${evalId}`,
+      `${itemLabel}: ${evalId}`,
       "",
       properties,
       ...(note ? ["", "Nota general:", note] : [])
@@ -316,7 +321,7 @@
     if (next) next.disabled = !complete;
     if (status) {
       status.textContent = complete
-        ? "Muestra completa. Puedes continuar o revisar tus respuestas."
+        ? `${itemLabel} completo. Puedes continuar o revisar tus respuestas.`
         : "Completa todos los campos obligatorios para continuar.";
     }
     if (legend) {
@@ -338,7 +343,7 @@
   const updateProgress = () => {
     const completed = state.size;
     const total = panels.length;
-    if (progressLabel) progressLabel.textContent = `${completed} de ${total} completadas`;
+    if (progressLabel) progressLabel.textContent = `${completed} de ${total} ${completedWord}`;
     if (progressBar) progressBar.style.width = `${(completed / total) * 100}%`;
 
     tabs.forEach((tab, index) => {
@@ -362,8 +367,8 @@
     }
     if (outputStatus) {
       outputStatus.textContent = allComplete
-        ? "Las 16 muestras están completas. La respuesta está lista para copiar."
-        : `Completa las 16 muestras para generar la respuesta final (${completed}/${total}).`;
+        ? `Los ${total} ${itemLabelPlural} están completos. La respuesta está lista para copiar.`
+        : `Completa los ${total} ${itemLabelPlural} para generar la respuesta final (${completed}/${total}).`;
     }
   };
 
