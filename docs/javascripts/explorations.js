@@ -226,14 +226,6 @@
           <option>N/A</option>
         </select>
       </div>
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
-      </div>
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -242,6 +234,14 @@
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment>Quitar propiedad</button>
     `;
