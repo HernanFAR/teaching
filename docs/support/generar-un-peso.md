@@ -1,12 +1,12 @@
 # 🪙 Generar un peso
 
-Esta es la forma de apoyar Teaching **sin poner dinero de tu bolsillo**.
+Esta es la forma de apoyar TDidacta Platform **sin poner dinero de tu bolsillo**.
 
 La idea no es insertar banners en las lecciones ni perseguirte con publicidad. Esta página existe precisamente para lo contrario:
 
 > **el patrocinio solo aparece cuando tú decides venir a verlo.**
 
-No desbloquea contenido, no entrega puntos y no mejora tu cuenta. Tu experiencia en Teaching es exactamente la misma aunque nunca abras esta página.
+No desbloquea contenido, no entrega puntos y no mejora tu cuenta. Tu experiencia en TDidacta Platform es exactamente la misma aunque nunca abras esta página.
 
 ---
 
@@ -62,7 +62,7 @@ Si una plataforma publicitaria exige romper estas propiedades, preferimos no usa
 
 **Generar un peso** también es una superficie de patrocinio directo.
 
-No vendemos acceso a nuestros lectores ni permitimos comprar una opinión de Teaching. Vendemos algo mucho más pequeño y explícito:
+No vendemos acceso a nuestros lectores ni permitimos comprar una opinión de TDidacta Platform. Vendemos algo mucho más pequeño y explícito:
 
 > **presencia durante un período acordado en la página que una persona abre voluntariamente para apoyar el proyecto.**
 
@@ -86,11 +86,11 @@ Pagar por esta superficie **no compra influencia editorial**.
 
 Un patrocinador no obtiene:
 
-- control sobre las lecciones, guías o conclusiones de Teaching;
+- control sobre las lecciones, guías o conclusiones de TDidacta Platform;
 - recomendaciones editoriales;
 - reseñas favorables;
 - acceso privilegiado al contenido;
-- datos personales de quienes visitan Teaching;
+- datos personales de quienes visitan TDidacta Platform;
 - capacidad para modificar nuestra metodología o principios;
 - garantía de una cantidad mínima de clics, impresiones o conversiones.
 
@@ -98,7 +98,7 @@ Si algún acuerdo futuro incluye métricas, se presentarán como observaciones d
 
 ## Qué podemos rechazar
 
-Teaching puede rechazar o retirar un patrocinio si el mensaje:
+TDidacta Platform puede rechazar o retirar un patrocinio si el mensaje:
 
 - es engañoso;
 - intenta hacerse pasar por contenido editorial;
@@ -112,13 +112,13 @@ Aceptar dinero no nos obliga a publicar cualquier cosa.
 
 Todavía **no fijamos una tarifa pública**.
 
-Teaching es demasiado joven como para inventar un CPM o un precio basado en una audiencia que todavía estamos descubriendo. Los primeros patrocinios pueden acordarse directamente considerando el período, el mensaje y el estado real del proyecto.
+TDidacta Platform es demasiado joven como para inventar un CPM o un precio basado en una audiencia que todavía estamos descubriendo. Los primeros patrocinios pueden acordarse directamente considerando el período, el mensaje y el estado real del proyecto.
 
 Si la superficie madura y aparecen suficientes datos, podremos publicar precios simples y estables.
 
 ## ¿Quieres patrocinar Generar un peso?
 
-Puedes [abrir un issue en el repositorio de Teaching](https://github.com/HernanFAR/teaching/issues/new) con el título:
+Puedes [abrir un issue en el repositorio de TDidacta Platform](https://github.com/HernanFAR/teaching/issues/new) con el título:
 
 `Patrocinio: Generar un peso`
 
