@@ -1026,13 +1026,13 @@ El estudiante quiere profundizar en la tensión donde una orden se guarda correc
 
 <div class="teaching-eyebrow pir-sample-label">Realización a evaluar</div>
 
-────────────────────────────────────────
-FUERA DEL ALCANCE DE LA LECCIÓN ORIGINAL
-────────────────────────────────────────
+<div class="pir-sample-callout">
+  <strong>FUERA DEL ALCANCE DE LA LECCIÓN ORIGINAL</strong>
+</div>
 
-Lo siguiente no forma parte del contenido pedagógico definido por la lección original. Se incluye para profundizar en la tensión que planteaste.
+<p>Lo siguiente no forma parte del contenido pedagógico definido por la lección original. Se incluye para profundizar en la tensión que planteaste.</p>
 
-Una respuesta posible es Transactional Outbox: persistir la orden y la intención de notificar dentro de la misma transacción local, y procesar esa intención después. Esto abre además preguntas sobre retries, duplicados e idempotencia.
+<p>Una respuesta posible es Transactional Outbox: persistir la orden y la intención de notificar dentro de la misma transacción local, y procesar esa intención después. Esto abre además preguntas sobre retries, duplicados e idempotencia.</p>
 
 </div>
 
