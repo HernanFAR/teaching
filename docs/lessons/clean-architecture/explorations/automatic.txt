@@ -1,4 +1,4 @@
-Estás realizando una exploración soportada por Teaching sobre la lección "Cómo se llega a Clean Architecture".
+Estás realizando una exploración soportada por TDidacta Platform sobre la lección "Cómo se llega a Clean Architecture".
 
 La lección no enseña Clean Architecture como una estructura de carpetas ni como una colección obligatoria de capas. Su pregunta guía es:
 
@@ -18,7 +18,7 @@ Invariantes importantes:
 
 La realización publicada usa "crear una orden" como caso conductor y recorrió: solución directa → regla con identidad → segundo mecanismo de entrada → capacidad de persistencia → segunda capacidad externa → Domain/Application → Composition → síntesis como Clean Architecture.
 
-Teaching soporta cuatro tipos de exploración para esta lección:
+TDidacta Platform soporta cuatro tipos de exploración para esta lección:
 
 1. **Otro caso**
    Re-realiza las presiones esenciales en otro dominio. No debe copiar superficialmente la arquitectura final ni fabricar presiones ausentes.
@@ -51,16 +51,16 @@ Al comenzar tu respuesta:
 
 No inventes un quinto tipo de exploración. Si la necesidad mezcla varios objetivos, elige el dominante y conserva los demás como restricciones secundarias.
 
-## Material fuente de Teaching
+## Material fuente de TDidacta Platform
 
-Si tienes acceso a GitHub, consulta la carpeta completa de esta lección antes de reconstruir por tu cuenta aquello que Teaching ya dejó explícito:
+Si tienes acceso a GitHub, consulta la carpeta completa de esta lección antes de reconstruir por tu cuenta aquello que TDidacta Platform ya dejó explícito:
 
 https://github.com/HernanFAR/teaching/tree/main/docs/lessons/clean-architecture
 
 Allí encontrarás la fuente pedagógica, el diseño de realización, el caso conductor, la evolución causal, la realización técnica, la evidencia de implementación y la publicación canónica.
 
 Cuando estas referencias sean accesibles:
-- considera los artefactos de Teaching como la fuente primaria para reconstruir qué pertenece a la lección;
+- considera los artefactos de TDidacta Platform como la fuente primaria para reconstruir qué pertenece a la lección;
 - usa este texto como orientación operativa para realizar la exploración, no como reemplazo ni reinterpretación autoritativa de esos artefactos;
 - usa los artefactos como fuente de contexto y procedencia;
 - si encuentras una diferencia material entre este texto y los artefactos, no la armonices por suposición: señálala explícitamente.
@@ -68,7 +68,7 @@ Cuando estas referencias sean accesibles:
 Si no puedes acceder a la carpeta o a alguno de sus archivos:
 - trabaja únicamente con el contexto incluido en este texto y con la necesidad concreta del estudiante;
 - no finjas haber consultado material al que no tuviste acceso;
-- no atribuyas a Teaching una afirmación específica que no puedas sostener con el material disponible.
+- no atribuyas a TDidacta Platform una afirmación específica que no puedas sostener con el material disponible.
 
 Las referencias complementan esta exploración; no sustituyen la necesidad concreta del estudiante ni amplían por sí solas el alcance pedagógico de la lección.
 
