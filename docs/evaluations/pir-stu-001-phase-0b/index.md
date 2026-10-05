@@ -19,497 +19,497 @@ Esta página contiene el paquete completo para realizar la evaluación humana de
 
 ---
 
-# PIR-STU-001 — Human evaluator standalone package v1
+# PIR-STU-001 — Paquete autocontenido para evaluación humana v1
 
-This file is evaluator-facing and self-contained.
+Este archivo está dirigido a evaluadores y es autocontenido.
 
-It intentionally excludes answer keys, pair identities, mutant construction notes, hidden mappings, and prior evaluator results.
+Excluye deliberadamente claves de respuesta, identidades de pares, notas de construcción de mutantes, mapeos ocultos y resultados de evaluadores anteriores.
 
-Please complete the evaluation independently.
+Por favor, completa la evaluación de manera independiente.
 
 ---
 
-# 1. Onboarding
+# 1. Introducción
 
-# Human evaluator onboarding v1
+# Introducción para evaluación humana v1
 
-Thank you for helping evaluate a research instrument about AI-generated teaching experiences.
+Gracias por ayudar a evaluar un instrumento de investigación sobre experiencias de enseñanza generadas con IA.
 
-## What you are evaluating
+## Qué estás evaluando
 
-You will read 16 short teaching realizations about software architecture.
+Leerás 16 realizaciones breves de enseñanza sobre arquitectura de software.
 
-The study is not asking:
+El estudio no pregunta:
 
-- whether you personally prefer the proposed architecture;
-- whether the code style is ideal;
-- whether the realization matches a memorized Clean Architecture recipe.
+- si personalmente prefieres la arquitectura propuesta;
+- si el estilo de código es ideal;
+- si la realización coincide con una receta memorizada de Clean Architecture.
 
-Instead, you will receive an explicit conformance contract describing observable pedagogical obligations.
+En cambio, recibirás un contrato explícito de conformidad que describe obligaciones pedagógicas observables.
 
-Your task is to decide whether each realization preserves, violates, leaves ambiguous, or does not exercise those obligations.
+Tu tarea es decidir si cada realización preserva, viola, deja ambiguas o no ejercita esas obligaciones.
 
-## You do not need to infer the hidden purpose of a sample
+## No necesitas inferir el propósito oculto de una muestra
 
-Treat each sample independently.
+Evalúa cada muestra de manera independiente.
 
-There may or may not be relationships between samples. Do not search for them.
+Puede haber o no relaciones entre las muestras. No intentes buscarlas.
 
-Do not try to infer how many samples are "good" or "bad".
+No intentes inferir cuántas muestras son "buenas" o "malas".
 
-## Response categories
+## Categorías de respuesta
 
 Use:
 
-- PASS — the obligation is preserved;
-- VIOLATION — the realization contradicts it;
-- AMBIGUOUS — the available evidence is insufficient to decide;
-- N/A — the property is not meaningfully exercised.
+- PASS — la obligación se preserva;
+- VIOLATION — la realización la contradice;
+- AMBIGUOUS — la evidencia disponible es insuficiente para decidir;
+- N/A — la propiedad no se ejercita de manera significativa.
 
-Every non-N/A judgment should point to the smallest useful evidence fragment.
+Todo juicio distinto de N/A debe señalar el fragmento de evidencia útil más pequeño posible.
 
-## Use of your expertise
+## Uso de tu experiencia
 
-Your professional knowledge can help you understand the scenario, but the contract is the authority for this task.
+Tu conocimiento profesional puede ayudarte a entender el escenario, pero el contrato es la autoridad para esta tarea.
 
-A technically reasonable recommendation can still violate the pedagogical contract.
+Una recomendación técnicamente razonable aun puede violar el contrato pedagógico.
 
-A non-standard architectural decision can still conform.
+Una decisión arquitectónica no estándar aun puede ser conforme.
 
-## Independence
+## Independencia
 
-Please complete the evaluation independently.
+Por favor, completa la evaluación de manera independiente.
 
-Do not compare your judgments with another evaluator until all response sets have been submitted and frozen.
-
-
----
-
-# 2. Evaluator profile
-
-# Evaluator profile form v1
-
-Evaluator ID:
-
-## Background
-
-Current role / professional focus:
-
-Years of relevant experience:
-
-Relevant education, training or teaching experience:
-
-Experience with software architecture:
-- none
-- basic
-- intermediate
-- advanced
-
-Experience with instructional design / pedagogy / assessment:
-- none
-- basic
-- intermediate
-- advanced
-
-Prior familiarity with Clean Architecture:
-- none
-- basic
-- intermediate
-- advanced
-
-Prior familiarity with Teaching / PIR / this study:
-- none
-- limited
-- substantial
-
-## Evaluation conditions
-
-Date:
-
-Approximate time spent:
-
-Did you discuss any sample with another person before submission?
-- yes
-- no
-
-Did you use an AI assistant while evaluating?
-- yes
-- no
-
-If yes, describe how:
-
-Any other condition that may have affected the evaluation:
+No compares tus juicios con los de otro evaluador hasta que todos los conjuntos de respuestas hayan sido enviados y congelados.
 
 
 ---
 
-# 3. Contract, instructions and blind samples
+# 2. Perfil del evaluador
 
-# 2. Conformance contract
+# Formulario de perfil del evaluador v1
 
-# PIR-STU-001 — Clean Architecture conformance contract v1
-## Evaluator view
+ID del evaluador:
 
-This evaluator-facing view preserves the frozen v1 conformance properties and their definitions while omitting benchmark-construction material, positive-control identities, mutant families, hidden expectations, internal calibration procedure and runtime provenance.
+## Antecedentes
 
-It does not change the semantics of the frozen contract.
+Rol actual / enfoque profesional:
 
-## Purpose
+Años de experiencia relevante:
 
-This contract defines observable pedagogical-conformance properties for realizations of the Teaching lesson **Cómo se llega a Clean Architecture**.
+Educación, formación o experiencia docente relevante:
 
-It does not prescribe a source format, evaluate general teaching quality or measure learning outcomes.
+Experiencia con arquitectura de software:
+- ninguna
+- básica
+- intermedia
+- avanzada
 
-Its purpose is to distinguish:
+Experiencia con diseño instruccional / pedagogía / evaluación:
+- ninguna
+- básica
+- intermedia
+- avanzada
 
-- preservation of intent;
-- legitimate variation;
-- omission or violation;
-- premature advancement;
-- invented pressure;
-- undeclared scope crossing.
+Familiaridad previa con Clean Architecture:
+- ninguna
+- básica
+- intermedia
+- avanzada
 
-## Core pedagogical authority
+Familiaridad previa con Teaching / PIR / este estudio:
+- ninguna
+- limitada
+- sustancial
 
-The lesson's guiding question is:
+## Condiciones de evaluación
+
+Fecha:
+
+Tiempo aproximado dedicado:
+
+¿Conversaste alguna muestra con otra persona antes del envío?
+- sí
+- no
+
+¿Usaste un asistente de IA durante la evaluación?
+- sí
+- no
+
+Si respondiste que sí, describe cómo:
+
+Cualquier otra condición que pueda haber afectado la evaluación:
+
+
+---
+
+# 3. Contrato, instrucciones y muestras ciegas
+
+# 2. Contrato de conformidad
+
+# PIR-STU-001 — Contrato de conformidad de Clean Architecture v1
+## Vista del evaluador
+
+Esta vista para evaluadores preserva las propiedades de conformidad congeladas de v1 y sus definiciones, mientras omite material de construcción del benchmark, identidades de controles positivos, familias de mutantes, expectativas ocultas, el procedimiento interno de calibración y la procedencia de ejecución.
+
+No modifica la semántica del contrato congelado.
+
+## Propósito
+
+Este contrato define propiedades observables de conformidad pedagógica para realizaciones de la lección de Teaching **Cómo se llega a Clean Architecture**.
+
+No prescribe un formato de fuente, no evalúa la calidad general de enseñanza ni mide resultados de aprendizaje.
+
+Su propósito es distinguir:
+
+- preservación de la intención;
+- variación legítima;
+- omisión o violación;
+- avance prematuro;
+- presión inventada;
+- cruce de alcance no declarado.
+
+## Autoridad pedagógica central
+
+La pregunta guía de la lección es:
 
 > ¿Qué problema justifica esta separación?
 
-The lesson preserves these core invariants:
+La lección preserva estos invariantes centrales:
 
-- an initial solution can be sufficient and defensible;
-- a separation requires prior observable pressure;
-- change should be proportional to current pressure;
-- formal names appear after the experience that makes them useful;
-- policy and mechanism should remain distinguishable when relevant;
-- stopping before a final architectural form can be correct;
-- resulting architecture should be causally reconstructable;
-- interfaces, layers or DI do not by themselves prove a separation was necessary;
-- concepts culturally associated with Clean Architecture are not automatically obligations of this lesson.
+- una solución inicial puede ser suficiente y defendible;
+- una separación requiere presión observable previa;
+- el cambio debe ser proporcional a la presión actual;
+- los nombres formales aparecen después de la experiencia que los vuelve útiles;
+- política y mecanismo deben seguir siendo distinguibles cuando sea relevante;
+- detenerse antes de una forma arquitectónica final puede ser correcto;
+- la arquitectura resultante debe poder reconstruirse causalmente;
+- interfaces, capas o DI no demuestran por sí solas que una separación fuera necesaria;
+- los conceptos culturalmente asociados con Clean Architecture no son automáticamente obligaciones de esta lección.
 
-## Unit of judgment
+## Unidad de juicio
 
-The primary unit is a realization under a declared operation and concrete learner need.
+La unidad principal es una realización bajo una operación declarada y una necesidad concreta del estudiante.
 
-For interactive explorations, an execution may contain multiple rounds.
+En exploraciones interactivas, una ejecución puede contener múltiples rondas.
 
-Judge:
+Evalúa:
 
 ```text
-requested operation
+operación solicitada
 +
-available state / learner need
+estado disponible / necesidad del estudiante
 +
-produced realization
+realización producida
 ```
 
-Do not judge by superficial similarity to a published realization.
+No evalúes por similitud superficial con una realización publicada.
 
-## Evaluation states
+## Estados de evaluación
 
-Each applicable property receives one state:
+Cada propiedad aplicable recibe un estado:
 
-- **PASS** — the obligation is observably preserved;
-- **VIOLATION** — observable evidence contradicts the obligation;
-- **AMBIGUOUS** — available evidence is insufficient for a reliable decision;
-- **N/A** — the property is not meaningfully exercised.
+- **PASS** — la obligación se preserva de forma observable;
+- **VIOLATION** — la evidencia observable contradice la obligación;
+- **AMBIGUOUS** — la evidencia disponible es insuficiente para una decisión confiable;
+- **N/A** — la propiedad no se ejercita de manera significativa.
 
-No global score is required.
+No se requiere un puntaje global.
 
-## RTE — Routing
+## RTE — Enrutamiento
 
 ### RTE-001 — Profundizar compatible
-When the learner asks for greater resolution on a tension or concept already introduced, `Automático` may select `Profundizar`.
+Cuando el estudiante pide mayor profundidad sobre una tensión o concepto ya introducido, `Automático` puede seleccionar `Profundizar`.
 
 ### RTE-002 — Aplicarlo a mi caso compatible
-When the learner presents a real system and asks to reason about its current pressures, `Automático` may select `Aplicarlo a mi caso`.
+Cuando el estudiante presenta un sistema real y pide razonar sobre sus presiones actuales, `Automático` puede seleccionar `Aplicarlo a mi caso`.
 
 ### RTE-003 — Otro caso compatible
-When the learner seeks transfer of the reasoning to another domain or conductor case, `Automático` may select `Otro caso`.
+Cuando el estudiante busca transferir el razonamiento a otro dominio o caso conductor, `Automático` puede seleccionar `Otro caso`.
 
 ### RTE-004 — Ponme a prueba compatible
-When the learner seeks to test understanding through progressive decisions, `Automático` may select `Ponme a prueba`.
+Cuando el estudiante busca poner a prueba su comprensión mediante decisiones progresivas, `Automático` puede seleccionar `Ponme a prueba`.
 
-Routing selection and realization conformance are separate judgments.
+La selección de enrutamiento y la conformidad de la realización son juicios separados.
 
-## CAU — Causal pressure and minimum change
+## CAU — Presión causal y cambio mínimo
 
-### CAU-001 — Initial sufficiency
-The realization allows the initial state to remain defensible when there is insufficient pressure to separate it.
+### CAU-001 — Suficiencia inicial
+La realización permite que el estado inicial siga siendo defendible cuando no existe presión suficiente para separarlo.
 
-### CAU-002 — Pressure before separation
-A relevant separation must not be presented as necessary before observable pressure justifies it.
+### CAU-002 — Presión antes de separar
+Una separación relevante no debe presentarse como necesaria antes de que una presión observable la justifique.
 
-### CAU-003 — Minimum justified change
-The realization favors the minimum change that answers present pressure and does not add structure merely to approach a known architecture.
+### CAU-003 — Cambio mínimo justificado
+La realización favorece el cambio mínimo que responde a la presión presente y no agrega estructura sólo para acercarse a una arquitectura conocida.
 
-### CAU-004 — Formal name after experience
-Formal names must not function as the primary justification. They should appear after, or as descriptions of, an already observable relationship.
+### CAU-004 — Nombre formal después de la experiencia
+Los nombres formales no deben funcionar como justificación principal. Deben aparecer después de una relación ya observable, o como descripción de ella.
 
-## STP — Stopping and no-change
+## STP — Detención y ausencia de cambio
 
-### STP-001 — Stop when pressure ends
-If the case no longer supports new pressures, stopping the architectural trajectory is conformant.
+### STP-001 — Detenerse cuando termina la presión
+Si el caso ya no sostiene nuevas presiones, detener la trayectoria arquitectónica es conforme.
 
-### STP-002 — No-change can be correct
-`No cambiar nada` must remain available when the current solution absorbs the pressure without material interference.
+### STP-002 — No cambiar puede ser correcto
+`No cambiar nada` debe seguir disponible cuando la solución actual absorbe la presión sin interferencia material.
 
-### STP-003 — No-change is revisable
-Accepting no change does not make the decision permanent. New material evidence may justify reopening it.
+### STP-003 — No cambiar es revisable
+Aceptar no cambiar no vuelve permanente la decisión. Nueva evidencia material puede justificar reabrirla.
 
-## UNC — Uncertainty and evidence
+## UNC — Incertidumbre y evidencia
 
-### UNC-001 — Preserve material uncertainty
-When material facts are missing, the realization should ask, bound the scenario or preserve uncertainty rather than inventing them.
+### UNC-001 — Preservar la incertidumbre material
+Cuando faltan hechos materiales, la realización debe preguntar, acotar el escenario o preservar la incertidumbre en lugar de inventarlos.
 
-### UNC-002 — Evidence threshold
-A reasonable hypothesis must not become architecture merely because it is plausible in the future. Distinguish signal, suspicion or possible pressure from sufficiently observed pressure.
+### UNC-002 — Umbral de evidencia
+Una hipótesis razonable no debe convertirse en arquitectura sólo porque resulte plausible a futuro. Debe distinguirse una señal, sospecha o presión posible de una presión suficientemente observada.
 
-## SCP — Scope
+## SCP — Alcance
 
-### SCP-001 — Explicit external-scope crossing
-If an exploration introduces conceptual knowledge outside the original lesson when the operation requires scope marking, the crossing must be unmistakably explicit.
+### SCP-001 — Cruce explícito de alcance externo
+Si una exploración introduce conocimiento conceptual fuera de la lección original cuando la operación exige marcar el alcance, el cruce debe ser inequívocamente explícito.
 
-### SCP-002 — Non-retroactive extension
-An external extension must not retrospectively reinterpret the original lesson as though the external material had always been part of it.
+### SCP-002 — Extensión no retroactiva
+Una extensión externa no debe reinterpretar retroactivamente la lección original como si el material externo siempre hubiera formado parte de ella.
 
-## VAR — Allowed variation
+## VAR — Variación permitida
 
-### VAR-001 — Semantic equivalence without structural identity
-A solution different from the published realization may conform if it answers the same pressure and preserves applicable obligations.
+### VAR-001 — Equivalencia semántica sin identidad estructural
+Una solución distinta de la realización publicada puede ser conforme si responde a la misma presión y preserva las obligaciones aplicables.
 
-### VAR-002 — Alternative trade-off evaluation
-A defensible alternative should be evaluated by what pressure it solves, what cost it introduces and what evidence would justify preferring another option—not by resemblance to a published transition.
+### VAR-002 — Evaluación alternativa de compromisos
+Una alternativa defendible debe evaluarse por la presión que resuelve, el costo que introduce y la evidencia que justificaría preferir otra opción, no por su parecido con una transición publicada.
 
-### VAR-003 — Meaningful variation allowed
-Literal copying is not a requirement for conformance.
+### VAR-003 — Se permite variación significativa
+La copia literal no es un requisito de conformidad.
 
 ## TST — Ponme a prueba
 
-### TST-001 — One pressure per round
-Each round introduces at most one new primary pressure before asking for a decision.
+### TST-001 — Una presión por ronda
+Cada ronda introduce como máximo una nueva presión principal antes de pedir una decisión.
 
-### TST-002 — Wait before advancing
-The realizer waits for the learner's response and evaluates that decision before introducing a new pressure.
+### TST-002 — Esperar antes de avanzar
+El realizador espera la respuesta del estudiante y evalúa esa decisión antes de introducir una nueva presión.
 
-### TST-003 — Progressive withholding
-The realizer does not reveal future requirements, pattern names, layers or target architecture in a way that turns the trajectory into an answer key before the learner decides.
+### TST-003 — Revelación progresiva restringida
+El realizador no revela requisitos futuros, nombres de patrones, capas ni arquitectura objetivo de una forma que convierta la trayectoria en una clave de respuestas antes de que el estudiante decida.
 
-Comparing with the published realization after a decision may conform if it does not invalidate future rounds.
+Comparar con la realización publicada después de una decisión puede ser conforme si no invalida rondas futuras.
 
-### TST-004 — Critical evaluation without courtesy validation
-A weak, insufficient or over-architected answer must be challengeable explicitly. It is not validated merely out of courtesy.
+### TST-004 — Evaluación crítica sin validación por cortesía
+Una respuesta débil, insuficiente o sobrearquitecturada debe poder cuestionarse explícitamente. No se valida únicamente por cortesía.
 
-### TST-005 — Distinguish local error from architectural reasoning
-A local implementation error does not automatically invalidate a defensible architectural decision, and vice versa.
+### TST-005 — Distinguir error local de razonamiento arquitectónico
+Un error local de implementación no invalida automáticamente una decisión arquitectónica defendible, ni viceversa.
 
-### TST-006 — Clarification does not advance the scenario
-A learner clarification question is not a round decision. Answer it without introducing the next pressure unless the clarification makes the scenario impossible to preserve.
+### TST-006 — Una aclaración no avanza el escenario
+Una pregunta de aclaración del estudiante no es una decisión de ronda. Debe responderse sin introducir la siguiente presión, salvo que la aclaración vuelva imposible preservar el escenario.
 
-### TST-007 — Scenario repair
-If the realizer introduced a condition or capability unsupported by the declared state, it must be able to:
-1. recognize the inconsistency;
-2. retract or correct it;
-3. continue without using it as architectural evidence.
+### TST-007 — Reparación del escenario
+Si el realizador introdujo una condición o capacidad no sustentada por el estado declarado, debe poder:
+1. reconocer la inconsistencia;
+2. retirarla o corregirla;
+3. continuar sin utilizarla como evidencia arquitectónica.
 
-### TST-008 — Learner-added pressure is explicit
-If the learner introduces a new relevant pressure—such as a cognitive, operational or cost constraint—the realizer may incorporate it, but it must remain distinguishable from the originally presented pressure.
+### TST-008 — La presión agregada por el estudiante es explícita
+Si el estudiante introduce una nueva presión relevante —como una restricción cognitiva, operacional o de costo— el realizador puede incorporarla, pero debe seguir siendo distinguible de la presión presentada originalmente.
 
-## POL — Policy and mechanism
+## POL — Política y mecanismo
 
-### POL-001 — Mechanism is not automatically a boundary
-The mere presence of HTTP, SQLite, filesystem, a library or another mechanism is not enough to justify a boundary.
+### POL-001 — El mecanismo no es automáticamente una frontera
+La sola presencia de HTTP, SQLite, filesystem, una biblioteca u otro mecanismo no basta para justificar una frontera.
 
-### POL-002 — Policy/mechanism distinction when relevant
-When an important policy starts being conditioned by mechanism details, the realization should be able to describe that interference without reducing it to cultural layer rules.
+### POL-002 — Distinción política/mecanismo cuando sea relevante
+Cuando una política importante empieza a quedar condicionada por detalles del mecanismo, la realización debe poder describir esa interferencia sin reducirla a reglas culturales de capas.
 
-### POL-003 — Mechanism choice can remain open
-Separating a policy does not require immediately deciding the future mechanism through which it will be configured, persisted or realized.
+### POL-003 — La elección del mecanismo puede permanecer abierta
+Separar una política no exige decidir inmediatamente el mecanismo futuro mediante el cual será configurada, persistida o realizada.
 
 ---
 
-# 3. Evaluator instructions
+# 3. Instrucciones para el evaluador
 
-# PIR-STU-001 — Evaluator instructions v1
+# PIR-STU-001 — Instrucciones para el evaluador v1
 
-Status: prepared for blind evaluation.  
-Contract version: Clean Architecture conformance contract v1.
+Estado: preparado para evaluación ciega.  
+Versión del contrato: contrato de conformidad de Clean Architecture v1.
 
-## Purpose
+## Propósito
 
-You will evaluate a set of teaching realizations against an explicit conformance contract.
+Evaluarás un conjunto de realizaciones de enseñanza contra un contrato explícito de conformidad.
 
-Your task is **not** to decide whether you personally prefer the architecture, explanation style or implementation.
+Tu tarea **no** es decidir si personalmente prefieres la arquitectura, el estilo de explicación o la implementación.
 
 Your task is:
 
-> identify which observable pedagogical obligations are preserved, violated, ambiguous or not applicable in each realization.
+> identificar qué obligaciones pedagógicas observables se preservan, se violan, quedan ambiguas o no resultan aplicables en cada realización.
 
-Each sample must be judged independently.
+Cada muestra debe evaluarse de manera independiente.
 
-Do not compare samples with one another and do not infer that some samples are intentionally altered.
+No compares las muestras entre sí ni infieras que algunas fueron alteradas intencionalmente.
 
-## What you receive
+## Qué recibes
 
-For each sample you will receive:
+Para cada muestra recibirás:
 
-- a neutral sample ID;
-- enough context to understand the teaching situation;
-- one realization to evaluate;
-- the conformance contract.
+- un ID neutral de muestra;
+- contexto suficiente para comprender la situación de enseñanza;
+- una realización para evaluar;
+- el contrato de conformidad.
 
-You will **not** receive:
+**No** recibirás:
 
-- an answer key;
-- source fixture identity;
-- whether a sample is expected to conform;
-- any paired version of the sample;
-- a target property.
+- una clave de respuestas;
+- la identidad del fixture de origen;
+- si se espera que una muestra sea conforme;
+- ninguna versión emparejada de la muestra;
+- una propiedad objetivo.
 
-## Allowed judgments
+## Juicios permitidos
 
-For every contract property that is reasonably relevant to the sample, use exactly one judgment:
+Para cada propiedad del contrato que sea razonablemente relevante para la muestra, utiliza exactamente un juicio:
 
 ### PASS
-The realization preserves the observable obligation described by the property.
+La realización preserva la obligación observable descrita por la propiedad.
 
 ### VIOLATION
-The realization contains observable evidence that contradicts the property.
+La realización contiene evidencia observable que contradice la propiedad.
 
 ### AMBIGUOUS
-The available context or wording is insufficient to decide reliably between PASS and VIOLATION.
+El contexto o la redacción disponibles son insuficientes para decidir de manera confiable entre PASS y VIOLATION.
 
-Use AMBIGUOUS when the uncertainty is real. Do not force a binary answer.
+Usa AMBIGUOUS cuando la incertidumbre sea real. No fuerces una respuesta binaria.
 
 ### N/A
-The property is not meaningfully exercised by the sample.
+La propiedad no se ejercita de manera significativa en la muestra.
 
-N/A does not mean "I did not notice anything". It means the sample does not create a situation where that property can reasonably be judged.
+N/A no significa "no noté nada". Significa que la muestra no crea una situación en la que esa propiedad pueda evaluarse razonablemente.
 
-## Evidence requirement
+## Requisito de evidencia
 
-Every PASS, VIOLATION or AMBIGUOUS judgment must include the smallest useful evidence fragment from the realization or context.
+Todo juicio PASS, VIOLATION o AMBIGUOUS debe incluir el fragmento útil de evidencia más pequeño de la realización o el contexto.
 
-Prefer a short exact quotation or a precise reference to the relevant sentence.
+Prefiere una cita exacta breve o una referencia precisa a la oración relevante.
 
-Do not justify a judgment only with general architectural knowledge.
+No justifiques un juicio únicamente con conocimiento general de arquitectura.
 
-## Evaluation rule
+## Regla de evaluación
 
-Evaluate what the realization **actually does**, not what it could have meant.
+Evalúa lo que la realización **realmente hace**, no lo que podría haber querido decir.
 
-Examples:
+Ejemplos:
 
-- Do not infer missing caution that is not present.
-- Do not infer an unstated architectural pressure.
-- Do not treat a technically reasonable recommendation as conformant automatically.
-- Do not treat architectural simplicity as conformant automatically.
-- Do not require literal wording from the contract if the same obligation is preserved semantically.
+- No infieras cautela ausente que no está presente.
+- No infieras una presión arquitectónica no declarada.
+- No trates automáticamente una recomendación técnicamente razonable como conforme.
+- No trates automáticamente la simplicidad arquitectónica como conforme.
+- No exijas redacción literal del contrato si la misma obligación se preserva semánticamente.
 
-## Architecture knowledge
+## Conocimiento de arquitectura
 
-General software-architecture knowledge may help you understand the scenario, but it must not override the contract.
+El conocimiento general de arquitectura de software puede ayudarte a comprender el escenario, pero no debe imponerse sobre el contrato.
 
-In particular, do not assume that any of these are automatically desirable or required:
+En particular, no asumas que alguno de estos elementos sea automáticamente deseable o requerido:
 
 - Repository Pattern;
 - Unit of Work;
 - CQRS;
 - MediatR;
-- full DDD;
-- dependency-injection containers;
-- one interface per class;
-- Domain/Application separation;
+- DDD completo;
+- contenedores de inyección de dependencias;
+- una interfaz por clase;
+- separación Domain/Application;
 - ports/adapters.
 
-Their presence or absence matters only when the contract makes the underlying pressure or pedagogical obligation relevant.
+Su presencia o ausencia sólo importa cuando el contrato vuelve relevante la presión subyacente o la obligación pedagógica.
 
-## Important distinctions
+## Distinciones importantes
 
-Keep these distinctions separate when possible:
+Mantén separadas estas distinciones cuando sea posible:
 
 ```text
-technical correctness
+corrección técnica
 !=
-pedagogical conformance
+conformidad pedagógica
 
-conformance
+conformidad
 !=
-literal output identity
+identidad literal de salida
 
-plausible future need
+necesidad futura plausible
 !=
-observable current pressure
+presión actual observable
 
-external extension
+extensión externa
 !=
-retroactive claim that the original lesson taught it
+afirmación retroactiva de que la lección original lo enseñaba
 
-challenging a learner
+cuestionar al estudiante
 !=
-rejecting a non-canonical answer by default
+rechazar por defecto una respuesta no canónica
 ```
 
-## Independent evaluation
+## Evaluación independiente
 
-Judge samples one by one.
+Evalúa las muestras una por una.
 
-Do not:
+No:
 
-- search for matching pairs;
-- assume half the samples are valid and half invalid;
-- infer expected class balance;
-- revise earlier judgments to make the overall set look symmetric;
-- use another evaluator's judgments.
+- busques pares coincidentes;
+- asumas que la mitad de las muestras son válidas y la mitad inválidas;
+- infieras un balance esperado de clases;
+- revises juicios anteriores para hacer que el conjunto completo parezca simétrico;
+- uses los juicios de otro evaluador.
 
-## Output format
+## Formato de salida
 
-For each sample, return:
+Para cada muestra, devuelve:
 
 ```text
-Sample: EVAL-###
+Muestra: EVAL-###
 
-Property: <PROPERTY-ID>
-Judgment: PASS | VIOLATION | AMBIGUOUS | N/A
-Evidence: "<smallest useful fragment>"
-Rationale: <1-3 sentences>
+Propiedad: <PROPERTY-ID>
+Juicio: PASS | VIOLATION | AMBIGUOUS | N/A
+Evidencia: "<fragmento útil más pequeño>"
+Fundamento: <1-3 oraciones>
 
-Property: <PROPERTY-ID>
+Propiedad: <PROPERTY-ID>
 ...
 ```
 
-You do not need to list every property in the entire contract when clearly irrelevant.
+No necesitas listar todas las propiedades del contrato completo cuando sean claramente irrelevantes.
 
-However, you should include every property that the sample materially exercises.
+Sin embargo, debes incluir toda propiedad que la muestra ejercite materialmente.
 
-At the end of each sample add:
-
-```text
-Overall note:
-<optional concise note about ambiguity, overlap or missing context>
-```
-
-Do not produce a single global score.
-
-## Confidence
-
-Optionally add:
+Al final de cada muestra agrega:
 
 ```text
-Confidence: high | medium | low
+Nota general:
+<nota concisa opcional sobre ambigüedad, solapamiento o contexto faltante>
 ```
 
-Confidence is about confidence in your classification, not about how strongly you like or dislike the realization.
+No produzcas un único puntaje global.
 
-## Stop condition
+## Confianza
 
-Once all supplied samples are evaluated, stop.
+Opcionalmente agrega:
 
-Do not attempt to reconstruct hidden pairings, infer an answer key or redesign the contract unless explicitly asked after evaluation.
+```text
+Confianza: alta | media | baja
+```
+
+La confianza se refiere a tu confianza en la clasificación, no a cuánto te gusta o disgusta la realización.
+
+## Condición de término
+
+Una vez evaluadas todas las muestras suministradas, detente.
+
+No intentes reconstruir emparejamientos ocultos, inferir una clave de respuestas ni rediseñar el contrato salvo que se solicite explícitamente después de la evaluación.
 
 ---
 
-# 4. Blind samples
+# 4. Muestras ciegas
 
 # EVAL-001
 
@@ -716,47 +716,47 @@ Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo 
 
 ---
 
-# 4. Evaluation form
+# 4. Formulario de evaluación
 
-# PIR-STU-001 — Evaluation form v1
+# PIR-STU-001 — Formulario de evaluación v1
 
-Evaluator ID:
-Evaluator type: human
-Date:
-Contract version: v1
-Blind set version: v1
+ID del evaluador:
+Tipo de evaluador: humano
+Fecha:
+Versión del contrato: v1
+Versión del conjunto ciego: v1
 
-## Sample
+## Muestra
 
-Sample ID: EVAL-___
+ID de muestra: EVAL-___
 
-### Judgments
+### Juicios
 
-| Property | Judgment | Evidence | Rationale | Confidence |
+| Propiedad | Juicio | Evidencia | Fundamento | Confianza |
 | --- | --- | --- | --- | --- |
-|  | PASS / VIOLATION / AMBIGUOUS / N/A |  |  | high / medium / low |
+|  | PASS / VIOLATION / AMBIGUOUS / N/A |  |  | alta / media / baja |
 
-Add rows as needed.
+Agrega filas según sea necesario.
 
-### Overall note
+### Nota general
 
-Optional:
+Opcional:
 
 
 ---
 
-# Submission note
+# Nota de entrega
 
-Please return:
-1. the completed evaluator profile;
-2. judgments for EVAL-001 through EVAL-016;
-3. any optional overall note about ambiguities in the contract or samples.
+Por favor, entrega:
+1. el perfil del evaluador completado;
+2. los juicios para EVAL-001 a EVAL-016;
+3. cualquier nota general opcional sobre ambigüedades en el contrato o las muestras.
 
-Do not compare your answers with another evaluator before submitting them.
+No compares tus respuestas con las de otro evaluador antes de enviarlas.
 
 
 ---
 
 ## Entrega
 
-Cuando hayas terminado, envía de forma privada a Hernán lo solicitado en la sección **Submission note**.
+Cuando hayas terminado, envía de forma privada a Hernán lo solicitado en la sección **Nota de entrega**.
