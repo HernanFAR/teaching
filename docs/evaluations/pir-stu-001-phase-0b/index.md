@@ -2,7 +2,6 @@
 title: PIR-STU-001 — Evaluación humana Phase 0b
 hide:
   - navigation
-  - toc
   - footer
 hide_support: true
 ---
@@ -19,14 +18,6 @@ Esta página contiene el paquete completo para realizar la evaluación humana de
     Mientras la evaluación permanezca abierta, no se publicarán aquí respuestas, resultados ni información adicional sobre la construcción interna de las muestras.
 
 
-<nav class="pir-evaluation-nav" aria-label="Ruta de evaluación">
-  <a href="#introduccion">1. Prepararte</a>
-  <a href="#perfil-evaluador">2. Copiar perfil</a>
-  <a href="#contrato">3. Consultar contrato</a>
-  <a href="#muestras">4. Evaluar muestras</a>
-  <a href="#formulario">5. Copiar respuesta</a>
-  <a href="#entrega">6. Entregar</a>
-</nav>
 
 ---
 
