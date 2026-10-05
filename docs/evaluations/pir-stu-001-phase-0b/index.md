@@ -691,180 +691,185 @@ No se requiere un puntaje global.
 
 **PIR-STU-001 — Instrucciones para el evaluador v1**
 
-Estado: preparado para evaluación ciega.  
-Versión del contrato: contrato de conformidad de Clean Architecture v1.
+<div class="teaching-card">
+<span class="teaching-eyebrow">Tu tarea</span>
+<strong>Evaluar cada realización contra el contrato</strong>
+<span>Identifica qué obligaciones pedagógicas observables se preservan, se violan, quedan ambiguas o no resultan aplicables. No evalúes según preferencia personal de arquitectura, estilo de explicación o implementación.</span>
+</div>
 
-#### Propósito
+<div class="teaching-flow">
 
-Evaluarás un conjunto de realizaciones de enseñanza contra un contrato explícito de conformidad.
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">1</span>
+<strong>Lee la muestra</strong>
+<small>Usa sólo el contexto y la realización suministrados.</small>
+</div>
 
-Tu tarea **no** es decidir si personalmente prefieres la arquitectura, el estilo de explicación o la implementación.
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
-Tu tarea es:
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">2</span>
+<strong>Identifica propiedades relevantes</strong>
+<small>No necesitas juzgar propiedades que la muestra no ejercita.</small>
+</div>
 
-> identificar qué obligaciones pedagógicas observables se preservan, se violan, quedan ambiguas o no resultan aplicables en cada realización.
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
 
-Cada muestra debe evaluarse de manera independiente.
+<div class="teaching-flow__step teaching-flow__step--numbered teaching-flow__step--accent">
+<span class="teaching-flow__marker">3</span>
+<strong>Clasifica con evidencia</strong>
+<small>Registra el juicio y el fragmento mínimo que lo sostiene.</small>
+</div>
 
-No compares las muestras entre sí ni infieras que algunas fueron alteradas intencionalmente.
+</div>
 
-#### Qué recibes
+=== "Contexto"
 
-Para cada muestra recibirás:
+    <div class="teaching-grid teaching-grid--2" markdown>
 
-- un ID neutral de muestra;
-- contexto suficiente para comprender la situación de enseñanza;
-- una realización para evaluar;
-- el contrato de conformidad.
+    <div class="teaching-card">
+    <span class="teaching-eyebrow">Qué recibes</span>
+    <strong>Una muestra autosuficiente</strong>
+    <span>Un ID neutral, contexto suficiente, una realización para evaluar y el contrato de conformidad.</span>
+    </div>
 
-**No** recibirás:
+    <div class="teaching-card">
+    <span class="teaching-eyebrow">Qué no recibes</span>
+    <strong>Información que revele la expectativa</strong>
+    <span>No recibirás clave de respuestas, identidad del fixture, expectativa de conformidad, versión emparejada ni propiedad objetivo.</span>
+    </div>
 
-- una clave de respuestas;
-- la identidad del fixture de origen;
-- si se espera que una muestra sea conforme;
-- ninguna versión emparejada de la muestra;
-- una propiedad objetivo.
+    </div>
 
-#### Juicios permitidos
+    !!! info "Evalúa cada muestra de forma independiente"
+        No compares las muestras entre sí ni infieras que algunas fueron alteradas intencionalmente.
 
-Para cada propiedad del contrato que sea razonablemente relevante para la muestra, utiliza exactamente un juicio:
+=== "Juicio"
 
-##### PASS
-La realización preserva la obligación observable descrita por la propiedad.
+    Para cada propiedad del contrato que sea razonablemente relevante, utiliza exactamente uno de estos juicios:
 
-##### VIOLATION
-La realización contiene evidencia observable que contradice la propiedad.
+    <div class="pir-judgment-grid">
+      <div class="pir-judgment"><strong>PASS</strong><span>La realización preserva la obligación observable descrita por la propiedad.</span></div>
+      <div class="pir-judgment"><strong>VIOLATION</strong><span>La realización contiene evidencia observable que contradice la propiedad.</span></div>
+      <div class="pir-judgment"><strong>AMBIGUOUS</strong><span>El contexto o la redacción disponibles son insuficientes para decidir de manera confiable entre PASS y VIOLATION.</span></div>
+      <div class="pir-judgment"><strong>N/A</strong><span>La propiedad no se ejercita de manera significativa en la muestra.</span></div>
+    </div>
 
-##### AMBIGUOUS
-El contexto o la redacción disponibles son insuficientes para decidir de manera confiable entre PASS y VIOLATION.
+    Usa **AMBIGUOUS** cuando la incertidumbre sea real. No fuerces una respuesta binaria.
 
-Usa AMBIGUOUS cuando la incertidumbre sea real. No fuerces una respuesta binaria.
+    **N/A** no significa “no noté nada”: significa que la muestra no crea una situación donde esa propiedad pueda evaluarse razonablemente.
 
-##### N/A
-La propiedad no se ejercita de manera significativa en la muestra.
+    !!! important "Evidencia mínima"
+        Todo juicio PASS, VIOLATION o AMBIGUOUS debe incluir el fragmento útil de evidencia más pequeño de la realización o el contexto.
 
-N/A no significa "no noté nada". Significa que la muestra no crea una situación en la que esa propiedad pueda evaluarse razonablemente.
+        Prefiere una cita exacta breve o una referencia precisa a la oración relevante. No justifiques un juicio únicamente con conocimiento general de arquitectura.
 
-#### Requisito de evidencia
+    <div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
 
-Todo juicio PASS, VIOLATION o AMBIGUOUS debe incluir el fragmento útil de evidencia más pequeño de la realización o el contexto.
+    <div class="teaching-item teaching-item--criterion">
+    <span class="teaching-item__marker">1</span>
+    <strong>Evalúa lo que realmente hace</strong>
+    <span>No infieras cautela ausente ni una presión arquitectónica que no fue declarada.</span>
+    </div>
 
-Prefiere una cita exacta breve o una referencia precisa a la oración relevante.
+    <div class="teaching-item teaching-item--criterion">
+    <span class="teaching-item__marker">2</span>
+    <strong>Razonable no significa automáticamente conforme</strong>
+    <span>Una recomendación técnicamente razonable o una solución simple no son conformes por defecto.</span>
+    </div>
 
-No justifiques un juicio únicamente con conocimiento general de arquitectura.
+    <div class="teaching-item teaching-item--criterion">
+    <span class="teaching-item__marker">3</span>
+    <strong>Evalúa semántica, no literalidad</strong>
+    <span>No exijas la redacción literal del contrato si la misma obligación se preserva semánticamente.</span>
+    </div>
 
-#### Regla de evaluación
+    </div>
 
-Evalúa lo que la realización **realmente hace**, no lo que podría haber querido decir.
+=== "Límites"
 
-Ejemplos:
+    <div class="teaching-card">
+    <span class="teaching-eyebrow">Conocimiento de arquitectura</span>
+    <strong>Puede ayudarte a entender, pero no reemplaza el contrato</strong>
+    <span>Repository Pattern, Unit of Work, CQRS, MediatR, DDD completo, contenedores de DI, una interfaz por clase, separación Domain/Application y ports/adapters no son automáticamente deseables ni requeridos.</span>
+    </div>
 
-- No infieras cautela ausente que no está presente.
-- No infieras una presión arquitectónica no declarada.
-- No trates automáticamente una recomendación técnicamente razonable como conforme.
-- No trates automáticamente la simplicidad arquitectónica como conforme.
-- No exijas redacción literal del contrato si la misma obligación se preserva semánticamente.
+    Su presencia o ausencia sólo importa cuando el contrato vuelve relevante la presión subyacente o la obligación pedagógica.
 
-#### Conocimiento de arquitectura
+    <div class="teaching-grid teaching-grid--2" markdown>
 
-El conocimiento general de arquitectura de software puede ayudarte a comprender el escenario, pero no debe imponerse sobre el contrato.
+    <div class="teaching-card">
+    <span class="teaching-eyebrow">Distingue</span>
+    <strong>Corrección técnica ≠ conformidad pedagógica</strong>
+    <span>Una solución puede ser técnicamente correcta y aun así violar el contrato pedagógico.</span>
+    </div>
 
-En particular, no asumas que alguno de estos elementos sea automáticamente deseable o requerido:
+    <div class="teaching-card">
+    <span class="teaching-eyebrow">Distingue</span>
+    <strong>Conformidad ≠ identidad literal</strong>
+    <span>Una realización no necesita copiar literalmente una salida publicada para ser conforme.</span>
+    </div>
 
-- Repository Pattern;
-- Unit of Work;
-- CQRS;
-- MediatR;
-- DDD completo;
-- contenedores de inyección de dependencias;
-- una interfaz por clase;
-- separación Domain/Application;
-- ports/adapters.
+    <div class="teaching-card">
+    <span class="teaching-eyebrow">Distingue</span>
+    <strong>Necesidad futura plausible ≠ presión actual observable</strong>
+    <span>Una posibilidad futura no equivale a evidencia suficiente para justificar arquitectura ahora.</span>
+    </div>
 
-Su presencia o ausencia sólo importa cuando el contrato vuelve relevante la presión subyacente o la obligación pedagógica.
+    <div class="teaching-card">
+    <span class="teaching-eyebrow">Distingue</span>
+    <strong>Extensión externa ≠ contenido original</strong>
+    <span>Introducir conocimiento externo no permite afirmar retroactivamente que la lección original ya lo enseñaba.</span>
+    </div>
 
-#### Distinciones importantes
+    <div class="teaching-card">
+    <span class="teaching-eyebrow">Distingue</span>
+    <strong>Cuestionar ≠ rechazar lo no canónico</strong>
+    <span>Desafiar una respuesta no implica rechazar por defecto una alternativa defendible.</span>
+    </div>
 
-Mantén separadas estas distinciones cuando sea posible:
+    </div>
 
-```text
-corrección técnica
-!=
-conformidad pedagógica
+    !!! warning "Evaluación independiente"
+        Evalúa las muestras una por una.
 
-conformidad
-!=
-identidad literal de salida
+        No busques pares coincidentes, no asumas un balance entre muestras válidas e inválidas, no infieras un balance esperado de clases, no revises juicios anteriores para forzar simetría y no uses los juicios de otro evaluador.
 
-necesidad futura plausible
-!=
-presión actual observable
+=== "Salida"
 
-extensión externa
-!=
-afirmación retroactiva de que la lección original lo enseñaba
+    Para cada muestra, devuelve:
 
-cuestionar al estudiante
-!=
-rechazar por defecto una respuesta no canónica
-```
+    ```text
+    Muestra: EVAL-###
 
-#### Evaluación independiente
+    Propiedad: <PROPERTY-ID>
+    Juicio: PASS | VIOLATION | AMBIGUOUS | N/A
+    Evidencia: "<fragmento útil más pequeño>"
+    Fundamento: <1-3 oraciones>
 
-Evalúa las muestras una por una.
+    Propiedad: <PROPERTY-ID>
+    ...
+    ```
 
-No:
+    No necesitas listar todas las propiedades del contrato cuando sean claramente irrelevantes, pero sí toda propiedad que la muestra ejercite materialmente.
 
-- busques pares coincidentes;
-- asumas que la mitad de las muestras son válidas y la mitad inválidas;
-- infieras un balance esperado de clases;
-- revises juicios anteriores para hacer que el conjunto completo parezca simétrico;
-- uses los juicios de otro evaluador.
+    Al final de cada muestra puedes agregar:
 
-#### Formato de salida
+    ```text
+    Nota general:
+    <nota concisa opcional sobre ambigüedad, solapamiento o contexto faltante>
 
-Para cada muestra, devuelve:
+    Confianza: alta | media | baja
+    ```
 
-```text
-Muestra: EVAL-###
+    La confianza se refiere a tu confianza en la clasificación, no a cuánto te gusta o disgusta la realización.
 
-Propiedad: <PROPERTY-ID>
-Juicio: PASS | VIOLATION | AMBIGUOUS | N/A
-Evidencia: "<fragmento útil más pequeño>"
-Fundamento: <1-3 oraciones>
+    No produzcas un único puntaje global.
 
-Propiedad: <PROPERTY-ID>
-...
-```
+    !!! info "Condición de término"
+        Una vez evaluadas todas las muestras suministradas, detente.
 
-No necesitas listar todas las propiedades del contrato completo cuando sean claramente irrelevantes.
-
-Sin embargo, debes incluir toda propiedad que la muestra ejercite materialmente.
-
-Al final de cada muestra agrega:
-
-```text
-Nota general:
-<nota concisa opcional sobre ambigüedad, solapamiento o contexto faltante>
-```
-
-No produzcas un único puntaje global.
-
-#### Confianza
-
-Opcionalmente agrega:
-
-```text
-Confianza: alta | media | baja
-```
-
-La confianza se refiere a tu confianza en la clasificación, no a cuánto te gusta o disgusta la realización.
-
-#### Condición de término
-
-Una vez evaluadas todas las muestras suministradas, detente.
-
-No intentes reconstruir emparejamientos ocultos, inferir una clave de respuestas ni rediseñar el contrato salvo que se solicite explícitamente después de la evaluación.
+        No intentes reconstruir emparejamientos ocultos, inferir una clave de respuestas ni rediseñar el contrato salvo que se solicite explícitamente después de la evaluación.
 
 ---
 
