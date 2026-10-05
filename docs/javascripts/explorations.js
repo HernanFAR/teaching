@@ -161,6 +161,9 @@
   const itemLabel = wizard.dataset.itemLabel || "Muestra";
   const itemLabelPlural = wizard.dataset.itemLabelPlural || "muestras";
   const completedWord = wizard.dataset.completedWord || "completadas";
+  const completeWordSingular = wizard.dataset.completeWordSingular || "completa";
+  const completeWordPlural = wizard.dataset.completeWordPlural || "completas";
+  const pluralArticle = wizard.dataset.pluralArticle || "Las";
   const confidenceRequired = wizard.dataset.confidenceRequired !== "false";
   const evidenceRequiredForNa = wizard.dataset.evidenceRequiredForNa === "true";
   let currentIndex = 0;
@@ -321,7 +324,7 @@
     if (next) next.disabled = !complete;
     if (status) {
       status.textContent = complete
-        ? `${itemLabel} completo. Puedes continuar o revisar tus respuestas.`
+        ? `${itemLabel} ${completeWordSingular}. Puedes continuar o revisar tus respuestas.`
         : "Completa todos los campos obligatorios para continuar.";
     }
     if (legend) {
@@ -367,7 +370,7 @@
     }
     if (outputStatus) {
       outputStatus.textContent = allComplete
-        ? `Los ${total} ${itemLabelPlural} están completos. La respuesta está lista para copiar.`
+        ? `${pluralArticle} ${total} ${itemLabelPlural} están ${completeWordPlural}. La respuesta está lista para copiar.`
         : `Completa los ${total} ${itemLabelPlural} para generar la respuesta final (${completed}/${total}).`;
     }
   };
