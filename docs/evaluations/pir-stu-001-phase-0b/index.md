@@ -895,11 +895,14 @@ Sí, tiene mucho sentido. Como los descuentos cambian seguido, lo mejor es hacer
 
 <form class="pir-eval-form" data-eval-form="EVAL-001" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-001</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-001, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -1000,10 +1003,7 @@ Sí, tiene mucho sentido. Como los descuentos cambian seguido, lo mejor es hacer
     Completa todos los campos obligatorios para continuar.
   </div>
 
-  <div class="pir-eval-form__actions">
-    <span></span>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
-  </div>
+  
 </form>
 
 </section>
@@ -1040,11 +1040,14 @@ Una respuesta posible es Transactional Outbox: persistir la orden y la intenció
 
 <form class="pir-eval-form" data-eval-form="EVAL-002" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-002</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-002, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -1147,7 +1150,6 @@ Una respuesta posible es Transactional Outbox: persistir la orden y la intenció
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -1183,11 +1185,14 @@ Este es el punto donde conviene extraer un caso de uso compartido, dejando HTTP 
 
 <form class="pir-eval-form" data-eval-form="EVAL-003" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-003</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-003, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -1290,7 +1295,6 @@ Este es el punto donde conviene extraer un caso de uso compartido, dejando HTTP 
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -1322,11 +1326,14 @@ La solución actual sigue siendo defendible. PostgreSQL existe, pero hoy no est�
 
 <form class="pir-eval-form" data-eval-form="EVAL-004" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-004</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-004, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -1429,7 +1436,6 @@ La solución actual sigue siendo defendible. PostgreSQL existe, pero hoy no est�
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -1461,11 +1467,14 @@ Dado que el segundo sistema también crea solicitudes, modelaría desde ahora la
 
 <form class="pir-eval-form" data-eval-form="EVAL-005" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-005</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-005, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -1568,7 +1577,6 @@ Dado que el segundo sistema también crea solicitudes, modelaría desde ahora la
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -1600,11 +1608,14 @@ Sí, ahí detectaste un problema real en el escenario que te planteé. Con el es
 
 <form class="pir-eval-form" data-eval-form="EVAL-006" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-006</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-006, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -1707,7 +1718,6 @@ Sí, ahí detectaste un problema real en el escenario que te planteé. Con el es
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -1739,11 +1749,14 @@ Una vez separadas las reglas de validación, conviene completar la evolución ar
 
 <form class="pir-eval-form" data-eval-form="EVAL-007" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-007</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-007, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -1846,7 +1859,6 @@ Una vez separadas las reglas de validación, conviene completar la evolución ar
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -1878,11 +1890,14 @@ Tu propuesta es defendible, aunque resuelve principalmente la fricción de prueb
 
 <form class="pir-eval-form" data-eval-form="EVAL-008" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-008</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-008, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -1985,7 +2000,6 @@ Tu propuesta es defendible, aunque resuelve principalmente la fricción de prueb
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -2017,11 +2031,14 @@ La siguiente evolución de Clean Architecture es introducir Transactional Outbox
 
 <form class="pir-eval-form" data-eval-form="EVAL-009" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-009</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-009, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -2124,7 +2141,6 @@ La siguiente evolución de Clean Architecture es introducir Transactional Outbox
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -2156,11 +2172,14 @@ Extraer calcularTotal(...) está bien justificado porque la política de cálcul
 
 <form class="pir-eval-form" data-eval-form="EVAL-010" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-010</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-010, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -2263,7 +2282,6 @@ Extraer calcularTotal(...) está bien justificado porque la política de cálcul
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -2295,11 +2313,14 @@ Aunque el sistema todavía es pequeño y no presenta dificultades observables, e
 
 <form class="pir-eval-form" data-eval-form="EVAL-011" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-011</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-011, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -2402,7 +2423,6 @@ Aunque el sistema todavía es pequeño y no presenta dificultades observables, e
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -2436,11 +2456,14 @@ Ahora aparece una integración con un marketplace. Envía órdenes en otro forma
 
 <form class="pir-eval-form" data-eval-form="EVAL-012" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-012</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-012, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -2543,7 +2566,6 @@ Ahora aparece una integración con un marketplace. Envía órdenes en otro forma
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -2575,11 +2597,14 @@ Mejorar la infraestructura de pruebas no es la respuesta arquitectónica correct
 
 <form class="pir-eval-form" data-eval-form="EVAL-013" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-013</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-013, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -2682,7 +2707,6 @@ Mejorar la infraestructura de pruebas no es la respuesta arquitectónica correct
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -2714,11 +2738,14 @@ Hasta aquí el caso sostiene honestamente la separación de las reglas de valida
 
 <form class="pir-eval-form" data-eval-form="EVAL-014" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-014</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-014, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -2821,7 +2848,6 @@ Hasta aquí el caso sostiene honestamente la separación de las reglas de valida
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -2853,11 +2879,14 @@ Entiendo la observación, pero podemos asumir que una orden puede contener vario
 
 <form class="pir-eval-form" data-eval-form="EVAL-015" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-015</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-015, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -2960,7 +2989,6 @@ Entiendo la observación, pero podemos asumir que una orden puede contener vario
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Siguiente EVAL</button>
   </div>
 </form>
 
@@ -2992,11 +3020,14 @@ Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo 
 
 <form class="pir-eval-form" data-eval-form="EVAL-016" novalidate>
   <div class="pir-eval-form__header">
-    <div>
-      <strong class="pir-eval-form__legend">Respuesta de EVAL-016</strong>
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend" data-eval-legend>Respuesta de EVAL-016, completa para continuar</strong>
       <span>Agrega todas las propiedades que esta muestra ejercita materialmente.</span>
     </div>
-    <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+    <div class="pir-eval-form__primary-actions">
+      <button type="button" class="md-button pir-eval-form__add" data-add-judgment>Agregar otra propiedad</button>
+      <button type="button" class="md-button md-button--primary" data-next-eval disabled>Finalizar evaluación</button>
+    </div>
   </div>
 
   <div class="pir-eval-form__judgments" data-judgments>
@@ -3099,7 +3130,6 @@ Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo 
 
   <div class="pir-eval-form__actions">
     <button type="button" class="md-button" data-prev-eval>Anterior</button>
-    <button type="button" class="md-button md-button--primary" data-next-eval disabled>Finalizar evaluación</button>
   </div>
 </form>
 
