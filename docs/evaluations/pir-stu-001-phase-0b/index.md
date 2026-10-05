@@ -920,16 +920,6 @@ Sí, tiene mucho sentido. Como los descuentos cambian seguido, lo mejor es hacer
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -938,6 +928,16 @@ Sí, tiene mucho sentido. Como los descuentos cambian seguido, lo mejor es hacer
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -1018,16 +1018,6 @@ Una respuesta posible es Transactional Outbox: persistir la orden y la intenció
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -1036,6 +1026,16 @@ Una respuesta posible es Transactional Outbox: persistir la orden y la intenció
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -1114,16 +1114,6 @@ Este es el punto donde conviene extraer un caso de uso compartido, dejando HTTP 
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -1132,6 +1122,16 @@ Este es el punto donde conviene extraer un caso de uso compartido, dejando HTTP 
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -1206,16 +1206,6 @@ La solución actual sigue siendo defendible. PostgreSQL existe, pero hoy no est�
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -1224,6 +1214,16 @@ La solución actual sigue siendo defendible. PostgreSQL existe, pero hoy no est�
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -1298,16 +1298,6 @@ Dado que el segundo sistema también crea solicitudes, modelaría desde ahora la
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -1316,6 +1306,16 @@ Dado que el segundo sistema también crea solicitudes, modelaría desde ahora la
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -1390,16 +1390,6 @@ Sí, ahí detectaste un problema real en el escenario que te planteé. Con el es
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -1408,6 +1398,16 @@ Sí, ahí detectaste un problema real en el escenario que te planteé. Con el es
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -1482,16 +1482,6 @@ Una vez separadas las reglas de validación, conviene completar la evolución ar
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -1500,6 +1490,16 @@ Una vez separadas las reglas de validación, conviene completar la evolución ar
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -1574,16 +1574,6 @@ Tu propuesta es defendible, aunque resuelve principalmente la fricción de prueb
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -1592,6 +1582,16 @@ Tu propuesta es defendible, aunque resuelve principalmente la fricción de prueb
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -1666,16 +1666,6 @@ La siguiente evolución de Clean Architecture es introducir Transactional Outbox
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -1684,6 +1674,16 @@ La siguiente evolución de Clean Architecture es introducir Transactional Outbox
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -1758,16 +1758,6 @@ Extraer calcularTotal(...) está bien justificado porque la política de cálcul
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -1776,6 +1766,16 @@ Extraer calcularTotal(...) está bien justificado porque la política de cálcul
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -1850,16 +1850,6 @@ Aunque el sistema todavía es pequeño y no presenta dificultades observables, e
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -1868,6 +1858,16 @@ Aunque el sistema todavía es pequeño y no presenta dificultades observables, e
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -1944,16 +1944,6 @@ Ahora aparece una integración con un marketplace. Envía órdenes en otro forma
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -1962,6 +1952,16 @@ Ahora aparece una integración con un marketplace. Envía órdenes en otro forma
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -2036,16 +2036,6 @@ Mejorar la infraestructura de pruebas no es la respuesta arquitectónica correct
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -2054,6 +2044,16 @@ Mejorar la infraestructura de pruebas no es la respuesta arquitectónica correct
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -2128,16 +2128,6 @@ Hasta aquí el caso sostiene honestamente la separación de las reglas de valida
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -2146,6 +2136,16 @@ Hasta aquí el caso sostiene honestamente la separación de las reglas de valida
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -2220,16 +2220,6 @@ Entiendo la observación, pero podemos asumir que una orden puede contener vario
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -2238,6 +2228,16 @@ Entiendo la observación, pero podemos asumir que una orden puede contener vario
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
@@ -2312,16 +2312,6 @@ Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo 
         </select>
       </div>
 
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Evidencia <span aria-hidden="true">*</span></label>
-        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
-      </div>
-
-      <div class="pir-eval-field pir-eval-field--wide">
-        <label>Fundamento <span aria-hidden="true">*</span></label>
-        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
-      </div>
-
       <div class="pir-eval-field">
         <label>Confianza <span aria-hidden="true">*</span></label>
         <select data-field="confidence" required>
@@ -2330,6 +2320,16 @@ Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo 
           <option>media</option>
           <option>baja</option>
         </select>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="1" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
 
       <button type="button" class="pir-eval-judgment__remove" data-remove-judgment hidden>Quitar propiedad</button>
