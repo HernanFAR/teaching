@@ -2,7 +2,7 @@
 
 ## Propósito
 
-Este documento conserva un patrón operativo reutilizable para publicar evaluaciones humanas autocontenidas dentro de Teaching.
+Este documento conserva un patrón operativo reutilizable para publicar evaluaciones humanas autocontenidas dentro de TDidacta Platform.
 
 El patrón surgió al implementar y validar las superficies humanas de PIR-STU-001 Phase 0b y Phase 0c. No define una única interfaz obligatoria; conserva las relaciones que demostraron ser útiles y verificables.
 
@@ -12,7 +12,7 @@ Usar como trayectoria de referencia:
 
 ```text
 bundle humano
-→ vista Teaching
+→ vista TDidacta Platform
 → mecanismo de evaluación reutilizable
 → self-check de navegador
 → prueba sobre la página publicada
@@ -46,7 +46,7 @@ Preservar:
 
 No importar silenciosamente reglas desde otra fase sólo porque comparte infraestructura.
 
-## 2. Vista Teaching
+## 2. Vista TDidacta Platform
 
 La vista pública debería reunir, cuando corresponda:
 
