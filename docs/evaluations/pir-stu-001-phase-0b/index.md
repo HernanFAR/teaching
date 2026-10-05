@@ -89,69 +89,12 @@ No compares tus juicios con los de otro evaluador hasta que todos los conjuntos 
 
 # 2. Perfil del evaluador
 
-# Formulario de perfil del evaluador v1
-
-ID del evaluador:
-
-## Antecedentes
-
-Rol actual / enfoque profesional:
-
-Años de experiencia relevante:
-
-Educación, formación o experiencia docente relevante:
-
-**Experiencia con arquitectura de software — elige una opción:**
-
-- ninguna
-- básica
-- intermedia
-- avanzada
-
-**Experiencia con diseño instruccional / pedagogía / evaluación — elige una opción:**
-
-- ninguna
-- básica
-- intermedia
-- avanzada
-
-**Familiaridad previa con Clean Architecture — elige una opción:**
-
-- ninguna
-- básica
-- intermedia
-- avanzada
-
-**Familiaridad previa con Teaching / PIR / este estudio — elige una opción:**
-
-- ninguna
-- limitada
-- sustancial
-
-## Condiciones de evaluación
-
-Fecha:
-
-Tiempo aproximado dedicado:
-
-**¿Conversaste alguna muestra con otra persona antes del envío? — elige una opción:**
-
-- sí
-- no
-
-**¿Usaste un asistente de IA durante la evaluación? — elige una opción:**
-
-- sí
-- no
-
-Si respondiste que sí, describe cómo:
-
-Cualquier otra condición que pueda haber afectado la evaluación:
+Antes de comenzar, copia esta plantilla. Incluye los antecedentes, nivel de experiencia y condiciones de evaluación que debes completar y enviar junto con tus respuestas.
 
 <div class="teaching-copy-template" data-teaching-copy-template>
   <div class="teaching-copy-template__body">
-    <strong>Plantilla del perfil</strong>
-    <span>Cópiala, complétala y envíala junto con tus respuestas.</span>
+    <strong>Perfil del evaluador</strong>
+    <span>Copia la plantilla, complétala y envíala junto con tu evaluación.</span>
   </div>
   <button type="button" class="md-button md-button--primary teaching-copy-template__button" data-copy-template-button>Copiar plantilla</button>
   <textarea hidden data-copy-template-source>ID del evaluador:
