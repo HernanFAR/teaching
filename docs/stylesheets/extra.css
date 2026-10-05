@@ -1995,7 +1995,7 @@
   display: none;
 }
 
-@media screen and (max-width: 59.9844em) {
+@media screen and (max-width: 45rem) {
   .pir-contract-criteria-grid {
     grid-template-columns: 1fr;
   }
