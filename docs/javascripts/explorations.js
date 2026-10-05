@@ -142,3 +142,249 @@
     });
   }
 })();
+
+
+/* PIR evaluator wizard */
+(() => {
+  const wizard = document.querySelector("[data-pir-eval-wizard]");
+  if (!wizard) return;
+
+  const tabs = [...wizard.querySelectorAll("[data-eval-tab]")];
+  const panels = [...wizard.querySelectorAll("[data-eval-panel]")];
+  const progressLabel = wizard.querySelector("[data-progress-label]");
+  const progressBar = wizard.querySelector("[data-progress-bar]");
+  const output = document.querySelector("[data-eval-output]");
+  const outputText = output?.querySelector("[data-eval-output-text]");
+  const outputStatus = output?.querySelector("[data-output-status]");
+  const copyOutput = output?.querySelector("[data-copy-eval-output]");
+  const state = new Map();
+  let currentIndex = 0;
+
+  const judgmentTemplate = () => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "pir-eval-judgment";
+    wrapper.dataset.judgment = "";
+    wrapper.innerHTML = `
+      <div class="pir-eval-field">
+        <label>Propiedad <span aria-hidden="true">*</span></label>
+        <input type="text" data-field="property" placeholder="CAU-002" autocomplete="off" required>
+      </div>
+      <div class="pir-eval-field">
+        <label>Juicio <span aria-hidden="true">*</span></label>
+        <select data-field="judgment" required>
+          <option value="">Selecciona…</option>
+          <option>PASS</option>
+          <option>VIOLATION</option>
+          <option>AMBIGUOUS</option>
+          <option>N/A</option>
+        </select>
+      </div>
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Evidencia <span aria-hidden="true">*</span></label>
+        <textarea data-field="evidence" rows="2" placeholder="Fragmento útil más pequeño" required></textarea>
+      </div>
+      <div class="pir-eval-field pir-eval-field--wide">
+        <label>Fundamento <span aria-hidden="true">*</span></label>
+        <textarea data-field="rationale" rows="3" placeholder="1–3 oraciones" required></textarea>
+      </div>
+      <div class="pir-eval-field">
+        <label>Confianza <span aria-hidden="true">*</span></label>
+        <select data-field="confidence" required>
+          <option value="">Selecciona…</option>
+          <option>alta</option>
+          <option>media</option>
+          <option>baja</option>
+        </select>
+      </div>
+      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment>Quitar propiedad</button>
+    `;
+    return wrapper;
+  };
+
+  const rowIsComplete = (row) =>
+    [...row.querySelectorAll("[required]")].every((field) => field.value.trim() !== "");
+
+  const formIsComplete = (form) => {
+    const rows = [...form.querySelectorAll("[data-judgment]")];
+    return rows.length > 0 && rows.every(rowIsComplete);
+  };
+
+  const serializeForm = (form, evalId) => {
+    const rows = [...form.querySelectorAll("[data-judgment]")].map((row) => ({
+      property: row.querySelector('[data-field="property"]').value.trim(),
+      judgment: row.querySelector('[data-field="judgment"]').value.trim(),
+      evidence: row.querySelector('[data-field="evidence"]').value.trim(),
+      rationale: row.querySelector('[data-field="rationale"]').value.trim(),
+      confidence: row.querySelector('[data-field="confidence"]').value.trim()
+    }));
+    const note = form.querySelector("[data-overall-note]")?.value.trim() ?? "";
+    return { evalId, rows, note };
+  };
+
+  const formatEval = ({ evalId, rows, note }) => {
+    const properties = rows.map((row) => [
+      `Propiedad: ${row.property}`,
+      `Juicio: ${row.judgment}`,
+      `Evidencia: "${row.evidence}"`,
+      `Fundamento: ${row.rationale}`,
+      `Confianza: ${row.confidence}`
+    ].join("\n")).join("\n\n");
+
+    return [
+      `Muestra: ${evalId}`,
+      "",
+      properties,
+      ...(note ? ["", "Nota general:", note] : [])
+    ].join("\n");
+  };
+
+  const updateRemoveButtons = (form) => {
+    const rows = [...form.querySelectorAll("[data-judgment]")];
+    rows.forEach((row) => {
+      const remove = row.querySelector("[data-remove-judgment]");
+      if (remove) remove.hidden = rows.length === 1;
+    });
+  };
+
+  const updateForm = (form) => {
+    const evalId = form.dataset.evalForm;
+    const complete = formIsComplete(form);
+    const next = form.querySelector("[data-next-eval]");
+    const status = form.querySelector("[data-eval-status]");
+
+    if (next) next.disabled = !complete;
+    if (status) {
+      status.textContent = complete
+        ? "Muestra completa. Puedes continuar o revisar tus respuestas."
+        : "Completa todos los campos obligatorios para continuar.";
+    }
+
+    const previous = state.get(evalId);
+    if (!complete) {
+      state.delete(evalId);
+    } else {
+      state.set(evalId, serializeForm(form, evalId));
+    }
+
+    if (previous || complete) updateProgress();
+  };
+
+  const updateProgress = () => {
+    const completed = state.size;
+    const total = panels.length;
+    if (progressLabel) progressLabel.textContent = `${completed} de ${total} completadas`;
+    if (progressBar) progressBar.style.width = `${(completed / total) * 100}%`;
+
+    tabs.forEach((tab, index) => {
+      const evalId = tab.dataset.evalTab;
+      tab.classList.toggle("is-complete", state.has(evalId));
+      const canReach = index === 0 || state.has(panels[index - 1]?.dataset.evalPanel) || state.has(evalId);
+      tab.disabled = !canReach;
+    });
+
+    const allComplete = completed === total;
+    if (copyOutput) copyOutput.disabled = !allComplete;
+    if (outputText) {
+      outputText.hidden = !allComplete;
+      if (allComplete) {
+        outputText.value = panels
+          .map((panel) => state.get(panel.dataset.evalPanel))
+          .filter(Boolean)
+          .map(formatEval)
+          .join("\n\n---\n\n");
+      }
+    }
+    if (outputStatus) {
+      outputStatus.textContent = allComplete
+        ? "Las 16 muestras están completas. La respuesta está lista para copiar."
+        : `Completa las 16 muestras para generar la respuesta final (${completed}/${total}).`;
+    }
+  };
+
+  const showPanel = (index) => {
+    const currentForm = panels[currentIndex]?.querySelector("[data-eval-form]");
+    if (index !== currentIndex && currentForm && !formIsComplete(currentForm)) {
+      currentForm.querySelector("[data-eval-status]")?.scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+
+    currentIndex = index;
+    tabs.forEach((tab, i) => {
+      const active = i === index;
+      tab.classList.toggle("is-active", active);
+      tab.setAttribute("aria-selected", String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+    panels.forEach((panel, i) => {
+      const active = i === index;
+      panel.hidden = !active;
+      panel.classList.toggle("is-active", active);
+    });
+    panels[index]?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      if (!tab.disabled) showPanel(index);
+    });
+  });
+
+  panels.forEach((panel, index) => {
+    const form = panel.querySelector("[data-eval-form]");
+    if (!form) return;
+
+    form.addEventListener("input", () => updateForm(form));
+    form.addEventListener("change", () => updateForm(form));
+
+    form.querySelector("[data-add-judgment]")?.addEventListener("click", () => {
+      const list = form.querySelector("[data-judgments]");
+      list?.appendChild(judgmentTemplate());
+      updateRemoveButtons(form);
+      updateForm(form);
+      list?.lastElementChild?.querySelector("input")?.focus();
+    });
+
+    form.addEventListener("click", (event) => {
+      const remove = event.target.closest("[data-remove-judgment]");
+      if (!remove) return;
+      remove.closest("[data-judgment]")?.remove();
+      updateRemoveButtons(form);
+      updateForm(form);
+    });
+
+    form.querySelector("[data-prev-eval]")?.addEventListener("click", () => {
+      if (index > 0) showPanel(index - 1);
+    });
+
+    form.querySelector("[data-next-eval]")?.addEventListener("click", () => {
+      updateForm(form);
+      if (!formIsComplete(form)) return;
+
+      if (index < panels.length - 1) {
+        showPanel(index + 1);
+      } else {
+        updateProgress();
+        document.querySelector("#respuesta-evaluacion")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+
+    updateRemoveButtons(form);
+    updateForm(form);
+  });
+
+  copyOutput?.addEventListener("click", async () => {
+    if (!outputText?.value) return;
+    const original = copyOutput.textContent;
+    try {
+      await navigator.clipboard.writeText(outputText.value);
+      copyOutput.textContent = "Copiado ✓";
+      window.setTimeout(() => copyOutput.textContent = original, 1600);
+    } catch {
+      outputText.hidden = false;
+      outputText.focus();
+      outputText.select();
+    }
+  });
+
+  updateProgress();
+})();
