@@ -1,10 +1,10 @@
-# Apoyar Teaching
+# Apoyar TDidacta Platform
 
-Teaching es gratuito y abierto. Esto es así porque el dinero no lo es todo
+TDidacta Platform es gratuito y abierto. Esto es así porque el dinero no lo es todo
 
 Queremos que cualquier persona pueda aprender con las lecciones, reutilizar sus instrucciones de generación, pedir nuevos ejemplos y recorrer las guías sin pagar ni desbloquear nada.
 
-Apoyar Teaching no significa únicamente aportar dinero.
+Apoyar TDidacta Platform no significa únicamente aportar dinero.
 
 Leer, aprender, compartir una lección, reutilizar las instrucciones de generación, [pedir una nueva lección o guía](https://github.com/HernanFAR/teaching/issues/new?template=request-content.yml), detectar un error o contarle a otra persona que este proyecto existe también ayuda.
 
@@ -42,7 +42,7 @@ Si necesitas más que el contenido público, podemos trabajar contigo de dos man
 </div>
 
 !!! info "Una distinción importante"
-    **Contratar trabajo profesional no desbloquea contenido ni cambia el acceso a Teaching.**
+    **Contratar trabajo profesional no desbloquea contenido ni cambia el acceso a TDidacta Platform.**
 
     Pagas por tiempo, criterio y trabajo aplicado a tu contexto; el contenido público sigue siendo abierto.
 
@@ -58,7 +58,7 @@ Si necesitas más que el contenido público, podemos trabajar contigo de dos man
 
     ---
 
-    Haz un aporte único para ayudar a sostener el trabajo detrás de Teaching.
+    Haz un aporte único para ayudar a sostener el trabajo detrás de TDidacta Platform.
 
     Puede servir para tiempo de desarrollo, herramientas, infraestructura, uso de modelos de IA y otras necesidades que permitan seguir produciendo material abierto.
 
@@ -92,7 +92,7 @@ Si necesitas más que el contenido público, podemos trabajar contigo de dos man
 
     ---
 
-    Apoya Teaching de forma recurrente, sin membresías ni contenido exclusivo.
+    Apoya TDidacta Platform de forma recurrente, sin membresías ni contenido exclusivo.
 
     Buy Me a Coffee ofrece **Monthly Support**: puedes convertir el apoyo en una contribución mensual sin esperar perks o recompensas.
 
@@ -110,7 +110,7 @@ Si necesitas más que el contenido público, podemos trabajar contigo de dos man
 
     ---
 
-    ¿Hay algo que quieres entender o conseguir y todavía no está en Teaching?
+    ¿Hay algo que quieres entender o conseguir y todavía no está en TDidacta Platform?
 
     Puedes proponer una **lección** o una **guía** con tus propias palabras. No necesitas conocer el nombre técnico del tema.
 
@@ -124,7 +124,7 @@ Si necesitas más que el contenido público, podemos trabajar contigo de dos man
 
 ## ¿Por qué existe esta página?
 
-Teaching quiere mantener el conocimiento **abierto y reutilizable**.
+TDidacta Platform quiere mantener el conocimiento **abierto y reutilizable**.
 
 Hacerlo bien requiere trabajo real, y queremos que ese trabajo siga siendo visible.
 
@@ -161,7 +161,7 @@ Hacerlo bien requiere trabajo real, y queremos que ese trabajo siga siendo visib
 </div>
 
 !!! info "Queremos que el proceso siga siendo visible"
-    Algunas partes de Teaching pueden ser ideadas, discutidas, revisadas, transformadas o generadas con ayuda de modelos de inteligencia artificial.
+    Algunas partes de TDidacta Platform pueden ser ideadas, discutidas, revisadas, transformadas o generadas con ayuda de modelos de inteligencia artificial.
 
     La IA puede participar en la realización; no convierte automáticamente al modelo en autoridad pedagógica.
 
@@ -171,7 +171,7 @@ Hacerlo bien requiere trabajo real, y queremos que ese trabajo siga siendo visib
 
 ## ¿A dónde va el apoyo?
 
-La intención es utilizar los ingresos de Teaching para ayudar a sostener el trabajo que permite que el proyecto siga existiendo y creciendo.
+La intención es utilizar los ingresos de TDidacta Platform para ayudar a sostener el trabajo que permite que el proyecto siga existiendo y creciendo.
 
 Eso puede incluir, entre otras cosas:
 
@@ -181,34 +181,34 @@ Eso puede incluir, entre otras cosas:
 - tiempo dedicado a investigar, escribir y desarrollar;
 - experimentos que puedan transformarse en nuevas lecciones o guías.
 
-### Si Teaching llega a sostenerse
+### Si TDidacta Platform llega a sostenerse
 
-Queremos que Teaching pueda llegar a sostener el trabajo necesario para mantenerlo, investigarlo y seguir desarrollándolo de forma abierta.
+Queremos que TDidacta Platform pueda llegar a sostener el trabajo necesario para mantenerlo, investigarlo y seguir desarrollándolo de forma abierta.
 
-Si el proyecto alcanza un nivel de sostenibilidad que permita hacerlo responsablemente, nos gustaría dedicar parte de esa capacidad a ofrecer **acompañamiento gratuito a docentes que se acerquen a título personal** y quieran aprender a adaptar Teaching a su propia materia.
+Si el proyecto alcanza un nivel de sostenibilidad que permita hacerlo responsablemente, nos gustaría dedicar parte de esa capacidad a ofrecer **acompañamiento gratuito a docentes que se acerquen a título personal** y quieran aprender a adaptar TDidacta Platform a su propia materia.
 
 !!! note "Una intención futura"
     Este acompañamiento **todavía no es un servicio disponible ni una promesa de cupos**.
 
-    Primero necesitamos que Teaching pueda sostener razonablemente su propio trabajo y contar con capacidad real para ofrecerlo.
+    Primero necesitamos que TDidacta Platform pueda sostener razonablemente su propio trabajo y contar con capacidad real para ofrecerlo.
 
 <div class="teaching-grid teaching-grid--2" markdown>
 
 <div class="teaching-card" markdown>
 <span class="teaching-eyebrow">Docente individual</span>
 <strong>Queremos poder reducir esa barrera</strong>
-<span>Si una persona docente se acerca por iniciativa propia para aprender a aplicar Teaching a su enseñanza, nos gustaría poder acompañarla sin costo cuando exista capacidad suficiente.</span>
+<span>Si una persona docente se acerca por iniciativa propia para aprender a aplicar TDidacta Platform a su enseñanza, nos gustaría poder acompañarla sin costo cuando exista capacidad suficiente.</span>
 </div>
 
 <div class="teaching-card" markdown>
 <span class="teaching-eyebrow">Uso institucional</span>
 <strong>Es un servicio profesional</strong>
-<span>Si una organización quiere capacitar a varios docentes, adaptar Teaching a varias asignaturas o desplegar el enfoque de forma sistemática, ese trabajo corresponde a un servicio profesional para la institución.</span>
+<span>Si una organización quiere capacitar a varios docentes, adaptar TDidacta Platform a varias asignaturas o desplegar el enfoque de forma sistemática, ese trabajo corresponde a un servicio profesional para la institución.</span>
 </div>
 
 </div>
 
-La intención del acompañamiento gratuito es ayudar a una persona que enseña, **no sustituir el presupuesto de organizaciones que quieren adoptar Teaching a escala**.
+La intención del acompañamiento gratuito es ayudar a una persona que enseña, **no sustituir el presupuesto de organizaciones que quieren adoptar TDidacta Platform a escala**.
 
 Conceptualmente, la dirección de sostenibilidad es:
 
@@ -235,7 +235,7 @@ Conceptualmente, la dirección de sostenibilidad es:
 
 </div>
 
-<p class="visual-equivalent"><strong>No es transaccional:</strong> apoyar Teaching no compra una sesión para una persona específica. Ayuda a construir una plataforma sostenible que, si llega a tener capacidad suficiente, pueda reducir esa barrera de acceso.</p>
+<p class="visual-equivalent"><strong>No es transaccional:</strong> apoyar TDidacta Platform no compra una sesión para una persona específica. Ayuda a construir una plataforma sostenible que, si llega a tener capacidad suficiente, pueda reducir esa barrera de acceso.</p>
 
 A medida que la plataforma madure, podremos hacer esta información más concreta y mantener visible cómo evoluciona su sostenibilidad.
 
