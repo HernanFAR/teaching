@@ -21,7 +21,7 @@ Esta página contiene el paquete completo para realizar la evaluación humana de
 
 ---
 
-# PIR-STU-001 — Paquete autocontenido para evaluación humana v1
+**Paquete autocontenido para evaluación humana — versión v1**
 
 Este archivo está dirigido a evaluadores y es autocontenido.
 
@@ -33,11 +33,11 @@ Por favor, completa la evaluación de manera independiente.
 
 ## 1. Introducción {#introduccion}
 
-# Introducción para evaluación humana v1
+**Introducción para evaluación humana — versión v1**
 
 Gracias por ayudar a evaluar un instrumento de investigación sobre experiencias de enseñanza generadas con IA.
 
-## Qué estás evaluando
+### Qué estás evaluando
 
 Leerás 16 realizaciones breves de enseñanza sobre arquitectura de software.
 
@@ -51,7 +51,7 @@ En cambio, recibirás un contrato explícito de conformidad que describe obligac
 
 Tu tarea es decidir si cada realización preserva, viola, deja ambiguas o no ejercita esas obligaciones.
 
-## No necesitas inferir el propósito oculto de una muestra
+### No necesitas inferir el propósito oculto de una muestra
 
 Evalúa cada muestra de manera independiente.
 
@@ -59,7 +59,7 @@ Puede haber o no relaciones entre las muestras. No intentes buscarlas.
 
 No intentes inferir cuántas muestras son "buenas" o "malas".
 
-## Categorías de respuesta
+### Categorías de respuesta
 
 Usa:
 
@@ -70,7 +70,7 @@ Usa:
 
 Todo juicio distinto de N/A debe señalar el fragmento de evidencia útil más pequeño posible.
 
-## Uso de tu experiencia
+### Uso de tu experiencia
 
 Tu conocimiento profesional puede ayudarte a entender el escenario, pero el contrato es la autoridad para esta tarea.
 
@@ -78,7 +78,7 @@ Una recomendación técnicamente razonable aun puede violar el contrato pedagóg
 
 Una decisión arquitectónica no estándar aun puede ser conforme.
 
-## Independencia
+### Independencia
 
 Por favor, completa la evaluación de manera independiente.
 
