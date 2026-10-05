@@ -248,7 +248,7 @@ No prescribe un formato de fuente, no evalúa la calidad general de enseñanza n
 
 La lección preserva estos invariantes centrales:
 
-<div class="pir-contract-criteria-grid" markdown>
+<div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
 
 <div class="teaching-item teaching-item--criterion">
 <span class="teaching-item__marker">1</span>
