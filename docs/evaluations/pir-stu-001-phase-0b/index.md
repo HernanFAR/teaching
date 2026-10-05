@@ -341,7 +341,7 @@ Evaluarás un conjunto de realizaciones de enseñanza contra un contrato explíc
 
 Tu tarea **no** es decidir si personalmente prefieres la arquitectura, el estilo de explicación o la implementación.
 
-Your task is:
+Tu tarea es:
 
 > identificar qué obligaciones pedagógicas observables se preservan, se violan, quedan ambiguas o no resultan aplicables en cada realización.
 
