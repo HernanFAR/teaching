@@ -12,10 +12,6 @@ hide:
 
 Esta página contiene el paquete completo para realizar la evaluación humana de PIR-STU-001 Phase 0b.
 
-Puedes leerlo directamente aquí o descargar una copia en Markdown para trabajar localmente.
-
-[Descargar paquete v1](PIR-STU-001-human-evaluator-package-v1.md){ .md-button .md-button--primary }
-
 !!! info "Entrega privada"
     Cuando termines, envía el perfil y las respuestas **de forma privada a Hernán**, por el canal mediante el cual recibiste este enlace.
 
