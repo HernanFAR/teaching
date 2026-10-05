@@ -39,52 +39,93 @@ Gracias por ayudar a evaluar un instrumento de investigación sobre experiencias
 
 ### Qué estás evaluando
 
-Leerás 16 realizaciones breves de enseñanza sobre arquitectura de software.
+<div class="teaching-grid teaching-grid--2" markdown>
 
-El estudio no pregunta:
+<div class="teaching-card">
+<span class="teaching-eyebrow">Material</span>
+<strong>16 realizaciones breves</strong>
+<span>Leerás 16 realizaciones de enseñanza sobre arquitectura de software.</span>
+</div>
 
-- si personalmente prefieres la arquitectura propuesta;
-- si el estilo de código es ideal;
-- si la realización coincide con una receta memorizada de Clean Architecture.
+<div class="teaching-card">
+<span class="teaching-eyebrow">Tu tarea</span>
+<strong>Evaluar obligaciones observables</strong>
+<span>Decide si cada realización preserva, viola, deja ambiguas o no ejercita las obligaciones definidas por el contrato.</span>
+</div>
+
+</div>
+
+El estudio **no** pregunta:
+
+<div class="teaching-grid teaching-grid--3 teaching-grid--stack-medium" markdown>
+
+<div class="teaching-card">
+<span class="teaching-eyebrow">Preferencia</span>
+<strong>No evalúes si te gusta la arquitectura</strong>
+<span>No importa si personalmente prefieres la arquitectura propuesta.</span>
+</div>
+
+<div class="teaching-card">
+<span class="teaching-eyebrow">Estilo</span>
+<strong>No evalúes si el código es ideal</strong>
+<span>El estilo de código no es el objeto de esta evaluación.</span>
+</div>
+
+<div class="teaching-card">
+<span class="teaching-eyebrow">Receta</span>
+<strong>No compares con una forma memorizada</strong>
+<span>No evalúes si la realización coincide con una receta memorizada de Clean Architecture.</span>
+</div>
+
+</div>
 
 En cambio, recibirás un contrato explícito de conformidad que describe obligaciones pedagógicas observables.
 
-Tu tarea es decidir si cada realización preserva, viola, deja ambiguas o no ejercita esas obligaciones.
-
-### No necesitas inferir el propósito oculto de una muestra
-
-Evalúa cada muestra de manera independiente.
-
-Puede haber o no relaciones entre las muestras. No intentes buscarlas.
-
-No intentes inferir cuántas muestras son "buenas" o "malas".
-
 ### Categorías de respuesta
 
-Usa:
+<div class="teaching-grid teaching-grid--2" markdown>
 
-- PASS — la obligación se preserva;
-- VIOLATION — la realización la contradice;
-- AMBIGUOUS — la evidencia disponible es insuficiente para decidir;
-- N/A — la propiedad no se ejercita de manera significativa.
+<div class="teaching-card">
+<span class="teaching-eyebrow">PASS</span>
+<strong>La obligación se preserva</strong>
+<span>La realización mantiene de forma observable la obligación evaluada.</span>
+</div>
+
+<div class="teaching-card">
+<span class="teaching-eyebrow">VIOLATION</span>
+<strong>La realización la contradice</strong>
+<span>Existe evidencia observable que contradice la obligación evaluada.</span>
+</div>
+
+<div class="teaching-card">
+<span class="teaching-eyebrow">AMBIGUOUS</span>
+<strong>La evidencia no alcanza</strong>
+<span>La evidencia disponible es insuficiente para decidir de manera confiable.</span>
+</div>
+
+<div class="teaching-card">
+<span class="teaching-eyebrow">N/A</span>
+<strong>La propiedad no se ejercita</strong>
+<span>La muestra no crea una situación donde esa propiedad pueda juzgarse significativamente.</span>
+</div>
+
+</div>
 
 Todo juicio distinto de N/A debe señalar el fragmento de evidencia útil más pequeño posible.
 
-### Uso de tu experiencia
+!!! info "El contrato es la autoridad"
+    Tu conocimiento profesional puede ayudarte a entender el escenario, pero el contrato es la autoridad para esta tarea.
 
-Tu conocimiento profesional puede ayudarte a entender el escenario, pero el contrato es la autoridad para esta tarea.
+    Una recomendación técnicamente razonable aun puede violar el contrato pedagógico. Una decisión arquitectónica no estándar aun puede ser conforme.
 
-Una recomendación técnicamente razonable aun puede violar el contrato pedagógico.
+!!! warning "Evalúa de forma independiente"
+    Evalúa cada muestra de manera independiente.
 
-Una decisión arquitectónica no estándar aun puede ser conforme.
+    Puede haber o no relaciones entre las muestras. No intentes buscarlas ni inferir cuántas son "buenas" o "malas".
 
-### Independencia
+    Durante la evaluación, no busques PIR-STU-001 ni materiales relacionados fuera de esta página. Todo el contexto necesario para completar la tarea está incluido aquí.
 
-Por favor, completa la evaluación de manera independiente.
-
-Durante la evaluación, no busques PIR-STU-001 ni materiales relacionados fuera de esta página. Todo el contexto necesario para completar la tarea está incluido aquí.
-
-No compares tus juicios con los de otro evaluador hasta que todos los conjuntos de respuestas hayan sido enviados y congelados.
+    No compares tus juicios con los de otro evaluador hasta que todos los conjuntos de respuestas hayan sido enviados y congelados.
 
 
 ---
