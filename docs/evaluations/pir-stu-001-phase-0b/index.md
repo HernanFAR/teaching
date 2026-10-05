@@ -725,7 +725,7 @@ No se requiere un puntaje global.
 
 === "Contexto"
 
-    <div class="teaching-grid teaching-grid--2" markdown>
+    <div class="pir-instructions-grid" markdown>
 
     <div class="teaching-card">
     <span class="teaching-eyebrow">Qué recibes</span>
@@ -764,7 +764,7 @@ No se requiere un puntaje global.
 
         Prefiere una cita exacta breve o una referencia precisa a la oración relevante. No justifiques un juicio únicamente con conocimiento general de arquitectura.
 
-    <div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
+    <div class="pir-instructions-grid" markdown>
 
     <div class="teaching-item teaching-item--criterion">
     <span class="teaching-item__marker">1</span>
@@ -796,7 +796,7 @@ No se requiere un puntaje global.
 
     Su presencia o ausencia sólo importa cuando el contrato vuelve relevante la presión subyacente o la obligación pedagógica.
 
-    <div class="teaching-grid teaching-grid--2" markdown>
+    <div class="pir-instructions-grid" markdown>
 
     <div class="teaching-card">
     <span class="teaching-eyebrow">Distingue</span>
