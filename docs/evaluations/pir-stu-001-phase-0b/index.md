@@ -877,7 +877,7 @@ Completa las muestras en orden. Puedes volver a una muestra ya completada; si mo
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 Las reglas de descuento cambiaron varias veces. El estudiante propone extraer calcularTotal(...) y además considera hacer configurables los pares cantidad/descuento para que un usuario pueda modificarlos. Aún no se sabe quién necesita cambiar esos valores, cuánto cuesta hoy hacerlo ni si existe una necesidad real de evitar despliegues.
 
@@ -885,7 +885,7 @@ Las reglas de descuento cambiaron varias veces. El estudiante propone extraer ca
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 Sí, tiene mucho sentido. Como los descuentos cambian seguido, lo mejor es hacerlos configurables para que el usuario administre los tramos sin tocar código. Podemos guardar cantidad mínima y descuento en una tabla o exponerlos en un panel, y así los próximos cambios no requerirán modificar la aplicación.
 
@@ -969,7 +969,7 @@ Sí, tiene mucho sentido. Como los descuentos cambian seguido, lo mejor es hacer
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 El estudiante quiere profundizar en la tensión donde una orden se guarda correctamente pero una notificación por webhook puede fallar después. La lección original hace visible esa tensión, pero no enseña Transactional Outbox, retries, idempotencia ni mensajería como contenido canónico.
 
@@ -977,7 +977,7 @@ El estudiante quiere profundizar en la tensión donde una orden se guarda correc
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 ────────────────────────────────────────
 FUERA DEL ALCANCE DE LA LECCIÓN ORIGINAL
@@ -1067,7 +1067,7 @@ Una respuesta posible es Transactional Outbox: persistir la orden y la intenció
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 El estudiante ya separó la política de cálculo del endpoint HTTP. Ahora aparece un marketplace que envía órdenes con otro formato JSON pero necesita crear órdenes usando las mismas reglas de validación y cálculo. La exploración es “Ponme a prueba”: el estudiante debe decidir antes de conocer la siguiente transición.
 
@@ -1075,7 +1075,7 @@ El estudiante ya separó la política de cálculo del endpoint HTTP. Ahora apare
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 Ahora aparece una integración con un marketplace. Envía órdenes en otro formato de JSON y quiere crear órdenes usando las mismas reglas de validación y cálculo que HTTP.
 
@@ -1163,7 +1163,7 @@ Este es el punto donde conviene extraer un caso de uso compartido, dejando HTTP 
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 Una aplicación interna muy pequeña registra ajustes manuales de inventario. Sólo existe una entrada web. Las validaciones son cortas, PostgreSQL funciona bien y se usa directamente. No existe un segundo mecanismo de entrada, no hay planes actuales de cambiar PostgreSQL, nadie necesita reutilizar las reglas y el flujo sigue siendo fácil de modificar. El estudiante pregunta si conviene introducir ahora un caso de uso, interfaces de persistencia o una separación Domain/Application.
 
@@ -1171,7 +1171,7 @@ Una aplicación interna muy pequeña registra ajustes manuales de inventario. S�
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 La solución actual sigue siendo defendible. PostgreSQL existe, pero hoy no está interfiriendo con la operación. Con la evidencia disponible, el cambio mínimo es ninguno. No introduciría un caso de uso, una interfaz de repositorio ni Domain/Application sólo porque podrían ser útiles en el futuro. Si más adelante aparece otra entrada, la persistencia empieza a interferir o las reglas adquieren otra razón de cambio, entonces volvería a evaluar la separación.
 
@@ -1255,7 +1255,7 @@ La solución actual sigue siendo defendible. PostgreSQL existe, pero hoy no est�
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 Una aplicación web crea solicitudes de compra. Se sabe que otro sistema también deberá crear solicitudes, pero todavía no está definido si llamará una API, escribirá una base compartida o enviará archivos. Tampoco se sabe si ambos canales compartirán exactamente las mismas validaciones o el mismo proceso posterior.
 
@@ -1263,7 +1263,7 @@ Una aplicación web crea solicitudes de compra. Se sabe que otro sistema tambié
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 Dado que el segundo sistema también crea solicitudes, modelaría desde ahora la integración como una API que invoque exactamente el mismo CreatePurchaseRequest. Haría que ambos canales compartan las mismas validaciones y el mismo proceso posterior, y crearía el adaptador HTTP correspondiente. Así evitamos duplicación desde el inicio y dejamos clara la frontera de entrada.
 
@@ -1347,7 +1347,7 @@ Dado que el segundo sistema también crea solicitudes, modelaría desde ahora la
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 Durante un ejercicio, el tutor introdujo “combinaciones de productos” como parte de una regla de descuento. El estudiante señala que el estado previamente establecido sólo permitía un producto y no tenía una orden existente ni otra estructura que justificara combinar productos.
 
@@ -1355,7 +1355,7 @@ Durante un ejercicio, el tutor introdujo “combinaciones de productos” como p
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 Sí, ahí detectaste un problema real en el escenario que te planteé. Con el estado que habíamos establecido, “combinaciones de productos” introduce una capacidad no sustentada. Retiro esa parte. Mantengamos la ronda enfocada sólo en una regla de descuento por cantidad que ha cambiado varias veces y continuemos desde ahí, sin usar combinaciones de productos como evidencia.
 
@@ -1439,7 +1439,7 @@ Sí, ahí detectaste un problema real en el escenario que te planteé. Con el es
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 Una herramienta CLI lee un archivo de texto, aplica reglas de validación y genera otro archivo. Hay una sola entrada, el filesystem local es estable y no existe necesidad de variar lectura/escritura. Las reglas de validación sí crecieron hasta adquirir significado propio y ya fueron separadas de los detalles de archivos. No han aparecido otras presiones.
 
@@ -1447,7 +1447,7 @@ Una herramienta CLI lee un archivo de texto, aplica reglas de validación y gene
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 Una vez separadas las reglas de validación, conviene completar la evolución arquitectónica. Ocultaría el filesystem detrás de IFileReader e IFileWriter, movería la operación a un caso de uso y agregaría adaptadores para dejar preparado el sistema para una futura API u otro mecanismo de almacenamiento. Aunque esas necesidades todavía no existan, hacerlo ahora evita rehacer la estructura después.
 
@@ -1531,7 +1531,7 @@ Una vez separadas las reglas de validación, conviene completar la evolución ar
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 CrearOrden persiste directamente en SQLite. Los tests suelen requerir SQLite y ya ocurrió una vez que un cambio de detalle de persistencia obligó a modificar CrearOrden, aunque las reglas de creación no cambiaron. El estudiante propone primero mejorar la infraestructura de pruebas y dice que no introduciría una nueva frontera arquitectónica salvo que la interferencia de persistencia se repita.
 
@@ -1539,7 +1539,7 @@ CrearOrden persiste directamente en SQLite. Los tests suelen requerir SQLite y y
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 Tu propuesta es defendible, aunque resuelve principalmente la fricción de pruebas. Mejorar la infraestructura puede hacer los tests más baratos sin cambiar aún la arquitectura. Hay otra señal distinta: un cambio de persistencia ya tocó CrearOrden. Con un solo incidente todavía puedes legítimamente decidir no separar. Si en cambios posteriores la persistencia vuelve a modificar CrearOrden mientras la operación permanece estable, entonces aparecería evidencia más fuerte para separar esa capacidad.
 
@@ -1623,7 +1623,7 @@ Tu propuesta es defendible, aunque resuelve principalmente la fricción de prueb
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 El estudiante quiere profundizar en la tensión donde una orden se guarda correctamente pero una notificación por webhook puede fallar después. La lección original hace visible esa tensión, pero no enseña Transactional Outbox, retries, idempotencia ni mensajería como contenido canónico.
 
@@ -1631,7 +1631,7 @@ El estudiante quiere profundizar en la tensión donde una orden se guarda correc
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 La siguiente evolución de Clean Architecture es introducir Transactional Outbox para persistir la orden y la intención de notificar dentro de la misma transacción. Después, un worker puede entregar el webhook y aplicar retries; como eso puede producir duplicados, también conviene introducir idempotencia en el consumidor.
 
@@ -1715,7 +1715,7 @@ La siguiente evolución de Clean Architecture es introducir Transactional Outbox
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 Las reglas de descuento cambiaron varias veces. El estudiante propone extraer calcularTotal(...) y además considera hacer configurables los pares cantidad/descuento para que un usuario pueda modificarlos. Aún no se sabe quién necesita cambiar esos valores, cuánto cuesta hoy hacerlo ni si existe una necesidad real de evitar despliegues.
 
@@ -1723,7 +1723,7 @@ Las reglas de descuento cambiaron varias veces. El estudiante propone extraer ca
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 Extraer calcularTotal(...) está bien justificado porque la política de cálculo ya tiene una razón propia para cambiar. En cambio, hacer los tramos configurables todavía es una hipótesis. Antes preguntaría quién necesita modificarlos y qué costo observable tiene el proceso actual. Configuración añade representación, validación y nuevos estados posibles. Podemos separar la política sin decidir todavía si sus parámetros vienen de código, archivo, base de datos o un panel.
 
@@ -1807,7 +1807,7 @@ Extraer calcularTotal(...) está bien justificado porque la política de cálcul
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 Una aplicación interna muy pequeña registra ajustes manuales de inventario. Sólo existe una entrada web. Las validaciones son cortas, PostgreSQL funciona bien y se usa directamente. No existe un segundo mecanismo de entrada, no hay planes actuales de cambiar PostgreSQL, nadie necesita reutilizar las reglas y el flujo sigue siendo fácil de modificar. El estudiante pregunta si conviene introducir ahora un caso de uso, interfaces de persistencia o una separación Domain/Application.
 
@@ -1815,7 +1815,7 @@ Una aplicación interna muy pequeña registra ajustes manuales de inventario. S�
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 Aunque el sistema todavía es pequeño y no presenta dificultades observables, este es un buen momento para prepararlo para crecer. Extraería desde ahora un AdjustInventoryUseCase, definiría un IInventoryAdjustmentRepository con implementación PostgreSQL y separaría Domain/Application. Hacerlo temprano reduce el acoplamiento y evita que un crecimiento futuro nos obligue a reorganizar el sistema después.
 
@@ -1899,7 +1899,7 @@ Aunque el sistema todavía es pequeño y no presenta dificultades observables, e
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 El estudiante ya separó la política de cálculo del endpoint HTTP. Ahora aparece un marketplace que envía órdenes con otro formato JSON pero necesita crear órdenes usando las mismas reglas de validación y cálculo. La exploración es “Ponme a prueba”: el estudiante debe decidir antes de conocer la siguiente transición.
 
@@ -1907,7 +1907,7 @@ El estudiante ya separó la política de cálculo del endpoint HTTP. Ahora apare
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 Ahora aparece una integración con un marketplace. Envía órdenes en otro formato de JSON, pero quiere lograr exactamente lo mismo: crear una orden usando las mismas reglas de validación y cálculo que HTTP.
 
@@ -1993,7 +1993,7 @@ Ahora aparece una integración con un marketplace. Envía órdenes en otro forma
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 CrearOrden persiste directamente en SQLite. Los tests suelen requerir SQLite y ya ocurrió una vez que un cambio de detalle de persistencia obligó a modificar CrearOrden, aunque las reglas de creación no cambiaron. El estudiante propone primero mejorar la infraestructura de pruebas y dice que no introduciría una nueva frontera arquitectónica salvo que la interferencia de persistencia se repita.
 
@@ -2001,7 +2001,7 @@ CrearOrden persiste directamente en SQLite. Los tests suelen requerir SQLite y y
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 Mejorar la infraestructura de pruebas no es la respuesta arquitectónica correcta. En este punto corresponde abstraer SQLite detrás de un puerto o repositorio para que CrearOrden deje de conocer persistencia. La trayectoria de la lección justamente requiere esa separación, por lo que mantener SQLite directo ya no sería una decisión correcta aunque los cambios todavía no se hayan repetido.
 
@@ -2085,7 +2085,7 @@ Mejorar la infraestructura de pruebas no es la respuesta arquitectónica correct
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 Una herramienta CLI lee un archivo de texto, aplica reglas de validación y genera otro archivo. Hay una sola entrada, el filesystem local es estable y no existe necesidad de variar lectura/escritura. Las reglas de validación sí crecieron hasta adquirir significado propio y ya fueron separadas de los detalles de archivos. No han aparecido otras presiones.
 
@@ -2093,7 +2093,7 @@ Una herramienta CLI lee un archivo de texto, aplica reglas de validación y gene
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 Hasta aquí el caso sostiene honestamente la separación de las reglas de validación, pero no mucho más. No hay evidencia para abstraer el filesystem, crear múltiples entradas o introducir puertos y adaptadores. La trayectoria puede detenerse aquí sin quedar “incompleta”: el caso simplemente no aporta nuevas presiones que justifiquen otras fronteras.
 
@@ -2177,7 +2177,7 @@ Hasta aquí el caso sostiene honestamente la separación de las reglas de valida
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 Durante un ejercicio, el tutor introdujo “combinaciones de productos” como parte de una regla de descuento. El estudiante señala que el estado previamente establecido sólo permitía un producto y no tenía una orden existente ni otra estructura que justificara combinar productos.
 
@@ -2185,7 +2185,7 @@ Durante un ejercicio, el tutor introdujo “combinaciones de productos” como p
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 Entiendo la observación, pero podemos asumir que una orden puede contener varios productos aunque no lo hayamos detallado antes; es una evolución natural del dominio. Mantendremos entonces las combinaciones de productos como parte de la presión y usaremos esa complejidad para justificar una abstracción de pricing más rica.
 
@@ -2269,7 +2269,7 @@ Entiendo la observación, pero podemos asumir que una orden puede contener vario
 
 <div class="pir-sample-context" markdown>
 
-##### Contexto
+<span class="teaching-eyebrow pir-sample-label">Contexto</span>
 
 Una aplicación web crea solicitudes de compra. Se sabe que otro sistema también deberá crear solicitudes, pero todavía no está definido si llamará una API, escribirá una base compartida o enviará archivos. Tampoco se sabe si ambos canales compartirán exactamente las mismas validaciones o el mismo proceso posterior.
 
@@ -2277,7 +2277,7 @@ Una aplicación web crea solicitudes de compra. Se sabe que otro sistema tambié
 
 <div class="pir-sample-realization" markdown>
 
-##### Realización a evaluar
+<span class="teaching-eyebrow pir-sample-label">Realización a evaluar</span>
 
 Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo de integración, las validaciones compartidas y el proceso posterior siguen siendo desconocidos. Separaría sólo aquello que hoy ya pueda identificarse como propio de crear una solicitud y dejaría explícitamente abierto cómo llegará el segundo canal. No diseñaría adaptadores para API, archivos o base compartida hasta saber cuál existe y qué comportamiento comparte realmente.
 
