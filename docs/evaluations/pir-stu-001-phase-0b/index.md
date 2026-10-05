@@ -842,7 +842,7 @@ No se requiere un puntaje global.
 
 Completa las muestras en orden. Puedes volver a una muestra ya completada; si modificas su formulario y queda incompleto, la navegación vuelve a bloquearse hasta completarlo.
 
-<div class="pir-eval-wizard" data-pir-eval-wizard data-eval-count="16" markdown>
+<div class="pir-eval-wizard" data-pir-eval-wizard data-eval-count="16">
 
 <div class="pir-eval-wizard__tabs" role="tablist" aria-label="Muestras de evaluación">
 <button type="button" role="tab" class="pir-eval-wizard__tab is-active" id="pir-tab-EVAL-001" aria-controls="pir-panel-EVAL-001" aria-selected="true" data-eval-tab="EVAL-001" >EVAL-001</button>
