@@ -2563,3 +2563,55 @@
     padding-right: 0.7rem;
   }
 }
+
+
+/* PIR form header with primary progression actions */
+
+.pir-eval-wizard__panel .pir-eval-form__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.pir-eval-form__intro {
+  min-width: 0;
+}
+
+.pir-eval-form__primary-actions {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pir-eval-form__primary-actions .md-button {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__actions {
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 52rem) {
+  .pir-eval-wizard__panel .pir-eval-form__header {
+    grid-template-columns: 1fr;
+  }
+
+  .pir-eval-form__primary-actions {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  .pir-eval-form__primary-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .pir-eval-form__primary-actions .md-button {
+    width: 100%;
+  }
+}
