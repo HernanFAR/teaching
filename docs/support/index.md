@@ -1,15 +1,50 @@
 # Apoyar Teaching
 
-Teaching es gratuito y abierto.
+Teaching es gratuito y abierto. Esto es así porque el dinero no lo es todo
 
 Queremos que cualquier persona pueda aprender con las lecciones, reutilizar sus instrucciones de generación, pedir nuevos ejemplos y recorrer las guías sin pagar ni desbloquear nada.
 
-Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes hacerlo de forma completamente voluntaria.
+Apoyar Teaching no significa únicamente aportar dinero.
+
+Leer, aprender, compartir una lección, reutilizar las instrucciones de generación, [pedir una nueva lección o guía](https://github.com/HernanFAR/teaching/issues/new?template=request-content.yml), detectar un error o contarle a otra persona que este proyecto existe también ayuda.
 
 !!! heart "Una regla importante"
-    **Apoyar nunca desbloquea contenido ni cambia tu experiencia.**
+    **El apoyo económico es una posibilidad, no una expectativa.**
 
-    No hay lecciones premium, ventajas para sponsors ni contenido bloqueado detrás de una contribución.
+    Apoyar nunca desbloquea contenido ni cambia tu experiencia. No hay lecciones premium, ventajas para sponsors ni contenido bloqueado detrás de una contribución.
+
+    Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes hacerlo de la forma que tenga sentido para ti.
+
+---
+
+## Trabajar con nosotros
+
+<span class="teaching-eyebrow">Trabajo profesional</span>
+
+Si necesitas más que el contenido público, podemos trabajar contigo de dos maneras:
+
+<div class="teaching-grid teaching-grid--2" markdown>
+
+<a class="teaching-link-card" href="../advisory/">
+  <span class="teaching-eyebrow">Asesoría</span>
+  <strong>Una segunda mirada sobre un caso concreto</strong>
+  <span>Revisamos contigo una situación real, sus presiones, alternativas y el siguiente movimiento razonable.</span>
+  <span class="teaching-link-card__action">Ver asesoría →</span>
+</a>
+
+<a class="teaching-link-card" href="../services/">
+  <span class="teaching-eyebrow">Servicios</span>
+  <strong>Aplicamos o transferimos el enfoque</strong>
+  <span>Podemos ayudarte a construir una superficie pedagógica para tu dominio o formar a tu equipo para que pueda hacerlo con autonomía.</span>
+  <span class="teaching-link-card__action">Ver servicios →</span>
+</a>
+
+</div>
+
+!!! info "Una distinción importante"
+    **Contratar trabajo profesional no desbloquea contenido ni cambia el acceso a Teaching.**
+
+    Pagas por tiempo, criterio y trabajo aplicado a tu contexto; el contenido público sigue siendo abierto.
 
 ---
 
@@ -89,34 +124,48 @@ Si algo de aquí te sirvió y quieres ayudarnos a seguir construyéndolo, puedes
 
 ## ¿Por qué existe esta página?
 
-Teaching nace de una intención simple: compartir conocimiento de una forma que ayude a entender **por qué** aparecen ciertas decisiones de software, no solamente a memorizarlas.
+Teaching quiere mantener el conocimiento **abierto y reutilizable**.
 
-Crear ese material requiere trabajo:
+Hacerlo bien requiere trabajo real, y queremos que ese trabajo siga siendo visible.
 
-- estudiar problemas reales;
-- diseñar recorridos pedagógicos;
-- escribir y revisar explicaciones;
-- construir ejemplos;
-- producir diagramas y material visual;
-- probar distintas formas de explicar la misma idea;
-- mantener la plataforma;
-- utilizar herramientas e inteligencia artificial cuando aportan valor.
+<div class="teaching-research-boundary">
 
-Queremos que ese proceso siga siendo visible.
+<div class="teaching-research-boundary__column">
 
-Por eso también somos transparentes con el uso de IA: algunas partes del material pueden ser ideadas, discutidas, revisadas, transformadas o generadas con ayuda de modelos de inteligencia artificial.
+<span class="teaching-eyebrow">Trabajo pedagógico</span>
 
-Puedes leer más sobre ello en [Cómo enseñamos](../about/how-we-teach.md).
+<ul>
+  <li>estudiar problemas y casos reales;</li>
+  <li>diseñar recorridos de aprendizaje;</li>
+  <li>escribir y revisar explicaciones;</li>
+  <li>probar distintas formas de enseñar la misma intención;</li>
+  <li>revisar qué evidencia contradice lo que esperábamos.</li>
+</ul>
 
----
+</div>
 
-## No tienes que apoyar económicamente
+<div class="teaching-research-boundary__column">
 
-En serio.
+<span class="teaching-eyebrow">Realización y continuidad</span>
 
-Leer, aprender, compartir una lección, reutilizar las instrucciones de generación, [pedir una nueva lección o guía](https://github.com/HernanFAR/teaching/issues/new?template=request-content.yml), detectar un error o contarle a otra persona que este proyecto existe también ayuda.
+<ul>
+  <li>construir ejemplos, diagramas y material visual;</li>
+  <li>mantener la plataforma y su documentación;</li>
+  <li>sostener herramientas e infraestructura;</li>
+  <li>usar modelos de IA cuando aportan valor;</li>
+  <li>seguir investigando cómo mejorar el sistema.</li>
+</ul>
 
-El apoyo económico es una posibilidad, no una expectativa.
+</div>
+
+</div>
+
+!!! info "Queremos que el proceso siga siendo visible"
+    Algunas partes de Teaching pueden ser ideadas, discutidas, revisadas, transformadas o generadas con ayuda de modelos de inteligencia artificial.
+
+    La IA puede participar en la realización; no convierte automáticamente al modelo en autoridad pedagógica.
+
+    Puedes leer más en [Cómo enseñamos](../about/how-we-teach.md).
 
 ---
 
@@ -131,6 +180,62 @@ Eso puede incluir, entre otras cosas:
 - cómputo y uso de modelos de IA;
 - tiempo dedicado a investigar, escribir y desarrollar;
 - experimentos que puedan transformarse en nuevas lecciones o guías.
+
+### Si Teaching llega a sostenerse
+
+Queremos que Teaching pueda llegar a sostener el trabajo necesario para mantenerlo, investigarlo y seguir desarrollándolo de forma abierta.
+
+Si el proyecto alcanza un nivel de sostenibilidad que permita hacerlo responsablemente, nos gustaría dedicar parte de esa capacidad a ofrecer **acompañamiento gratuito a docentes que se acerquen a título personal** y quieran aprender a adaptar Teaching a su propia materia.
+
+!!! note "Una intención futura"
+    Este acompañamiento **todavía no es un servicio disponible ni una promesa de cupos**.
+
+    Primero necesitamos que Teaching pueda sostener razonablemente su propio trabajo y contar con capacidad real para ofrecerlo.
+
+<div class="teaching-grid teaching-grid--2" markdown>
+
+<div class="teaching-card" markdown>
+<span class="teaching-eyebrow">Docente individual</span>
+<strong>Queremos poder reducir esa barrera</strong>
+<span>Si una persona docente se acerca por iniciativa propia para aprender a aplicar Teaching a su enseñanza, nos gustaría poder acompañarla sin costo cuando exista capacidad suficiente.</span>
+</div>
+
+<div class="teaching-card" markdown>
+<span class="teaching-eyebrow">Uso institucional</span>
+<strong>Es un servicio profesional</strong>
+<span>Si una organización quiere capacitar a varios docentes, adaptar Teaching a varias asignaturas o desplegar el enfoque de forma sistemática, ese trabajo corresponde a un servicio profesional para la institución.</span>
+</div>
+
+</div>
+
+La intención del acompañamiento gratuito es ayudar a una persona que enseña, **no sustituir el presupuesto de organizaciones que quieren adoptar Teaching a escala**.
+
+Conceptualmente, la dirección de sostenibilidad es:
+
+<div class="teaching-flow">
+
+<div class="teaching-flow__step">
+<strong>Apoyo y servicios</strong>
+<small>Servicios profesionales, adopciones institucionales, patrocinios y apoyo voluntario.</small>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step">
+<strong>Sostenibilidad</strong>
+<small>Capacidad para sostener desarrollo abierto, investigación, infraestructura y trabajo humano.</small>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step teaching-flow__step--accent">
+<strong>Capacidad adicional</strong>
+<small>Si existe, queremos poder destinar parte de ella a acompañar gratuitamente a docentes individuales.</small>
+</div>
+
+</div>
+
+<p class="visual-equivalent"><strong>No es transaccional:</strong> apoyar Teaching no compra una sesión para una persona específica. Ayuda a construir una plataforma sostenible que, si llega a tener capacidad suficiente, pueda reducir esa barrera de acceso.</p>
 
 A medida que la plataforma madure, podremos hacer esta información más concreta y mantener visible cómo evoluciona su sostenibilidad.
 

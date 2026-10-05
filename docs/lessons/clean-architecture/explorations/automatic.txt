@@ -55,7 +55,7 @@ No inventes un quinto tipo de exploración. Si la necesidad mezcla varios objeti
 
 Si tienes acceso a GitHub, consulta la carpeta completa de esta lección antes de reconstruir por tu cuenta aquello que Teaching ya dejó explícito:
 
-https://github.com/HernanFAR/teaching/tree/lesson/clean-architecture/docs/lessons/clean-architecture
+https://github.com/HernanFAR/teaching/tree/main/docs/lessons/clean-architecture
 
 Allí encontrarás la fuente pedagógica, el diseño de realización, el caso conductor, la evolución causal, la realización técnica, la evidencia de implementación y la publicación canónica.
 
