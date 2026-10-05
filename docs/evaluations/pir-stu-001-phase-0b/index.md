@@ -230,22 +230,21 @@ No modifica la semántica del contrato congelado.
 
 #### Propósito
 
-Este contrato define propiedades observables de conformidad pedagógica para realizaciones de la lección de Teaching **Cómo se llega a Clean Architecture**.
+<div class="teaching-card">
+<span class="teaching-eyebrow">Qué evalúa este contrato</span>
+<strong>Conformidad pedagógica observable</strong>
+<span>Distingue preservación de intención, variación legítima, violaciones, avance prematuro, presión inventada y cruces de alcance no declarados.</span>
+</div>
 
 No prescribe un formato de fuente, no evalúa la calidad general de enseñanza ni mide resultados de aprendizaje.
 
-Su propósito es distinguir:
-
-- preservación de la intención;
-- variación legítima;
-- omisión o violación;
-- avance prematuro;
-- presión inventada;
-- cruce de alcance no declarado.
-
 #### Autoridad pedagógica central
 
-> ¿Qué problema justifica esta separación?
+<div class="teaching-card">
+<span class="teaching-eyebrow">Pregunta guía</span>
+<strong>¿Qué problema justifica esta separación?</strong>
+<span>La arquitectura debe poder reconstruirse desde las presiones que vuelven útil cada separación.</span>
+</div>
 
 La lección preserva estos invariantes centrales:
 
@@ -309,19 +308,35 @@ La lección preserva estos invariantes centrales:
 
 #### Unidad de juicio
 
-La unidad principal es una realización bajo una operación declarada y una necesidad concreta del estudiante.
+Evalúa la realización en relación con la operación solicitada y el estado o necesidad concreta disponible.
 
-En exploraciones interactivas, una ejecución puede contener múltiples rondas.
+<div class="teaching-flow">
 
-```text
-operación solicitada
-+
-estado disponible / necesidad del estudiante
-+
-realización producida
-```
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">1</span>
+<strong>Operación solicitada</strong>
+<small>Qué se pidió hacer en esta interacción.</small>
+</div>
 
-No evalúes por similitud superficial con una realización publicada.
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">2</span>
+<strong>Estado / necesidad</strong>
+<small>Qué información y necesidad concreta estaban disponibles.</small>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step teaching-flow__step--numbered teaching-flow__step--accent">
+<span class="teaching-flow__marker">3</span>
+<strong>Realización producida</strong>
+<small>Qué hizo efectivamente la realización frente a ese contexto.</small>
+</div>
+
+</div>
+
+En exploraciones interactivas, una ejecución puede contener múltiples rondas. No evalúes por similitud superficial con una realización publicada.
 
 #### Estados de evaluación
 
