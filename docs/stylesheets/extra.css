@@ -2491,3 +2491,11 @@
 .pir-eval-wizard__panel .pir-sample-label + p {
   margin-top: 0;
 }
+
+
+/* EVAL identifiers are local wizard labels, not document headings */
+
+.pir-eval-wizard__panel .pir-eval-label {
+  display: block;
+  margin: 0 0 0.45rem;
+}
