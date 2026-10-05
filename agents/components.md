@@ -1,8 +1,8 @@
-# Teaching component rules
+# TDidacta Platform component rules
 
 ## Purpose
 
-Use this file when implementing the visual structure of a Teaching entry.
+Use this file when implementing the visual structure of a TDidacta Platform entry.
 
 Components are an **implementation vocabulary**, not pedagogical authority. Choose them only after the pedagogical source and the realization design make the job of the content clear.
 
@@ -10,7 +10,7 @@ Prefer, in this order:
 
 1. plain Markdown when it already communicates the idea;
 2. a native Zensical or supported Markdown component when its semantics fit;
-3. an existing Teaching primitive or recipe;
+3. an existing TDidacta Platform primitive or recipe;
 4. new HTML/CSS only when the existing vocabulary cannot express the required meaning honestly.
 
 Do not create a new component only because a section has a new topic name.
@@ -38,9 +38,9 @@ Do not recreate an admonition as a custom colored box.
 
 Use code when the code itself is the evidence or object of study.
 
-Use Mermaid only when a diagram answers a concrete pedagogical question more clearly than simpler text or an existing Teaching component.
+Use Mermaid only when a diagram answers a concrete pedagogical question more clearly than simpler text or an existing TDidacta Platform component.
 
-## Teaching primitives
+## TDidacta Platform primitives
 
 ### `teaching-grid`
 
@@ -132,7 +132,7 @@ It is visual metadata, not a heading level.
 
 ### `teaching-link-card`
 
-A card whose primary job is navigation to another Teaching surface.
+A card whose primary job is navigation to another TDidacta Platform surface.
 
 Use it when the entire card is one clear action. Do not turn ordinary explanatory cards into links merely for visual consistency.
 
@@ -200,7 +200,7 @@ Question:
 
 Use `teaching-flow` when a short causal chain can be expressed as readable named states connected linearly. If five or more states become too narrow in one row, use the multiline flow recipe instead of squeezing the labels. Keep a textual equivalent immediately after the flow when the relationship is essential.
 
-Use Mermaid instead when the relationship actually needs graph geometry: branching, convergence, cycles, or other structure that a linear Teaching flow cannot express honestly.
+Use Mermaid instead when the relationship actually needs graph geometry: branching, convergence, cycles, or other structure that a linear TDidacta Platform flow cannot express honestly.
 
 ### Comparison
 
@@ -232,7 +232,7 @@ Before adding a new component, ask:
 
 1. Is this actually a new semantic job?
 2. Can a native Zensical or supported Markdown component express it?
-3. Can an existing Teaching primitive express it with a different layout?
+3. Can an existing TDidacta Platform primitive express it with a different layout?
 4. Would a new abstraction be reusable in another entry without knowing this topic?
 
 If the answer is mostly about the topic name rather than the semantic job, do not create a new component.
