@@ -2438,3 +2438,44 @@
 .pir-eval-wizard__panel .pir-sample-realization > h5 {
   margin-bottom: 0.35rem;
 }
+
+
+/* Make each EVAL a single continuous workspace */
+
+.pir-eval-wizard__panel .pir-eval-form {
+  margin-top: 0.45rem;
+  padding: 0.25rem 0 0;
+  border: 0;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__header {
+  padding-top: 0;
+}
+
+.pir-eval-wizard__panel .pir-eval-judgment {
+  padding: 0.45rem 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.pir-eval-wizard__panel .pir-eval-judgment + .pir-eval-judgment {
+  margin-top: 0.55rem;
+  padding-top: 0.75rem;
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+.pir-eval-wizard__panel .pir-eval-form__judgments {
+  margin-top: 0.5rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-form > .pir-eval-field {
+  margin-top: 0.45rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__status {
+  margin-top: 0.35rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__actions {
+  margin-top: 0.4rem;
+}
