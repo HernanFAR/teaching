@@ -2000,3 +2000,32 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Evaluator-instructions tabs */
+
+.pir-instructions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.pir-instructions-grid > .teaching-card,
+.pir-instructions-grid > .teaching-item {
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+}
+
+/* Markdown inside tabbed content can emit empty paragraph nodes.
+   They must not consume grid cells. */
+.pir-instructions-grid > p:empty {
+  display: none;
+}
+
+@media screen and (max-width: 45rem) {
+  .pir-instructions-grid {
+    grid-template-columns: 1fr;
+  }
+}
