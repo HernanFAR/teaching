@@ -11,6 +11,7 @@ Las instrucciones operativas específicas para agentes viven en `agents/`. Antes
 - `agents/realization-design.md`;
 - `agents/explorations.md`;
 - `agents/components.md`.
+- `agents/evaluations.md`.
 
 La documentación bajo `docs/` es la realización pública para humanos. No reemplaza las reglas operativas de `agents/`.
 
