@@ -1200,8 +1200,18 @@
   display: block;
 }
 
-.teaching-card > strong {
+.teaching-card > strong,
+.teaching-card > p > strong {
+  display: block;
   line-height: 1.35;
+}
+
+.teaching-card > p > strong + span {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .teaching-card > span:last-child:not(.teaching-eyebrow) {
@@ -1211,8 +1221,8 @@
   line-height: 1.5;
 }
 
-.teaching-card > p:last-child {
-  margin-bottom: 0;
+.teaching-card > p {
+  margin: 0;
 }
 
 .teaching-eyebrow {
@@ -1659,4 +1669,84 @@
 
 .teaching-provenance p {
   margin: 0;
+}
+
+
+.teaching-work-scope {
+  margin: 1.15rem 0 1.4rem;
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+.teaching-work-scope__item {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.1rem 0;
+  border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+.teaching-work-scope__label {
+  padding-top: 0.1rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.teaching-work-scope__body {
+  min-width: 0;
+}
+
+.teaching-work-scope__body strong,
+.teaching-work-scope__body span {
+  display: block;
+}
+
+.teaching-work-scope__body strong {
+  line-height: 1.35;
+}
+
+.teaching-work-scope__body span {
+  margin-top: 0.3rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 45rem) {
+  .teaching-work-scope__item {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+}
+
+
+.teaching-research-boundary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 1.25rem 0 1.4rem;
+}
+
+.teaching-research-boundary__column {
+  min-width: 0;
+  padding-top: 0.9rem;
+  border-top: 0.08rem solid var(--md-default-fg-color--lightest);
+}
+
+.teaching-research-boundary__column > ul {
+  margin-top: 0.7rem;
+}
+
+.teaching-research-boundary__column > ul > li {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 45rem) {
+  .teaching-research-boundary {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
 }
