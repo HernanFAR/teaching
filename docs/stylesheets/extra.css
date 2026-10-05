@@ -2499,3 +2499,67 @@
   display: block;
   margin: 0 0 0.45rem;
 }
+
+
+/* Split each EVAL into two related cards with border legends */
+
+.pir-eval-wizard__panel {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.pir-eval-wizard__panel .pir-evaluation-sample,
+.pir-eval-wizard__panel .pir-eval-form {
+  position: relative;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: calc(var(--teaching-radius) + 0.1rem);
+  background: transparent;
+}
+
+.pir-eval-wizard__panel .pir-evaluation-sample {
+  margin: 0;
+  padding: 1.15rem 0.85rem 0.85rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-label {
+  position: absolute;
+  top: -0.62rem;
+  left: 0.8rem;
+  z-index: 1;
+  margin: 0;
+  padding: 0 0.38rem;
+  background: var(--md-default-bg-color);
+  line-height: 1.2;
+}
+
+.pir-eval-wizard__panel .pir-eval-form {
+  margin-top: 0.85rem;
+  padding: 1.15rem 0.85rem 0.75rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__legend {
+  position: absolute;
+  top: -0.62rem;
+  left: 0.8rem;
+  z-index: 1;
+  padding: 0 0.38rem;
+  background: var(--md-default-bg-color);
+  line-height: 1.2;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__header {
+  min-height: 1.8rem;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__header > div > span {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 45rem) {
+  .pir-eval-wizard__panel .pir-evaluation-sample,
+  .pir-eval-wizard__panel .pir-eval-form {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+}
