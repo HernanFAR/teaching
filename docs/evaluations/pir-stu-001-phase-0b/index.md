@@ -196,11 +196,37 @@ Cualquier otra condición que pueda haber afectado la evaluación:
 
 **PIR-STU-001 — Contrato de conformidad de Clean Architecture v1**
 
-#### Vista del evaluador
-
-Esta vista para evaluadores preserva las propiedades de conformidad congeladas de v1 y sus definiciones, mientras omite material de construcción del benchmark, identidades de controles positivos, familias de mutantes, expectativas ocultas, el procedimiento interno de calibración y la procedencia de ejecución.
+Esta vista preserva las propiedades de conformidad congeladas de v1 y sus definiciones, mientras omite material de construcción del benchmark, identidades de controles positivos, familias de mutantes, expectativas ocultas, el procedimiento interno de calibración y la procedencia de ejecución.
 
 No modifica la semántica del contrato congelado.
+
+#### Cómo usar el contrato
+
+<div class="teaching-flow">
+
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">1</span>
+<strong>Identifica qué propiedades se ejercitan</strong>
+<small>No todas las propiedades son relevantes para todas las muestras.</small>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step teaching-flow__step--numbered">
+<span class="teaching-flow__marker">2</span>
+<strong>Juzga la evidencia disponible</strong>
+<small>Usa PASS, VIOLATION, AMBIGUOUS o N/A según lo que la realización realmente hace.</small>
+</div>
+
+<div class="teaching-flow__arrow" aria-hidden="true">→</div>
+
+<div class="teaching-flow__step teaching-flow__step--numbered teaching-flow__step--accent">
+<span class="teaching-flow__marker">3</span>
+<strong>Señala la evidencia mínima</strong>
+<small>Todo juicio distinto de N/A debe apuntar al fragmento útil más pequeño.</small>
+</div>
+
+</div>
 
 #### Propósito
 
@@ -219,29 +245,73 @@ Su propósito es distinguir:
 
 #### Autoridad pedagógica central
 
-La pregunta guía de la lección es:
-
 > ¿Qué problema justifica esta separación?
 
 La lección preserva estos invariantes centrales:
 
-- una solución inicial puede ser suficiente y defendible;
-- una separación requiere presión observable previa;
-- el cambio debe ser proporcional a la presión actual;
-- los nombres formales aparecen después de la experiencia que los vuelve útiles;
-- política y mecanismo deben seguir siendo distinguibles cuando sea relevante;
-- detenerse antes de una forma arquitectónica final puede ser correcto;
-- la arquitectura resultante debe poder reconstruirse causalmente;
-- interfaces, capas o DI no demuestran por sí solas que una separación fuera necesaria;
-- los conceptos culturalmente asociados con Clean Architecture no son automáticamente obligaciones de esta lección.
+<div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
+
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">1</span>
+<strong>Suficiencia inicial</strong>
+<span>Una solución inicial puede ser suficiente y defendible.</span>
+</div>
+
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">2</span>
+<strong>Presión observable</strong>
+<span>Una separación requiere presión observable previa.</span>
+</div>
+
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">3</span>
+<strong>Cambio proporcional</strong>
+<span>El cambio debe ser proporcional a la presión actual.</span>
+</div>
+
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">4</span>
+<strong>Nombres después de la experiencia</strong>
+<span>Los nombres formales aparecen después de la experiencia que los vuelve útiles.</span>
+</div>
+
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">5</span>
+<strong>Política y mecanismo distinguibles</strong>
+<span>Política y mecanismo deben seguir siendo distinguibles cuando sea relevante.</span>
+</div>
+
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">6</span>
+<strong>Detenerse puede ser correcto</strong>
+<span>Detenerse antes de una forma arquitectónica final puede ser correcto.</span>
+</div>
+
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">7</span>
+<strong>Trayectoria reconstruible</strong>
+<span>La arquitectura resultante debe poder reconstruirse causalmente.</span>
+</div>
+
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">8</span>
+<strong>La forma no prueba necesidad</strong>
+<span>Interfaces, capas o DI no demuestran por sí solas que una separación fuera necesaria.</span>
+</div>
+
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">9</span>
+<strong>No todo concepto asociado es obligación</strong>
+<span>Los conceptos culturalmente asociados con Clean Architecture no son automáticamente obligaciones de esta lección.</span>
+</div>
+
+</div>
 
 #### Unidad de juicio
 
 La unidad principal es una realización bajo una operación declarada y una necesidad concreta del estudiante.
 
 En exploraciones interactivas, una ejecución puede contener múltiples rondas.
-
-Evalúa:
 
 ```text
 operación solicitada
@@ -254,8 +324,6 @@ realización producida
 No evalúes por similitud superficial con una realización publicada.
 
 #### Estados de evaluación
-
-Cada propiedad aplicable recibe un estado:
 
 <div class="pir-judgment-grid">
   <div class="pir-judgment"><strong>PASS</strong><span>La obligación se preserva de forma observable.</span></div>
@@ -270,149 +338,303 @@ No se requiere un puntaje global.
 
 #### RTE — Enrutamiento
 
-##### RTE-001 — Profundizar compatible
-Cuando el estudiante pide mayor profundidad sobre una tensión o concepto ya introducido, `Automático` puede seleccionar `Profundizar`.
+<div class="teaching-card">
+<span class="teaching-eyebrow">Qué protege esta familia</span>
+<strong>Compatibilidad entre la necesidad del estudiante y la ruta elegida</strong>
+<span>El enrutamiento se evalúa por la necesidad concreta del estudiante; su selección y la conformidad de la realización son juicios separados.</span>
+</div>
 
-##### RTE-002 — Aplicarlo a mi caso compatible
-Cuando el estudiante presenta un sistema real y pide razonar sobre sus presiones actuales, `Automático` puede seleccionar `Aplicarlo a mi caso`.
+<div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
 
-##### RTE-003 — Otro caso compatible
-Cuando el estudiante busca transferir el razonamiento a otro dominio o caso conductor, `Automático` puede seleccionar `Otro caso`.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">1</span>
+<strong>RTE-001 — Profundizar compatible</strong>
+<span>Cuando el estudiante pide mayor profundidad sobre una tensión o concepto ya introducido, `Automático` puede seleccionar `Profundizar`.</span>
+</div>
 
-##### RTE-004 — Ponme a prueba compatible
-Cuando el estudiante busca poner a prueba su comprensión mediante decisiones progresivas, `Automático` puede seleccionar `Ponme a prueba`.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">2</span>
+<strong>RTE-002 — Aplicarlo a mi caso compatible</strong>
+<span>Cuando el estudiante presenta un sistema real y pide razonar sobre sus presiones actuales, `Automático` puede seleccionar `Aplicarlo a mi caso`.</span>
+</div>
+
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">3</span>
+<strong>RTE-003 — Otro caso compatible</strong>
+<span>Cuando el estudiante busca transferir el razonamiento a otro dominio o caso conductor, `Automático` puede seleccionar `Otro caso`.</span>
+</div>
+
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">4</span>
+<strong>RTE-004 — Ponme a prueba compatible</strong>
+<span>Cuando el estudiante busca poner a prueba su comprensión mediante decisiones progresivas, `Automático` puede seleccionar `Ponme a prueba`.</span>
+</div>
+
+</div>
 
 La selección de enrutamiento y la conformidad de la realización son juicios separados.
 
-<section class="pir-contract-family" markdown>
-
-
 </section>
+
+<section class="pir-contract-family" markdown>
 
 #### CAU — Presión causal y cambio mínimo
 
-##### CAU-001 — Suficiencia inicial
-La realización permite que el estado inicial siga siendo defendible cuando no existe presión suficiente para separarlo.
+<div class="teaching-card">
+<span class="teaching-eyebrow">Qué protege esta familia</span>
+<strong>Que la arquitectura responda a presión observable</strong>
+<span>Una separación debe ganarse por la evidencia presente y responder con el cambio mínimo que esa presión justifica.</span>
+</div>
 
-##### CAU-002 — Presión antes de separar
-Una separación relevante no debe presentarse como necesaria antes de que una presión observable la justifique.
+<div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
 
-##### CAU-003 — Cambio mínimo justificado
-La realización favorece el cambio mínimo que responde a la presión presente y no agrega estructura sólo para acercarse a una arquitectura conocida.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">1</span>
+<strong>CAU-001 — Suficiencia inicial</strong>
+<span>La realización permite que el estado inicial siga siendo defendible cuando no existe presión suficiente para separarlo.</span>
+</div>
 
-##### CAU-004 — Nombre formal después de la experiencia
-Los nombres formales no deben funcionar como justificación principal. Deben aparecer después de una relación ya observable, o como descripción de ella.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">2</span>
+<strong>CAU-002 — Presión antes de separar</strong>
+<span>Una separación relevante no debe presentarse como necesaria antes de que una presión observable la justifique.</span>
+</div>
 
-<section class="pir-contract-family" markdown>
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">3</span>
+<strong>CAU-003 — Cambio mínimo justificado</strong>
+<span>La realización favorece el cambio mínimo que responde a la presión presente y no agrega estructura sólo para acercarse a una arquitectura conocida.</span>
+</div>
 
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">4</span>
+<strong>CAU-004 — Nombre formal después de la experiencia</strong>
+<span>Los nombres formales no deben funcionar como justificación principal. Deben aparecer después de una relación ya observable, o como descripción de ella.</span>
+</div>
+
+</div>
 
 </section>
+
+<section class="pir-contract-family" markdown>
 
 #### STP — Detención y ausencia de cambio
 
-##### STP-001 — Detenerse cuando termina la presión
-Si el caso ya no sostiene nuevas presiones, detener la trayectoria arquitectónica es conforme.
+<div class="teaching-card">
+<span class="teaching-eyebrow">Qué protege esta familia</span>
+<strong>Que detenerse o no cambiar siga siendo una decisión válida</strong>
+<span>La trayectoria no necesita avanzar hacia una forma final cuando la presión termina o la solución actual todavía la absorbe.</span>
+</div>
 
-##### STP-002 — No cambiar puede ser correcto
-`No cambiar nada` debe seguir disponible cuando la solución actual absorbe la presión sin interferencia material.
+<div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
 
-##### STP-003 — No cambiar es revisable
-Aceptar no cambiar no vuelve permanente la decisión. Nueva evidencia material puede justificar reabrirla.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">1</span>
+<strong>STP-001 — Detenerse cuando termina la presión</strong>
+<span>Si el caso ya no sostiene nuevas presiones, detener la trayectoria arquitectónica es conforme.</span>
+</div>
 
-<section class="pir-contract-family" markdown>
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">2</span>
+<strong>STP-002 — No cambiar puede ser correcto</strong>
+<span>`No cambiar nada` debe seguir disponible cuando la solución actual absorbe la presión sin interferencia material.</span>
+</div>
 
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">3</span>
+<strong>STP-003 — No cambiar es revisable</strong>
+<span>Aceptar no cambiar no vuelve permanente la decisión. Nueva evidencia material puede justificar reabrirla.</span>
+</div>
+
+</div>
 
 </section>
+
+<section class="pir-contract-family" markdown>
 
 #### UNC — Incertidumbre y evidencia
 
-##### UNC-001 — Preservar la incertidumbre material
-Cuando faltan hechos materiales, la realización debe preguntar, acotar el escenario o preservar la incertidumbre en lugar de inventarlos.
+<div class="teaching-card">
+<span class="teaching-eyebrow">Qué protege esta familia</span>
+<strong>Que una hipótesis no se convierta prematuramente en arquitectura</strong>
+<span>La incertidumbre material debe preservarse hasta que exista evidencia suficiente para sostener una decisión.</span>
+</div>
 
-##### UNC-002 — Umbral de evidencia
-Una hipótesis razonable no debe convertirse en arquitectura sólo porque resulte plausible a futuro. Debe distinguirse una señal, sospecha o presión posible de una presión suficientemente observada.
+<div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
 
-<section class="pir-contract-family" markdown>
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">1</span>
+<strong>UNC-001 — Preservar la incertidumbre material</strong>
+<span>Cuando faltan hechos materiales, la realización debe preguntar, acotar el escenario o preservar la incertidumbre en lugar de inventarlos.</span>
+</div>
 
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">2</span>
+<strong>UNC-002 — Umbral de evidencia</strong>
+<span>Una hipótesis razonable no debe convertirse en arquitectura sólo porque resulte plausible a futuro. Debe distinguirse una señal, sospecha o presión posible de una presión suficientemente observada.</span>
+</div>
+
+</div>
 
 </section>
+
+<section class="pir-contract-family" markdown>
 
 #### SCP — Alcance
 
-##### SCP-001 — Cruce explícito de alcance externo
-Si una exploración introduce conocimiento conceptual fuera de la lección original cuando la operación exige marcar el alcance, el cruce debe ser inequívocamente explícito.
+<div class="teaching-card">
+<span class="teaching-eyebrow">Qué protege esta familia</span>
+<strong>Que las extensiones externas sigan siendo reconocibles como extensiones</strong>
+<span>Profundizar fuera del alcance original puede ser válido, pero el cruce debe ser explícito y no reescribir retroactivamente la lección.</span>
+</div>
 
-##### SCP-002 — Extensión no retroactiva
-Una extensión externa no debe reinterpretar retroactivamente la lección original como si el material externo siempre hubiera formado parte de ella.
+<div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
 
-<section class="pir-contract-family" markdown>
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">1</span>
+<strong>SCP-001 — Cruce explícito de alcance externo</strong>
+<span>Si una exploración introduce conocimiento conceptual fuera de la lección original cuando la operación exige marcar el alcance, el cruce debe ser inequívocamente explícito.</span>
+</div>
 
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">2</span>
+<strong>SCP-002 — Extensión no retroactiva</strong>
+<span>Una extensión externa no debe reinterpretar retroactivamente la lección original como si el material externo siempre hubiera formado parte de ella.</span>
+</div>
+
+</div>
 
 </section>
+
+<section class="pir-contract-family" markdown>
 
 #### VAR — Variación permitida
 
-##### VAR-001 — Equivalencia semántica sin identidad estructural
-Una solución distinta de la realización publicada puede ser conforme si responde a la misma presión y preserva las obligaciones aplicables.
+<div class="teaching-card">
+<span class="teaching-eyebrow">Qué protege esta familia</span>
+<strong>Que conformidad no signifique copiar una solución publicada</strong>
+<span>Una alternativa puede ser conforme si responde a la presión y conserva las obligaciones, aunque su estructura concreta sea distinta.</span>
+</div>
 
-##### VAR-002 — Evaluación de alternativas por sus compromisos
-Una alternativa defendible debe evaluarse por la presión que resuelve, el costo que introduce y la evidencia que justificaría preferir otra opción, no por su parecido con una transición publicada.
+<div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
 
-##### VAR-003 — Se permite variación significativa
-La copia literal no es un requisito de conformidad.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">1</span>
+<strong>VAR-001 — Equivalencia semántica sin identidad estructural</strong>
+<span>Una solución distinta de la realización publicada puede ser conforme si responde a la misma presión y preserva las obligaciones aplicables.</span>
+</div>
 
-<section class="pir-contract-family" markdown>
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">2</span>
+<strong>VAR-002 — Evaluación de alternativas por sus compromisos</strong>
+<span>Una alternativa defendible debe evaluarse por la presión que resuelve, el costo que introduce y la evidencia que justificaría preferir otra opción, no por su parecido con una transición publicada.</span>
+</div>
 
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">3</span>
+<strong>VAR-003 — Se permite variación significativa</strong>
+<span>La copia literal no es un requisito de conformidad.</span>
+</div>
+
+</div>
 
 </section>
+
+<section class="pir-contract-family" markdown>
 
 #### TST — Ponme a prueba
 
-##### TST-001 — Una presión por ronda
-Cada ronda introduce como máximo una nueva presión principal antes de pedir una decisión.
+<div class="teaching-card">
+<span class="teaching-eyebrow">Qué protege esta familia</span>
+<strong>Que el estudiante pueda decidir antes de conocer la trayectoria</strong>
+<span>La prueba debe avanzar por presiones progresivas, evaluar críticamente las decisiones y reparar el escenario cuando sea necesario.</span>
+</div>
 
-##### TST-002 — Esperar antes de avanzar
-El realizador espera la respuesta del estudiante y evalúa esa decisión antes de introducir una nueva presión.
+<div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
 
-##### TST-003 — Retención progresiva de información
-El realizador no revela requisitos futuros, nombres de patrones, capas ni arquitectura objetivo de una forma que convierta la trayectoria en una clave de respuestas antes de que el estudiante decida.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">1</span>
+<strong>TST-001 — Una presión por ronda</strong>
+<span>Cada ronda introduce como máximo una nueva presión principal antes de pedir una decisión.</span>
+</div>
 
-Comparar con la realización publicada después de una decisión puede ser conforme si no invalida rondas futuras.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">2</span>
+<strong>TST-002 — Esperar antes de avanzar</strong>
+<span>El realizador espera la respuesta del estudiante y evalúa esa decisión antes de introducir una nueva presión.</span>
+</div>
 
-##### TST-004 — Evaluación crítica sin validación por cortesía
-Una respuesta débil, insuficiente o sobrearquitecturada debe poder cuestionarse explícitamente. No se valida únicamente por cortesía.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">3</span>
+<strong>TST-003 — Retención progresiva de información</strong>
+<span>El realizador no revela requisitos futuros, nombres de patrones, capas ni arquitectura objetivo de una forma que convierta la trayectoria en una clave de respuestas antes de que el estudiante decida. Comparar con la realización publicada después de una decisión puede ser conforme si no invalida rondas futuras.</span>
+</div>
 
-##### TST-005 — Distinguir error local de razonamiento arquitectónico
-Un error local de implementación no invalida automáticamente una decisión arquitectónica defendible, ni viceversa.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">4</span>
+<strong>TST-004 — Evaluación crítica sin validación por cortesía</strong>
+<span>Una respuesta débil, insuficiente o sobrearquitecturada debe poder cuestionarse explícitamente. No se valida únicamente por cortesía.</span>
+</div>
 
-##### TST-006 — Una aclaración no avanza el escenario
-Una pregunta de aclaración del estudiante no es una decisión de ronda. Debe responderse sin introducir la siguiente presión, salvo que la aclaración vuelva imposible preservar el escenario.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">5</span>
+<strong>TST-005 — Distinguir error local de razonamiento arquitectónico</strong>
+<span>Un error local de implementación no invalida automáticamente una decisión arquitectónica defendible, ni viceversa.</span>
+</div>
 
-##### TST-007 — Reparación del escenario
-Si el realizador introdujo una condición o capacidad no sustentada por el estado declarado, debe poder:
-1. reconocer la inconsistencia;
-2. retirarla o corregirla;
-3. continuar sin utilizarla como evidencia arquitectónica.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">6</span>
+<strong>TST-006 — Una aclaración no avanza el escenario</strong>
+<span>Una pregunta de aclaración del estudiante no es una decisión de ronda. Debe responderse sin introducir la siguiente presión, salvo que la aclaración vuelva imposible preservar el escenario.</span>
+</div>
 
-##### TST-008 — La presión agregada por el estudiante es explícita
-Si el estudiante introduce una nueva presión relevante —como una restricción cognitiva, operacional o de costo— el realizador puede incorporarla, pero debe seguir siendo distinguible de la presión presentada originalmente.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">7</span>
+<strong>TST-007 — Reparación del escenario</strong>
+<span>Si el realizador introdujo una condición o capacidad no sustentada por el estado declarado, debe poder: 1. reconocer la inconsistencia; 2. retirarla o corregirla; 3. continuar sin utilizarla como evidencia arquitectónica.</span>
+</div>
 
-<section class="pir-contract-family" markdown>
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">8</span>
+<strong>TST-008 — La presión agregada por el estudiante es explícita</strong>
+<span>Si el estudiante introduce una nueva presión relevante —como una restricción cognitiva, operacional o de costo— el realizador puede incorporarla, pero debe seguir siendo distinguible de la presión presentada originalmente.</span>
+</div>
 
+</div>
 
 </section>
 
+<section class="pir-contract-family" markdown>
+
 #### POL — Política y mecanismo
 
-##### POL-001 — El mecanismo no es automáticamente una frontera
-La sola presencia de HTTP, SQLite, filesystem, una biblioteca u otro mecanismo no basta para justificar una frontera.
+<div class="teaching-card">
+<span class="teaching-eyebrow">Qué protege esta familia</span>
+<strong>Que un mecanismo no se convierta automáticamente en una frontera</strong>
+<span>La separación debe responder a interferencia real entre política y mecanismo, sin forzar desde temprano cómo se realizará el mecanismo futuro.</span>
+</div>
 
-##### POL-002 — Distinción política/mecanismo cuando sea relevante
-Cuando una política importante empieza a quedar condicionada por detalles del mecanismo, la realización debe poder describir esa interferencia sin reducirla a reglas culturales de capas.
+<div class="teaching-grid teaching-grid--2 teaching-grid--lateral-badges" markdown>
 
-##### POL-003 — La elección del mecanismo puede permanecer abierta
-Separar una política no exige decidir inmediatamente el mecanismo futuro mediante el cual será configurada, persistida o realizada.
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">1</span>
+<strong>POL-001 — El mecanismo no es automáticamente una frontera</strong>
+<span>La sola presencia de HTTP, SQLite, filesystem, una biblioteca u otro mecanismo no basta para justificar una frontera.</span>
+</div>
 
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">2</span>
+<strong>POL-002 — Distinción política/mecanismo cuando sea relevante</strong>
+<span>Cuando una política importante empieza a quedar condicionada por detalles del mecanismo, la realización debe poder describir esa interferencia sin reducirla a reglas culturales de capas.</span>
+</div>
+
+<div class="teaching-item teaching-item--criterion">
+<span class="teaching-item__marker">3</span>
+<strong>POL-003 — La elección del mecanismo puede permanecer abierta</strong>
+<span>Separar una política no exige decidir inmediatamente el mecanismo futuro mediante el cual será configurada, persistida o realizada.</span>
+</div>
+
+</div>
 
 </section>
 
