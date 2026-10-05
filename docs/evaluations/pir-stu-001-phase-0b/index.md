@@ -59,7 +59,7 @@ No intentes inferir cuántas muestras son "buenas" o "malas".
 
 ## Categorías de respuesta
 
-Use:
+Usa:
 
 - PASS — la obligación se preserva;
 - VIOLATION — la realización la contradice;
@@ -79,6 +79,8 @@ Una decisión arquitectónica no estándar aun puede ser conforme.
 ## Independencia
 
 Por favor, completa la evaluación de manera independiente.
+
+Durante la evaluación, no busques PIR-STU-001 ni materiales relacionados fuera de esta página. Todo el contexto necesario para completar la tarea está incluido aquí.
 
 No compares tus juicios con los de otro evaluador hasta que todos los conjuntos de respuestas hayan sido enviados y congelados.
 
@@ -278,7 +280,7 @@ Una extensión externa no debe reinterpretar retroactivamente la lección origin
 ### VAR-001 — Equivalencia semántica sin identidad estructural
 Una solución distinta de la realización publicada puede ser conforme si responde a la misma presión y preserva las obligaciones aplicables.
 
-### VAR-002 — Evaluación alternativa de compromisos
+### VAR-002 — Evaluación de alternativas por sus compromisos
 Una alternativa defendible debe evaluarse por la presión que resuelve, el costo que introduce y la evidencia que justificaría preferir otra opción, no por su parecido con una transición publicada.
 
 ### VAR-003 — Se permite variación significativa
@@ -292,7 +294,7 @@ Cada ronda introduce como máximo una nueva presión principal antes de pedir un
 ### TST-002 — Esperar antes de avanzar
 El realizador espera la respuesta del estudiante y evalúa esa decisión antes de introducir una nueva presión.
 
-### TST-003 — Revelación progresiva restringida
+### TST-003 — Retención progresiva de información
 El realizador no revela requisitos futuros, nombres de patrones, capas ni arquitectura objetivo de una forma que convierta la trayectoria en una clave de respuestas antes de que el estudiante decida.
 
 Comparar con la realización publicada después de una decisión puede ser conforme si no invalida rondas futuras.
