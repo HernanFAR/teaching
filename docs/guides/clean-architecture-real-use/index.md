@@ -13,7 +13,7 @@ No intentará completar una arquitectura “canónica” ni acumular patrones as
 Su trabajo será recorrer problemas reales que quedaron deliberadamente a medio cocinar en la lección y decidir, uno por uno, qué frontera, mecanismo o patrón merece aparecer.
 
 !!! info "Estado de la guía"
-    Esta es la primera guía oficial de Teaching y está **en construcción**.
+    Esta es la primera guía oficial de TDidacta Platform y está **en construcción**.
 
     El inventario inicial nace de leer la lección publicada como si no conociéramos su proceso de generación y registrar qué conceptos alcanzó a introducir, pero no a desarrollar como herramientas de uso cotidiano.
 
