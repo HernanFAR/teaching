@@ -67,6 +67,13 @@ create table if not exists public.account_deletion_requests (
 
 alter table public.account_deletion_requests enable row level security;
 
+-- The project is created with "Automatically expose new tables" disabled.
+-- Grant only the operations this authenticated surface actually needs.
+revoke all on table public.account_deletion_requests from anon;
+grant select, insert, update, delete
+  on table public.account_deletion_requests
+  to authenticated;
+
 drop policy if exists "Users can read own deletion request" on public.account_deletion_requests;
 create policy "Users can read own deletion request"
   on public.account_deletion_requests

@@ -55,16 +55,17 @@ Milestones such as returning on another day or using multiple lessons are calcul
 
 1. Create a Supabase project.
 2. Prefer the specific **South America (São Paulo / AWS sa-east-1)** region unless a later legal review selects another region.
-3. Run [schema.sql](schema.sql) in the SQL editor.
-4. In Supabase Auth URL Configuration set:
+3. Keep **Enable Data API** on and **Automatically expose new tables** off.
+4. Run [schema.sql](schema.sql) in the SQL editor. The migration grants only the minimum authenticated privileges required by the account-deletion request surface.
+5. In Supabase Auth URL Configuration set:
    - Site URL: `https://hernanfar.github.io/teaching/`
    - Redirect URL: `https://hernanfar.github.io/teaching/account/`
-5. Review and retain the current Supabase DPA and subprocessor list.
-6. Review Supabase operational log retention before enabling the feature.
-7. In GitHub repository **Actions variables**, create:
+6. Review and retain the current Supabase DPA and subprocessor list.
+7. Review Supabase operational log retention before enabling the feature.
+8. In GitHub repository **Actions variables**, create:
    - `TDIDACTA_SUPABASE_URL`
    - `TDIDACTA_SUPABASE_PUBLISHABLE_KEY`
-8. Re-run the Documentation workflow or push a new commit.
+9. Re-run the Documentation workflow or push a new commit.
 
 The publishable key is intentionally a browser credential. Never place a Supabase secret/service-role key in GitHub Pages, repository variables consumed by the frontend, or browser JavaScript.
 
