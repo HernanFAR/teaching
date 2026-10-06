@@ -1,6 +1,13 @@
 (() => {
   const roots = document.querySelectorAll("[data-teaching-exploration]");
 
+  const recordActivity = (event, explorationMode) => {
+    window.TDidactaAccounts?.track?.(event, {
+      lessonId: window.TDidactaAccounts.currentLessonId?.() ?? null,
+      explorationMode: explorationMode || null
+    });
+  };
+
   for (const root of roots) {
     const mode = root.querySelector("[data-exploration-mode]");
     const need = root.querySelector("[data-exploration-need]");
@@ -60,6 +67,7 @@
         if (output) output.value = composed;
         if (result) result.hidden = false;
         setStatus("Exploración preparada. Revísala antes de copiarla.");
+        recordActivity("exploration_prepared", selectedOption?.value || selectedOption?.textContent?.trim());
         output?.focus();
       } catch {
         setStatus("No pudimos cargar el texto orientativo de esta exploración.");
@@ -78,6 +86,7 @@
         copy.textContent = "Copiado ✓";
         copy.disabled = true;
         setStatus("Texto copiado. Puedes pegarlo en el LLM que prefieras.");
+        recordActivity("exploration_copied", mode?.value || mode?.selectedOptions?.[0]?.textContent?.trim());
 
         window.setTimeout(() => {
           copy.textContent = originalLabel;

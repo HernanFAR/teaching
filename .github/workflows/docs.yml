@@ -34,6 +34,27 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Configure optional account backend
+        env:
+          TDIDACTA_SUPABASE_URL: ${{ vars.TDIDACTA_SUPABASE_URL }}
+          TDIDACTA_SUPABASE_PUBLISHABLE_KEY: ${{ vars.TDIDACTA_SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          config = {
+              "supabaseUrl": os.environ.get("TDIDACTA_SUPABASE_URL", ""),
+              "supabasePublishableKey": os.environ.get("TDIDACTA_SUPABASE_PUBLISHABLE_KEY", ""),
+          }
+
+          Path("docs/javascripts/auth-config.js").write_text(
+              "window.TDIDACTA_AUTH_CONFIG = Object.freeze(" + json.dumps(config) + ");\n",
+              encoding="utf-8",
+          )
+          PY
+
       - name: Build site
         run: zensical build --strict --clean
 

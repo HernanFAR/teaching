@@ -37,12 +37,14 @@ nav:
       - Cómo enseñamos: about/how-we-teach.md
       - Cómo generamos lecciones: about/lesson-generation.md
       - Cómo diseñamos una realización: about/realization-design.md
+      - Privacidad y cuentas: privacy/index.md
   - Lecciones:
       - lessons/index.md
       - Cómo se llega a Clean Architecture: lessons/clean-architecture/index.md
   - Guías:
       - guides/index.md
       - Clean Architecture en uso real: guides/clean-architecture-real-use/index.md
+  - Mi aprendizaje: account/index.md
   - Asesoría:
       - advisory/index.md
   - Servicios:
@@ -93,4 +95,6 @@ extra_css:
   - stylesheets/extra.css
 
 extra_javascript:
+  - javascripts/auth-config.js
+  - javascripts/accounts.js
   - javascripts/explorations.js

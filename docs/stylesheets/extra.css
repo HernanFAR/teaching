@@ -2640,3 +2640,168 @@
   padding-top: 0.75rem;
   border-top: 0.05rem solid var(--md-default-fg-color--lightest);
 }
+
+
+/* Account continuity — optional product identity and minimal activity */
+.td-account {
+  margin: 1.25rem 0 2rem;
+}
+
+.td-account__status,
+.td-account__muted {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.td-account [data-account-panel] {
+  margin-top: 1rem;
+  padding: 1.1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.td-account [data-account-panel] > h2:first-child {
+  margin-top: 0;
+}
+
+.td-account-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.td-account-form__row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: stretch;
+}
+
+.td-account-form input[type="email"] {
+  flex: 1 1 18rem;
+  min-width: 0;
+  padding: 0.7rem 0.75rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 0.35rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font: inherit;
+}
+
+.td-account__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.td-account__header strong,
+.td-account__eyebrow {
+  display: block;
+}
+
+.td-account__eyebrow {
+  margin-bottom: 0.2rem;
+  color: var(--md-accent-fg-color);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.td-account-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.td-account-stats > div {
+  padding: 0.9rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+}
+
+.td-account-stats strong,
+.td-account-stats span {
+  display: block;
+}
+
+.td-account-stats strong {
+  font-size: 1.5rem;
+}
+
+.td-account-stats span {
+  margin-top: 0.25rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.78rem;
+}
+
+.td-account-activity {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.td-account-activity li {
+  padding: 0.75rem 0;
+  border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+.td-account-activity li:last-child {
+  border-bottom: 0;
+}
+
+.td-account-activity strong,
+.td-account-activity span {
+  display: block;
+}
+
+.td-account-activity span {
+  margin-top: 0.2rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.78rem;
+}
+
+.td-account-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.td-account-alert {
+  margin: 0.9rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 0.18rem solid var(--md-accent-fg-color);
+  background: color-mix(in srgb, var(--md-accent-fg-color) 7%, transparent);
+}
+
+.td-account-alert strong,
+.td-account-alert span {
+  display: block;
+}
+
+.td-account-alert span {
+  margin-top: 0.25rem;
+  font-size: 0.82rem;
+}
+
+@media screen and (max-width: 45rem) {
+  .td-account-form__row,
+  .td-account__header {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .td-account-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .td-account-form__row .md-button,
+  .td-account__header .md-button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
