@@ -1,50 +1,58 @@
--- TDidacta Platform — conservative early adoption metrics
+-- TDidacta Platform — privacy-first early adoption metrics
 -- Run from the Supabase SQL editor with an administrative role.
--- These are product-use metrics, not evidence of learning.
+--
+-- IMPORTANT:
+-- * Auth account counts are account-service data.
+-- * Usage counters are anonymous aggregates and are NOT evidence of learning.
+-- * Browser-based milestones are approximate: clearing storage or changing device
+--   can make one person count more than once.
 
--- Permanent accounts.
+-- Registered permanent accounts.
 select count(*) as registered_accounts
 from auth.users
 where is_anonymous is not true
   and deleted_at is null;
 
--- Accounts that opened at least one lesson while signed in.
-select count(distinct user_id) as users_who_opened_a_lesson
-from public.learning_activity
-where event = 'lesson_opened';
+-- Browsers that voluntarily enabled anonymous statistics.
+-- This is approximate because no persistent server-side identifier exists.
+select coalesce(sum(total), 0) as anonymous_stats_opt_ins
+from public.anonymous_usage_daily
+where event = 'analytics_opt_in';
 
--- Accounts that prepared at least one exploration.
-select count(distinct user_id) as users_who_prepared_an_exploration
-from public.learning_activity
-where event = 'exploration_prepared';
+-- Anonymous aggregate feature-use counts.
+select
+  event,
+  coalesce(sum(total), 0) as total_events
+from public.anonymous_usage_daily
+where event in (
+  'lesson_opened',
+  'exploration_prepared',
+  'exploration_copied'
+)
+group by event
+order by event;
 
--- Accounts that used at least two distinct lessons.
-select count(*) as multi_lesson_users
-from (
-  select user_id
-  from public.learning_activity
-  where lesson_id is not null
-  group by user_id
-  having count(distinct lesson_id) >= 2
-) users;
+-- Privacy-preserving adoption milestones computed locally in the browser
+-- and sent once per local browser state.
+select
+  event,
+  coalesce(sum(total), 0) as approximate_browsers
+from public.anonymous_usage_daily
+where event in (
+  'return_visit',
+  'multi_lesson_milestone',
+  'three_day_milestone'
+)
+group by event
+order by event;
 
--- Accounts active on at least two distinct calendar dates.
-select count(*) as returning_users
-from (
-  select user_id
-  from public.learning_activity
-  group by user_id
-  having count(distinct occurred_at::date) >= 2
-) users;
-
--- Accounts active on at least three distinct calendar dates.
-select count(*) as users_active_three_days
-from (
-  select user_id
-  from public.learning_activity
-  group by user_id
-  having count(distinct occurred_at::date) >= 3
-) users;
+-- Daily anonymous trend.
+select
+  usage_date,
+  event,
+  total
+from public.anonymous_usage_daily
+order by usage_date desc, event;
 
 -- Pending account-deletion requests that must be processed administratively.
 select user_id, requested_at

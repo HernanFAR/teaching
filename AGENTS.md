@@ -319,3 +319,22 @@ Una persona que termine una lección debería poder:
 - generar o pedir nuevos ejemplos sin perder la intención original.
 
 Si solo puede repetir la estructura final, la lección todavía no terminó de enseñar.
+
+
+---
+
+## Privacidad, cuentas y telemetría
+
+Las capacidades de cuenta y medición deben preservar estas invariantes:
+
+- el contenido educativo público no requiere cuenta;
+- la cuenta es opcional;
+- no mantener telemetría conductual por usuario;
+- el resumen de aprendizaje permanece local al navegador salvo que una futura capability justifique explícitamente otra cosa;
+- las estadísticas anónimas están desactivadas por defecto y requieren una decisión separada de la persona;
+- la persistencia estadística sólo contiene contadores agregados y no puede incluir correo, `user_id`, identificador de dispositivo, sesión, texto del estudiante, prompt, conversación ni inferencias de aprendizaje;
+- el cliente usado para estadísticas no debe transportar la sesión autenticada de TDidacta;
+- participación en Research requiere una decisión y consentimiento separados del uso de Platform;
+- una nueva métrica o dato no se incorpora por conveniencia: primero debe justificarse finalidad, necesidad, base de legitimidad, destinatarios, retención, seguridad y derechos.
+
+La política pública vigente vive en `docs/privacy/index.md`. Si una implementación contradice esa política, detener el cambio y resolver la contradicción antes de recolectar datos.
