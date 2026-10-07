@@ -810,10 +810,11 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
       </div>
 
       <aside class="pir-eval-demo__guide" data-demo-guide aria-live="polite">
-        <span class="pir-eval-demo__step" data-demo-step-label>Paso 1 de 7</span>
+        <span class="pir-eval-demo__step" data-demo-step-label>Paso 1 de 8</span>
         <strong data-demo-title>Propiedad</strong>
         <span data-demo-description>Primero identifica qué obligación del contrato está realmente en juego.</span>
         <div class="pir-eval-demo__progress" aria-hidden="true">
+          <span data-demo-dot></span>
           <span data-demo-dot></span>
           <span data-demo-dot></span>
           <span data-demo-dot></span>
