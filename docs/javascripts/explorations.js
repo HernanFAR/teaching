@@ -608,7 +608,6 @@
     const start = demo.querySelector("[data-demo-start]");
     const stage = demo.querySelector("[data-demo-stage]");
     const next = demo.querySelector("[data-demo-next]");
-    const replay = demo.querySelector("[data-demo-replay]");
     const cancel = demo.querySelector("[data-demo-cancel]");
     const title = demo.querySelector("[data-demo-title]");
     const description = demo.querySelector("[data-demo-description]");
@@ -648,7 +647,6 @@
       dots.forEach((dot) => dot.classList.remove("is-active", "is-complete"));
       index = 0;
       if (status) status.textContent = "Completa todos los campos obligatorios para continuar.";
-      if (replay) replay.hidden = true;
       if (cancel) cancel.hidden = true;
       if (next) {
         next.hidden = false;
@@ -663,7 +661,6 @@
       if (title) title.textContent = "¿Quieres ver cómo se responde?";
       if (description) description.textContent = "Te mostraremos una respuesta ficticia paso a paso. Primero leeremos el contexto y después completaremos el formulario exactamente con la misma lógica que usarás en la evaluación real.";
       if (cancel) cancel.hidden = false;
-      if (replay) replay.hidden = true;
       if (next) {
         next.hidden = false;
         next.textContent = "Iniciar";
@@ -758,12 +755,6 @@
       if (stepLabel) stepLabel.textContent = "Demostración terminada";
       if (status) status.textContent = "Respuesta de demostración completa. Puedes continuar al siguiente caso.";
       next.hidden = true;
-      if (replay) replay.hidden = false;
-    });
-
-    replay?.addEventListener("click", () => {
-      reset();
-      render();
     });
   }
 })();
