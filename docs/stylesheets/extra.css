@@ -3080,7 +3080,7 @@
     position: fixed;
     top: 4.75rem;
     right: 1.25rem;
-    width: clamp(20rem, 27vw, 25rem);
+    width: clamp(16.5rem, 20vw, 18.5rem);
     max-width: calc(100vw - 2.5rem);
     max-height: calc(100vh - 6rem);
     overflow: auto;
@@ -3100,8 +3100,8 @@
   }
 
   .pir-eval-demo__guide .pir-eval-demo__actions .md-button {
-    min-width: 7.5rem;
-    padding: 0.55rem 0.85rem;
+    min-width: 6.25rem;
+    padding: 0.5rem 0.7rem;
     text-align: center;
   }
 }
