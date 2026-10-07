@@ -309,7 +309,6 @@
     return [
       "Perfil del evaluador",
       "",
-      `ID del evaluador: ${value("id")}`,
       `Rol actual / enfoque profesional: ${value("role")}`,
       `Años de experiencia relevante: ${value("experienceYears")}`,
       `Educación, formación o experiencia docente relevante: ${value("education")}`,
