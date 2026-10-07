@@ -3027,10 +3027,6 @@
 }
 
 @media (min-width: 56rem) {
-  .pir-eval-demo__stage {
-    padding-right: 20rem;
-  }
-
   .pir-eval-demo__workspace {
     display: block;
   }
@@ -3039,9 +3035,10 @@
     position: fixed;
     top: 4.75rem;
     right: 1rem;
-    width: 18rem;
+    width: min(18rem, calc(100vw - 2rem));
     max-height: calc(100vh - 5.75rem);
     overflow: auto;
+    z-index: 1000;
   }
 }
 
