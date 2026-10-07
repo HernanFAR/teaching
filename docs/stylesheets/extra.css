@@ -2997,6 +2997,11 @@
   transition: box-shadow 180ms ease, background 180ms ease, transform 180ms ease;
 }
 
+.pir-eval-demo__scenario.is-demo-focus {
+  box-shadow: 0 0 0 0.1rem var(--md-accent-fg-color);
+  background: color-mix(in srgb, var(--md-accent-fg-color) 8%, var(--md-default-fg-color--lightest));
+}
+
 .pir-eval-demo__form .pir-eval-field.is-demo-focus select,
 .pir-eval-demo__form .pir-eval-field.is-demo-focus textarea,
 .pir-eval-demo__note.is-demo-focus textarea {
