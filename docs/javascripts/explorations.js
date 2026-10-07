@@ -609,6 +609,7 @@
     const stage = demo.querySelector("[data-demo-stage]");
     const next = demo.querySelector("[data-demo-next]");
     const replay = demo.querySelector("[data-demo-replay]");
+    const cancel = demo.querySelector("[data-demo-cancel]");
     const title = demo.querySelector("[data-demo-title]");
     const description = demo.querySelector("[data-demo-description]");
     const stepLabel = demo.querySelector("[data-demo-step-label]");
@@ -648,10 +649,38 @@
       index = 0;
       if (status) status.textContent = "Completa todos los campos obligatorios para continuar.";
       if (replay) replay.hidden = true;
+      if (cancel) cancel.hidden = true;
       if (next) {
         next.hidden = false;
         next.textContent = "Siguiente";
       }
+    };
+
+    const showIntroduction = () => {
+      Object.values(fields).filter(Boolean).forEach((field) => field.classList.remove("is-demo-focus", "is-demo-complete"));
+      dots.forEach((dot) => dot.classList.remove("is-active", "is-complete"));
+      if (stepLabel) stepLabel.textContent = "Demostración guiada";
+      if (title) title.textContent = "¿Quieres ver cómo se responde?";
+      if (description) description.textContent = "Te mostraremos una respuesta ficticia paso a paso. Primero leeremos el contexto y después completaremos el formulario exactamente con la misma lógica que usarás en la evaluación real.";
+      if (cancel) cancel.hidden = false;
+      if (replay) replay.hidden = true;
+      if (next) {
+        next.hidden = false;
+        next.textContent = "Iniciar";
+      }
+    };
+
+    const closeIntroduction = () => {
+      if (stage) stage.hidden = true;
+      if (start) {
+        start.textContent = "Ver demostración";
+        start.disabled = false;
+      }
+      if (guide && guideAnchor && guideHome && guide.parentElement === document.body) {
+        guide.classList.remove("md-typeset");
+        guideAnchor.after(guide);
+      }
+      reset();
     };
 
     const render = () => {
@@ -685,17 +714,31 @@
 
     start?.addEventListener("click", () => {
       reset();
-      if (stage) stage.hidden = false;
       start.textContent = "Demostración abierta";
       start.disabled = true;
+
+      const desktop = window.matchMedia("(min-width: 56rem)").matches;
+      if (!desktop && stage) stage.hidden = false;
+
       syncGuidePlacement();
-      render();
-      stage?.scrollIntoView({ behavior: "smooth", block: "start" });
+      showIntroduction();
     });
+
+    cancel?.addEventListener("click", closeIntroduction);
 
     window.addEventListener("resize", syncGuidePlacement);
 
     next?.addEventListener("click", () => {
+      if (next.textContent === "Iniciar") {
+        if (stage) stage.hidden = false;
+        if (cancel) cancel.hidden = true;
+        next.textContent = "Siguiente";
+        index = 0;
+        render();
+        fields.context?.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+
       if (index < steps.length - 1) {
         index += 1;
         render();
