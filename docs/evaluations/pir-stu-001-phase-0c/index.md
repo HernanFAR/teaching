@@ -74,11 +74,6 @@ Completa este perfil antes o durante la evaluaci√≥n. **Todo lo que ingreses aqu√
 
   <div class="pir-eval-form__judgments">
     <div class="pir-eval-field pir-eval-field--wide">
-      <label>ID del evaluador <span aria-hidden="true">*</span></label>
-      <input type="text" data-profile-field="id" required>
-    </div>
-
-    <div class="pir-eval-field pir-eval-field--wide">
       <label>Rol actual / enfoque profesional <span aria-hidden="true">*</span></label>
       <input type="text" data-profile-field="role" required>
     </div>
