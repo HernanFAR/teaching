@@ -551,20 +551,26 @@
 
   const steps = [
     {
+      field: "context",
+      title: "1. Lee primero el contexto",
+      description: "Antes de tocar el formulario, identifica qué hechos están realmente establecidos. La evaluación depende de lo que el caso muestra, no de lo que podría suponerse fuera de él.",
+      apply: () => {}
+    },
+    {
       field: "property",
-      title: "1. Identifica la propiedad",
-      description: "Selecciona la obligación del contrato que el caso realmente pone en juego. No tienes que marcar propiedades que el caso no ejercita.",
+      title: "2. Identifica la propiedad",
+      description: "Ahora selecciona la obligación del contrato que el caso realmente pone en juego. No tienes que marcar propiedades que el caso no ejercita.",
       apply: ({ property }) => { property.value = "CAU-002"; }
     },
     {
       field: "judgment",
-      title: "2. Emite el juicio",
+      title: "3. Emite el juicio",
       description: "Decide si la evidencia preserva, viola, deja ambigua o no ejercita la propiedad. En este ejemplo, la separación se propone antes de existir una presión observable.",
       apply: ({ judgment }) => { judgment.value = "VIOLATION"; }
     },
     {
       field: "evidence",
-      title: "3. Señala la evidencia mínima",
+      title: "4. Señala la evidencia mínima",
       description: "Copia sólo el fragmento necesario para reconstruir tu decisión. No hace falta volver a contar todo el caso.",
       apply: ({ evidence }) => {
         evidence.value = "agregar una capa adicional únicamente porque quizá en el futuro aparezca otro canal";
@@ -572,7 +578,7 @@
     },
     {
       field: "rationale",
-      title: "4. Explica el fundamento",
+      title: "5. Explica el fundamento",
       description: "Une la evidencia con la propiedad en una explicación breve: por qué ese fragmento sostiene el juicio elegido.",
       apply: ({ rationale }) => {
         rationale.value = "La separación se propone por una posibilidad futura, no por una presión observable presente. Por eso contradice CAU-002.";
@@ -580,19 +586,19 @@
     },
     {
       field: "confidence",
-      title: "5. Indica tu confianza",
+      title: "6. Indica tu confianza",
       description: "La confianza expresa cuán seguro estás de tu juicio. No reemplaza la evidencia ni el fundamento.",
       apply: ({ confidence }) => { confidence.value = "alta"; }
     },
     {
       field: "note",
-      title: "6. Usa la nota general sólo si aporta algo",
+      title: "7. Usa la nota general sólo si aporta algo",
       description: "Este campo es opcional. Sirve para registrar ambigüedad, solapamiento entre propiedades o contexto faltante. En este ejemplo no hace falta escribir nada.",
       apply: () => {}
     },
     {
       field: "actions",
-      title: "7. Continúa o agrega otra propiedad",
+      title: "8. Continúa o agrega otra propiedad",
       description: "Si el caso ejercita otra propiedad, usa “Agregar otra propiedad”. Cuando ya registraste todas las propiedades relevantes y los campos obligatorios están completos, continúa al siguiente caso.",
       apply: () => {}
     }
@@ -628,6 +634,7 @@
     const fields = Object.fromEntries(
       [...demo.querySelectorAll("[data-demo-field]")].map((field) => [field.dataset.demoField, field])
     );
+    fields.context = demo.querySelector(".pir-eval-demo__scenario");
     fields.actions = demo.querySelector(".pir-eval-form__primary-actions");
     const inputs = Object.fromEntries(
       [...demo.querySelectorAll("[data-demo-input]")].map((input) => [input.dataset.demoInput, input])
