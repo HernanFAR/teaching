@@ -542,3 +542,302 @@
 
   updateProgress();
 })();
+
+
+/* PIR evaluator guided demonstration */
+(() => {
+  const demos = document.querySelectorAll("[data-pir-eval-demo]");
+  if (!demos.length) return;
+
+  const defaultSteps = [
+    {
+      field: "context",
+      title: "1. Lee primero el contexto",
+      description: "Antes de tocar el formulario, identifica qué hechos están realmente establecidos. La evaluación depende de lo que el caso muestra, no de lo que podría suponerse fuera de él.",
+      apply: () => {}
+    },
+    {
+      field: "property",
+      title: "2. Identifica la propiedad",
+      description: "Ahora selecciona la obligación del contrato que el caso realmente pone en juego. No tienes que marcar propiedades que el caso no ejercita.",
+      apply: ({ property }) => { property.value = "CAU-002"; }
+    },
+    {
+      field: "judgment",
+      title: "3. Emite el juicio",
+      description: "Decide si la evidencia preserva, viola, deja ambigua o no ejercita la propiedad. En este ejemplo, la separación se propone antes de existir una presión observable.",
+      apply: ({ judgment }) => { judgment.value = "VIOLATION"; }
+    },
+    {
+      field: "evidence",
+      title: "4. Señala la evidencia mínima",
+      description: "Copia sólo el fragmento necesario para reconstruir tu decisión. No hace falta volver a contar todo el caso.",
+      apply: ({ evidence }) => {
+        evidence.value = "agregar una capa adicional únicamente porque quizá en el futuro aparezca otro canal";
+      }
+    },
+    {
+      field: "rationale",
+      title: "5. Explica el fundamento",
+      description: "Une la evidencia con la propiedad en una explicación breve: por qué ese fragmento sostiene el juicio elegido.",
+      apply: ({ rationale }) => {
+        rationale.value = "La separación se propone por una posibilidad futura, no por una presión observable presente. Por eso contradice CAU-002.";
+      }
+    },
+    {
+      field: "confidence",
+      title: "6. Indica tu confianza",
+      description: "La confianza expresa cuán seguro estás de tu juicio. No reemplaza la evidencia ni el fundamento.",
+      apply: ({ confidence }) => { confidence.value = "alta"; }
+    },
+    {
+      field: "note",
+      title: "7. Usa la nota general sólo si aporta algo",
+      description: "Este campo es opcional. Sirve para registrar ambigüedad, solapamiento entre propiedades o contexto faltante. En este ejemplo no hace falta escribir nada.",
+      apply: () => {}
+    },
+    {
+      field: "actions",
+      title: "8. Continúa o agrega otra propiedad",
+      description: "Si el caso ejercita otra propiedad, usa “Agregar otra propiedad”. Cuando ya registraste todas las propiedades relevantes y los campos obligatorios están completos, continúa al siguiente caso.",
+      apply: () => {}
+    }
+  ];
+
+  const phase0cSteps = [
+    {
+      field: "context",
+      title: "1. Lee primero el contexto",
+      description: "Empieza por los hechos y restricciones que el caso establece. No completes huecos con supuestos externos.",
+      apply: () => {}
+    },
+    {
+      field: "realization",
+      title: "2. Lee la realización a evaluar",
+      description: "Ahora observa qué decisión o recomendación propone realmente la realización. El juicio se hace sobre esa respuesta dentro del contexto dado.",
+      apply: () => {}
+    },
+    {
+      field: "property",
+      title: "3. Identifica la propiedad",
+      description: "Selecciona cada propiedad del contrato que el caso ejercita materialmente. No reduzcas todo el caso a un único juicio global.",
+      apply: ({ property }) => { property.value = "CAU-002"; }
+    },
+    {
+      field: "judgment",
+      title: "4. Emite el juicio",
+      description: "Clasifica esa propiedad como PASS, VIOLATION, AMBIGUOUS o N/A según lo que muestran juntos el contexto y la realización.",
+      apply: ({ judgment }) => { judgment.value = "VIOLATION"; }
+    },
+    {
+      field: "evidence",
+      title: "5. Señala la evidencia mínima",
+      description: "Registra el fragmento útil más pequeño que permita reconstruir el juicio sin volver a copiar todo el caso.",
+      apply: ({ evidence }) => {
+        evidence.value = "Como quizá en el futuro aparezca otro canal de entrada, extraería ahora la operación";
+      }
+    },
+    {
+      field: "rationale",
+      title: "6. Explica el fundamento",
+      description: "Une propiedad, evidencia y juicio en una explicación breve. El fundamento debe hacer visible por qué esa evidencia sostiene tu clasificación.",
+      apply: ({ rationale }) => {
+        rationale.value = "La separación se propone por una posibilidad futura y no por una presión observable presente, por lo que contradice CAU-002.";
+      }
+    },
+    {
+      field: "confidence",
+      title: "7. Confianza es opcional",
+      description: "Si te resulta útil, indica cuán seguro estás de tu juicio. En Phase 0c este campo es opcional y no bloquea el avance.",
+      apply: ({ confidence }) => { confidence.value = "alta"; }
+    },
+    {
+      field: "note",
+      title: "8. Usa la nota general sólo si aporta algo",
+      description: "La nota general también es opcional. Úsala para registrar una observación transversal del caso que no pertenezca a un juicio concreto.",
+      apply: () => {}
+    },
+    {
+      field: "actions",
+      title: "9. Agrega propiedades o continúa",
+      description: "Si el caso ejercita otra propiedad, agrégala como un juicio separado. Cuando hayas registrado todas las propiedades relevantes, continúa al siguiente caso.",
+      apply: () => {}
+    }
+  ];
+
+  for (const demo of demos) {
+    const start = demo.querySelector("[data-demo-start]");
+    const header = demo.querySelector(".pir-eval-demo__header");
+    const stage = demo.querySelector("[data-demo-stage]");
+    const next = demo.querySelector("[data-demo-next]");
+    const cancel = demo.querySelector("[data-demo-cancel]");
+    const title = demo.querySelector("[data-demo-title]");
+    const description = demo.querySelector("[data-demo-description]");
+    const stepLabel = demo.querySelector("[data-demo-step-label]");
+    const status = demo.querySelector("[data-demo-status]");
+    const guide = demo.querySelector("[data-demo-guide]");
+    const guideHome = guide?.parentElement ?? null;
+    const guideAnchor = guide ? document.createComment("pir-eval-demo-guide-home") : null;
+    if (guide && guideAnchor) guide.before(guideAnchor);
+
+    const syncGuidePlacement = () => {
+      if (!guide || !guideAnchor || !guideHome) return;
+      const desktop = window.matchMedia("(min-width: 56rem)").matches;
+
+      if (desktop && guide.parentElement !== document.body) {
+        guide.classList.add("md-typeset");
+        document.body.appendChild(guide);
+      } else if (!desktop && guide.parentElement === document.body) {
+        guide.classList.remove("md-typeset");
+        guideAnchor.after(guide);
+      }
+    };
+    const steps = demo.dataset.demoVariant === "phase-0c" ? phase0cSteps : defaultSteps;
+    const dots = [...demo.querySelectorAll("[data-demo-dot]")];
+    const fields = Object.fromEntries(
+      [...demo.querySelectorAll("[data-demo-field]")].map((field) => [field.dataset.demoField, field])
+    );
+    fields.context ??= demo.querySelector(".pir-eval-demo__scenario");
+    fields.actions = demo.querySelector(".pir-eval-form__primary-actions");
+    const inputs = Object.fromEntries(
+      [...demo.querySelectorAll("[data-demo-input]")].map((input) => [input.dataset.demoInput, input])
+    );
+    let index = 0;
+
+    const reset = () => {
+      Object.values(inputs).forEach((input) => { input.value = ""; });
+      Object.values(fields).filter(Boolean).forEach((field) => field.classList.remove("is-demo-focus", "is-demo-complete"));
+      dots.forEach((dot) => dot.classList.remove("is-active", "is-complete"));
+      index = 0;
+      if (status) status.textContent = "Completa todos los campos obligatorios para continuar.";
+      if (cancel) cancel.hidden = true;
+      if (next) {
+        next.hidden = false;
+        next.textContent = "Siguiente";
+      }
+    };
+
+    const showIntroduction = () => {
+      Object.values(fields).filter(Boolean).forEach((field) => field.classList.remove("is-demo-focus", "is-demo-complete"));
+      dots.forEach((dot) => dot.classList.remove("is-active", "is-complete"));
+      if (stepLabel) stepLabel.textContent = "Demostración guiada";
+      if (title) title.textContent = "¿Quieres ver cómo se responde?";
+      if (description) description.textContent = "Te mostraremos una respuesta ficticia paso a paso. Primero leeremos el contexto y después completaremos el formulario exactamente con la misma lógica que usarás en la evaluación real.";
+      if (cancel) cancel.hidden = false;
+      if (next) {
+        next.hidden = false;
+        next.textContent = "Iniciar";
+      }
+    };
+
+    const closeIntroduction = () => {
+      if (stage) stage.hidden = true;
+      if (header) header.hidden = false;
+      if (start) {
+        start.textContent = "Ver demostración";
+        start.disabled = false;
+      }
+      if (guide && guideAnchor && guideHome && guide.parentElement === document.body) {
+        guide.classList.remove("md-typeset");
+        guideAnchor.after(guide);
+      }
+      reset();
+    };
+
+    const render = () => {
+      const step = steps[index];
+      steps.slice(0, index + 1).forEach((completedStep) => completedStep.apply(inputs));
+
+      Object.entries(fields).forEach(([name, field]) => {
+        if (!field) return;
+        const stepIndex = steps.findIndex((candidate) => candidate.field === name);
+        field.classList.toggle("is-demo-focus", stepIndex === index);
+        field.classList.toggle("is-demo-complete", stepIndex >= 0 && stepIndex < index);
+      });
+
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle("is-active", dotIndex === index);
+        dot.classList.toggle("is-complete", dotIndex < index);
+      });
+
+      if (title) title.textContent = step.title;
+      if (description) description.textContent = step.description;
+      if (stepLabel) stepLabel.textContent = `Paso ${index + 1} de ${steps.length}`;
+      if (status && index >= 4) status.textContent = "Los campos obligatorios de esta respuesta ya están completos.";
+
+      if (index === steps.length - 1 && next) next.textContent = "Terminar";
+
+      const active = fields[step.field];
+      if (active) {
+        active.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        const focusTarget =
+          active.matches("input, select, textarea, button")
+            ? active
+            : active.querySelector("select, textarea, input, button");
+
+        window.setTimeout(() => {
+          focusTarget?.focus({ preventScroll: true });
+        }, 260);
+      }
+    };
+
+    start?.addEventListener("click", () => {
+      reset();
+      if (header) header.hidden = true;
+      start.textContent = "Demostración abierta";
+      start.disabled = true;
+
+      const desktop = window.matchMedia("(min-width: 56rem)").matches;
+      if (!desktop && stage) stage.hidden = false;
+
+      syncGuidePlacement();
+      showIntroduction();
+    });
+
+    cancel?.addEventListener("click", closeIntroduction);
+
+    window.addEventListener("resize", syncGuidePlacement);
+
+    next?.addEventListener("click", () => {
+      if (next.textContent === "Cerrar") {
+        closeIntroduction();
+        return;
+      }
+
+      if (next.textContent === "Iniciar") {
+        if (stage) stage.hidden = false;
+        if (cancel) cancel.hidden = true;
+        next.textContent = "Siguiente";
+        index = 0;
+        render();
+        fields.context?.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+
+      if (index < steps.length - 1) {
+        index += 1;
+        render();
+        return;
+      }
+
+      Object.values(fields).filter(Boolean).forEach((field) => {
+        field.classList.remove("is-demo-focus");
+        field.classList.add("is-demo-complete");
+      });
+      dots.forEach((dot) => {
+        dot.classList.remove("is-active");
+        dot.classList.add("is-complete");
+      });
+      if (title) title.textContent = "Respuesta completa";
+      if (description) description.textContent = "Eso es todo. El formulario real usa esta misma estructura: puedes agregar propiedades, completar cada juicio y continuar cuando los campos obligatorios estén listos.";
+      if (stepLabel) stepLabel.textContent = "Demostración terminada";
+      if (status) status.textContent = "Respuesta de demostración completa. Puedes continuar al siguiente caso.";
+      if (next) {
+        next.hidden = false;
+        next.textContent = "Cerrar";
+      }
+    });
+  }
+})();
+

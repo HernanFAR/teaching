@@ -722,7 +722,126 @@ No compares tus respuestas con otros evaluadores antes de entregar.
 
 ---
 
-### 3.3 Evaluación de casos {#casos}
+### 3.3 Demostración guiada {#demostracion}
+
+Antes de responder los casos reales, puedes ver una demostración corta de cómo completar una evaluación. **El ejemplo no pertenece al estudio y no anticipa ninguna respuesta de las muestras reales.**
+
+!!! tip "Mejor experiencia visual"
+    La demostración funciona en celular, pero está pensada principalmente para verse en **PC o notebook**, donde el formulario y la guía pueden mantenerse visibles al mismo tiempo.
+
+<div class="pir-eval-demo" data-pir-eval-demo data-demo-variant="phase-0c">
+  <div class="pir-eval-demo__header">
+    <div>
+      <span class="teaching-eyebrow">Ejemplo interactivo</span>
+      <strong>Cómo se construye una respuesta</strong>
+      <span>La demostración reproduce el mismo tipo de formulario que usarás después y lo completa paso a paso.</span>
+    </div>
+    <button type="button" class="md-button md-button--primary" data-demo-start>Ver demostración</button>
+  </div>
+
+  <div class="pir-eval-demo__stage" data-demo-stage hidden>
+    <div class="pir-evaluation-sample pir-eval-demo__sample">
+      <div class="teaching-eyebrow pir-eval-label">DEMO-001</div>
+
+      <div class="pir-sample-context" data-demo-field="context">
+        <div class="teaching-eyebrow pir-sample-label">Contexto</div>
+        <p>Una aplicación funciona hoy con una sola entrada web. No existe todavía un segundo consumidor ni una necesidad observada que obligue a separar la operación.</p>
+      </div>
+
+      <div class="pir-sample-realization" data-demo-field="realization">
+        <div class="teaching-eyebrow pir-sample-label">Realización a evaluar</div>
+        <p>Como quizá en el futuro aparezca otro canal de entrada, extraería ahora la operación para que HTTP deje de ser su dueño.</p>
+      </div>
+    </div>
+
+    <div class="pir-eval-demo__workspace">
+      <div class="pir-eval-demo__form-wrap">
+        <div class="pir-eval-form pir-eval-demo__mock-form">
+          <div class="pir-eval-form__header">
+            <div class="pir-eval-form__intro">
+              <strong class="pir-eval-form__legend">Respuesta de DEMO-001</strong>
+              <span>Agrega todas las propiedades que este caso ejercita materialmente.</span>
+            </div>
+            <div class="pir-eval-form__primary-actions">
+              <button type="button" class="md-button pir-eval-form__add" data-demo-action="add" tabindex="-1">Agregar otra propiedad</button>
+              <button type="button" class="md-button md-button--primary" data-demo-action="next" tabindex="-1">Siguiente caso</button>
+            </div>
+          </div>
+
+          <div class="pir-eval-form__judgments">
+            <div class="pir-eval-judgment pir-eval-demo__form">
+              <div class="pir-eval-field" data-demo-field="property">
+                <label>Propiedad <span aria-hidden="true">*</span></label>
+                <select data-demo-input="property" tabindex="-1" aria-label="Propiedad de demostración">
+                  <option value="">Selecciona…</option>
+                  <option value="CAU-002">CAU-002 — Presión antes de separar</option>
+                </select>
+              </div>
+
+              <div class="pir-eval-field" data-demo-field="judgment">
+                <label>Juicio <span aria-hidden="true">*</span></label>
+                <select data-demo-input="judgment" tabindex="-1" aria-label="Juicio de demostración">
+                  <option value="">Selecciona…</option>
+                  <option>VIOLATION</option>
+                </select>
+              </div>
+
+              <div class="pir-eval-field" data-demo-field="confidence">
+                <label>Confianza <span class="pir-eval-field__optional">opcional</span></label>
+                <select data-demo-input="confidence" tabindex="-1" aria-label="Confianza de demostración">
+                  <option value="">Selecciona…</option>
+                  <option>alta</option>
+                </select>
+              </div>
+
+              <div class="pir-eval-field pir-eval-field--wide" data-demo-field="evidence">
+                <label>Evidencia <span aria-hidden="true">*</span></label>
+                <textarea data-demo-input="evidence" rows="1" readonly tabindex="-1" aria-label="Evidencia de demostración"></textarea>
+              </div>
+
+              <div class="pir-eval-field pir-eval-field--wide" data-demo-field="rationale">
+                <label>Fundamento <span aria-hidden="true">*</span></label>
+                <textarea data-demo-input="rationale" rows="2" readonly tabindex="-1" aria-label="Fundamento de demostración"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="pir-eval-field pir-eval-field--wide pir-eval-demo__note" data-demo-field="note">
+            <label>Nota general <span class="pir-eval-field__optional">opcional</span></label>
+            <textarea data-demo-input="note" rows="2" readonly tabindex="-1" placeholder="Ambigüedad, solapamiento o contexto faltante"></textarea>
+          </div>
+
+          <div class="pir-eval-form__status" data-demo-status>
+            Completa todos los campos obligatorios para continuar.
+          </div>
+        </div>
+      </div>
+
+      <aside class="pir-eval-demo__guide" data-demo-guide aria-live="polite">
+        <span class="pir-eval-demo__step" data-demo-step-label>Paso 1 de 8</span>
+        <strong data-demo-title>Propiedad</strong>
+        <span data-demo-description>Primero identifica qué obligación del contrato está realmente en juego.</span>
+        <div class="pir-eval-demo__progress" aria-hidden="true">
+          <span data-demo-dot></span>
+          <span data-demo-dot></span>
+          <span data-demo-dot></span>
+          <span data-demo-dot></span>
+          <span data-demo-dot></span>
+          <span data-demo-dot></span>
+          <span data-demo-dot></span>
+          <span data-demo-dot></span>
+          <span data-demo-dot></span>
+        </div>
+        <div class="pir-eval-demo__actions">
+          <button type="button" class="md-button" data-demo-cancel hidden>Cancelar</button>
+          <button type="button" class="md-button md-button--primary" data-demo-next>Siguiente</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+### 3.4 Evaluación de casos {#casos}
 
 Completa los casos en orden. Puedes volver a un caso ya completado; si modificas uno y lo dejas incompleto, la navegación vuelve a bloquearse hasta completarlo.
 

@@ -2348,9 +2348,9 @@
 
 .pir-eval-wizard__panel .pir-eval-judgment {
   grid-template-columns:
-    minmax(7.5rem, 0.7fr)
-    minmax(8.5rem, 0.8fr)
-    minmax(7rem, 0.55fr);
+    minmax(0, 2fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr);
   gap: 0.55rem 0.7rem;
   padding: 0.7rem;
 }
@@ -2878,3 +2878,293 @@
     gap: 0.2rem;
   }
 }
+
+
+/* PIR evaluator guided demonstration */
+.pir-eval-demo {
+  margin: 1rem 0 2rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: var(--teaching-radius);
+  background: var(--md-default-bg-color);
+}
+
+.pir-eval-demo__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+}
+
+.pir-eval-demo__header[hidden] {
+  display: none !important;
+}
+
+.pir-eval-demo__header strong,
+.pir-eval-demo__header span {
+  display: block;
+}
+
+.pir-eval-demo__header > div > span:last-child {
+  margin-top: 0.2rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.78rem;
+}
+
+.pir-eval-demo__stage {
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+  padding: 0.85rem;
+}
+
+.pir-eval-demo__scenario {
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--teaching-radius);
+  background: var(--md-default-fg-color--lightest);
+}
+
+.pir-eval-demo__scenario strong,
+.pir-eval-demo__scenario span,
+.pir-eval-demo__guide strong,
+.pir-eval-demo__guide span {
+  display: block;
+}
+
+.pir-eval-demo__scenario > span:last-child,
+.pir-eval-demo__guide > span:last-child {
+  margin-top: 0.25rem;
+}
+
+.pir-eval-demo__workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.85rem;
+  margin-top: 0.85rem;
+}
+
+.pir-eval-demo__mock-form {
+  margin-top: 0;
+  container-type: inline-size;
+}
+
+.pir-eval-demo__guide {
+  z-index: 4;
+  padding: 0.8rem 0.9rem;
+  border: 0.05rem solid var(--md-accent-fg-color);
+  border-left-width: 0.2rem;
+  border-radius: var(--teaching-radius);
+  background: var(--md-default-bg-color);
+  box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.12);
+}
+
+.pir-eval-demo__step {
+  color: var(--md-accent-fg-color);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pir-eval-demo__form {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.pir-eval-demo__form .pir-eval-field {
+  min-width: 0;
+}
+
+.pir-eval-demo__form .pir-eval-field select,
+.pir-eval-demo__form .pir-eval-field textarea {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+@container (min-width: 50rem) {
+  .pir-eval-demo__form {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.pir-eval-demo__form .pir-eval-field,
+.pir-eval-demo__note,
+.pir-eval-demo__mock-form .pir-eval-form__primary-actions {
+  position: relative;
+  border-radius: 0.55rem;
+  transition: box-shadow 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.pir-eval-demo__scenario.is-demo-focus {
+  box-shadow: 0 0 0 0.1rem var(--md-accent-fg-color);
+  background: color-mix(in srgb, var(--md-accent-fg-color) 8%, var(--md-default-fg-color--lightest));
+}
+
+.pir-eval-demo__form .pir-eval-field.is-demo-focus select,
+.pir-eval-demo__form .pir-eval-field.is-demo-focus textarea,
+.pir-eval-demo__note.is-demo-focus textarea {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 0.1rem var(--md-accent-fg-color);
+}
+
+.pir-eval-demo__form .pir-eval-field.is-demo-focus label,
+.pir-eval-demo__note.is-demo-focus label {
+  color: var(--md-accent-fg-color);
+}
+
+.pir-eval-demo__mock-form .pir-eval-form__primary-actions.is-demo-focus {
+  border-radius: 0.55rem;
+  box-shadow: 0 0 0 0.1rem var(--md-accent-fg-color);
+}
+
+.pir-eval-demo__form .pir-eval-field.is-demo-complete::after,
+.pir-eval-demo__note.is-demo-complete::after {
+  content: "✓";
+  position: absolute;
+  top: 0.35rem;
+  right: 0.45rem;
+  color: var(--md-accent-fg-color);
+  font-weight: 800;
+}
+
+.pir-eval-demo__form select,
+.pir-eval-demo__form textarea,
+.pir-eval-demo__mock-form button,
+.pir-eval-demo__note textarea {
+  pointer-events: none;
+}
+
+.pir-eval-demo__note {
+  margin-top: 0.7rem;
+  padding: 0.35rem;
+}
+
+.pir-eval-demo__progress {
+  display: flex;
+  gap: 0.32rem;
+  margin-top: 0.8rem;
+}
+
+.pir-eval-demo__progress span {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 999px;
+  background: var(--md-default-fg-color--lightest);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.pir-eval-demo__progress span.is-active {
+  background: var(--md-accent-fg-color);
+  transform: scale(1.22);
+}
+
+.pir-eval-demo__progress span.is-complete {
+  background: var(--md-accent-fg-color);
+  opacity: 0.55;
+}
+
+.pir-eval-demo__actions {
+  display: flex;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+}
+
+@media (min-width: 56rem) {
+  .pir-eval-demo__workspace {
+    display: block;
+  }
+
+  .pir-eval-demo__guide {
+    position: fixed;
+    top: 4.75rem;
+    right: 1.25rem;
+    width: clamp(16.5rem, 20vw, 18.5rem);
+    max-width: calc(100vw - 2.5rem);
+    max-height: calc(100vh - 6rem);
+    overflow: auto;
+    z-index: 1000;
+    padding: 1rem 1.1rem;
+  }
+
+  .pir-eval-demo__guide > strong {
+    margin-top: 0.15rem;
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  .pir-eval-demo__guide > span:last-of-type {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .pir-eval-demo__guide .pir-eval-demo__actions .md-button {
+    min-width: 6.25rem;
+    padding: 0.5rem 0.7rem;
+    text-align: center;
+  }
+}
+
+/* Compact evaluator layout for common laptop / non-FHD resolutions. */
+@media (max-width: 90rem) {
+  .pir-eval-form {
+    padding: 0.75rem;
+  }
+
+  .pir-eval-form__header,
+  .pir-eval-output__header {
+    gap: 0.65rem;
+  }
+
+  .pir-eval-form__judgments {
+    margin-top: 0.7rem;
+  }
+
+  .pir-eval-judgment {
+    gap: 0.6rem;
+    padding: 0.7rem;
+  }
+
+  .pir-eval-field input,
+  .pir-eval-field select,
+  .pir-eval-field textarea {
+    padding: 0.5rem 0.58rem;
+  }
+
+  .pir-eval-form__primary-actions {
+    gap: 0.45rem;
+  }
+
+  .pir-evaluation-sample {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 55.99rem) {
+  .pir-eval-demo__form {
+    grid-template-columns: 1fr;
+  }
+
+  .pir-eval-demo__form .pir-eval-field {
+    grid-column: 1;
+  }
+  .pir-eval-demo__header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pir-eval-demo__actions {
+    width: 100%;
+  }
+
+  .pir-eval-demo__actions .md-button,
+  .pir-eval-demo__header .md-button {
+    flex: 1;
+    text-align: center;
+  }
+
+  .pir-eval-demo__guide {
+    position: static;
+    width: auto;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
