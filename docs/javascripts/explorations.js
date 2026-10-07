@@ -168,6 +168,13 @@
   const copyOutput = output?.querySelector("[data-copy-eval-output]");
   const profile = document.querySelector("[data-pir-evaluator-profile]");
   const profileStatus = profile?.querySelector("[data-profile-status]");
+  const profileCurrentDate = profile?.querySelector("[data-profile-current-date]");
+  const currentDate = new Intl.DateTimeFormat("es-CL", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).format(new Date());
+  if (profileCurrentDate) profileCurrentDate.textContent = currentDate;
   const state = new Map();
   const itemLabel = wizard.dataset.itemLabel || "Muestra";
   const itemLabelPlural = wizard.dataset.itemLabelPlural || "muestras";
@@ -318,7 +325,7 @@
       `Familiaridad previa con Clean Architecture: ${value("cleanArchitectureFamiliarity")}`,
       `Familiaridad previa con Teaching / PIR / este estudio: ${value("studyFamiliarity")}`,
       "",
-      `Fecha: ${value("date")}`,
+      `Fecha: ${currentDate}`,
       `Tiempo aproximado dedicado: ${value("duration")}`,
       "",
       `¿Conversaste algún caso con otra persona antes del envío?: ${value("discussedWithOthers")}`,
