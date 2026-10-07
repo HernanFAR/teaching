@@ -607,6 +607,21 @@
     const description = demo.querySelector("[data-demo-description]");
     const stepLabel = demo.querySelector("[data-demo-step-label]");
     const status = demo.querySelector("[data-demo-status]");
+    const guide = demo.querySelector("[data-demo-guide]");
+    const guideHome = guide?.parentElement ?? null;
+    const guideAnchor = guide ? document.createComment("pir-eval-demo-guide-home") : null;
+    if (guide && guideAnchor) guide.before(guideAnchor);
+
+    const syncGuidePlacement = () => {
+      if (!guide || !guideAnchor || !guideHome) return;
+      const desktop = window.matchMedia("(min-width: 56rem)").matches;
+
+      if (desktop && guide.parentElement !== document.body) {
+        document.body.appendChild(guide);
+      } else if (!desktop && guide.parentElement === document.body) {
+        guideAnchor.after(guide);
+      }
+    };
     const dots = [...demo.querySelectorAll("[data-demo-dot]")];
     const fields = Object.fromEntries(
       [...demo.querySelectorAll("[data-demo-field]")].map((field) => [field.dataset.demoField, field])
@@ -664,9 +679,12 @@
       if (stage) stage.hidden = false;
       start.textContent = "Demostración abierta";
       start.disabled = true;
+      syncGuidePlacement();
       render();
       stage?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
+
+    window.addEventListener("resize", syncGuidePlacement);
 
     next?.addEventListener("click", () => {
       if (index < steps.length - 1) {
