@@ -62,58 +62,118 @@ Esta evaluación forma parte de una investigación sobre **material educativo y 
 
 ## 2. Perfil del evaluador {#perfil-evaluador}
 
-Antes de comenzar, copia y completa el perfil que debe acompañar tu evaluación.
+Completa este perfil antes o durante la evaluación. **Todo lo que ingreses aquí se agregará automáticamente a la respuesta consolidada de la parte inferior**, así que no tendrás que copiar ni reconstruir el perfil por separado.
 
-<div class="teaching-copy-template" data-teaching-copy-template>
-  <div class="teaching-copy-template__body">
-    <strong>Perfil del evaluador</strong>
-    <span>Copia la plantilla, complétala y envíala junto con los 8 casos.</span>
+<form class="pir-eval-form" data-pir-evaluator-profile novalidate>
+  <div class="pir-eval-form__header">
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend">Perfil del evaluador</strong>
+      <span>Estos antecedentes acompañarán tus respuestas cuando uses “Copiar respuesta” al final.</span>
+    </div>
   </div>
-  <button type="button" class="md-button md-button--primary teaching-copy-template__button" data-copy-template-button>Copiar plantilla</button>
-  <textarea hidden data-copy-template-source>ID del evaluador:
 
-Rol actual / enfoque profesional:
-Años de experiencia relevante:
-Educación, formación o experiencia docente relevante:
+  <div class="pir-eval-form__judgments">
+    <div class="pir-eval-field pir-eval-field--wide">
+      <label>ID del evaluador <span aria-hidden="true">*</span></label>
+      <input type="text" data-profile-field="id" required>
+    </div>
 
-Experiencia con arquitectura de software (elige una):
-[ ] ninguna
-[ ] básica
-[ ] intermedia
-[ ] avanzada
+    <div class="pir-eval-field pir-eval-field--wide">
+      <label>Rol actual / enfoque profesional <span aria-hidden="true">*</span></label>
+      <input type="text" data-profile-field="role" required>
+    </div>
 
-Experiencia con diseño instruccional / pedagogía / evaluación (elige una):
-[ ] ninguna
-[ ] básica
-[ ] intermedia
-[ ] avanzada
+    <div class="pir-eval-field">
+      <label>Años de experiencia relevante <span aria-hidden="true">*</span></label>
+      <input type="text" data-profile-field="experienceYears" placeholder="Ej. 7 años" required>
+    </div>
 
-Familiaridad previa con Clean Architecture (elige una):
-[ ] ninguna
-[ ] básica
-[ ] intermedia
-[ ] avanzada
+    <div class="pir-eval-field pir-eval-field--wide">
+      <label>Educación, formación o experiencia docente relevante <span aria-hidden="true">*</span></label>
+      <textarea data-profile-field="education" rows="2" required></textarea>
+    </div>
 
-Familiaridad previa con Teaching / PIR / este estudio (elige una):
-[ ] ninguna
-[ ] limitada
-[ ] sustancial
+    <div class="pir-eval-field">
+      <label>Experiencia con arquitectura de software <span aria-hidden="true">*</span></label>
+      <select data-profile-field="architectureExperience" required>
+        <option value="">Selecciona…</option>
+        <option>ninguna</option>
+        <option>básica</option>
+        <option>intermedia</option>
+        <option>avanzada</option>
+      </select>
+    </div>
 
-Fecha:
-Tiempo aproximado dedicado:
+    <div class="pir-eval-field">
+      <label>Experiencia con diseño instruccional / pedagogía / evaluación <span aria-hidden="true">*</span></label>
+      <select data-profile-field="pedagogyExperience" required>
+        <option value="">Selecciona…</option>
+        <option>ninguna</option>
+        <option>básica</option>
+        <option>intermedia</option>
+        <option>avanzada</option>
+      </select>
+    </div>
 
-¿Conversaste algún caso con otra persona antes del envío?
-[ ] sí
-[ ] no
+    <div class="pir-eval-field">
+      <label>Familiaridad previa con Clean Architecture <span aria-hidden="true">*</span></label>
+      <select data-profile-field="cleanArchitectureFamiliarity" required>
+        <option value="">Selecciona…</option>
+        <option>ninguna</option>
+        <option>básica</option>
+        <option>intermedia</option>
+        <option>avanzada</option>
+      </select>
+    </div>
 
-¿Usaste un asistente de IA durante la evaluación?
-[ ] sí
-[ ] no
+    <div class="pir-eval-field">
+      <label>Familiaridad previa con Teaching / PIR / este estudio <span aria-hidden="true">*</span></label>
+      <select data-profile-field="studyFamiliarity" required>
+        <option value="">Selecciona…</option>
+        <option>ninguna</option>
+        <option>limitada</option>
+        <option>sustancial</option>
+      </select>
+    </div>
 
-Si respondiste que sí, describe cómo:
-</textarea>
-  <span class="teaching-copy-template__status" data-copy-template-status aria-live="polite"></span>
-</div>
+    <div class="pir-eval-field">
+      <label>Fecha <span aria-hidden="true">*</span></label>
+      <input type="date" data-profile-field="date" required>
+    </div>
+
+    <div class="pir-eval-field">
+      <label>Tiempo aproximado dedicado <span aria-hidden="true">*</span></label>
+      <input type="text" data-profile-field="duration" placeholder="Ej. 45 minutos" required>
+    </div>
+
+    <div class="pir-eval-field">
+      <label>¿Conversaste algún caso con otra persona antes del envío? <span aria-hidden="true">*</span></label>
+      <select data-profile-field="discussedWithOthers" required>
+        <option value="">Selecciona…</option>
+        <option>sí</option>
+        <option>no</option>
+      </select>
+    </div>
+
+    <div class="pir-eval-field">
+      <label>¿Usaste un asistente de IA durante la evaluación? <span aria-hidden="true">*</span></label>
+      <select data-profile-field="usedAi" required>
+        <option value="">Selecciona…</option>
+        <option>sí</option>
+        <option>no</option>
+      </select>
+    </div>
+
+    <div class="pir-eval-field pir-eval-field--wide">
+      <label>Si respondiste que sí, describe cómo <span class="pir-eval-field__optional">opcional</span></label>
+      <textarea data-profile-field="aiUsageDescription" rows="2"></textarea>
+    </div>
+  </div>
+
+  <div class="pir-eval-form__status" data-profile-status aria-live="polite">
+    Completa los campos obligatorios. El perfil se incorporará automáticamente a la respuesta final.
+  </div>
+</form>
 
 ---
 
