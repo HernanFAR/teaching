@@ -729,7 +729,7 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
 !!! tip "Mejor experiencia visual"
     La demostración funciona en celular, pero está pensada principalmente para verse en **PC o notebook**, donde el formulario y la guía pueden mantenerse visibles al mismo tiempo.
 
-<div class="pir-eval-demo" data-pir-eval-demo>
+<div class="pir-eval-demo" data-pir-eval-demo data-demo-variant="phase-0c">
   <div class="pir-eval-demo__header">
     <div>
       <span class="teaching-eyebrow">Ejemplo interactivo</span>
@@ -740,10 +740,16 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
   </div>
 
   <div class="pir-eval-demo__stage" data-demo-stage hidden>
-    <div class="pir-eval-demo__scenario">
-      <span class="teaching-eyebrow">Caso ficticio — fuera del estudio</span>
+    <div class="pir-eval-demo__scenario" data-demo-field="context">
+      <span class="teaching-eyebrow">Contexto ficticio — fuera del estudio</span>
       <strong>Una aplicación funciona hoy con una sola entrada web.</strong>
-      <span>Alguien propone agregar una capa adicional únicamente porque quizá en el futuro aparezca otro canal de entrada. No existe todavía un segundo consumidor ni una necesidad observada.</span>
+      <span>No existe todavía un segundo consumidor ni una necesidad observada que obligue a separar la operación.</span>
+    </div>
+
+    <div class="pir-eval-demo__scenario" data-demo-field="realization">
+      <span class="teaching-eyebrow">Realización a evaluar</span>
+      <strong>Se propone separar la operación ahora.</strong>
+      <span>“Como quizá en el futuro aparezca otro canal de entrada, extraería ahora la operación para que HTTP deje de ser su dueño.”</span>
     </div>
 
     <div class="pir-eval-demo__workspace">
@@ -779,7 +785,7 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
               </div>
 
               <div class="pir-eval-field" data-demo-field="confidence">
-                <label>Confianza</label>
+                <label>Confianza <span class="pir-eval-field__optional">opcional</span></label>
                 <select data-demo-input="confidence" tabindex="-1" aria-label="Confianza de demostración">
                   <option value="">Selecciona…</option>
                   <option>alta</option>
@@ -814,6 +820,7 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
         <strong data-demo-title>Propiedad</strong>
         <span data-demo-description>Primero identifica qué obligación del contrato está realmente en juego.</span>
         <div class="pir-eval-demo__progress" aria-hidden="true">
+          <span data-demo-dot></span>
           <span data-demo-dot></span>
           <span data-demo-dot></span>
           <span data-demo-dot></span>
