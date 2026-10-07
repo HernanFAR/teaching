@@ -740,16 +740,18 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
   </div>
 
   <div class="pir-eval-demo__stage" data-demo-stage hidden>
-    <div class="pir-eval-demo__scenario" data-demo-field="context">
-      <span class="teaching-eyebrow">Contexto ficticio — fuera del estudio</span>
-      <strong>Una aplicación funciona hoy con una sola entrada web.</strong>
-      <span>No existe todavía un segundo consumidor ni una necesidad observada que obligue a separar la operación.</span>
-    </div>
+    <div class="pir-evaluation-sample pir-eval-demo__sample">
+      <div class="teaching-eyebrow pir-eval-label">DEMO-001</div>
 
-    <div class="pir-eval-demo__scenario" data-demo-field="realization">
-      <span class="teaching-eyebrow">Realización a evaluar</span>
-      <strong>Se propone separar la operación ahora.</strong>
-      <span>“Como quizá en el futuro aparezca otro canal de entrada, extraería ahora la operación para que HTTP deje de ser su dueño.”</span>
+      <div class="pir-sample-context" data-demo-field="context">
+        <div class="teaching-eyebrow pir-sample-label">Contexto</div>
+        <p>Una aplicación funciona hoy con una sola entrada web. No existe todavía un segundo consumidor ni una necesidad observada que obligue a separar la operación.</p>
+      </div>
+
+      <div class="pir-sample-realization" data-demo-field="realization">
+        <div class="teaching-eyebrow pir-sample-label">Realización a evaluar</div>
+        <p>Como quizá en el futuro aparezca otro canal de entrada, extraería ahora la operación para que HTTP deje de ser su dueño.</p>
+      </div>
     </div>
 
     <div class="pir-eval-demo__workspace">
