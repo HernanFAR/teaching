@@ -3034,11 +3034,30 @@
   .pir-eval-demo__guide {
     position: fixed;
     top: 4.75rem;
-    right: 1rem;
-    width: min(18rem, calc(100vw - 2rem));
-    max-height: calc(100vh - 5.75rem);
+    right: 1.25rem;
+    width: clamp(20rem, 27vw, 25rem);
+    max-width: calc(100vw - 2.5rem);
+    max-height: calc(100vh - 6rem);
     overflow: auto;
     z-index: 1000;
+    padding: 1rem 1.1rem;
+  }
+
+  .pir-eval-demo__guide > strong {
+    margin-top: 0.15rem;
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  .pir-eval-demo__guide > span:last-of-type {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .pir-eval-demo__guide .pir-eval-demo__actions .md-button {
+    min-width: 7.5rem;
+    padding: 0.55rem 0.85rem;
+    text-align: center;
   }
 }
 
