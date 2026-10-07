@@ -328,9 +328,10 @@
       `Fecha: ${currentDate}`,
       `Tiempo aproximado dedicado: ${value("duration")}`,
       "",
-      `¿Conversaste algún caso con otra persona antes del envío?: ${value("discussedWithOthers")}`,
+      `¿Conversaste alguna muestra o caso con otra persona antes del envío?: ${value("discussedWithOthers")}`,
       `¿Usaste un asistente de IA durante la evaluación?: ${value("usedAi")}`,
-      ...(value("aiUsageDescription") ? [`Si respondiste que sí, describe cómo: ${value("aiUsageDescription")}`] : [])
+      ...(value("aiUsageDescription") ? [`Si respondiste que sí, describe cómo: ${value("aiUsageDescription")}`] : []),
+      ...(value("otherConditions") ? [`Cualquier otra condición que pueda haber afectado la evaluación: ${value("otherConditions")}`] : [])
     ].join("\n");
   };
 
