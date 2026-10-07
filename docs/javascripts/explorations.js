@@ -706,8 +706,17 @@
       if (index === steps.length - 1 && next) next.textContent = "Terminar";
 
       const active = fields[step.field];
-      if (active && window.matchMedia("(max-width: 79.99rem)").matches) {
+      if (active) {
         active.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        const focusTarget =
+          active.matches("input, select, textarea, button")
+            ? active
+            : active.querySelector("select, textarea, input, button");
+
+        window.setTimeout(() => {
+          focusTarget?.focus({ preventScroll: true });
+        }, 260);
       }
     };
 
