@@ -1000,6 +1000,7 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
           <span data-demo-dot></span>
         </div>
         <div class="pir-eval-demo__actions">
+          <button type="button" class="md-button" data-demo-cancel hidden>Cancelar</button>
           <button type="button" class="md-button" data-demo-replay hidden>Repetir</button>
           <button type="button" class="md-button md-button--primary" data-demo-next>Siguiente</button>
         </div>
