@@ -3026,22 +3026,22 @@
   margin-top: 0.8rem;
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 56rem) {
+  .pir-eval-demo__stage {
+    padding-right: 20rem;
+  }
+
   .pir-eval-demo__workspace {
-    grid-template-columns: minmax(0, 1fr) 17rem;
-    align-items: start;
+    display: block;
   }
 
   .pir-eval-demo__guide {
-    position: sticky;
-    top: 4.5rem;
-  }
-}
-
-@media (max-width: 79.99rem) {
-  .pir-eval-demo__guide {
-    position: sticky;
-    bottom: 0.75rem;
+    position: fixed;
+    top: 4.75rem;
+    right: 1rem;
+    width: 18rem;
+    max-height: calc(100vh - 5.75rem);
+    overflow: auto;
   }
 }
 
@@ -3080,7 +3080,7 @@
   }
 }
 
-@media (max-width: 55rem) {
+@media (max-width: 55.99rem) {
   .pir-eval-demo__header {
     align-items: stretch;
     flex-direction: column;
@@ -3098,6 +3098,9 @@
 
   .pir-eval-demo__guide {
     position: static;
+    width: auto;
+    max-height: none;
+    overflow: visible;
   }
 }
 
