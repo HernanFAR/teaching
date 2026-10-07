@@ -549,7 +549,7 @@
   const demos = document.querySelectorAll("[data-pir-eval-demo]");
   if (!demos.length) return;
 
-  const steps = [
+  const defaultSteps = [
     {
       field: "context",
       title: "1. Lee primero el contexto",
@@ -604,6 +604,67 @@
     }
   ];
 
+  const phase0cSteps = [
+    {
+      field: "context",
+      title: "1. Lee primero el contexto",
+      description: "Empieza por los hechos y restricciones que el caso establece. No completes huecos con supuestos externos.",
+      apply: () => {}
+    },
+    {
+      field: "realization",
+      title: "2. Lee la realización a evaluar",
+      description: "Ahora observa qué decisión o recomendación propone realmente la realización. El juicio se hace sobre esa respuesta dentro del contexto dado.",
+      apply: () => {}
+    },
+    {
+      field: "property",
+      title: "3. Identifica la propiedad",
+      description: "Selecciona cada propiedad del contrato que el caso ejercita materialmente. No reduzcas todo el caso a un único juicio global.",
+      apply: ({ property }) => { property.value = "CAU-002"; }
+    },
+    {
+      field: "judgment",
+      title: "4. Emite el juicio",
+      description: "Clasifica esa propiedad como PASS, VIOLATION, AMBIGUOUS o N/A según lo que muestran juntos el contexto y la realización.",
+      apply: ({ judgment }) => { judgment.value = "VIOLATION"; }
+    },
+    {
+      field: "evidence",
+      title: "5. Señala la evidencia mínima",
+      description: "Registra el fragmento útil más pequeño que permita reconstruir el juicio sin volver a copiar todo el caso.",
+      apply: ({ evidence }) => {
+        evidence.value = "Como quizá en el futuro aparezca otro canal de entrada, extraería ahora la operación";
+      }
+    },
+    {
+      field: "rationale",
+      title: "6. Explica el fundamento",
+      description: "Une propiedad, evidencia y juicio en una explicación breve. El fundamento debe hacer visible por qué esa evidencia sostiene tu clasificación.",
+      apply: ({ rationale }) => {
+        rationale.value = "La separación se propone por una posibilidad futura y no por una presión observable presente, por lo que contradice CAU-002.";
+      }
+    },
+    {
+      field: "confidence",
+      title: "7. Confianza es opcional",
+      description: "Si te resulta útil, indica cuán seguro estás de tu juicio. En Phase 0c este campo es opcional y no bloquea el avance.",
+      apply: ({ confidence }) => { confidence.value = "alta"; }
+    },
+    {
+      field: "note",
+      title: "8. Usa la nota general sólo si aporta algo",
+      description: "La nota general también es opcional. Úsala para registrar una observación transversal del caso que no pertenezca a un juicio concreto.",
+      apply: () => {}
+    },
+    {
+      field: "actions",
+      title: "9. Agrega propiedades o continúa",
+      description: "Si el caso ejercita otra propiedad, agrégala como un juicio separado. Cuando hayas registrado todas las propiedades relevantes, continúa al siguiente caso.",
+      apply: () => {}
+    }
+  ];
+
   for (const demo of demos) {
     const start = demo.querySelector("[data-demo-start]");
     const header = demo.querySelector(".pir-eval-demo__header");
@@ -631,11 +692,12 @@
         guideAnchor.after(guide);
       }
     };
+    const steps = demo.dataset.demoVariant === "phase-0c" ? phase0cSteps : defaultSteps;
     const dots = [...demo.querySelectorAll("[data-demo-dot]")];
     const fields = Object.fromEntries(
       [...demo.querySelectorAll("[data-demo-field]")].map((field) => [field.dataset.demoField, field])
     );
-    fields.context = demo.querySelector(".pir-eval-demo__scenario");
+    fields.context ??= demo.querySelector(".pir-eval-demo__scenario");
     fields.actions = demo.querySelector(".pir-eval-form__primary-actions");
     const inputs = Object.fromEntries(
       [...demo.querySelectorAll("[data-demo-input]")].map((input) => [input.dataset.demoInput, input])
