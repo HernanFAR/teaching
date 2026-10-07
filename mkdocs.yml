@@ -52,6 +52,7 @@ nav:
   - Apoyar:
       - support/index.md
       - Generar un peso: support/generar-un-peso.md
+  - Estado de publicación: build-status.md
 
 markdown_extensions:
   - admonition
