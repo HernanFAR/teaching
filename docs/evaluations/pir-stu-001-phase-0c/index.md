@@ -132,8 +132,9 @@ Completa este perfil antes o durante la evaluación. **Todo lo que ingreses aqu�
     </div>
 
     <div class="pir-eval-field">
-      <label>Fecha <span aria-hidden="true">*</span></label>
-      <input type="date" data-profile-field="date" required>
+      <label>Fecha</label>
+      <strong data-profile-current-date>Fecha actual</strong>
+      <span class="pir-eval-field__optional">Se completa automáticamente al abrir la evaluación.</span>
     </div>
 
     <div class="pir-eval-field">
