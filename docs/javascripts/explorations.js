@@ -606,6 +606,7 @@
 
   for (const demo of demos) {
     const start = demo.querySelector("[data-demo-start]");
+    const header = demo.querySelector(".pir-eval-demo__header");
     const stage = demo.querySelector("[data-demo-stage]");
     const next = demo.querySelector("[data-demo-next]");
     const cancel = demo.querySelector("[data-demo-cancel]");
@@ -669,6 +670,7 @@
 
     const closeIntroduction = () => {
       if (stage) stage.hidden = true;
+      if (header) header.hidden = false;
       if (start) {
         start.textContent = "Ver demostración";
         start.disabled = false;
@@ -711,6 +713,7 @@
 
     start?.addEventListener("click", () => {
       reset();
+      if (header) header.hidden = true;
       start.textContent = "Demostración abierta";
       start.disabled = true;
 
@@ -755,6 +758,10 @@
       if (stepLabel) stepLabel.textContent = "Demostración terminada";
       if (status) status.textContent = "Respuesta de demostración completa. Puedes continuar al siguiente caso.";
       next.hidden = true;
+
+      window.setTimeout(() => {
+        closeIntroduction();
+      }, 650);
     });
   }
 })();
