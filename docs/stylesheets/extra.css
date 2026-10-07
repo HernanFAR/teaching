@@ -2896,6 +2896,10 @@
   padding: 0.85rem 1rem;
 }
 
+.pir-eval-demo__header[hidden] {
+  display: none !important;
+}
+
 .pir-eval-demo__header strong,
 .pir-eval-demo__header span {
   display: block;
