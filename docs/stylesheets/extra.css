@@ -2997,10 +2997,20 @@
   transition: box-shadow 180ms ease, background 180ms ease, transform 180ms ease;
 }
 
-.pir-eval-demo__form .pir-eval-field.is-demo-focus,
-.pir-eval-demo__note.is-demo-focus,
+.pir-eval-demo__form .pir-eval-field.is-demo-focus select,
+.pir-eval-demo__form .pir-eval-field.is-demo-focus textarea,
+.pir-eval-demo__note.is-demo-focus textarea {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 0.1rem var(--md-accent-fg-color);
+}
+
+.pir-eval-demo__form .pir-eval-field.is-demo-focus label,
+.pir-eval-demo__note.is-demo-focus label {
+  color: var(--md-accent-fg-color);
+}
+
 .pir-eval-demo__mock-form .pir-eval-form__primary-actions.is-demo-focus {
-  background: color-mix(in srgb, var(--md-accent-fg-color) 9%, var(--md-default-bg-color));
+  border-radius: 0.55rem;
   box-shadow: 0 0 0 0.1rem var(--md-accent-fg-color);
 }
 
