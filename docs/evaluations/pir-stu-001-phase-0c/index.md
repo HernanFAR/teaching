@@ -10,10 +10,14 @@ hide_support: true
 
 **Paquete para validación humana — versión v1**
 
-Esta página contiene el paquete completo para realizar la evaluación humana de PIR-STU-001 Phase 0c.
+Esta evaluación forma parte de una investigación sobre **material educativo y consistencia pedagógica**. Revisarás varios casos de manera independiente usando los criterios incluidos en esta página; no necesitas conocer PIR-STU-001, TDidacta ni cómo fueron construidos los casos para realizarla.
 
-!!! info "Entrega privada"
-    Cuando termines, envía el perfil y las respuestas **de forma privada a Hernán**, por el canal mediante el cual recibiste este enlace.
+!!! info "Antes de empezar"
+    Cuando termines, envía **tu perfil de evaluador y tus respuestas de forma privada a Hernán**, por el mismo canal por el que recibiste este enlace. No necesitas subirlas a GitHub ni publicarlas en ningún sitio.
+
+    Si recibiste este enlace reenviado y no tienes un canal directo con Hernán, puedes entregar tus respuestas a la persona que te lo envió para que se las haga llegar.
+
+    Mientras la evaluación permanezca abierta, no se publicarán aquí respuestas, resultados ni información adicional sobre la construcción interna de los casos.
 
 ---
 
