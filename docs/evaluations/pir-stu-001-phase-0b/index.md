@@ -134,61 +134,119 @@ Todo juicio distinto de N/A debe señalar el fragmento de evidencia útil más p
 
 ## 2. Perfil del evaluador {#perfil-evaluador}
 
-Antes de comenzar, copia esta plantilla. Incluye los antecedentes, nivel de experiencia y condiciones de evaluación que debes completar y enviar junto con tus respuestas.
+Completa este perfil antes o durante la evaluación. **Todo lo que ingreses aquí se agregará automáticamente a la respuesta consolidada de la parte inferior**, así que no tendrás que copiar ni reconstruir el perfil por separado.
 
-<div class="teaching-copy-template" data-teaching-copy-template>
-  <div class="teaching-copy-template__body">
-    <strong>Perfil del evaluador</strong>
-    <span>Copia la plantilla, complétala y envíala junto con tu evaluación.</span>
+<form class="pir-eval-form" data-pir-evaluator-profile novalidate>
+  <div class="pir-eval-form__header">
+    <div class="pir-eval-form__intro">
+      <strong class="pir-eval-form__legend">Perfil del evaluador</strong>
+      <span>Estos antecedentes acompañarán tus respuestas cuando uses “Copiar respuesta” al final.</span>
+    </div>
   </div>
-  <button type="button" class="md-button md-button--primary teaching-copy-template__button" data-copy-template-button>Copiar plantilla</button>
-  <textarea hidden data-copy-template-source>ID del evaluador:
 
-Rol actual / enfoque profesional:
-Años de experiencia relevante:
-Educación, formación o experiencia docente relevante:
+  <div class="pir-eval-form__judgments">
+    <div class="pir-eval-field pir-eval-field--wide">
+      <label>Rol actual / enfoque profesional <span aria-hidden="true">*</span></label>
+      <input type="text" data-profile-field="role" required>
+    </div>
 
-Experiencia con arquitectura de software (elige una):
-[ ] ninguna
-[ ] básica
-[ ] intermedia
-[ ] avanzada
+    <div class="pir-eval-field">
+      <label>Años de experiencia relevante <span aria-hidden="true">*</span></label>
+      <input type="text" data-profile-field="experienceYears" placeholder="Ej. 7 años" required>
+    </div>
 
-Experiencia con diseño instruccional / pedagogía / evaluación (elige una):
-[ ] ninguna
-[ ] básica
-[ ] intermedia
-[ ] avanzada
+    <div class="pir-eval-field pir-eval-field--wide">
+      <label>Educación, formación o experiencia docente relevante <span aria-hidden="true">*</span></label>
+      <textarea data-profile-field="education" rows="2" required></textarea>
+    </div>
 
-Familiaridad previa con Clean Architecture (elige una):
-[ ] ninguna
-[ ] básica
-[ ] intermedia
-[ ] avanzada
+    <div class="pir-eval-field">
+      <label>Experiencia con arquitectura de software <span aria-hidden="true">*</span></label>
+      <select data-profile-field="architectureExperience" required>
+        <option value="">Selecciona…</option>
+        <option>ninguna</option>
+        <option>básica</option>
+        <option>intermedia</option>
+        <option>avanzada</option>
+      </select>
+    </div>
 
-Familiaridad previa con Teaching / PIR / este estudio (elige una):
-[ ] ninguna
-[ ] limitada
-[ ] sustancial
+    <div class="pir-eval-field">
+      <label>Experiencia con diseño instruccional / pedagogía / evaluación <span aria-hidden="true">*</span></label>
+      <select data-profile-field="pedagogyExperience" required>
+        <option value="">Selecciona…</option>
+        <option>ninguna</option>
+        <option>básica</option>
+        <option>intermedia</option>
+        <option>avanzada</option>
+      </select>
+    </div>
 
-Fecha:
-Tiempo aproximado dedicado:
+    <div class="pir-eval-field">
+      <label>Familiaridad previa con Clean Architecture <span aria-hidden="true">*</span></label>
+      <select data-profile-field="cleanArchitectureFamiliarity" required>
+        <option value="">Selecciona…</option>
+        <option>ninguna</option>
+        <option>básica</option>
+        <option>intermedia</option>
+        <option>avanzada</option>
+      </select>
+    </div>
 
-¿Conversaste alguna muestra con otra persona antes del envío?
-[ ] sí
-[ ] no
+    <div class="pir-eval-field">
+      <label>Familiaridad previa con Teaching / PIR / este estudio <span aria-hidden="true">*</span></label>
+      <select data-profile-field="studyFamiliarity" required>
+        <option value="">Selecciona…</option>
+        <option>ninguna</option>
+        <option>limitada</option>
+        <option>sustancial</option>
+      </select>
+    </div>
 
-¿Usaste un asistente de IA durante la evaluación?
-[ ] sí
-[ ] no
+    <div class="pir-eval-field">
+      <label>Fecha</label>
+      <strong data-profile-current-date>Fecha actual</strong>
+      <span class="pir-eval-field__optional">Se completa automáticamente al abrir la evaluación.</span>
+    </div>
 
-Si respondiste que sí, describe cómo:
+    <div class="pir-eval-field">
+      <label>Tiempo aproximado dedicado <span aria-hidden="true">*</span></label>
+      <input type="text" data-profile-field="duration" placeholder="Ej. 45 minutos" required>
+    </div>
 
-Cualquier otra condición que pueda haber afectado la evaluación:
-</textarea>
-  <span class="teaching-copy-template__status" data-copy-template-status aria-live="polite"></span>
-</div>
+    <div class="pir-eval-field">
+      <label>¿Conversaste alguna muestra o caso con otra persona antes del envío? <span aria-hidden="true">*</span></label>
+      <select data-profile-field="discussedWithOthers" required>
+        <option value="">Selecciona…</option>
+        <option>sí</option>
+        <option>no</option>
+      </select>
+    </div>
 
+    <div class="pir-eval-field">
+      <label>¿Usaste un asistente de IA durante la evaluación? <span aria-hidden="true">*</span></label>
+      <select data-profile-field="usedAi" required>
+        <option value="">Selecciona…</option>
+        <option>sí</option>
+        <option>no</option>
+      </select>
+    </div>
+
+    <div class="pir-eval-field pir-eval-field--wide">
+      <label>Si respondiste que sí, describe cómo <span class="pir-eval-field__optional">opcional</span></label>
+      <textarea data-profile-field="aiUsageDescription" rows="2"></textarea>
+    </div>
+
+    <div class="pir-eval-field pir-eval-field--wide">
+      <label>Cualquier otra condición que pueda haber afectado la evaluación <span class="pir-eval-field__optional">opcional</span></label>
+      <textarea data-profile-field="otherConditions" rows="2"></textarea>
+    </div>
+  </div>
+
+  <div class="pir-eval-form__status" data-profile-status aria-live="polite">
+    Completa los campos obligatorios. El perfil se incorporará automáticamente a la respuesta final.
+  </div>
+</form>
 
 ---
 
@@ -3158,7 +3216,7 @@ Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo 
 <div class="teaching-card">
 <span class="teaching-eyebrow">Entrega privada</span>
 <strong>Envía la evaluación completa a Hernán</strong>
-<span>Cuando hayas terminado, envía de forma privada: el perfil del evaluador completado, los juicios para EVAL-001 a EVAL-016 y cualquier nota general opcional sobre ambigüedades en el contrato o las muestras.</span>
+<span>Cuando hayas terminado, usa “Copiar respuesta” y envía ese texto de forma privada. La respuesta consolidada ya incluye el perfil del evaluador, los juicios para EVAL-001 a EVAL-016 y cualquier nota general opcional.</span>
 </div>
 
 No compares tus respuestas con las de otro evaluador antes de enviarlas.
