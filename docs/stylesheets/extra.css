@@ -2959,6 +2959,20 @@
   letter-spacing: 0.04em;
 }
 
+.pir-eval-demo__form {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pir-eval-demo__form .pir-eval-field {
+  min-width: 0;
+}
+
+.pir-eval-demo__form .pir-eval-field select,
+.pir-eval-demo__form .pir-eval-field textarea {
+  min-width: 0;
+  width: 100%;
+}
+
 .pir-eval-demo__form .pir-eval-field,
 .pir-eval-demo__note,
 .pir-eval-demo__mock-form .pir-eval-form__primary-actions {
@@ -3096,7 +3110,25 @@
   }
 }
 
+@media (max-width: 68rem) {
+  .pir-eval-demo__form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pir-eval-demo__form .pir-eval-field:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 55.99rem) {
+  .pir-eval-demo__form {
+    grid-template-columns: 1fr;
+  }
+
+  .pir-eval-demo__form .pir-eval-field,
+  .pir-eval-demo__form .pir-eval-field:nth-child(3) {
+    grid-column: 1;
+  }
   .pir-eval-demo__header {
     align-items: stretch;
     flex-direction: column;
