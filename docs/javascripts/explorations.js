@@ -617,8 +617,10 @@
       const desktop = window.matchMedia("(min-width: 56rem)").matches;
 
       if (desktop && guide.parentElement !== document.body) {
+        guide.classList.add("md-typeset");
         document.body.appendChild(guide);
       } else if (!desktop && guide.parentElement === document.body) {
+        guide.classList.remove("md-typeset");
         guideAnchor.after(guide);
       }
     };
