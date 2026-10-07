@@ -166,6 +166,8 @@
   const outputText = output?.querySelector("[data-eval-output-text]");
   const outputStatus = output?.querySelector("[data-output-status]");
   const copyOutput = output?.querySelector("[data-copy-eval-output]");
+  const profile = document.querySelector("[data-pir-evaluator-profile]");
+  const profileStatus = profile?.querySelector("[data-profile-status]");
   const state = new Map();
   const itemLabel = wizard.dataset.itemLabel || "Muestra";
   const itemLabelPlural = wizard.dataset.itemLabelPlural || "muestras";
@@ -297,6 +299,35 @@
     return { evalId, rows, note };
   };
 
+  const profileIsComplete = () =>
+    !profile || [...profile.querySelectorAll("[required]")].every((field) => field.value.trim() !== "");
+
+  const formatProfile = () => {
+    if (!profile) return "";
+
+    const value = (name) => profile.querySelector(`[data-profile-field="${name}"]`)?.value.trim() ?? "";
+    return [
+      "Perfil del evaluador",
+      "",
+      `ID del evaluador: ${value("id")}`,
+      `Rol actual / enfoque profesional: ${value("role")}`,
+      `Años de experiencia relevante: ${value("experienceYears")}`,
+      `Educación, formación o experiencia docente relevante: ${value("education")}`,
+      "",
+      `Experiencia con arquitectura de software: ${value("architectureExperience")}`,
+      `Experiencia con diseño instruccional / pedagogía / evaluación: ${value("pedagogyExperience")}`,
+      `Familiaridad previa con Clean Architecture: ${value("cleanArchitectureFamiliarity")}`,
+      `Familiaridad previa con Teaching / PIR / este estudio: ${value("studyFamiliarity")}`,
+      "",
+      `Fecha: ${value("date")}`,
+      `Tiempo aproximado dedicado: ${value("duration")}`,
+      "",
+      `¿Conversaste algún caso con otra persona antes del envío?: ${value("discussedWithOthers")}`,
+      `¿Usaste un asistente de IA durante la evaluación?: ${value("usedAi")}`,
+      ...(value("aiUsageDescription") ? [`Si respondiste que sí, describe cómo: ${value("aiUsageDescription")}`] : [])
+    ].join("\n");
+  };
+
   const formatEval = ({ evalId, rows, note }) => {
     const properties = rows.map((row) => [
       `Propiedad: ${row.property}`,
@@ -366,21 +397,33 @@
     });
 
     const allComplete = completed === total;
-    if (copyOutput) copyOutput.disabled = !allComplete;
+    const profileComplete = profileIsComplete();
+    if (copyOutput) copyOutput.disabled = !(allComplete && profileComplete);
     if (outputText) {
-      outputText.hidden = !allComplete;
-      if (allComplete) {
-        outputText.value = panels
+      outputText.hidden = !(allComplete && profileComplete);
+      if (allComplete && profileComplete) {
+        const evaluationText = panels
           .map((panel) => state.get(panel.dataset.evalPanel))
           .filter(Boolean)
           .map(formatEval)
           .join("\n\n---\n\n");
+        const profileText = formatProfile();
+        outputText.value = profileText
+          ? [profileText, evaluationText].join("\n\n---\n\n")
+          : evaluationText;
       }
     }
     if (outputStatus) {
-      outputStatus.textContent = allComplete
-        ? `${pluralArticle} ${total} ${itemLabelPlural} están ${completeWordPlural}. La respuesta está lista para copiar.`
-        : `Completa los ${total} ${itemLabelPlural} para generar la respuesta final (${completed}/${total}).`;
+      outputStatus.textContent = allComplete && profileComplete
+        ? `${pluralArticle} ${total} ${itemLabelPlural} y el perfil están completos. La respuesta está lista para copiar.`
+        : allComplete
+          ? "Los casos están completos. Completa el perfil del evaluador para habilitar la respuesta final."
+          : `Completa los ${total} ${itemLabelPlural} para generar la respuesta final (${completed}/${total}).`;
+    }
+    if (profileStatus) {
+      profileStatus.textContent = profileComplete
+        ? "Perfil completo. Se incluirá automáticamente en la respuesta final."
+        : "Completa los campos obligatorios. El perfil se incorporará automáticamente a la respuesta final.";
     }
   };
 
@@ -472,6 +515,9 @@
     updateRemoveButtons(form);
     updateForm(form);
   });
+
+  profile?.addEventListener("input", updateProgress);
+  profile?.addEventListener("change", updateProgress);
 
   copyOutput?.addEventListener("click", async () => {
     if (!outputText?.value) return;
