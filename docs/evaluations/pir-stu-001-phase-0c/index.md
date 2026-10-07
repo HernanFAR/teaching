@@ -143,7 +143,7 @@ Completa este perfil antes o durante la evaluación. **Todo lo que ingreses aqu�
     </div>
 
     <div class="pir-eval-field">
-      <label>¿Conversaste algún caso con otra persona antes del envío? <span aria-hidden="true">*</span></label>
+      <label>¿Conversaste alguna muestra o caso con otra persona antes del envío? <span aria-hidden="true">*</span></label>
       <select data-profile-field="discussedWithOthers" required>
         <option value="">Selecciona…</option>
         <option>sí</option>
@@ -163,6 +163,11 @@ Completa este perfil antes o durante la evaluación. **Todo lo que ingreses aqu�
     <div class="pir-eval-field pir-eval-field--wide">
       <label>Si respondiste que sí, describe cómo <span class="pir-eval-field__optional">opcional</span></label>
       <textarea data-profile-field="aiUsageDescription" rows="2"></textarea>
+    </div>
+
+    <div class="pir-eval-field pir-eval-field--wide">
+      <label>Cualquier otra condición que pueda haber afectado la evaluación <span class="pir-eval-field__optional">opcional</span></label>
+      <textarea data-profile-field="otherConditions" rows="2"></textarea>
     </div>
   </div>
 
@@ -1916,6 +1921,6 @@ Correcto, esa capacidad no estaba establecida. La retiro y no la usaré como evi
 
 <div class="teaching-card">
 <span class="teaching-eyebrow">Entrega privada</span>
-<strong>Envía los 8 casos y el perfil del evaluador a Hernán</strong>
-<span>Cuando hayas terminado, copia la respuesta consolidada y envíala de forma privada junto con el perfil completado.</span>
+<strong>Envía la respuesta consolidada a Hernán</strong>
+<span>Cuando hayas terminado, usa “Copiar respuesta” y envía ese texto de forma privada. La respuesta consolidada ya incluye el perfil del evaluador y los 8 casos.</span>
 </div>
