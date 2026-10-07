@@ -2348,9 +2348,9 @@
 
 .pir-eval-wizard__panel .pir-eval-judgment {
   grid-template-columns:
-    minmax(7.5rem, 0.7fr)
-    minmax(8.5rem, 0.8fr)
-    minmax(7rem, 0.55fr);
+    minmax(0, 2fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr);
   gap: 0.55rem 0.7rem;
   padding: 0.7rem;
 }
