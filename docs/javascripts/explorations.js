@@ -542,3 +542,139 @@
 
   updateProgress();
 })();
+
+
+/* PIR evaluator guided demonstration */
+(() => {
+  const demos = document.querySelectorAll("[data-pir-eval-demo]");
+  if (!demos.length) return;
+
+  const steps = [
+    {
+      field: "property",
+      title: "1. Identifica la propiedad",
+      description: "Selecciona la obligación del contrato que el caso realmente pone en juego. No necesitas evaluar todas las propiedades.",
+      apply: ({ property }) => { property.value = "CAU-002"; }
+    },
+    {
+      field: "judgment",
+      title: "2. Emite el juicio",
+      description: "Decide si la evidencia preserva, viola, deja ambigua o no ejercita la propiedad. Aquí la separación se propone antes de existir una presión observable.",
+      apply: ({ judgment }) => { judgment.value = "VIOLATION"; }
+    },
+    {
+      field: "evidence",
+      title: "3. Señala la evidencia mínima",
+      description: "Cita sólo el fragmento necesario para reconstruir tu decisión. No hace falta volver a contar todo el caso.",
+      apply: ({ evidence }) => {
+        evidence.value = "agregar una capa adicional únicamente porque quizá en el futuro aparezca otro canal";
+      }
+    },
+    {
+      field: "rationale",
+      title: "4. Explica el fundamento",
+      description: "Une la evidencia con la propiedad en una explicación breve. El fundamento dice por qué ese fragmento sostiene tu juicio.",
+      apply: ({ rationale }) => {
+        rationale.value = "La separación se propone por una posibilidad futura, no por una presión observable presente. Por eso contradice CAU-002.";
+      }
+    },
+    {
+      field: "confidence",
+      title: "5. Indica tu confianza",
+      description: "La confianza expresa cuán seguro estás de tu juicio; no reemplaza la evidencia ni el fundamento.",
+      apply: ({ confidence }) => { confidence.value = "alta"; }
+    }
+  ];
+
+  for (const demo of demos) {
+    const start = demo.querySelector("[data-demo-start]");
+    const stage = demo.querySelector("[data-demo-stage]");
+    const next = demo.querySelector("[data-demo-next]");
+    const replay = demo.querySelector("[data-demo-replay]");
+    const title = demo.querySelector("[data-demo-title]");
+    const description = demo.querySelector("[data-demo-description]");
+    const stepLabel = demo.querySelector("[data-demo-step-label]");
+    const dots = [...demo.querySelectorAll("[data-demo-dot]")];
+    const fields = Object.fromEntries(
+      [...demo.querySelectorAll("[data-demo-field]")].map((field) => [field.dataset.demoField, field])
+    );
+    const inputs = Object.fromEntries(
+      [...demo.querySelectorAll("[data-demo-input]")].map((input) => [input.dataset.demoInput, input])
+    );
+    let index = 0;
+
+    const reset = () => {
+      Object.values(inputs).forEach((input) => { input.value = ""; });
+      Object.values(fields).forEach((field) => field.classList.remove("is-demo-focus", "is-demo-complete"));
+      dots.forEach((dot) => dot.classList.remove("is-active", "is-complete"));
+      index = 0;
+      if (replay) replay.hidden = true;
+      if (next) {
+        next.hidden = false;
+        next.textContent = "Siguiente";
+      }
+    };
+
+    const render = () => {
+      const step = steps[index];
+      steps.slice(0, index + 1).forEach((completedStep) => completedStep.apply(inputs));
+
+      Object.entries(fields).forEach(([name, field]) => {
+        const stepIndex = steps.findIndex((candidate) => candidate.field === name);
+        field.classList.toggle("is-demo-focus", stepIndex === index);
+        field.classList.toggle("is-demo-complete", stepIndex < index);
+      });
+
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle("is-active", dotIndex === index);
+        dot.classList.toggle("is-complete", dotIndex < index);
+      });
+
+      if (title) title.textContent = step.title;
+      if (description) description.textContent = step.description;
+      if (stepLabel) stepLabel.textContent = `Paso ${index + 1} de ${steps.length}`;
+
+      fields[step.field]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+      if (index === steps.length - 1 && next) {
+        next.textContent = "Terminar";
+      }
+    };
+
+    start?.addEventListener("click", () => {
+      reset();
+      if (stage) stage.hidden = false;
+      start.textContent = "Demostración abierta";
+      start.disabled = true;
+      render();
+      stage?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    next?.addEventListener("click", () => {
+      if (index < steps.length - 1) {
+        index += 1;
+        render();
+        return;
+      }
+
+      Object.values(fields).forEach((field) => {
+        field.classList.remove("is-demo-focus");
+        field.classList.add("is-demo-complete");
+      });
+      dots.forEach((dot) => {
+        dot.classList.remove("is-active");
+        dot.classList.add("is-complete");
+      });
+      if (title) title.textContent = "Respuesta completa";
+      if (description) description.textContent = "Eso es todo: propiedad, juicio, evidencia mínima, fundamento y confianza. Los casos reales se completan exactamente con esta misma lógica.";
+      if (stepLabel) stepLabel.textContent = "Demostración terminada";
+      next.hidden = true;
+      if (replay) replay.hidden = false;
+    });
+
+    replay?.addEventListener("click", () => {
+      reset();
+      render();
+    });
+  }
+})();
