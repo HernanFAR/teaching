@@ -729,6 +729,11 @@
     window.addEventListener("resize", syncGuidePlacement);
 
     next?.addEventListener("click", () => {
+      if (next.textContent === "Cerrar") {
+        closeIntroduction();
+        return;
+      }
+
       if (next.textContent === "Iniciar") {
         if (stage) stage.hidden = false;
         if (cancel) cancel.hidden = true;
@@ -757,11 +762,10 @@
       if (description) description.textContent = "Eso es todo. El formulario real usa esta misma estructura: puedes agregar propiedades, completar cada juicio y continuar cuando los campos obligatorios estén listos.";
       if (stepLabel) stepLabel.textContent = "Demostración terminada";
       if (status) status.textContent = "Respuesta de demostración completa. Puedes continuar al siguiente caso.";
-      next.hidden = true;
-
-      window.setTimeout(() => {
-        closeIntroduction();
-      }, 650);
+      if (next) {
+        next.hidden = false;
+        next.textContent = "Cerrar";
+      }
     });
   }
 })();
