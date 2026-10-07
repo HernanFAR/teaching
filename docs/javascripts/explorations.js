@@ -553,19 +553,19 @@
     {
       field: "property",
       title: "1. Identifica la propiedad",
-      description: "Selecciona la obligación del contrato que el caso realmente pone en juego. No necesitas evaluar todas las propiedades.",
+      description: "Selecciona la obligación del contrato que el caso realmente pone en juego. No tienes que marcar propiedades que el caso no ejercita.",
       apply: ({ property }) => { property.value = "CAU-002"; }
     },
     {
       field: "judgment",
       title: "2. Emite el juicio",
-      description: "Decide si la evidencia preserva, viola, deja ambigua o no ejercita la propiedad. Aquí la separación se propone antes de existir una presión observable.",
+      description: "Decide si la evidencia preserva, viola, deja ambigua o no ejercita la propiedad. En este ejemplo, la separación se propone antes de existir una presión observable.",
       apply: ({ judgment }) => { judgment.value = "VIOLATION"; }
     },
     {
       field: "evidence",
       title: "3. Señala la evidencia mínima",
-      description: "Cita sólo el fragmento necesario para reconstruir tu decisión. No hace falta volver a contar todo el caso.",
+      description: "Copia sólo el fragmento necesario para reconstruir tu decisión. No hace falta volver a contar todo el caso.",
       apply: ({ evidence }) => {
         evidence.value = "agregar una capa adicional únicamente porque quizá en el futuro aparezca otro canal";
       }
@@ -573,7 +573,7 @@
     {
       field: "rationale",
       title: "4. Explica el fundamento",
-      description: "Une la evidencia con la propiedad en una explicación breve. El fundamento dice por qué ese fragmento sostiene tu juicio.",
+      description: "Une la evidencia con la propiedad en una explicación breve: por qué ese fragmento sostiene el juicio elegido.",
       apply: ({ rationale }) => {
         rationale.value = "La separación se propone por una posibilidad futura, no por una presión observable presente. Por eso contradice CAU-002.";
       }
@@ -581,8 +581,20 @@
     {
       field: "confidence",
       title: "5. Indica tu confianza",
-      description: "La confianza expresa cuán seguro estás de tu juicio; no reemplaza la evidencia ni el fundamento.",
+      description: "La confianza expresa cuán seguro estás de tu juicio. No reemplaza la evidencia ni el fundamento.",
       apply: ({ confidence }) => { confidence.value = "alta"; }
+    },
+    {
+      field: "note",
+      title: "6. Usa la nota general sólo si aporta algo",
+      description: "Este campo es opcional. Sirve para registrar ambigüedad, solapamiento entre propiedades o contexto faltante. En este ejemplo no hace falta escribir nada.",
+      apply: () => {}
+    },
+    {
+      field: "actions",
+      title: "7. Continúa o agrega otra propiedad",
+      description: "Si el caso ejercita otra propiedad, usa “Agregar otra propiedad”. Cuando ya registraste todas las propiedades relevantes y los campos obligatorios están completos, continúa al siguiente caso.",
+      apply: () => {}
     }
   ];
 
@@ -594,10 +606,12 @@
     const title = demo.querySelector("[data-demo-title]");
     const description = demo.querySelector("[data-demo-description]");
     const stepLabel = demo.querySelector("[data-demo-step-label]");
+    const status = demo.querySelector("[data-demo-status]");
     const dots = [...demo.querySelectorAll("[data-demo-dot]")];
     const fields = Object.fromEntries(
       [...demo.querySelectorAll("[data-demo-field]")].map((field) => [field.dataset.demoField, field])
     );
+    fields.actions = demo.querySelector(".pir-eval-form__primary-actions");
     const inputs = Object.fromEntries(
       [...demo.querySelectorAll("[data-demo-input]")].map((input) => [input.dataset.demoInput, input])
     );
@@ -605,9 +619,10 @@
 
     const reset = () => {
       Object.values(inputs).forEach((input) => { input.value = ""; });
-      Object.values(fields).forEach((field) => field.classList.remove("is-demo-focus", "is-demo-complete"));
+      Object.values(fields).filter(Boolean).forEach((field) => field.classList.remove("is-demo-focus", "is-demo-complete"));
       dots.forEach((dot) => dot.classList.remove("is-active", "is-complete"));
       index = 0;
+      if (status) status.textContent = "Completa todos los campos obligatorios para continuar.";
       if (replay) replay.hidden = true;
       if (next) {
         next.hidden = false;
@@ -620,9 +635,10 @@
       steps.slice(0, index + 1).forEach((completedStep) => completedStep.apply(inputs));
 
       Object.entries(fields).forEach(([name, field]) => {
+        if (!field) return;
         const stepIndex = steps.findIndex((candidate) => candidate.field === name);
         field.classList.toggle("is-demo-focus", stepIndex === index);
-        field.classList.toggle("is-demo-complete", stepIndex < index);
+        field.classList.toggle("is-demo-complete", stepIndex >= 0 && stepIndex < index);
       });
 
       dots.forEach((dot, dotIndex) => {
@@ -633,11 +649,13 @@
       if (title) title.textContent = step.title;
       if (description) description.textContent = step.description;
       if (stepLabel) stepLabel.textContent = `Paso ${index + 1} de ${steps.length}`;
+      if (status && index >= 4) status.textContent = "Los campos obligatorios de esta respuesta ya están completos.";
 
-      fields[step.field]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      if (index === steps.length - 1 && next) next.textContent = "Terminar";
 
-      if (index === steps.length - 1 && next) {
-        next.textContent = "Terminar";
+      const active = fields[step.field];
+      if (active && window.matchMedia("(max-width: 79.99rem)").matches) {
+        active.scrollIntoView({ behavior: "smooth", block: "center" });
       }
     };
 
@@ -657,7 +675,7 @@
         return;
       }
 
-      Object.values(fields).forEach((field) => {
+      Object.values(fields).filter(Boolean).forEach((field) => {
         field.classList.remove("is-demo-focus");
         field.classList.add("is-demo-complete");
       });
@@ -666,8 +684,9 @@
         dot.classList.add("is-complete");
       });
       if (title) title.textContent = "Respuesta completa";
-      if (description) description.textContent = "Eso es todo: propiedad, juicio, evidencia mínima, fundamento y confianza. Los casos reales se completan exactamente con esta misma lógica.";
+      if (description) description.textContent = "Eso es todo. El formulario real usa esta misma estructura: puedes agregar propiedades, completar cada juicio y continuar cuando los campos obligatorios estén listos.";
       if (stepLabel) stepLabel.textContent = "Demostración terminada";
+      if (status) status.textContent = "Respuesta de demostración completa. Puedes continuar al siguiente caso.";
       next.hidden = true;
       if (replay) replay.hidden = false;
     });
@@ -678,3 +697,4 @@
     });
   }
 })();
+
