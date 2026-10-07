@@ -58,6 +58,43 @@ jobs:
       - name: Build site
         run: zensical build --strict --clean
 
+      - name: Write build metadata
+        env:
+          BUILD_RUN_NUMBER: ${{ github.run_number }}
+          BUILD_RUN_ID: ${{ github.run_id }}
+          BUILD_RUN_ATTEMPT: ${{ github.run_attempt }}
+          BUILD_COMMIT: ${{ github.sha }}
+          BUILD_WORKFLOW: ${{ github.workflow }}
+          BUILD_REPOSITORY: ${{ github.repository }}
+          BUILD_SERVER_URL: ${{ github.server_url }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          metadata = {
+              "runNumber": int(os.environ["BUILD_RUN_NUMBER"]),
+              "runId": int(os.environ["BUILD_RUN_ID"]),
+              "runAttempt": int(os.environ["BUILD_RUN_ATTEMPT"]),
+              "commit": os.environ["BUILD_COMMIT"],
+              "workflow": os.environ["BUILD_WORKFLOW"],
+              "repository": os.environ["BUILD_REPOSITORY"],
+              "builtAt": datetime.now(timezone.utc).isoformat(),
+              "actionsUrl": (
+                  f'{os.environ["BUILD_SERVER_URL"]}/'
+                  f'{os.environ["BUILD_REPOSITORY"]}/actions/runs/'
+                  f'{os.environ["BUILD_RUN_ID"]}'
+              ),
+          }
+
+          Path("site/build.json").write_text(
+              json.dumps(metadata, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
       - name: Configure Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
