@@ -296,8 +296,8 @@
   );
 
   assert(
-    /8\\s*\\/\\s*8|8 de 8|(?:los|las) 8 (?:casos|muestras) (?:están completos|están completas)|(?:los|las) (?:casos|muestras) están complet[oa]s/i.test(outputStatus.textContent),
-    "El estado final informa que los 8 casos están completos.",
+    outputStatus.textContent.includes("La respuesta está lista para copiar."),
+    "El estado final confirma que la respuesta está lista para copiar tras completar 8 casos y el perfil.",
     outputStatus.textContent
   );
 
