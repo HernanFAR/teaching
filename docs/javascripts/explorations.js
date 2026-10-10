@@ -185,6 +185,37 @@
   const confidenceRequired = wizard.dataset.confidenceRequired !== "false";
   const evidenceRequiredForNa = wizard.dataset.evidenceRequiredForNa === "true";
   let currentIndex = 0;
+  let initializing = true;
+  const draftKey = `tdidacta:evaluation-draft:v1:${window.location.pathname}:${panels.map((panel) => panel.dataset.evalPanel).join(",")}`;
+  const rowFields = ["property", "judgment", "confidence", "evidence", "rationale"];
+
+  const saveDraft = () => {
+    if (initializing) return;
+    const draft = {
+      version: 1,
+      currentIndex,
+      forms: panels.map((panel) => {
+        const form = panel.querySelector("[data-eval-form]");
+        return {
+          id: form?.dataset.evalForm,
+          dirty: form?.dataset.dirty === "true",
+          rows: [...(form?.querySelectorAll("[data-judgment]") ?? [])].map((row) =>
+            Object.fromEntries(rowFields.map((field) => [field, row.querySelector(`[data-field="${field}"]`)?.value ?? ""]))
+          ),
+          note: form?.querySelector("[data-overall-note]")?.value ?? ""
+        };
+      }),
+      profile: [...(profile?.querySelectorAll("[data-profile-field]") ?? [])].map((field) => ({
+        name: field.dataset.profileField,
+        value: field.value
+      }))
+    };
+    try {
+      window.localStorage.setItem(draftKey, JSON.stringify(draft));
+    } catch {
+      // A blocked or full browser store must not prevent evaluation.
+    }
+  };
 
   const judgmentTemplate = () => {
     const wrapper = document.createElement("div");
@@ -269,7 +300,6 @@
         <label>Fundamento <span aria-hidden="true">*</span></label>
         <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
-      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment>Quitar propiedad</button>
     `;
     return wrapper;
   };
@@ -353,11 +383,8 @@
   };
 
   const updateRemoveButtons = (form) => {
-    const rows = [...form.querySelectorAll("[data-judgment]")];
-    rows.forEach((row) => {
-      const remove = row.querySelector("[data-remove-judgment]");
-      if (remove) remove.hidden = rows.length === 1;
-    });
+    const remove = form.querySelector("[data-remove-last-judgment]");
+    if (remove) remove.disabled = form.querySelectorAll("[data-judgment]").length <= 1;
   };
 
   const updateForm = (form) => {
@@ -388,6 +415,7 @@
     }
 
     if (previous || complete) updateProgress();
+    saveDraft();
   };
 
   const updateProgress = () => {
@@ -449,6 +477,7 @@
     }
 
     currentIndex = index;
+    saveDraft();
     tabs.forEach((tab, i) => {
       const active = i === index;
       tab.classList.toggle("is-active", active);
@@ -474,6 +503,27 @@
     if (!form) return;
 
     form.dataset.dirty = "false";
+    // Remove the old per-row controls in favor of one predictable undo action.
+    form.querySelectorAll("[data-remove-judgment]").forEach((button) => button.remove());
+    const actions = form.querySelector(".pir-eval-form__primary-actions");
+    const add = form.querySelector("[data-add-judgment]");
+    if (actions && add) {
+      const removeLast = document.createElement("button");
+      removeLast.type = "button";
+      removeLast.className = "md-button";
+      removeLast.dataset.removeLastJudgment = "";
+      removeLast.textContent = "Quitar última propiedad";
+      add.after(removeLast);
+      removeLast.addEventListener("click", () => {
+        const rows = form.querySelectorAll("[data-judgment]");
+        if (rows.length <= 1) return;
+        rows[rows.length - 1].remove();
+        form.dataset.dirty = "true";
+        updateRemoveButtons(form);
+        updateForm(form);
+        add.focus();
+      });
+    }
 
     form.addEventListener("input", () => {
       form.dataset.dirty = "true";
@@ -492,15 +542,6 @@
       updateRemoveButtons(form);
       updateForm(form);
       list?.lastElementChild?.querySelector("select, input")?.focus();
-    });
-
-    form.addEventListener("click", (event) => {
-      const remove = event.target.closest("[data-remove-judgment]");
-      if (!remove) return;
-      remove.closest("[data-judgment]")?.remove();
-      form.dataset.dirty = "true";
-      updateRemoveButtons(form);
-      updateForm(form);
     });
 
     form.querySelector("[data-prev-eval]")?.addEventListener("click", () => {
@@ -523,8 +564,103 @@
     updateForm(form);
   });
 
-  profile?.addEventListener("input", updateProgress);
-  profile?.addEventListener("change", updateProgress);
+  profile?.addEventListener("input", () => { updateProgress(); saveDraft(); });
+  profile?.addEventListener("change", () => { updateProgress(); saveDraft(); });
+
+  // Each evaluation has an independent browser-only draft. Restore incomplete rows too.
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(draftKey) || "null");
+    if (saved?.version === 1 && Array.isArray(saved.forms) &&
+        saved.forms.length === panels.length &&
+        saved.forms.every((entry, index) => entry.id === panels[index].dataset.evalPanel)) {
+      saved.forms.forEach((entry, index) => {
+        const form = panels[index].querySelector("[data-eval-form]");
+        const list = form?.querySelector("[data-judgments]");
+        if (!form || !list || !Array.isArray(entry.rows) || !entry.rows.length) return;
+        while (list.children.length < entry.rows.length) list.appendChild(judgmentTemplate());
+        while (list.children.length > entry.rows.length && list.children.length > 1) list.lastElementChild.remove();
+        [...list.querySelectorAll("[data-judgment]")].forEach((row, rowIndex) => {
+          for (const field of rowFields) {
+            const input = row.querySelector(`[data-field="${field}"]`);
+            const value = entry.rows[rowIndex]?.[field];
+            if (input && typeof value === "string") input.value = value;
+          }
+        });
+        const note = form.querySelector("[data-overall-note]");
+        if (note && typeof entry.note === "string") note.value = entry.note;
+        form.dataset.dirty = entry.dirty ? "true" : "false";
+        updateRemoveButtons(form);
+        updateForm(form);
+      });
+      if (Array.isArray(saved.profile)) {
+        for (const entry of saved.profile) {
+          const field = [...(profile?.querySelectorAll("[data-profile-field]") ?? [])]
+            .find((candidate) => candidate.dataset.profileField === entry.name);
+          if (field && typeof entry.value === "string") field.value = entry.value;
+        }
+      }
+      // Keep the restored position reachable under the existing navigation contract.
+      const savedIndex = Number.isInteger(saved.currentIndex) ? saved.currentIndex : 0;
+      if (savedIndex >= 0 && savedIndex < panels.length) {
+        const form = panels[savedIndex]?.querySelector("[data-eval-form]");
+        if (savedIndex === 0 || state.has(panels[savedIndex - 1]?.dataset.evalPanel) ||
+            (form?.dataset.dirty === "true" && savedIndex > 0)) {
+          currentIndex = savedIndex;
+          tabs.forEach((tab, index) => {
+            tab.classList.toggle("is-active", index === currentIndex);
+            tab.setAttribute("aria-selected", String(index === currentIndex));
+            tab.tabIndex = index === currentIndex ? 0 : -1;
+          });
+          panels.forEach((panel, index) => {
+            panel.hidden = index !== currentIndex;
+            panel.classList.toggle("is-active", index === currentIndex);
+          });
+        }
+      }
+    }
+  } catch {
+    // Invalid or inaccessible drafts are ignored; the blank form remains usable.
+  }
+  initializing = false;
+
+  const reset = document.createElement("button");
+  reset.type = "button";
+  reset.className = "md-button";
+  reset.textContent = "Reiniciar evaluación";
+  reset.dataset.resetEvaluation = "";
+  wizard.querySelector(".pir-eval-wizard__progress")?.appendChild(reset);
+  reset.addEventListener("click", () => {
+    if (!window.confirm("¿Eliminar todo el avance guardado de esta evaluación? Esta acción no se puede deshacer.")) return;
+    try { window.localStorage.removeItem(draftKey); } catch {}
+    panels.forEach((panel) => {
+      const form = panel.querySelector("[data-eval-form]");
+      if (!form) return;
+      form.reset();
+      const list = form.querySelector("[data-judgments]");
+      while (list?.children.length > 1) list.lastElementChild.remove();
+      form.querySelector("[data-overall-note]")?.setRangeText?.("");
+      const note = form.querySelector("[data-overall-note]");
+      if (note) note.value = "";
+      form.dataset.dirty = "false";
+      updateRemoveButtons(form);
+    });
+    profile?.reset?.();
+    state.clear();
+    currentIndex = 0;
+    tabs.forEach((tab, index) => {
+      tab.classList.toggle("is-active", index === 0);
+      tab.setAttribute("aria-selected", String(index === 0));
+      tab.tabIndex = index === 0 ? 0 : -1;
+    });
+    panels.forEach((panel, index) => {
+      panel.hidden = index !== 0;
+      panel.classList.toggle("is-active", index === 0);
+      const form = panel.querySelector("[data-eval-form]");
+      if (form) updateForm(form);
+    });
+    updateProgress();
+    try { window.localStorage.removeItem(draftKey); } catch {}
+  });
 
   copyOutput?.addEventListener("click", async () => {
     if (!outputText?.value) return;
