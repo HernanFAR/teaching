@@ -2590,6 +2590,13 @@
   white-space: nowrap;
 }
 
+/* Keep the three actual evaluation actions equally sized. */
+.pir-eval-wizard__panel .pir-eval-form__primary-actions .md-button {
+  width: 12.5rem;
+  flex: 0 0 12.5rem;
+  text-align: center;
+}
+
 .pir-eval-wizard__panel .pir-eval-form__actions {
   justify-content: flex-start;
 }
