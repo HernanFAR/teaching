@@ -319,6 +319,18 @@
     return [...row.querySelectorAll("[required]")].every((field) => field.value.trim() !== "");
   };
 
+  const showRequiredErrors = (form) => {
+    const fields = [...form.querySelectorAll("[data-judgment] [required]")];
+    fields.forEach((field) => {
+      const invalid = !field.value.trim();
+      field.classList.toggle("is-required-missing", invalid);
+      field.setAttribute("aria-invalid", String(invalid));
+    });
+    const first = fields.find((field) => !field.value.trim());
+    if (first) first.focus();
+    return !first;
+  };
+
   const formIsComplete = (form) => {
     const rows = [...form.querySelectorAll("[data-judgment]")];
     return rows.length > 0 && rows.every(rowIsComplete);
@@ -395,7 +407,7 @@
     const status = form.querySelector("[data-eval-status]");
     const legend = form.querySelector("[data-eval-legend]");
 
-    if (next) next.disabled = !complete;
+    if (next) next.disabled = false;
     if (status) {
       status.textContent = complete
         ? `${itemLabel} ${completeWordSingular}. Puedes continuar o revisar tus respuestas.`
@@ -415,6 +427,14 @@
     }
 
     if (previous || complete) updateProgress();
+    if (form.dataset.validationAttempted === "true") {
+      form.querySelectorAll("[data-judgment] [required], .is-required-missing").forEach((field) => {
+        const invalid = field.required && !field.value.trim();
+        field.classList.toggle("is-required-missing", invalid);
+        if (invalid) field.setAttribute("aria-invalid", "true");
+        else field.removeAttribute("aria-invalid");
+      });
+    }
     saveDraft();
   };
 
@@ -550,7 +570,16 @@
 
     form.querySelector("[data-next-eval]")?.addEventListener("click", () => {
       updateForm(form);
-      if (!formIsComplete(form)) return;
+      if (!formIsComplete(form)) {
+        form.dataset.validationAttempted = "true";
+        showRequiredErrors(form);
+        return;
+      }
+      form.dataset.validationAttempted = "false";
+      form.querySelectorAll(".is-required-missing").forEach((field) => {
+        field.classList.remove("is-required-missing");
+        field.removeAttribute("aria-invalid");
+      });
 
       if (index < panels.length - 1) {
         showPanel(index + 1);
