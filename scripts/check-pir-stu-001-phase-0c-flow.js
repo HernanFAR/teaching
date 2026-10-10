@@ -9,7 +9,8 @@
  *
  * The script exercises the real DOM and the real wizard behavior.
  * It intentionally fills the evaluation forms with synthetic test data.
- * This test changes the page and its localStorage draft. Use "Reiniciar evaluación"\n * in section 4 after testing to remove the synthetic data.
+ * This test changes the page and its localStorage draft. Use "Reiniciar evaluación"
+ * in section 4 after testing to remove the synthetic data.
  */
 
 (async () => {
