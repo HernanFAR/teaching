@@ -1012,6 +1012,8 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
 
 Completa las muestras en orden. Puedes volver a una muestra ya completada; si modificas su formulario y queda incompleto, la navegación vuelve a bloquearse hasta completarlo.
 
+Tu avance se guarda automáticamente en este navegador. Si necesitas comenzar desde cero, encontrarás **«Reiniciar evaluación»** en el [paso 4, Respuesta y entrega](#respuesta-evaluacion).
+
 <div class="pir-eval-wizard" data-pir-eval-wizard data-eval-count="16">
 
 <div class="pir-eval-wizard__tabs" role="tablist" aria-label="Muestras de evaluación">
@@ -3317,7 +3319,9 @@ Hay una presión real: aparecerá otro origen de solicitudes. Pero el mecanismo 
       <strong>Respuesta consolidada</strong>
       <span data-output-status>Completa las 16 muestras para generar la respuesta final.</span>
     </div>
-    <button type="button" class="md-button md-button--primary" data-copy-eval-output disabled>Copiar respuesta</button>
+    <div class="pir-eval-form__primary-actions" data-eval-reset-container>
+      <button type="button" class="md-button md-button--primary" data-copy-eval-output disabled>Copiar respuesta</button>
+    </div>
   </div>
 
   <textarea class="pir-eval-output__text" data-eval-output-text readonly hidden aria-label="Respuesta consolidada de la evaluación"></textarea>
