@@ -2590,6 +2590,22 @@
   white-space: nowrap;
 }
 
+/* Match action heights without consuming the space needed by the instructions. */
+.pir-eval-wizard__panel .pir-eval-form__header {
+  grid-template-columns: minmax(12rem, 1fr) auto;
+}
+
+.pir-eval-wizard__panel .pir-eval-form__primary-actions .md-button,
+.pir-eval-demo__mock-form .pir-eval-form__primary-actions .md-button {
+  width: auto;
+  flex: 0 0 auto;
+  min-height: 2.25rem;
+  padding: 0.38rem 0.65rem;
+  line-height: 1.2;
+  font-size: 0.72rem;
+  text-align: center;
+}
+
 .pir-eval-wizard__panel .pir-eval-form__actions {
   justify-content: flex-start;
 }
@@ -3010,6 +3026,13 @@
   color: var(--md-accent-fg-color);
 }
 
+.pir-eval-demo__mock-form .pir-eval-form__primary-actions [data-demo-action].is-demo-focus {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 0.12rem var(--md-accent-fg-color);
+  background: color-mix(in srgb, var(--md-accent-fg-color) 12%, transparent);
+  opacity: 1;
+}
+
 .pir-eval-demo__mock-form .pir-eval-form__primary-actions.is-demo-focus {
   border-radius: 0.55rem;
   box-shadow: 0 0 0 0.1rem var(--md-accent-fg-color);
@@ -3168,3 +3191,14 @@
   }
 }
 
+
+/* Required-field feedback appears only after attempting to continue. */
+.pir-eval-wizard__panel .pir-eval-field .is-required-missing {
+  border-color: #e05252;
+  box-shadow: 0 0 0 1px #e05252;
+}
+
+.pir-eval-wizard__panel .pir-eval-field .is-required-missing:focus-visible {
+  outline: 2px solid #e05252;
+  outline-offset: 2px;
+}

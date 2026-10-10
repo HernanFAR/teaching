@@ -9,7 +9,8 @@
  *
  * The script exercises the real DOM and the real wizard behavior.
  * It intentionally fills the evaluation forms with synthetic test data.
- * Reload the page afterwards to return to a clean state.
+ * This test changes the page and its localStorage draft. Use "Reiniciar evaluación"
+ * in section 4 after testing to remove the synthetic data.
  */
 
 (async () => {
@@ -63,6 +64,17 @@
   const getNext = (index) => getForm(index)?.querySelector("[data-next-eval]");
   const getPrev = (index) => getForm(index)?.querySelector("[data-prev-eval]");
   const rows = (form) => [...form.querySelectorAll("[data-judgment]")];
+  // Requires a fresh evaluation. Never erase a person's stored answers automatically.
+  const hasPriorProgress = tabs.slice(1).some((tab) => !tab.disabled) ||
+    panels.some((panel) => panel.querySelectorAll("[data-judgment]").length > 1 ||
+      panel.querySelector('[data-eval-form]')?.dataset.dirty === "true") ||
+    [...(document.querySelectorAll("[data-pir-evaluator-profile] [data-profile-field]"))]
+      .some((field) => field.value.trim() !== "");
+  if (hasPriorProgress) {
+    console.warn(`${PREFIX} La evaluación ya tiene avance guardado. Para probar el estado inicial, usa «Reiniciar evaluación» en el paso 4 y vuelve a ejecutar este script. No se borró ningún dato automáticamente.`);
+    return;
+  }
+
 
   const fillRow = (row, {
     property = "CAU-001",
@@ -111,7 +123,12 @@
 
   assert(!tabs[0].disabled, "C02 está disponible al inicio.");
   assert(tabs.slice(1).every((tab) => tab.disabled), "C03..C31 parten bloqueados.");
-  assert(getNext(0).disabled, "Siguiente caso parte deshabilitado.");
+  assert(!getNext(0).disabled, "Siguiente caso está disponible para activar validación.");
+  getNext(0).click();
+  await wait();
+  assert(!panels[0].hidden, "Un formulario vacío no permite avanzar.");
+  assert(rows(getForm(0))[0].querySelectorAll(".is-required-missing").length > 0, "Los campos requeridos vacíos se marcan en rojo.");
+  assert(rows(getForm(0))[0].querySelector('[data-field="property"]').getAttribute("aria-invalid") === "true", "El primer campo requerido anuncia su estado inválido.");
   assert(copyButton.disabled, "Copiar respuesta parte deshabilitado.");
 
   info("Comprobando avance con confianza vacía…");
@@ -147,12 +164,16 @@
   dispatchValue(c02Evidence, "");
   await wait();
 
-  assert(getNext(0).disabled, "Editar C02 y dejarlo incompleto vuelve a bloquear el avance.");
+  getNext(0).click();
+  await wait();
+  assert(!panels[0].hidden, "Editar C02 y dejarlo incompleto impide avanzar.");
+  assert(c02Evidence.classList.contains("is-required-missing"), "La evidencia faltante queda resaltada.");
+  assert(c02Evidence.getAttribute("aria-invalid") === "true", "La evidencia faltante se anuncia como inválida.");
 
   dispatchValue(c02Evidence, "Evidencia restaurada.");
   await wait();
 
-  assert(!getNext(0).disabled, "Restaurar el campo vuelve a habilitar el avance.");
+  assert(!c02Evidence.classList.contains("is-required-missing"), "Restaurar evidencia limpia el estado de error.");
 
   getNext(0).click();
   await wait(120);
@@ -172,7 +193,10 @@
 
   await wait();
 
-  assert(getNext(1).disabled, "N/A sin evidencia permanece bloqueado en Phase 0c.");
+  getNext(1).click();
+  await wait();
+  assert(!panels[1].hidden, "N/A sin evidencia no permite avanzar en Phase 0c.");
+  assert(c03Row.querySelector('[data-field="evidence"]').classList.contains("is-required-missing"), "N/A sin evidencia marca el campo requerido.");
 
   dispatchValue(
     c03Row.querySelector('[data-field="evidence"]'),
@@ -181,7 +205,7 @@
 
   await wait();
 
-  assert(!getNext(1).disabled, "N/A con evidencia permite continuar.");
+  assert(!c03Row.querySelector('[data-field="evidence"]').classList.contains("is-required-missing"), "N/A con evidencia elimina el error.");
 
   info("Comprobando múltiples propiedades…");
 
@@ -192,6 +216,15 @@
   await wait();
 
   assert(rows(c03Form).length === 2, "Agregar otra propiedad crea una segunda fila.");
+  const removeLast = c03Form.querySelector("[data-remove-last-judgment]");
+  assert(removeLast && !removeLast.disabled, "Quitar última propiedad está disponible con dos filas.");
+  removeLast.click();
+  await wait();
+  assert(rows(c03Form).length === 1, "Quitar última propiedad elimina sólo la última fila.");
+  assert(removeLast.disabled, "No se puede quitar la fila base.");
+  addButton.click();
+  await wait();
+  assert(rows(c03Form).length === 2, "Se puede volver a agregar la propiedad después de quitarla.");
 
   fillRow(rows(c03Form)[1], {
     property: "POL-003",
@@ -229,6 +262,22 @@
 
   info("Comprobando salida final…");
 
+  const profile = document.querySelector("[data-pir-evaluator-profile]");
+  assert(profile, "Existe el perfil del evaluador.");
+  assert(copyButton.disabled, "Completar los casos sin el perfil no habilita la copia.");
+
+  const profileFields = [...profile.querySelectorAll("[data-profile-field][required]")];
+  assert(profileFields.length > 0, "El perfil contiene campos obligatorios.");
+  for (const field of profileFields) {
+    const option = field.matches("select")
+      ? [...field.options].find((candidate) => candidate.value.trim() !== "" && !candidate.disabled)
+      : null;
+    dispatchValue(field, option ? option.value : "Dato sintético de self-check");
+  }
+  await wait();
+  assert(profileFields.every((field) => field.value.trim() !== ""), "Los campos obligatorios del perfil están completos.");
+
+
   assert(!copyButton.disabled, "Copiar respuesta se habilita al completar los 8 casos.");
   assert(!outputText.hidden, "El texto consolidado se hace visible.");
   assert(outputText.value.trim().length > 0, "La respuesta consolidada contiene texto.");
@@ -258,8 +307,8 @@
   );
 
   assert(
-    /8\s*\/\s*8|8 de 8|8 casos están completos/i.test(outputStatus.textContent),
-    "El estado final informa que los 8 casos están completos.",
+    outputStatus.textContent.includes("La respuesta está lista para copiar."),
+    "El estado final confirma que la respuesta está lista para copiar tras completar 8 casos y el perfil.",
     outputStatus.textContent
   );
 
@@ -276,6 +325,6 @@
   console.log("✅ C14 preselecciona RTE-003.");
   console.log("✅ Serialización de 8 casos.");
   console.log("✅ Respuesta consolidada lista para copiar.");
-  console.log("ℹ️ Recarga la página para limpiar los datos sintéticos.");
+  console.log("ℹ️ Usa «Reiniciar evaluación» en el paso 4 para borrar el borrador sintético de localStorage.");
   console.groupEnd();
 })();

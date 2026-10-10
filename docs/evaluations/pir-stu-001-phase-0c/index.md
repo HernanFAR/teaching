@@ -764,6 +764,7 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
             </div>
             <div class="pir-eval-form__primary-actions">
               <button type="button" class="md-button pir-eval-form__add" data-demo-action="add" tabindex="-1">Agregar otra propiedad</button>
+              <button type="button" class="md-button" data-demo-action="remove" disabled tabindex="-1">Quitar última propiedad</button>
               <button type="button" class="md-button md-button--primary" data-demo-action="next" tabindex="-1">Siguiente caso</button>
             </div>
           </div>
@@ -831,6 +832,7 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
           <span data-demo-dot></span>
           <span data-demo-dot></span>
           <span data-demo-dot></span>
+          <span data-demo-dot></span>
         </div>
         <div class="pir-eval-demo__actions">
           <button type="button" class="md-button" data-demo-cancel hidden>Cancelar</button>
@@ -844,6 +846,8 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
 ### 3.4 Evaluación de casos {#casos}
 
 Completa los casos en orden. Puedes volver a un caso ya completado; si modificas uno y lo dejas incompleto, la navegación vuelve a bloquearse hasta completarlo.
+
+Tu avance se guarda automáticamente en este navegador. Si necesitas comenzar desde cero, encontrarás **«Reiniciar evaluación»** en el [paso 4, Respuesta y entrega](#respuesta-evaluacion).
 
 <div class="pir-eval-wizard"
      data-pir-eval-wizard
@@ -2032,7 +2036,9 @@ Correcto, esa capacidad no estaba establecida. La retiro y no la usaré como evi
       <strong>Respuesta consolidada</strong>
       <span data-output-status>Completa los 8 casos para generar la respuesta final.</span>
     </div>
-    <button type="button" class="md-button md-button--primary" data-copy-eval-output disabled>Copiar respuesta</button>
+    <div class="pir-eval-form__primary-actions" data-eval-reset-container>
+      <button type="button" class="md-button md-button--primary" data-copy-eval-output disabled>Copiar respuesta</button>
+    </div>
   </div>
 
   <textarea class="pir-eval-output__text" data-eval-output-text readonly hidden aria-label="Respuesta consolidada de la evaluación"></textarea>

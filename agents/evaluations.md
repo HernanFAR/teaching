@@ -188,3 +188,17 @@ Este patrón es apropiado cuando una evaluación:
 No usar el wizard por costumbre si una evaluación simple puede resolverse mejor con una superficie estática.
 
 La infraestructura debe seguir a la presión del instrumento, no al revés.
+
+## 10. Edición reversible y borradores locales
+
+En formularios de evaluación por propiedades:
+
+- ofrecer una acción visible **Quitar última propiedad** junto a la acción de agregar, deshabilitada cuando sólo permanece la fila base;
+- conservar la fila base para impedir evaluaciones sin ninguna propiedad;
+- guardar automáticamente en el navegador tanto respuestas completas como incompletas, filas agregadas, notas, perfil y posición de navegación;
+- aislar borradores por evaluación y versión de formato, sin enviarlos al servidor ni confundirlos con entregas de Research;
+- restaurar los datos sin relajar las reglas de validación ni desbloqueo secuencial;
+- ofrecer **Reiniciar evaluación** con confirmación explícita, borrando únicamente el borrador de esta evaluación;
+- tratar almacenamiento inaccesible, lleno o corrupto como una degradación no bloqueante.
+
+El guardado en `localStorage` es una comodidad del navegador actual; no equivale a sincronización entre dispositivos ni a entrega de respuestas. Verificar el flujo de recarga a mitad de una fila, la recuperación de múltiples propiedades, el reinicio y el aislamiento entre evaluaciones.

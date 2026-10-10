@@ -185,6 +185,37 @@
   const confidenceRequired = wizard.dataset.confidenceRequired !== "false";
   const evidenceRequiredForNa = wizard.dataset.evidenceRequiredForNa === "true";
   let currentIndex = 0;
+  let initializing = true;
+  const draftKey = `tdidacta:evaluation-draft:v1:${window.location.pathname}:${panels.map((panel) => panel.dataset.evalPanel).join(",")}`;
+  const rowFields = ["property", "judgment", "confidence", "evidence", "rationale"];
+
+  const saveDraft = () => {
+    if (initializing) return;
+    const draft = {
+      version: 1,
+      currentIndex,
+      forms: panels.map((panel) => {
+        const form = panel.querySelector("[data-eval-form]");
+        return {
+          id: form?.dataset.evalForm,
+          dirty: form?.dataset.dirty === "true",
+          rows: [...(form?.querySelectorAll("[data-judgment]") ?? [])].map((row) =>
+            Object.fromEntries(rowFields.map((field) => [field, row.querySelector(`[data-field="${field}"]`)?.value ?? ""]))
+          ),
+          note: form?.querySelector("[data-overall-note]")?.value ?? ""
+        };
+      }),
+      profile: [...(profile?.querySelectorAll("[data-profile-field]") ?? [])].map((field) => ({
+        name: field.dataset.profileField,
+        value: field.value
+      }))
+    };
+    try {
+      window.localStorage.setItem(draftKey, JSON.stringify(draft));
+    } catch {
+      // A blocked or full browser store must not prevent evaluation.
+    }
+  };
 
   const judgmentTemplate = () => {
     const wrapper = document.createElement("div");
@@ -269,7 +300,6 @@
         <label>Fundamento <span aria-hidden="true">*</span></label>
         <textarea data-field="rationale" rows="2" placeholder="1–3 oraciones" required></textarea>
       </div>
-      <button type="button" class="pir-eval-judgment__remove" data-remove-judgment>Quitar propiedad</button>
     `;
     return wrapper;
   };
@@ -287,6 +317,18 @@
   const rowIsComplete = (row) => {
     syncEvidenceRequirement(row);
     return [...row.querySelectorAll("[required]")].every((field) => field.value.trim() !== "");
+  };
+
+  const showRequiredErrors = (form) => {
+    const fields = [...form.querySelectorAll("[data-judgment] [required]")];
+    fields.forEach((field) => {
+      const invalid = !field.value.trim();
+      field.classList.toggle("is-required-missing", invalid);
+      field.setAttribute("aria-invalid", String(invalid));
+    });
+    const first = fields.find((field) => !field.value.trim());
+    if (first) first.focus();
+    return !first;
   };
 
   const formIsComplete = (form) => {
@@ -353,11 +395,8 @@
   };
 
   const updateRemoveButtons = (form) => {
-    const rows = [...form.querySelectorAll("[data-judgment]")];
-    rows.forEach((row) => {
-      const remove = row.querySelector("[data-remove-judgment]");
-      if (remove) remove.hidden = rows.length === 1;
-    });
+    const remove = form.querySelector("[data-remove-last-judgment]");
+    if (remove) remove.disabled = form.querySelectorAll("[data-judgment]").length <= 1;
   };
 
   const updateForm = (form) => {
@@ -368,7 +407,7 @@
     const status = form.querySelector("[data-eval-status]");
     const legend = form.querySelector("[data-eval-legend]");
 
-    if (next) next.disabled = !complete;
+    if (next) next.disabled = false;
     if (status) {
       status.textContent = complete
         ? `${itemLabel} ${completeWordSingular}. Puedes continuar o revisar tus respuestas.`
@@ -388,6 +427,15 @@
     }
 
     if (previous || complete) updateProgress();
+    if (form.dataset.validationAttempted === "true") {
+      form.querySelectorAll("[data-judgment] [required], .is-required-missing").forEach((field) => {
+        const invalid = field.required && !field.value.trim();
+        field.classList.toggle("is-required-missing", invalid);
+        if (invalid) field.setAttribute("aria-invalid", "true");
+        else field.removeAttribute("aria-invalid");
+      });
+    }
+    saveDraft();
   };
 
   const updateProgress = () => {
@@ -449,6 +497,7 @@
     }
 
     currentIndex = index;
+    saveDraft();
     tabs.forEach((tab, i) => {
       const active = i === index;
       tab.classList.toggle("is-active", active);
@@ -474,6 +523,27 @@
     if (!form) return;
 
     form.dataset.dirty = "false";
+    // Remove the old per-row controls in favor of one predictable undo action.
+    form.querySelectorAll("[data-remove-judgment]").forEach((button) => button.remove());
+    const actions = form.querySelector(".pir-eval-form__primary-actions");
+    const add = form.querySelector("[data-add-judgment]");
+    if (actions && add) {
+      const removeLast = document.createElement("button");
+      removeLast.type = "button";
+      removeLast.className = "md-button";
+      removeLast.dataset.removeLastJudgment = "";
+      removeLast.textContent = "Quitar última propiedad";
+      add.after(removeLast);
+      removeLast.addEventListener("click", () => {
+        const rows = form.querySelectorAll("[data-judgment]");
+        if (rows.length <= 1) return;
+        rows[rows.length - 1].remove();
+        form.dataset.dirty = "true";
+        updateRemoveButtons(form);
+        updateForm(form);
+        add.focus();
+      });
+    }
 
     form.addEventListener("input", () => {
       form.dataset.dirty = "true";
@@ -494,22 +564,22 @@
       list?.lastElementChild?.querySelector("select, input")?.focus();
     });
 
-    form.addEventListener("click", (event) => {
-      const remove = event.target.closest("[data-remove-judgment]");
-      if (!remove) return;
-      remove.closest("[data-judgment]")?.remove();
-      form.dataset.dirty = "true";
-      updateRemoveButtons(form);
-      updateForm(form);
-    });
-
     form.querySelector("[data-prev-eval]")?.addEventListener("click", () => {
       if (index > 0) showPanel(index - 1);
     });
 
     form.querySelector("[data-next-eval]")?.addEventListener("click", () => {
       updateForm(form);
-      if (!formIsComplete(form)) return;
+      if (!formIsComplete(form)) {
+        form.dataset.validationAttempted = "true";
+        showRequiredErrors(form);
+        return;
+      }
+      form.dataset.validationAttempted = "false";
+      form.querySelectorAll(".is-required-missing").forEach((field) => {
+        field.classList.remove("is-required-missing");
+        field.removeAttribute("aria-invalid");
+      });
 
       if (index < panels.length - 1) {
         showPanel(index + 1);
@@ -523,8 +593,103 @@
     updateForm(form);
   });
 
-  profile?.addEventListener("input", updateProgress);
-  profile?.addEventListener("change", updateProgress);
+  profile?.addEventListener("input", () => { updateProgress(); saveDraft(); });
+  profile?.addEventListener("change", () => { updateProgress(); saveDraft(); });
+
+  // Each evaluation has an independent browser-only draft. Restore incomplete rows too.
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(draftKey) || "null");
+    if (saved?.version === 1 && Array.isArray(saved.forms) &&
+        saved.forms.length === panels.length &&
+        saved.forms.every((entry, index) => entry.id === panels[index].dataset.evalPanel)) {
+      saved.forms.forEach((entry, index) => {
+        const form = panels[index].querySelector("[data-eval-form]");
+        const list = form?.querySelector("[data-judgments]");
+        if (!form || !list || !Array.isArray(entry.rows) || !entry.rows.length) return;
+        while (list.children.length < entry.rows.length) list.appendChild(judgmentTemplate());
+        while (list.children.length > entry.rows.length && list.children.length > 1) list.lastElementChild.remove();
+        [...list.querySelectorAll("[data-judgment]")].forEach((row, rowIndex) => {
+          for (const field of rowFields) {
+            const input = row.querySelector(`[data-field="${field}"]`);
+            const value = entry.rows[rowIndex]?.[field];
+            if (input && typeof value === "string") input.value = value;
+          }
+        });
+        const note = form.querySelector("[data-overall-note]");
+        if (note && typeof entry.note === "string") note.value = entry.note;
+        form.dataset.dirty = entry.dirty ? "true" : "false";
+        updateRemoveButtons(form);
+        updateForm(form);
+      });
+      if (Array.isArray(saved.profile)) {
+        for (const entry of saved.profile) {
+          const field = [...(profile?.querySelectorAll("[data-profile-field]") ?? [])]
+            .find((candidate) => candidate.dataset.profileField === entry.name);
+          if (field && typeof entry.value === "string") field.value = entry.value;
+        }
+      }
+      // Keep the restored position reachable under the existing navigation contract.
+      const savedIndex = Number.isInteger(saved.currentIndex) ? saved.currentIndex : 0;
+      if (savedIndex >= 0 && savedIndex < panels.length) {
+        const form = panels[savedIndex]?.querySelector("[data-eval-form]");
+        if (savedIndex === 0 || state.has(panels[savedIndex - 1]?.dataset.evalPanel) ||
+            (form?.dataset.dirty === "true" && savedIndex > 0)) {
+          currentIndex = savedIndex;
+          tabs.forEach((tab, index) => {
+            tab.classList.toggle("is-active", index === currentIndex);
+            tab.setAttribute("aria-selected", String(index === currentIndex));
+            tab.tabIndex = index === currentIndex ? 0 : -1;
+          });
+          panels.forEach((panel, index) => {
+            panel.hidden = index !== currentIndex;
+            panel.classList.toggle("is-active", index === currentIndex);
+          });
+        }
+      }
+    }
+  } catch {
+    // Invalid or inaccessible drafts are ignored; the blank form remains usable.
+  }
+  initializing = false;
+
+  const reset = document.createElement("button");
+  reset.type = "button";
+  reset.className = "md-button";
+  reset.textContent = "Reiniciar evaluación";
+  reset.dataset.resetEvaluation = "";
+  output?.querySelector("[data-eval-reset-container]")?.appendChild(reset);
+  reset.addEventListener("click", () => {
+    if (!window.confirm("¿Eliminar todo el avance guardado de esta evaluación? Esta acción no se puede deshacer.")) return;
+    try { window.localStorage.removeItem(draftKey); } catch {}
+    panels.forEach((panel) => {
+      const form = panel.querySelector("[data-eval-form]");
+      if (!form) return;
+      form.reset();
+      const list = form.querySelector("[data-judgments]");
+      while (list?.children.length > 1) list.lastElementChild.remove();
+      form.querySelector("[data-overall-note]")?.setRangeText?.("");
+      const note = form.querySelector("[data-overall-note]");
+      if (note) note.value = "";
+      form.dataset.dirty = "false";
+      updateRemoveButtons(form);
+    });
+    profile?.reset?.();
+    state.clear();
+    currentIndex = 0;
+    tabs.forEach((tab, index) => {
+      tab.classList.toggle("is-active", index === 0);
+      tab.setAttribute("aria-selected", String(index === 0));
+      tab.tabIndex = index === 0 ? 0 : -1;
+    });
+    panels.forEach((panel, index) => {
+      panel.hidden = index !== 0;
+      panel.classList.toggle("is-active", index === 0);
+      const form = panel.querySelector("[data-eval-form]");
+      if (form) updateForm(form);
+    });
+    updateProgress();
+    try { window.localStorage.removeItem(draftKey); } catch {}
+  });
 
   copyOutput?.addEventListener("click", async () => {
     if (!outputText?.value) return;
@@ -597,9 +762,15 @@
       apply: () => {}
     },
     {
-      field: "actions",
-      title: "8. Continúa o agrega otra propiedad",
-      description: "Si el caso ejercita otra propiedad, usa “Agregar otra propiedad”. Cuando ya registraste todas las propiedades relevantes y los campos obligatorios están completos, continúa al siguiente caso.",
+      field: "addAction",
+      title: "8. Agrega otra propiedad si hace falta",
+      description: "Si el caso ejercita otra propiedad, usa “Agregar otra propiedad” para crear una nueva fila con su propio juicio. No hace falta añadir filas si una sola propiedad es suficiente.",
+      apply: () => {}
+    },
+    {
+      field: "removeAction",
+      title: "9. Corrige una propiedad agregada por error",
+      description: "Si agregaste una fila por accidente, usa “Quitar última propiedad”. Sólo elimina la última fila adicional y nunca la primera. Después puedes continuar al siguiente caso cuando todo esté completo.",
       apply: () => {}
     }
   ];
@@ -658,9 +829,15 @@
       apply: () => {}
     },
     {
-      field: "actions",
-      title: "9. Agrega propiedades o continúa",
-      description: "Si el caso ejercita otra propiedad, agrégala como un juicio separado. Cuando hayas registrado todas las propiedades relevantes, continúa al siguiente caso.",
+      field: "addAction",
+      title: "9. Agrega otra propiedad si hace falta",
+      description: "Cada propiedad materialmente ejercitada necesita su propio juicio. Usa “Agregar otra propiedad” para añadir una fila independiente.",
+      apply: () => {}
+    },
+    {
+      field: "removeAction",
+      title: "10. Quita una propiedad adicional si te equivocaste",
+      description: "Usa “Quitar última propiedad” para deshacer una fila agregada por error. La primera fila se conserva siempre. Continúa al siguiente caso una vez completos los campos obligatorios.",
       apply: () => {}
     }
   ];
@@ -682,6 +859,14 @@
 
     const syncGuidePlacement = () => {
       if (!guide || !guideAnchor || !guideHome) return;
+      // Opening DevTools also fires resize; a closed demonstration must stay hidden.
+      if (!start?.disabled) {
+        if (guide.parentElement === document.body) {
+          guide.classList.remove("md-typeset");
+          guideAnchor.after(guide);
+        }
+        return;
+      }
       const desktop = window.matchMedia("(min-width: 56rem)").matches;
 
       if (desktop && guide.parentElement !== document.body) {
@@ -699,6 +884,8 @@
     );
     fields.context ??= demo.querySelector(".pir-eval-demo__scenario");
     fields.actions = demo.querySelector(".pir-eval-form__primary-actions");
+    fields.addAction = demo.querySelector('[data-demo-action="add"]');
+    fields.removeAction = demo.querySelector('[data-demo-action="remove"]');
     const inputs = Object.fromEntries(
       [...demo.querySelectorAll("[data-demo-input]")].map((input) => [input.dataset.demoInput, input])
     );
@@ -752,7 +939,7 @@
         if (!field) return;
         const stepIndex = steps.findIndex((candidate) => candidate.field === name);
         field.classList.toggle("is-demo-focus", stepIndex === index);
-        field.classList.toggle("is-demo-complete", stepIndex >= 0 && stepIndex < index);
+        field.classList.toggle("is-demo-complete", stepIndex >= 0 && stepIndex < index && name !== "addAction" && name !== "removeAction");
       });
 
       dots.forEach((dot, dotIndex) => {
