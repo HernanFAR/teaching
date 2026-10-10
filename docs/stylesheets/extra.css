@@ -3183,3 +3183,14 @@
   }
 }
 
+
+/* Required-field feedback appears only after attempting to continue. */
+.pir-eval-wizard__panel .pir-eval-field .is-required-missing {
+  border-color: #e05252;
+  box-shadow: 0 0 0 1px #e05252;
+}
+
+.pir-eval-wizard__panel .pir-eval-field .is-required-missing:focus-visible {
+  outline: 2px solid #e05252;
+  outline-offset: 2px;
+}
