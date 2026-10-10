@@ -762,13 +762,13 @@
       apply: () => {}
     },
     {
-      field: "actions",
+      field: "addAction",
       title: "8. Agrega otra propiedad si hace falta",
       description: "Si el caso ejercita otra propiedad, usa “Agregar otra propiedad” para crear una nueva fila con su propio juicio. No hace falta añadir filas si una sola propiedad es suficiente.",
       apply: () => {}
     },
     {
-      field: "actions",
+      field: "removeAction",
       title: "9. Corrige una propiedad agregada por error",
       description: "Si agregaste una fila por accidente, usa “Quitar última propiedad”. Sólo elimina la última fila adicional y nunca la primera. Después puedes continuar al siguiente caso cuando todo esté completo.",
       apply: () => {}
@@ -829,13 +829,13 @@
       apply: () => {}
     },
     {
-      field: "actions",
+      field: "addAction",
       title: "9. Agrega otra propiedad si hace falta",
       description: "Cada propiedad materialmente ejercitada necesita su propio juicio. Usa “Agregar otra propiedad” para añadir una fila independiente.",
       apply: () => {}
     },
     {
-      field: "actions",
+      field: "removeAction",
       title: "10. Quita una propiedad adicional si te equivocaste",
       description: "Usa “Quitar última propiedad” para deshacer una fila agregada por error. La primera fila se conserva siempre. Continúa al siguiente caso una vez completos los campos obligatorios.",
       apply: () => {}
@@ -884,6 +884,8 @@
     );
     fields.context ??= demo.querySelector(".pir-eval-demo__scenario");
     fields.actions = demo.querySelector(".pir-eval-form__primary-actions");
+    fields.addAction = demo.querySelector('[data-demo-action="add"]');
+    fields.removeAction = demo.querySelector('[data-demo-action="remove"]');
     const inputs = Object.fromEntries(
       [...demo.querySelectorAll("[data-demo-input]")].map((input) => [input.dataset.demoInput, input])
     );
@@ -937,7 +939,7 @@
         if (!field) return;
         const stepIndex = steps.findIndex((candidate) => candidate.field === name);
         field.classList.toggle("is-demo-focus", stepIndex === index);
-        field.classList.toggle("is-demo-complete", stepIndex >= 0 && stepIndex < index);
+        field.classList.toggle("is-demo-complete", stepIndex >= 0 && stepIndex < index && name !== "addAction" && name !== "removeAction");
       });
 
       dots.forEach((dot, dotIndex) => {
