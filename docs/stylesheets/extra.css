@@ -3025,6 +3025,13 @@
   color: var(--md-accent-fg-color);
 }
 
+.pir-eval-demo__mock-form .pir-eval-form__primary-actions [data-demo-action].is-demo-focus {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 0.12rem var(--md-accent-fg-color);
+  background: color-mix(in srgb, var(--md-accent-fg-color) 12%, transparent);
+  opacity: 1;
+}
+
 .pir-eval-demo__mock-form .pir-eval-form__primary-actions.is-demo-focus {
   border-radius: 0.55rem;
   box-shadow: 0 0 0 0.1rem var(--md-accent-fg-color);
