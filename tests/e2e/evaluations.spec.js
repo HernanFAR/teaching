@@ -53,7 +53,9 @@ for (const variant of variants) {
         const key = sequence[i];
         const target = key === "add" || key === "remove"
           ? demo.locator(`[data-demo-action="${key}"]`)
-          : demo.locator(`[data-demo-field="${key}"]`);
+          : key === "context" && variant.slug.endsWith("0b")
+            ? demo.locator(".pir-eval-demo__scenario")
+            : demo.locator(`[data-demo-field="${key}"]`);
         await expect(target).toHaveClass(/is-demo-focus/);
         if (i < sequence.length - 1) await guide.locator("[data-demo-next]").click();
       }
