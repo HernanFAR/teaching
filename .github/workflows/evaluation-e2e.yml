@@ -1,0 +1,45 @@
+name: Evaluation E2E
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install site build requirements
+        run: pip install -r requirements.txt
+      - name: Build actual site
+        run: zensical build --strict --clean
+      - name: Install Playwright
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run browser E2E
+        run: npm run test:e2e
+      - name: Save reports and browser traces on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evaluation-e2e-artifacts
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 7
