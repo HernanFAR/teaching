@@ -251,6 +251,22 @@
 
   info("Comprobando salida final…");
 
+  const profile = document.querySelector("[data-pir-evaluator-profile]");
+  assert(profile, "Existe el perfil del evaluador.");
+  assert(copyButton.disabled, "Completar los casos sin el perfil no habilita la copia.");
+
+  const profileFields = [...profile.querySelectorAll("[data-profile-field][required]")];
+  assert(profileFields.length > 0, "El perfil contiene campos obligatorios.");
+  for (const field of profileFields) {
+    const option = field.matches("select")
+      ? [...field.options].find((candidate) => candidate.value.trim() !== "" && !candidate.disabled)
+      : null;
+    dispatchValue(field, option ? option.value : "Dato sintético de self-check");
+  }
+  await wait();
+  assert(profileFields.every((field) => field.value.trim() !== ""), "Los campos obligatorios del perfil están completos.");
+
+
   assert(!copyButton.disabled, "Copiar respuesta se habilita al completar los 8 casos.");
   assert(!outputText.hidden, "El texto consolidado se hace visible.");
   assert(outputText.value.trim().length > 0, "La respuesta consolidada contiene texto.");
