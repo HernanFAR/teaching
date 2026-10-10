@@ -2595,7 +2595,8 @@
   grid-template-columns: minmax(12rem, 1fr) auto;
 }
 
-.pir-eval-wizard__panel .pir-eval-form__primary-actions .md-button {
+.pir-eval-wizard__panel .pir-eval-form__primary-actions .md-button,
+.pir-eval-demo__mock-form .pir-eval-form__primary-actions .md-button {
   width: auto;
   flex: 0 0 auto;
   min-height: 2.25rem;
