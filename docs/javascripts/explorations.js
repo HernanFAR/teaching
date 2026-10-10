@@ -763,8 +763,14 @@
     },
     {
       field: "actions",
-      title: "8. Continúa o agrega otra propiedad",
-      description: "Si el caso ejercita otra propiedad, usa “Agregar otra propiedad”. Cuando ya registraste todas las propiedades relevantes y los campos obligatorios están completos, continúa al siguiente caso.",
+      title: "8. Agrega otra propiedad si hace falta",
+      description: "Si el caso ejercita otra propiedad, usa “Agregar otra propiedad” para crear una nueva fila con su propio juicio. No hace falta añadir filas si una sola propiedad es suficiente.",
+      apply: () => {}
+    },
+    {
+      field: "actions",
+      title: "9. Corrige una propiedad agregada por error",
+      description: "Si agregaste una fila por accidente, usa “Quitar última propiedad”. Sólo elimina la última fila adicional y nunca la primera. Después puedes continuar al siguiente caso cuando todo esté completo.",
       apply: () => {}
     }
   ];
@@ -824,8 +830,14 @@
     },
     {
       field: "actions",
-      title: "9. Agrega propiedades o continúa",
-      description: "Si el caso ejercita otra propiedad, agrégala como un juicio separado. Cuando hayas registrado todas las propiedades relevantes, continúa al siguiente caso.",
+      title: "9. Agrega otra propiedad si hace falta",
+      description: "Cada propiedad materialmente ejercitada necesita su propio juicio. Usa “Agregar otra propiedad” para añadir una fila independiente.",
+      apply: () => {}
+    },
+    {
+      field: "actions",
+      title: "10. Quita una propiedad adicional si te equivocaste",
+      description: "Usa “Quitar última propiedad” para deshacer una fila agregada por error. La primera fila se conserva siempre. Continúa al siguiente caso una vez completos los campos obligatorios.",
       apply: () => {}
     }
   ];
