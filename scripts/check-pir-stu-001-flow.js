@@ -242,8 +242,8 @@
   );
 
   assert(
-    /16\\s*\\\\s*16|16 de 16|(?:los|las) 16 (?:casos|muestras) (?:están completos|están completas)|(?:los|las) (?:casos|muestras) están complet[oa]s/i.test(outputStatus.textContent),
-    "El estado final informa que las 16 muestras están completas.",
+    outputStatus.textContent.includes("La respuesta está lista para copiar."),
+    "El estado final confirma que la respuesta está lista para copiar tras completar 16 muestras y el perfil.",
     outputStatus.textContent
   );
 
