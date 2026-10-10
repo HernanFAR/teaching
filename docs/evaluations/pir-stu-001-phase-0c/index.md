@@ -764,6 +764,7 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
             </div>
             <div class="pir-eval-form__primary-actions">
               <button type="button" class="md-button pir-eval-form__add" data-demo-action="add" tabindex="-1">Agregar otra propiedad</button>
+              <button type="button" class="md-button" data-demo-action="remove" disabled tabindex="-1">Quitar última propiedad</button>
               <button type="button" class="md-button md-button--primary" data-demo-action="next" tabindex="-1">Siguiente caso</button>
             </div>
           </div>
@@ -822,6 +823,7 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
         <strong data-demo-title>Propiedad</strong>
         <span data-demo-description>Primero identifica qué obligación del contrato está realmente en juego.</span>
         <div class="pir-eval-demo__progress" aria-hidden="true">
+          <span data-demo-dot></span>
           <span data-demo-dot></span>
           <span data-demo-dot></span>
           <span data-demo-dot></span>
