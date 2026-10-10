@@ -2590,10 +2590,18 @@
   white-space: nowrap;
 }
 
-/* Keep the three actual evaluation actions equally sized. */
+/* Match action heights without consuming the space needed by the instructions. */
+.pir-eval-wizard__panel .pir-eval-form__header {
+  grid-template-columns: minmax(12rem, 1fr) auto;
+}
+
 .pir-eval-wizard__panel .pir-eval-form__primary-actions .md-button {
-  width: 12.5rem;
-  flex: 0 0 12.5rem;
+  width: auto;
+  flex: 0 0 auto;
+  min-height: 2.25rem;
+  padding: 0.38rem 0.65rem;
+  line-height: 1.2;
+  font-size: 0.72rem;
   text-align: center;
 }
 
