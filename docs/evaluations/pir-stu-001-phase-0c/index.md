@@ -845,6 +845,8 @@ Antes de responder los casos reales, puedes ver una demostración corta de cómo
 
 Completa los casos en orden. Puedes volver a un caso ya completado; si modificas uno y lo dejas incompleto, la navegación vuelve a bloquearse hasta completarlo.
 
+Tu avance se guarda automáticamente en este navegador. Si necesitas comenzar desde cero, encontrarás **«Reiniciar evaluación»** en el [paso 4, Respuesta y entrega](#respuesta-evaluacion).
+
 <div class="pir-eval-wizard"
      data-pir-eval-wizard
      data-eval-count="8"
@@ -2032,7 +2034,9 @@ Correcto, esa capacidad no estaba establecida. La retiro y no la usaré como evi
       <strong>Respuesta consolidada</strong>
       <span data-output-status>Completa los 8 casos para generar la respuesta final.</span>
     </div>
-    <button type="button" class="md-button md-button--primary" data-copy-eval-output disabled>Copiar respuesta</button>
+    <div class="pir-eval-form__primary-actions" data-eval-reset-container>
+      <button type="button" class="md-button md-button--primary" data-copy-eval-output disabled>Copiar respuesta</button>
+    </div>
   </div>
 
   <textarea class="pir-eval-output__text" data-eval-output-text readonly hidden aria-label="Respuesta consolidada de la evaluación"></textarea>
