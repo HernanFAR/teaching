@@ -56,6 +56,17 @@
   const getPrev = (index) => getForm(index).querySelector("[data-prev-eval]");
 
   const rows = (form) => [...form.querySelectorAll("[data-judgment]")];
+  // Requires a fresh evaluation. Never erase a person's stored answers automatically.
+  const hasPriorProgress = tabs.slice(1).some((tab) => !tab.disabled) ||
+    panels.some((panel) => panel.querySelectorAll("[data-judgment]").length > 1 ||
+      panel.querySelector('[data-eval-form]')?.dataset.dirty === "true") ||
+    [...(document.querySelectorAll("[data-pir-evaluator-profile] [data-profile-field]"))]
+      .some((field) => field.value.trim() !== "");
+  if (hasPriorProgress) {
+    console.warn(`${PREFIX} La evaluación ya tiene avance guardado. Para probar el estado inicial, usa «Reiniciar evaluación» en el paso 4 y vuelve a ejecutar este script. No se borró ningún dato automáticamente.`);
+    return;
+  }
+
 
   const fillRow = (row, {
     property = "CAU-001",
