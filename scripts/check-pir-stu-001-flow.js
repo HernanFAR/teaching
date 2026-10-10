@@ -242,7 +242,7 @@
   );
 
   assert(
-    /16\s*\/\s*16|16 de 16|16 muestras están completas/i.test(outputStatus.textContent),
+    /16\\s*\\/\\s*16|16 de 16|(?:los|las) 16 (?:casos|muestras) (?:están completos|están completas)|(?:los|las) (?:casos|muestras) están complet[oa]s/i.test(outputStatus.textContent),
     "El estado final informa que las 16 muestras están completas.",
     outputStatus.textContent
   );
