@@ -628,7 +628,7 @@
   reset.className = "md-button";
   reset.textContent = "Reiniciar evaluación";
   reset.dataset.resetEvaluation = "";
-  wizard.querySelector("[data-eval-reset-container]")?.appendChild(reset);
+  output?.querySelector("[data-eval-reset-container]")?.appendChild(reset);
   reset.addEventListener("click", () => {
     if (!window.confirm("¿Eliminar todo el avance guardado de esta evaluación? Esta acción no se puede deshacer.")) return;
     try { window.localStorage.removeItem(draftKey); } catch {}
