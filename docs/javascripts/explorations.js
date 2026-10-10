@@ -847,6 +847,14 @@
 
     const syncGuidePlacement = () => {
       if (!guide || !guideAnchor || !guideHome) return;
+      // Opening DevTools also fires resize; a closed demonstration must stay hidden.
+      if (!start?.disabled) {
+        if (guide.parentElement === document.body) {
+          guide.classList.remove("md-typeset");
+          guideAnchor.after(guide);
+        }
+        return;
+      }
       const desktop = window.matchMedia("(min-width: 56rem)").matches;
 
       if (desktop && guide.parentElement !== document.body) {
